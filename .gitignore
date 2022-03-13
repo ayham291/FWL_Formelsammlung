@@ -1,0 +1,7 @@
+tags
+*.aux
+*.toc
+*.log
+*.out
+*.fdb*
+*.fls
