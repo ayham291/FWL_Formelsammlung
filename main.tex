@@ -1,0 +1,58 @@
+\documentclass[10pt]{article}
+\usepackage{preamble}
+
+\def\FS{Formelsammlung}
+\def\Fach{Felder, Wellen und Leitungen}
+\title{\FS \ \Fach}
+\author{Ayham Alhalaibi}
+\date{\today}
+\def\MatNr{MATNR} % DONT PUSH TO PUBLIC REMOTE REPO
+\def\Semester{Wintersemster 21/22}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\begin{titlepage}
+\thispagestyle{empty}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{~/texmf/tex/latex/oth/logos/OTHR_OTHR_Logo.pdf}\\
+\vspace*{\stretch{1}}
+\Huge
+\textsc{\MyTitle}\\
+\vspace*{\stretch{0.25}}
+\normalsize
+\Semester
+
+\vspace*{\stretch{2}}
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{l l}
+    Name:  & \hspace{4cm}\MyAuthor \\
+    Matrikelnummer:  & \hspace{4cm}\MatNr\\
+    Letzte Änderung:  & \hspace{4cm}\MyDate\\
+    Lizenz:  & \hspace{4cm}GPLv3
+\end{tabular}
+}
+\vspace*{\stretch{1}}
+
+\end{center}
+\end{titlepage}
+
+\newpage
+
+
+\tableofcontents\clearpage
+
+\pagestyle{fancy}
+\lhead{\MyAuthor}
+\rhead{\Semester}
+\cfoot{\vspace{-20pt}\thepage}
+\pagenumbering{arabic}
+% \setlength{\columnsep}{1pt}
+\raggedcolumns
+\begin{multicols*}{2}
+
+    % WRITE YOUR CONTENT HERE
+
+\end{multicols*}
+\end{document}

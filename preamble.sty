@@ -1,0 +1,76 @@
+\ProvidesPackage{preamble}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lmodern}
+\usepackage{physics}
+% \usepackage[left=1cm,right=1cm,top=2cm,bottom=1.7cm]{geometry}
+\usepackage[a4paper,left=0pt,right=0.5cm,top=1.55cm,bottom=1.5cm]{geometry}
+% \usepackage{showframe}
+\usepackage{tabularx}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{mhchem}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\graphicspath{{./Bilder}}
+\usepackage{float}
+\usepackage{xcolor, soul}
+\definecolor{purple}{RGB}{200,0,255}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{csquotes}
+\usepackage{trfsigns}
+\usepackage{capt-of}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{trfsigns}
+\usepackage{authoraftertitle}
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle=FWL Formelsammlung,
+    pdfsubject=FWL,
+    pdfauthor=Ayham Alhalaibi,
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\setlength{\headsep}{7pt}
+\setlength{\headheight}{24pt}
+\setlength{\marginparwidth}{0pt}
+\geometry{bindingoffset=2cm}
+
+\newcommand{\bulletpt}{
+\begin{tikzpicture}
+    \filldraw[fill=black] circle (2pt);
+\end{tikzpicture}
+}
+\newcommand{\bulletptR}{
+\begin{tikzpicture}
+    \filldraw[fill=black] (0,0) rectangle (3pt,3pt);
+\end{tikzpicture}
+}
+
+
+\sisetup{locale=DE}
+\sisetup{per-mode = symbol-or-fraction}
+\sisetup{separate-uncertainty=true}
+\DeclareSIUnit\year{a}
+\DeclareSIUnit\clight{c}
+
+\mdfdefinestyle{exercise}{backgroundcolor=black!10,roundcorner=8pt,
+hidealllines=true, nobreak=true, frametitlerule=true, skipabove=3pt, skipbelow=0pt}
