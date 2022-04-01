@@ -1,0 +1,75 @@
+\section{Maxwell’schen Gleichungen}
+
+\subsection{Intergralform \rn{1}, \rn{2}}
+Gauß'sches Gesetz\\
+Induktionsgesetz\\
+Durchflutungsgesetz\\
+Quellenfreiheit $B$-Feld\\
+Zusammenhang
+\begin{align*}
+    \varoiint_{A_{Huelle}} \vec{D} d \vec{A} &= Q_{eing.}\\
+    \oint_{Rand} \vec{E} d \vec{s} &= -\dfrac{d\Phi_{eing.}}{dt}\\
+    \oint_{Rand} \vec{H} d \vec{s} &= I_{eing.} + I_{versch.} \\
+    \varoiint_{A_{Huelle}} \vec{B} d \vec{A} &= 0\\
+    \vec{D} = \varepsilon \cdot \vec{E} \qquad 
+            \vec{B} &= \mu \cdot \vec{H}
+\end{align*}
+
+Bei isotropen Stoffen sind $\varepsilon$ u. $\mu$ Skalare:
+\begin{equation*}
+    \varepsilon = \varepsilon_0 \cdot \varepsilon_r \qquad \mu = \mu_0 \cdot \mu_r
+\end{equation*}
+
+\subsection{Differentialform \rn{1}, \rn{2}}
+\begin{align*}
+    \operatorname{div} \vec{D} &= \rho\\
+    \operatorname{rot} \vec{E} &= -\dfrac{\partial \vec{B}}{\partial t}\\
+    \operatorname{rot} &= \vec{J} + \dfrac{\partial \vec{D}}{\partial t} \\
+    \operatorname{div} \vec{B} &= 0
+\end{align*}
+
+\textbf{Divergenz/Rotation/Gradient}\\
+$\operatorname{div}$: Operator macht aus einem Vektor ein Skalar.\\
+$\operatorname{rot}$: Operator bildet ein Vektor auf Vektorfeld ab.\\
+$\operatorname{grad}$: Operator bildet ein Skalar-/Gradientenfeld in ein Vektorfeld ab.
+Zeigt Richtung stärkster Zunahme des Feldes
+\begin{align*}
+    \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} &= \operatorname{div} \vec{G} = \nabla \cdot \vec{G}\\
+\end{align*}
+\begin{align*}
+    \begin{pmatrix}
+        \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z}\\
+        \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x}\\
+        \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}\\
+    \end{pmatrix} &= \operatorname{rot} \vec{G} = \nabla \times \vec{G}\\
+    \begin{pmatrix}
+        \dfrac{\partial G}{\partial x}\\
+        \dfrac{\partial G}{\partial y}\\
+        \dfrac{\partial G}{\partial z}\\
+    \end{pmatrix} &= \operatorname{grad} G = \nabla \cdot G
+\end{align*}
+
+\textbf{Nabla Operator}
+\begin{align*}
+    \nabla &= \vec{\nabla} = \left( \dfrac{\partial G}{\partial x}, \dfrac{\partial G}{\partial y}, \dfrac{\partial G}{\partial z} \right)
+\end{align*}
+
+Feldänderung bei Bewegung
+\begin{align*}
+    \Delta G &= \dfrac{\partial G}{\partial x} \Delta x + \dfrac{\partial G}{\partial y} \Delta y + \dfrac{\partial G}{\partial z} \Delta z \\
+             &= dG = \operatorname{grad} G \cdot d \vec{s}
+\end{align*}
+
+\subsection{stationäre Felder}
+\begin{align*}
+    \nabla \cdot \vec{D} &= \rho \qquad \vec{D} = \varepsilon \cdot \vec{E}\\
+    \nabla \times \vec{E} &= 0\\
+    \nabla \times \vec{H} &= \vec{J} \qquad \vec{B} = \mu \cdot \vec{H}\\
+    \nabla \cdot \vec{B} &= 0\\
+    \vec{J} &= \kappa \vec{E}
+\end{align*}
+
+\subsection{statische Felder}
+Elektrostatik: $\vec{J} = 0$\\
+$\operatorname{rot} \vec{E} = 0$\\
+Magnetostatik: $\vec{J} = const$
