@@ -77,4 +77,4 @@
 hidealllines=true, nobreak=true, frametitlerule=true, skipabove=3pt, skipbelow=0pt}
 
 % \RN für Römischezahl
-\newcommand{\rn}[1]{\textup{\uppercase\expandafter{\romannumeral#1}}}
+\newcommand*{\rn}[1]{\expandafter\@slowromancap\romannumeral #1@}
