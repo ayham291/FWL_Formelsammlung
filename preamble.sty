@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{esint}                              % u.a. Hüllintegralle
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{lmodern}
@@ -74,3 +75,6 @@
 
 \mdfdefinestyle{exercise}{backgroundcolor=black!10,roundcorner=8pt,
 hidealllines=true, nobreak=true, frametitlerule=true, skipabove=3pt, skipbelow=0pt}
+
+% \RN für Römischezahl
+\newcommand*{\rn}[1]{\expandafter\@slowromancap\romannumeral #1@}
