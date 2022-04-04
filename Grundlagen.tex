@@ -56,6 +56,7 @@ Feldänderung bei Bewegung
     $\rho$ & Raumladungsdichte &  \\
 \end{tabularx}
 
+
 \subsection{Kartesische Koordinaten}
 Einheitsvektoren:   $\quad \vec{e_{x}}, \vec{e_{y}}, \vec{e_{z}}$\\ 
 Rechtssystem:       $\quad \vec{e_{x}} \times \vec{e_{y}}=\vec{e_{z}}$\\
@@ -72,16 +73,17 @@ Laplace Operator:   $\quad \Delta=\frac{\partial^{2} \ldots}{\partial x^{2}}+\fr
                    &+ \left[\frac{\partial^{2} E_{z}}{\partial x^{2}}+\frac{\partial^{2} E_{z}}{\partial y^{2}}+\frac{\partial^{2} E_{z}}{\partial z^{2}}\right] \vec{e_{z}}
 \end{align*}
 
+
 \subsection{Zylinderkoordinaten}
 Variablen:          $\quad r, \alpha, z$\\
 Einheitsvektoren:   $\quad \vec{e_{r}}, \vec{e_{\alpha}}, \vec{e_{z}} \quad$\\
 Rechtssystem: $\vec{e_{r}} \times \vec{e_{\alpha}}=\vec{e_{z}}$\\
-Zusammenhang mit rechtwinkligen Koordinaten:
-\begin{align*}
-    x&=r \cos \alpha \quad r=\sqrt{x^{2}+y^{2}} \quad d r=d x \cos \alpha+d y \sin \alpha\\
-    y&=r \sin \alpha \quad \alpha=\arctan \frac{y}{x} \quad r d \alpha=d y \cos \alpha-d x \sin \alpha\\
-    z&=z \quad z=z \quad d z=d z
-\end{align*}
+% Zusammenhang mit rechtwinkligen Koordinaten:
+% \begin{align*}
+%     x&=r \cos \alpha \quad r=\sqrt{x^{2}+y^{2}} \quad d r=d x \cos \alpha+d y \sin \alpha\\
+%     y&=r \sin \alpha \quad \alpha=\arctan \frac{y}{x} \quad r d \alpha=d y \cos \alpha-d x \sin \alpha\\
+%     z&=z \quad z=z \quad d z=d z
+% \end{align*}
 Linienelemente:     $\quad d s=\sqrt{d r^{2}+r^{2} d \alpha^{2}+d z^{2}}$\\
 Volumenelemente:    $\quad d v=r d r d \alpha d z$\\
 Nabla Operator:     $\quad \nabla=\frac{\partial}{\partial r} \vec{e_{r}}+\frac{1}{r} \frac{\partial}{\partial \alpha} \vec{e_{\alpha}}+\frac{\partial}{\partial z} \vec{e_{z}}$\\
@@ -94,16 +96,17 @@ Laplace Operator:   $\quad \Delta = \frac{1}{r}\frac{\partial \left(r \frac{\par
              &+\left[\Delta E_{\alpha}+\frac{2}{r^{2}} \frac{\partial E_{r}}{\partial \alpha}-\frac{E_{\alpha}}{r^{2}}\right] \vec{e_{\alpha}}+\left[\Delta E_{z}\right] \vec{e_{z}}
 \end{align*}
 
+
 \subsection{Kugelkoordinaten}
 Variablen:          $\quad r, \vartheta, \alpha$\\
 Einheitsvektoren:   $\quad \vec{e_{r}}, \vec{e_{\vartheta}}, \vec{e_{\alpha}}$\\
 Rechtssystem:       $\quad \vec{e_{r}} \times \vec{e_{\vartheta}}=\vec{e_{\alpha}}$\\
-Zusammenhang mit rechtwinkligen Koordinaten:
-\begin{align*}
-    x&=r \sin \vartheta \cos \alpha \quad r=\sqrt{x^{2}+y^{2}+z^{2}} \quad d r=d x \sin \vartheta \cos \alpha+d y \sin \vartheta \sin \alpha+d z \cos \vartheta\\
-    y&=r \sin \vartheta \sin \alpha \quad \alpha=\arctan \frac{y}{x} \quad r \sin \vartheta d \alpha=d y \cos \alpha-d x \sin \alpha\\
-    z&=r \cos \vartheta \quad \vartheta=\arctan \frac{\sqrt{x^{2}+y^{2}}}{z} \quad r d \vartheta=d x \cos \vartheta \cos \alpha+d y \cos \vartheta \sin \alpha-d z \sin \vartheta
-\end{align*}
+% Zusammenhang mit rechtwinkligen Koordinaten:
+% \begin{align*}
+%     x&=r \sin \vartheta \cos \alpha \quad r=\sqrt{x^{2}+y^{2}+z^{2}} \quad d r=d x \sin \vartheta \cos \alpha+d y \sin \vartheta \sin \alpha+d z \cos \vartheta\\
+%     y&=r \sin \vartheta \sin \alpha \quad \alpha=\arctan \frac{y}{x} \quad r \sin \vartheta d \alpha=d y \cos \alpha-d x \sin \alpha\\
+%     z&=r \cos \vartheta \quad \vartheta=\arctan \frac{\sqrt{x^{2}+y^{2}}}{z} \quad r d \vartheta=d x \cos \vartheta \cos \alpha+d y \cos \vartheta \sin \alpha-d z \sin \vartheta
+% \end{align*}
 Linienelement:      $\quad d s=\sqrt{d r^{2}+r^{2} \sin ^{2} \vartheta d \alpha^{2}+r^{2} d \vartheta^{2}}$\\
 Volumenelement:     $\quad d v=r^{2} \sin \vartheta d r d \vartheta d \alpha$\\
 Nabla Operator:     $\quad \nabla=\frac{\partial}{\partial r} \vec{e_{r}}+\frac{1}{r} \frac{\partial}{\partial \vartheta} \vec{e_{\vartheta}}+\frac{1}{r \sin \vartheta} \frac{\partial}{\partial \alpha} \vec{e_{\alpha}}$\\
@@ -123,3 +126,38 @@ Laplace Operator in Kugelkoordinaten, angewandt auf einen Vektor:
 \end{align*}
 
  
+
+\subsection{Vergleich/Umrechnung}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
+    Kart. & Zyl. & Kug.\\
+    \specialrule{1.5pt}{0pt}{0pt}
+    $x$                                 & $r \cos \alpha$       & $r \sin \vartheta \cos \alpha$  \\
+    \hline
+    $y$                                 & $r \sin \alpha$       & $r \sin \vartheta \sin \alpha$  \\
+    \hline
+    $z$                                 & $z$                   & $r \cos \vartheta$ \\
+    \specialrule{1.5pt}{0pt}{0pt}
+    $\sqrt{x^{2}+y^{2}}$                & $r$                   & \\
+    \hline
+    $\arctan \frac{y}{x}$               & $\alpha$              & \\
+    \hline
+    $z$                                 & $z$                   & \\
+    \hline
+    $d x \cos \alpha+d y \sin \alpha$   & $dr$                  & \\
+    \hline
+    $d y \cos \alpha-d x \sin \alpha$   & $r d\alpha$           & \\
+    \hline
+    $dz$                                & $dz$                  & \\
+    \specialrule{1.5pt}{0pt}{0pt}
+    $\sqrt{x^{2}+y^{2}+z^{2}}$          &                       & $r$ \\
+    \hline
+    $\arctan \frac{y}{x}$               &                       & $\alpha$ \\
+    \hline
+    $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$ &                    & $\vartheta$ \\
+    \hline
+    $d x \sin \vartheta \cos \alpha+d y \sin \vartheta \sin \alpha+d z \cos \vartheta$ & & $dr$ \\
+    \hline
+    $d y \cos \alpha-d x \sin \alpha$   &                       & $r \sin \vartheta d \alpha$ \\
+    \hline
+    $d x \cos \vartheta \cos \alpha+d y \cos \vartheta \sin \alpha-d z \sin \vartheta$ & & $r d \vartheta$\\
+\end{tabularx}
