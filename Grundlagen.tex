@@ -1,0 +1,31 @@
+\section{Grundlagen}
+
+\subsection{Randbedingung}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
+    Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$)\\
+    \hline
+    Neumann-RB &  Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an\\
+\end{tabularx}
+
+\subsection{Begriffe}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.2\hsize}X|>{\hsize=.4\hsize}X|>{\hsize=.4\hsize}X}
+        & Begriff & Beschreibung \\
+    \hline
+    $\rho$ &  &  \\
+\end{tabularx}
+
+\subsection{Kartesische Koordinaten}
+Einheitsvektoren:   $\quad \vec{e_{x}}, \vec{e_{y}}, \vec{e_{z}}$\\ 
+Rechtssystem:       $\vec{e_{x}} \times \vec{e_{y}}=\vec{e_{z}}$\\
+Linienelemente:     $\quad d s=\sqrt{d x^{2}+d y^{2}+d z^{2}}$\\
+Nabla Operator:     $\quad \nabla=\frac{\partial}{\partial x} \vec{e_{x}}+\frac{\partial}{\partial y} \vec{e_{y}}+\frac{\partial}{\partial z} \vec{e_{z}}$\\
+Gradient:           $\operatorname{grad} \varphi \equiv \nabla \varphi=\frac{\partial \varphi}{\partial x} \vec{e_{x}}+\frac{\partial \varphi}{\partial y} \vec{e_{y}}+\frac{\partial \varphi}{\partial z} \vec{e_{z}}$\\
+Divergenz:          $\operatorname{div} \vec{D} \equiv \nabla \vec{D}=\frac{\partial D_{x}}{\partial x}+\frac{\partial D_{y}}{\partial y}+\frac{\partial D_{z}}{\partial z}$\\
+Rotation:           $\quad \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E} =$\\
+                        $\left[\frac{\partial E_{z}}{\partial y}-\frac{\partial E_{y}}{\partial z}\right] \vec{e_{x}}+\left[\frac{\partial E_{x}}{\partial z}-\frac{\partial E_{z}}{\partial x}\right] \vec{e_{y}}+\left[\frac{\partial E_{y}}{\partial x}-\frac{\partial E_{x}}{\partial y}\right] \vec{e_{z}}$\\
+Laplace Operator:   $\quad \Delta=\frac{\partial^{2} \ldots}{\partial x^{2}}+\frac{\partial^{2} \ldots}{\partial y^{2}}+\frac{\partial^{2} \ldots}{\partial z^{2}}$\\
+\begin{align*}
+    &\Delta \vec{E} = \operatorname{grad} \operatorname{div} \vec{E}-\operatorname{rot} \operatorname{rot} \vec{E} =\Delta E_{x} \vec{e_{x}}+\Delta E_{y} \vec{e_{y}}+\Delta E_{z} \vec{e_{z}}=\\
+                   &= \left[\frac{\partial^{2} E_{x}}{\partial x^{2}}+\frac{\partial^{2} E_{x}}{\partial y^{2}}+\frac{\partial^{2} E_{x}}{\partial z^{2}}\right] \vec{e_{x}}+\left[\frac{\partial^{2} E_{y}}{\partial x^{2}}+\frac{\partial^{2} E_{y}}{\partial y^{2}}+\frac{\partial^{2} E_{y}}{\partial z^{2}}\right] \vec{e_{y}}\\
+                   &+ \left[\frac{\partial^{2} E_{z}}{\partial x^{2}}+\frac{\partial^{2} E_{z}}{\partial y^{2}}+\frac{\partial^{2} E_{z}}{\partial z^{2}}\right] \vec{e_{z}}
+\end{align*}

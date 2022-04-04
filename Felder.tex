@@ -1,0 +1,16 @@
+\section{Felder}
+
+\subsection{Potential}
+\begin{align*}
+    \nabla \cdot \vec{D}  &= \rho       \qquad          \vec{D} = \varepsilon \vec{E}\\
+    \nabla \times \vec{E} &= 0 = \operatorname{rot} \operatorname{grad} E
+\end{align*}
+
+\subsubsection{Poisson-Gleichung}
+mit $\rho = 0 \Rightarrow$ \textbf{Laplace-Gleichung}
+\begin{align*}
+    \Delta \varphi + \underbrace{ \dfrac{\operatorname{grad} \varepsilon \cdot \operatorname{grad} \varphi}{\varepsilon}}_{= 0\textit{, wenn homogen}}       
+                                &= - \dfrac{\rho (x, y, z)}{\varepsilon}\\
+    \frac{d^2 \varphi}{d x^2} + \frac{d^2 \varphi}{d y^2} + \frac{d^2 \varphi}{d z^2}
+                                &= - \dfrac{\rho (x, y, z)}{\varepsilon}
+\end{align*}
