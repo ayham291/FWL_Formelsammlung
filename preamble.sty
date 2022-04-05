@@ -15,6 +15,7 @@
 \usepackage[a4paper,left=0pt,right=0.5cm,top=1.55cm,bottom=1.5cm]{geometry}
 % \usepackage{showframe}
 \usepackage{tabularx}
+\usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{fancyhdr}
 \usepackage{enumerate}
@@ -22,7 +23,6 @@
 \usepackage{multicol}
 \usepackage{mathtools}
 \usepackage{graphicx}
-\usepackage{tabularx}
 \graphicspath{{./Bilder}}
 \usepackage{float}
 \usepackage{xcolor, soul}
@@ -78,3 +78,11 @@ hidealllines=true, nobreak=true, frametitlerule=true, skipabove=3pt, skipbelow=0
 
 % \RN für Römischezahl
 \newcommand*{\rn}[1]{\expandafter\@slowromancap\romannumeral #1@}
+
+% Macro für div, rot, grad
+\newcommand*{\opdiv}{\operatorname{div}}
+\newcommand*{\oprot}{\operatorname{rot}}
+\newcommand*{\opgrad}{\operatorname{grad}}
+
+\setlength{\arraycolsep}{1.0pt}
+\def\arraystretch{2}

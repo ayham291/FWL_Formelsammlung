@@ -25,51 +25,10 @@ Bei isotropen Stoffen sind $\varepsilon$ u. $\mu$ Skalare:
 
 \subsection{Differentialform \rn{1}, \rn{2}}
 \begin{align*}
-    \operatorname{div} \vec{D} & = \rho                                           \\
+    \opdiv \vec{D} & = \rho                                           \\
     \operatorname{rot} \vec{E} & = -\dfrac{\partial \vec{B}}{\partial t}          \\
     \operatorname{rot} \vec{H} & = \vec{J} + \dfrac{\partial \vec{D}}{\partial t} \\
-    \operatorname{div} \vec{B} & = 0
-\end{align*}
-
-\subsubsection*{Divergenz/Rotation/Gradient}
-
-$\operatorname{div}$: macht aus einem Vektor ein Skalar.\\
-$\operatorname{rot}$: bildet ein Vektor auf Vektorfeld ab.\\
-$\operatorname{grad}$: bildet ein Skalar-/Gradientenfeld in ein Vektorfeld ab.
-Zeigt Richtung stärkster Zunahme des Feldes.
-
-\[
-    \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} +
-    \dfrac{\partial G_z}{\partial z} = \operatorname{div} \vec{G} = \nabla
-    \cdot \vec{G}
-\]
-
-\begin{align*}
-    \arraycolsep=1.0pt\def\arraystretch{2.0}
-    \begin{pmatrix}
-        \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
-        \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
-        \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y} \\
-    \end{pmatrix} & = \operatorname{rot} \vec{G} = \nabla \times \vec{G}                                 \\
-    \arraycolsep=1.0pt\def\arraystretch{2.0}
-    \begin{pmatrix}
-        \dfrac{\partial G}{\partial x} \\
-        \dfrac{\partial G}{\partial y} \\
-        \dfrac{\partial G}{\partial z} \\
-    \end{pmatrix} \qquad                                      & = \operatorname{grad} G = \nabla \cdot G
-\end{align*}
-
-\subsubsection*{Nabla Operator}
-
-\[
-    \nabla = \vec{\nabla} = \left( \dfrac{\partial G}{\partial x},
-    \dfrac{\partial G}{\partial y}, \dfrac{\partial G}{\partial z} \right)
-\]
-
-Feldänderung bei Bewegung
-\begin{align*}
-    \Delta G & = \dfrac{\partial G}{\partial x} \Delta x + \dfrac{\partial G}{\partial y} \Delta y + \dfrac{\partial G}{\partial z} \Delta z \\
-             & = dG = \operatorname{grad} G \cdot d \vec{s}
+    \opdiv \vec{B} & = 0
 \end{align*}
 
 \subsection{stationäre Felder}
@@ -82,7 +41,7 @@ Feldänderung bei Bewegung
     \vec{J}               & = \kappa \vec{E}
 \end{align*}
 
-\subsection{statische Felder}
-Elektrostatik: $\vec{J} = 0$\\
-$\operatorname{rot} \vec{E} = 0$\\
-Magnetostatik: $\vec{J} = const$
+% \subsection{statische Felder}
+% Elektrostatik: $\vec{J} = 0$\\
+% $\operatorname{rot} \vec{E} = 0$\\
+% Magnetostatik: $\vec{J} = const$

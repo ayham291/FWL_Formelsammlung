@@ -1,0 +1,92 @@
+\section{Grundlagen}
+\subsection{mathematische}
+\subsubsection*{Divergenz/Rotation/Gradient}
+
+$\opdiv$: macht aus einem Vektor ein Skalar.\\
+$\operatorname{rot}$: bildet ein Vektor auf Vektorfeld ab.\\
+$\opgrad$: bildet ein Skalar-/Gradientenfeld in ein Vektorfeld ab.
+Zeigt Richtung stärkster Zunahme des Feldes.
+\begin{align*}
+    \opdiv \vec{G}             & = \nabla \cdot \vec{G} = \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
+                               & = 0 \quad\Rightarrow \textnormal{Volumen}                                                                                       \\
+                               & > 0 \quad\Rightarrow \textnormal{Quelle}                                                                                        \\
+                               & < 0 \quad\Rightarrow \textnormal{Senke}                                                                                         \\
+    \operatorname{rot} \vec{G} & = \nabla \times \vec{G} =
+    \begin{pmatrix}
+        \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
+        \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
+        \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
+    \end{pmatrix}                                                                                          \\
+    \opgrad G                  & = \nabla \cdot G = \hspace{6ex}
+    \begin{pmatrix}
+        \dfrac{\partial G}{\partial x} \\
+        \dfrac{\partial G}{\partial y} \\
+        \dfrac{\partial G}{\partial z}
+    \end{pmatrix}
+\end{align*}
+
+\subsubsection*{Nabla Operator}
+\[
+    \nabla = \vec{\nabla} = \left( \dfrac{\partial G}{\partial x},
+    \dfrac{\partial G}{\partial y}, \dfrac{\partial G}{\partial z} \right)
+\]
+
+Feldänderung bei Bewegung
+\begin{align*}
+    \Delta G & = \dfrac{\partial G}{\partial x} \Delta x + \dfrac{\partial G}{\partial y} \Delta y + \dfrac{\partial G}{\partial z} \Delta z \\
+             & = dG = \opgrad G \cdot d \vec{s}
+\end{align*}
+
+
+
+\subsection{Randbedingung}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
+    Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$) \\
+    \hline
+    Neumann-RB   & Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an   \\
+\end{tabularx}
+
+\subsection{Begriffe}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.1\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.4\hsize}X}
+           & Begriff           & Beschreibung \\
+    \hline
+    $\rho$ & Raumladungsdichte &              \\
+\end{tabularx}
+
+
+
+
+\subsection{Vergleich/Umrechnung}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
+    Kart.                                                                              & Zyl.            & Kug.                           \\
+    \specialrule{1.5pt}{0pt}{0pt}
+    $x$                                                                                & $r \cos \alpha$ & $r \sin \vartheta \cos \alpha$ \\
+    \hline
+    $y$                                                                                & $r \sin \alpha$ & $r \sin \vartheta \sin \alpha$ \\
+    \hline
+    $z$                                                                                & $z$             & $r \cos \vartheta$             \\
+    \specialrule{1.5pt}{0pt}{0pt}
+    $\sqrt{x^{2}+y^{2}}$                                                               & $r$             &                                \\
+    \hline
+    $\arctan \frac{y}{x}$                                                              & $\alpha$        &                                \\
+    \hline
+    $z$                                                                                & $z$             &                                \\
+    \hline
+    $d x \cos \alpha+d y \sin \alpha$                                                  & $dr$            &                                \\
+    \hline
+    $d y \cos \alpha-d x \sin \alpha$                                                  & $r d\alpha$     &                                \\
+    \hline
+    $dz$                                                                               & $dz$            &                                \\
+    \specialrule{1.5pt}{0pt}{0pt}
+    $\sqrt{x^{2}+y^{2}+z^{2}}$                                                         &                 & $r$                            \\
+    \hline
+    $\arctan \frac{y}{x}$                                                              &                 & $\alpha$                       \\
+    \hline
+    $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                             &                 & $\vartheta$                    \\
+    \hline
+    $d x \sin \vartheta \cos \alpha+d y \sin \vartheta \sin \alpha+d z \cos \vartheta$ &                 & $dr$                           \\
+    \hline
+    $d y \cos \alpha-d x \sin \alpha$                                                  &                 & $r \sin \vartheta d \alpha$    \\
+    \hline
+    $d x \cos \vartheta \cos \alpha+d y \cos \vartheta \sin \alpha-d z \sin \vartheta$ &                 & $r d \vartheta$                \\
+\end{tabularx}

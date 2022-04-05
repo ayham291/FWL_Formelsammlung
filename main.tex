@@ -50,10 +50,18 @@
 \pagenumbering{arabic}
 % \setlength{\columnsep}{1pt}
 \raggedcolumns
-\begin{multicols*}{2}
 
-    % WRITE YOUR CONTENT HERE
-    \input{Maxwell}
+
+\begin{multicols*}{2}
+	\input{Grundlagen}
+\end{multicols*}
+
+    % newpage
+	\include{KoordinatenSysteme}
+
+\begin{multicols*}{2}
+	\input{Maxwell}
+	\input{Felder}
 
 \end{multicols*}
 
