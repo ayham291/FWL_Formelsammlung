@@ -1,0 +1,139 @@
+\subsection{Kartesische Koordinaten}
+\begin{description}
+	\item Einheitsvektoren:
+	      \[
+		      \vec{e_{x}}, \vec{e_{y}}, \vec{e_{z}}
+	      \]
+	\item Rechtssystem:
+	      \[
+		      \vec{e_{x}} \times \vec{e_{y}}=\vec{e_{z}}
+	      \]
+	\item Linienelemente:
+	      \[
+		      ds=\sqrt{d x^{2}+d y^{2}+d z^{2}}
+	      \]
+	\item Nabla Operator:
+	      \[
+		      \nabla=\frac{\partial}{\partial x} \vec{e_{x}}+\frac{\partial}{\partial y} \vec{e_{y}}+\frac{\partial}{\partial z} \vec{e_{z}}
+	      \]
+	\item Gradient:
+	      \[
+		      \opgrad \varphi \equiv \nabla \varphi=\frac{\partial \varphi}{\partial x} \vec{e_{x}}+\frac{\partial \varphi}{\partial y} \vec{e_{y}}+\frac{\partial \varphi}{\partial z} \vec{e_{z}}
+	      \]
+	\item Divergenz:
+	      \[
+		      \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{\partial D_{x}}{\partial x}+\frac{\partial D_{y}}{\partial y}+\frac{\partial D_{z}}{\partial z}
+	      \]
+	\item Rotation:
+	      \[
+		      \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E} =
+		      \left[\frac{\partial E_{z}}{\partial y}-\frac{\partial E_{y}}{\partial z}\right] \vec{e_{x}}+\left[\frac{\partial E_{x}}{\partial z}-\frac{\partial E_{z}}{\partial x}\right] \vec{e_{y}}+\left[\frac{\partial E_{y}}{\partial x}-\frac{\partial E_{x}}{\partial y}\right] \vec{e_{z}}
+	      \]
+	\item Laplace Operator:
+	      \[
+		      \Delta=\frac{\partial^{2} \ldots}{\partial x^{2}}+\frac{\partial^{2} \ldots}{\partial y^{2}}+\frac{\partial^{2} \ldots}{\partial z^{2}}
+	      \]
+	      \begin{align*}
+		      \Delta \vec{E} & = \opgrad \opdiv \vec{E}-\operatorname{rot} \operatorname{rot} \vec{E} = \Delta E_{x} \vec{e_{x}}+\Delta E_{y} \vec{e_{y}}+\Delta E_{z} \vec{e_{z}}                                                                                                                                                                                                                                                                                                                     \\
+		                     & = \left[\frac{\partial^{2} E_{x}}{\partial x^{2}}+\frac{\partial^{2} E_{x}}{\partial y^{2}}+\frac{\partial^{2} E_{x}}{\partial z^{2}}\right] \vec{e_{x}}+\left[\frac{\partial^{2} E_{y}}{\partial x^{2}}+\frac{\partial^{2} E_{y}}{\partial y^{2}}+\frac{\partial^{2} E_{y}}{\partial z^{2}}\right] \vec{e_{y}}+ \left[\frac{\partial^{2} E_{z}}{\partial x^{2}}+\frac{\partial^{2} E_{z}}{\partial y^{2}}+\frac{\partial^{2} E_{z}}{\partial z^{2}}\right] \vec{e_{z}}
+	      \end{align*}
+\end{description}
+
+\subsection{Zylinderkoordinaten}
+\begin{description}
+    \item Variablen:
+          \[
+              \quad r, \alpha, z
+          \]
+    \item Einheitsvektoren:
+          \[
+              \quad \vec{e_{r}}, \vec{e_{\alpha}}, \vec{e_{z}} \quad
+          \]
+    \item Rechtssystem:
+          \[
+              \vec{e_{r}} \times \vec{e_{\alpha}}=\vec{e_{z}}
+          \]
+    \item Linienelemente:
+          \[
+              \quad d s=\sqrt{d r^{2}+r^{2} d \alpha^{2}+d z^{2}}
+          \]
+    \item Volumenelemente:
+          \[
+              \quad d v=r d r d \alpha d z
+          \]
+    \item Nabla Operator:
+          \[
+              \quad \nabla=\frac{\partial}{\partial r} \vec{e_{r}}+\frac{1}{r} \frac{\partial}{\partial \alpha} \vec{e_{\alpha}}+\frac{\partial}{\partial z} \vec{e_{z}}
+          \]
+    \item Gradient:
+          \[
+              \quad \opgrad \varphi \equiv \nabla \varphi=\frac{\partial \varphi}{\partial r} \vec{e_{r}}+\frac{1}{r} \frac{\partial \varphi}{\partial \alpha} \vec{e_{\alpha}}+\frac{\partial \varphi}{\partial z} \vec{e_{z}}
+          \]
+    \item Divergenz:
+          \[
+              \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r} \frac{\partial\left(r \vec{D}_{r}\right)}{\partial r}+\frac{1}{r} \frac{\partial \vec{D}_{\alpha}}{\partial \alpha}+\frac{\partial \vec{D}_{z}}{\partial z}
+          \]
+    \item Rotation:
+          \[
+              \quad \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E}=\left[\frac{1}{r} \frac{\partial E_{z}}{\partial \alpha}-\frac{\partial E_{\alpha}}{\partial z}\right] \vec{e_{r}}+\left[\frac{\partial E_{r}}{\partial z}-\frac{\partial E_{z}}{\partial r}\right] \vec{e_{\alpha}}+\left[\frac{1}{r} \frac{\partial\left(r E_{\alpha}\right)}{\partial r}-\frac{1}{r} \frac{\partial E_{r}}{\partial \alpha}\right] \vec{e_{z}}
+          \]
+    \item Laplace Operator:
+          \[
+              \quad \Delta = \frac{1}{r}\frac{\partial \left(r \frac{\partial \ldots}{\partial r}\right)}{\partial r} + \frac{1}{r^2}\frac{\partial^2 \ldots}{\partial \alpha^2} + \frac{\partial^2 \ldots}{\partial z^2}
+          \]
+          \[
+              \vec{E} =  \left[\Delta E_{r}-\frac{2}{r^{2}} \frac{\partial E_{\alpha}}{\partial \alpha}-\frac{E_{r}}{r^{2}}\right] \vec{e_{r}}
+               +\left[\Delta E_{\alpha}+\frac{2}{r^{2}} \frac{\partial E_{r}}{\partial \alpha}-\frac{E_{\alpha}}{r^{2}}\right] \vec{e_{\alpha}}+\left[\Delta E_{z}\right] \vec{e_{z}}
+          \]
+\end{description}
+
+\subsection{Kugelkoordinaten}
+\begin{description}
+    \item Variablen:
+          \[
+              \quad r, \vartheta, \alpha
+          \]
+    \item Einheitsvektoren:
+          \[
+              \quad \vec{e_{r}}, \vec{e_{\vartheta}}, \vec{e_{\alpha}}
+          \]
+    \item Rechtssystem:
+          \[
+              \quad \vec{e_{r}} \times \vec{e_{\vartheta}}=\vec{e_{\alpha}}
+          \]
+    \item Linienelement:
+          \[
+              \quad d s=\sqrt{d r^{2}+r^{2} \sin ^{2} \vartheta d \alpha^{2}+r^{2} d \vartheta^{2}}
+          \]
+    \item Volumenelement:
+          \[
+              \quad d v=r^{2} \sin \vartheta d r d \vartheta d \alpha
+          \]
+    \item Nabla Operator:
+          \[
+              \quad \nabla=\frac{\partial}{\partial r} \vec{e_{r}}+\frac{1}{r} \frac{\partial}{\partial \vartheta} \vec{e_{\vartheta}}+\frac{1}{r \sin \vartheta} \frac{\partial}{\partial \alpha} \vec{e_{\alpha}}
+          \]
+    \item Gradient:
+          \[
+              \quad \opgrad \varphi \equiv \nabla \varphi=\frac{\partial \varphi}{\partial r} \vec{e_{r}}+\frac{1}{r} \frac{\partial \varphi}{\partial \vartheta} \vec{e_{\vartheta}}+\frac{1}{r \sin \vartheta} \frac{\partial \varphi}{\partial \alpha} \vec{e_{\alpha}}
+          \]
+    \item Divergenz:
+          \[
+              \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r^{2}} \frac{\partial\left(r^{2} D_{r}\right)}{\partial r}+\frac{1}{r \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot D_{\vartheta}\right)}{\partial \vartheta}+\frac{1}{r \sin \vartheta} \frac{\partial D_{\alpha}}{\partial \alpha}
+          \]
+    \item Rotation:
+          \[
+              \operatorname{rot} \vec{E}  \equiv \nabla \times \vec{E}= \frac{1}{r \sin \vartheta}\left[\frac{\partial\left(\sin \vartheta \cdot E_{\alpha}\right)}{\partial \vartheta}-\frac{\partial E_{\vartheta}}{\partial \alpha}\right] \vec{e_{r}}                                                                                 \\
+              +                           \frac{1}{r}\left[\frac{1}{\sin \vartheta} \frac{\partial E_{r}}{\partial \alpha}-\frac{\partial r E_{\alpha}}{\partial r}\right] \vec{e_{\vartheta}}+\frac{1}{r}\left[\frac{\partial\left(r E_{\vartheta}\right)}{\partial r}-\frac{\partial E_{r}}{\partial \vartheta}\right] \vec{e_{\alpha}}
+          \]
+    \item Laplace Operator:
+          \[
+              \Delta=\frac{1}{r^{2}} \frac{\partial\left(r^{2} \frac{\partial . .}{\partial r}\right)}{\partial r}+\frac{1}{r^{2} \sin \vartheta} \frac{\partial\left(\sin \vartheta \frac{\partial . \ddot{ }}{\partial \vartheta}\right)}{\partial \vartheta}+\frac{1}{r^{2} \sin ^{2} \vartheta} \frac{\partial^{2} . .}{\partial \alpha^{2}}
+          \]
+    \item Laplace Operator in Kugelkoordinaten, angewandt auf einen Vektor:
+          \begin{multline*}
+              \Delta \vec{E}  =\left[\Delta E_{r}-\frac{2}{r^{2}} E_{r}-\frac{2}{r^{2} \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot E_{\vartheta}\right)}{\partial \vartheta}-\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_{\alpha}}{\partial \alpha}\right] \vec{e_{r}}        \\
+              +\left[\Delta E_{\vartheta}-\frac{E_{\vartheta}}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2}} \frac{\partial E_{r}}{\partial \vartheta}-\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_{\alpha}}{\partial \alpha}\right] \vec{e_{\vartheta}}       \\
+              +\left[\Delta E_{\alpha}-\frac{E_{\alpha}}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_{r}}{\partial \alpha}+\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_{\vartheta}}{\partial \alpha}\right] \vec{e_{\alpha}}
+          \end{multline*}
+\end{description}
