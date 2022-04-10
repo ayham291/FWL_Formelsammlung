@@ -3,9 +3,9 @@
 \subsection{Elektrostatik}
 ist ein wirbelfreies Feld. Elek. Ladungen sind Quellen des Feldes.
 \begin{align*}
-    \opdiv \vec{D} = \nabla \cdot \vec{D}  &= \rho       \qquad          \vec{D} = \varepsilon \vec{E}\\
-    \oprot \vec{E} = \nabla \times \vec{E} &= 0 \quad = \oprot \opgrad E\\
-    \vec{E} &=- \opgrad \varphi
+    \opdiv \vec{D} = \nabla \cdot \vec{D}  & = \rho       \qquad          \vec{D} = \varepsilon \vec{E} \\
+    \oprot \vec{E} = \nabla \times \vec{E} & = 0 \quad = \oprot \opgrad E                               \\
+    \vec{E}                                & =- \opgrad \varphi
 \end{align*}
 \subsubsection{Potetialgleichung}
 \[
@@ -14,11 +14,12 @@ ist ein wirbelfreies Feld. Elek. Ladungen sind Quellen des Feldes.
 \paragraph{$\qquad \Rightarrow$ Poisson-Gleichung}
 mit $\rho = 0 \Rightarrow$ \textbf{Laplace-Gleichung}
 \begin{align*}
-    \Delta \varphi + \underbrace{ \dfrac{\opgrad \varepsilon \cdot \opgrad \varphi}{\varepsilon}}_{= 0\textit{, wenn homogen}}       
-                                &= - \dfrac{\rho (x, y, z)}{\varepsilon}\\
+    \Delta \varphi + \underbrace{ \dfrac{\opgrad \varepsilon \cdot \opgrad \varphi}{\varepsilon}}_{= 0\texttt{, wenn homogen}}
+     & = - \dfrac{\rho (x, y, z)}{\varepsilon} \\
     \frac{d^2 \varphi}{d x^2} + \frac{d^2 \varphi}{d y^2} + \frac{d^2 \varphi}{d z^2}
-                                &= - \dfrac{\rho (x, y, z)}{\varepsilon}
+     & = - \dfrac{\rho (x, y, z)}{\varepsilon}
 \end{align*}
+
 \subsection{Skineffekt}
 
 \begin{description}
