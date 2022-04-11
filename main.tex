@@ -4,10 +4,16 @@
 \def\FS{Formelsammlung}
 \def\Fach{Felder, Wellen und Leitungen}
 \title{\FS \ \Fach}
-\author{Ayham Alhalaibi}
 \date{\today}
-\def\MatNr{MATNR} % DONT PUSH TO PUBLIC REMOTE REPO
 \def\Semester{Wintersemster 21/22}
+\IfFileExists{info.tex}
+{
+    \input{info.tex}
+}
+{
+    \author{Ayham Alhalaibi}
+    \def\MatNr{MATNR}
+}
 
 \begin{document}
 
