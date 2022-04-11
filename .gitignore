@@ -7,3 +7,5 @@ tags
 *.fls
 *.synctex.gz
 *.pdf
+
+info.tex
