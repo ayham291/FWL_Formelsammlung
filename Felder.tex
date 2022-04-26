@@ -26,10 +26,10 @@ mit $\rho = 0 \Rightarrow$ \textbf{Laplace-Gleichung}
 
 \paragraph*{Potentialfeld einer Ladungsverteilung}
 mit $\varphi(\infty)=0$
-\[\varphi(x, y, z)=\frac{1}{4 \pi \varepsilon} \iiint_{V^{\prime}} \frac{\rho\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\prime}\right|} \mathrm{d} V^{\prime}\]
+\[\varphi(x, y, z)=\frac{1}{4 \pi \varepsilon} \iiint_{V^{\prime}} \frac{\rho\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} \mathrm{d} V^{\prime}\]
 
-mit der Green'schen Funktion $G\left(\vec{r}, \vec{r}^{\prime}\right)=\frac{1}{4 \pi \varepsilon\left|\vec{r}-\vec{r}^{\prime}\right|}$
-\[\varphi(x, y, z)=\iiint_{V^{\prime}} G\left(\vec{r}^{\prime} \vec{r}^{\prime}\right) \rho\left(\vec{r}^{\prime}\right) \mathrm{d} V^{\prime}\]
+mit der Green'schen Funktion $G\left(\vec{r}, \vec{r}^{\,\prime}\right)=\frac{1}{4 \pi \varepsilon\left|\vec{r}-\vec{r}^{\,\prime}\right|}$
+\[\varphi(x, y, z)=\iiint_{V^{\prime}} G\left(\vec{r}^{\,\prime} \vec{r}^{\,\prime}\right) \rho\left(\vec{r}^{\,\prime}\right) \mathrm{d} V^{\prime}\]
 
 
 \subsection{Magnetostatik}
@@ -43,13 +43,13 @@ ist ein Wirbelfeld, quellenfrei und hat geschlossene Feldlinien.
 \[ \Delta \vec{A} = - \mu \vec{J}\]
 
 \subsubsection{Vektorpotential in Abhängigkeit von der Stromdichte}
-\[ \vec{A}(x, y, z)=\frac{\mu}{4 \pi} \iiint_{V^{\prime}} \frac{\vec{J}\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\prime}\right|} d V^{\prime} \]
+\[ \vec{A}(x, y, z)=\frac{\mu}{4 \pi} \iiint_{V^{\prime}} \frac{\vec{J}\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} d V^{\prime} \]
 
 \subsubsection{Biot-Savart-Gesetz}
-\[ \vec{H}=\frac{I}{4 \pi} \oint_{C^{\prime}} \operatorname{grad} \frac{1}{\left|\vec{r}-\vec{r}^{\prime}\right|} \times \mathrm{d} \vec{s}^{\prime}\]
-mit $\operatorname{grad} \frac{1}{\left|\vec{r}-\vec{r}^{\prime}\right|}=-\frac{\vec{r}-\vec{r}^{\prime}}{\left|\vec{r}-\vec{r}^{\prime}\right|^{3}}$
-\[\vec{H}=\frac{I}{4 \pi} \oint_{C^{\prime}} \frac{\mathrm{d} \vec{s}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\prime}\right|^{3}}\]
-$\vec{r}:$ Aufpunkt $\quad \vec{r}^{\prime}:$ Quellpunkt
+\[ \vec{H}=\frac{I}{4 \pi} \oint_{C^{\prime}} \operatorname{grad} \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} \times \mathrm{d} \vec{s}^{\,\prime}\]
+mit $\operatorname{grad} \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|}=-\frac{\vec{r}-\vec{r}^{\,\prime}}{\left|\vec{r}-\vec{r}^{\,\prime}\right|^{3}}$
+\[\vec{H}=\frac{I}{4 \pi} \oint_{C^{\prime}} \frac{\mathrm{d} \vec{s}^{\,\prime} \times\left(\vec{r}-\vec{r}^{\,\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|^{3}}\]
+$\vec{r}:$ Aufpunkt $\quad \vec{r}^{\,\prime}:$ Quellpunkt
 
 
 \subsection{Skineffekt}
