@@ -4,12 +4,12 @@
 ist ein wirbelfreies Feld. Elek. Ladungen sind Quellen des Feldes.
 \begin{align*}
     \opdiv \vec{D} = \nabla \cdot \vec{D}  & = \rho       \qquad          \vec{D} = \varepsilon \vec{E} \\
-    \oprot \vec{E} = \nabla \times \vec{E} & = 0 \quad = \oprot \opgrad E                               \\
+    \oprot \vec{E} = \nabla \times \vec{E} & = 0          \qquad          = \oprot \opgrad E            \\
     \vec{E}                                & =- \opgrad \varphi
 \end{align*}
 \subsubsection{Potetialgleichung}
 \[
-    \opdiv \opgrad = - \dfrac{\rho}{\varepsilon}
+    \opdiv \opgrad \varphi = - \dfrac{\rho}{\varepsilon}
 \]
 \paragraph{$\qquad \Rightarrow$ Poisson-Gleichung}
 mit $\rho = 0 \Rightarrow$ \textbf{Laplace-Gleichung}
@@ -19,6 +19,38 @@ mit $\rho = 0 \Rightarrow$ \textbf{Laplace-Gleichung}
     \frac{d^2 \varphi}{d x^2} + \frac{d^2 \varphi}{d y^2} + \frac{d^2 \varphi}{d z^2}
      & = - \dfrac{\rho (x, y, z)}{\varepsilon}
 \end{align*}
+
+\subsubsection{Green'sche Funktionen}
+\paragraph*{Potential einer Punktladung}
+\[ \varphi (r) = \dfrac{Q}{4 \pi \varepsilon \cdot r}\]
+
+\paragraph*{Potentialfeld einer Ladungsverteilung}
+mit $\varphi(\infty)=0$
+\[\varphi(x, y, z)=\frac{1}{4 \pi \varepsilon} \iiint_{V^{\prime}} \frac{\rho\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} \mathrm{d} V^{\prime}\]
+
+mit der Green'schen Funktion $G\left(\vec{r}, \vec{r}^{\,\prime}\right)=\frac{1}{4 \pi \varepsilon\left|\vec{r}-\vec{r}^{\,\prime}\right|}$
+\[\varphi(x, y, z)=\iiint_{V^{\prime}} G\left(\vec{r}^{\,\prime} \vec{r}^{\,\prime}\right) \rho\left(\vec{r}^{\,\prime}\right) \mathrm{d} V^{\prime}\]
+
+
+\subsection{Magnetostatik}
+ist ein Wirbelfeld, quellenfrei und hat geschlossene Feldlinien.
+\begin{align*}
+    \oprot \vec{H} = \nabla \times \vec{H} & = \vec{J}  \qquad \vec{B} = \mu \vec{H}   \\
+    \opdiv \vec{B} = \nabla \cdot \vec{B}  & = 0        \qquad = \opdiv \oprot \vec{B}
+\end{align*}
+
+\paragraph*{Coulomb-Eichung}
+\[ \Delta \vec{A} = - \mu \vec{J}\]
+
+\subsubsection{Vektorpotential in Abhängigkeit von der Stromdichte}
+\[ \vec{A}(x, y, z)=\frac{\mu}{4 \pi} \iiint_{V^{\prime}} \frac{\vec{J}\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} d V^{\prime} \]
+
+\subsubsection{Biot-Savart-Gesetz}
+\[ \vec{H}=\frac{I}{4 \pi} \oint_{C^{\prime}} \operatorname{grad} \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} \times \mathrm{d} \vec{s}^{\,\prime}\]
+mit $\operatorname{grad} \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|}=-\frac{\vec{r}-\vec{r}^{\,\prime}}{\left|\vec{r}-\vec{r}^{\,\prime}\right|^{3}}$
+\[\vec{H}=\frac{I}{4 \pi} \oint_{C^{\prime}} \frac{\mathrm{d} \vec{s}^{\,\prime} \times\left(\vec{r}-\vec{r}^{\,\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|^{3}}\]
+$\vec{r}:$ Aufpunkt $\quad \vec{r}^{\,\prime}:$ Quellpunkt
+
 
 \subsection{Skineffekt}
 
