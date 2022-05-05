@@ -7,9 +7,9 @@ Durchflutungsgesetz\\
 Quellenfreiheit $B$-Feld\\
 Zusammenhang
 \begin{align*}
-    \varoiint_{A_\texttt{Hülle}} \vec{D} d \vec{A} & = Q_\texttt{eing.}                      \\
-    \oint_\texttt{Rand} \vec{E} d \vec{s}          & = -\dfrac{d\Phi_\texttt{eing.}}{dt}     \\
-    \oint_\texttt{Rand} \vec{H} d \vec{s}          & = I_\texttt{eing.} + I_\texttt{versch.} \\
+    \varoiint_{A_\texttt{Hülle}} \vec{D} d \vec{A} & = Q_\texttt{eing.}                                                                      \\
+    \oint_\texttt{Rand} \vec{E} d \vec{s}          & = -\dfrac{d\Phi_\texttt{eing.}}{dt} = -\frac{d}{dt} \iint \vec{B} \, d\vec{A} = u_{ind} \\
+    \oint_\texttt{Rand} \vec{H} d \vec{s}          & = I_\texttt{eing.} + I_\texttt{versch.}                                                 \\
     \varoiint_{A_\texttt{Hülle}} \vec{B} d \vec{A} & = 0
 \end{align*}
 
@@ -25,10 +25,10 @@ Bei isotropen Stoffen sind $\varepsilon$ u. $\mu$ Skalare:
 
 \subsection{Differentialform \rn{1}, \rn{2}}
 \begin{align*}
-    \opdiv \vec{D} & = \rho                                           \\
+    \opdiv \vec{D}             & = \rho                                           \\
     \operatorname{rot} \vec{E} & = -\dfrac{\partial \vec{B}}{\partial t}          \\
     \operatorname{rot} \vec{H} & = \vec{J} + \dfrac{\partial \vec{D}}{\partial t} \\
-    \opdiv \vec{B} & = 0
+    \opdiv \vec{B}             & = 0
 \end{align*}
 
 \subsection{stationäre Felder (Gleichstrom)}
