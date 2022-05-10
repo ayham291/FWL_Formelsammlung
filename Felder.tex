@@ -61,20 +61,21 @@ $\vec{r}:$ Aufpunkt $\quad \vec{r}^{\,\prime}:$ Quellpunkt
 
 \begin{description}
     \item Leitfähigkeit (äquivalente Leiterschichtdicke):
-          \[
-              \delta = \frac{1}{\sqrt{\pi\mu\sigma f}} = \sqrt{\frac{2}{\omega\mu\sigma}} \\
-          \]
+        \[
+            \delta = \frac{1}{\sqrt{\pi\mu\sigma f}} = \sqrt{\frac{2}{\omega\mu\sigma}} \\
+        \]
 
-    \item Widerstand:
-          \[
-              R = \frac{1}{\sigma} - \frac{l}{A_{\texttt{eff}}}
-          \]
-
+    \item Widerstand/ Oberflächenwiderstand:
+        \begin{align*}
+            R &= \frac{1}{\sigma} - \frac{l}{A_{\texttt{eff}}}\\
+            R_F &= \dfrac{1}{\sigma \delta}
+        \end{align*}
+              
     \item Effiktive Fläche:
-          \begin{align*}
+        \begin{align*}
               A_{\texttt{eff}} & = A_{\texttt{ges}} - A_{\sigma} = R^2\pi-(R-\sigma)^2\pi \\
                                & =2\cdot \pi \delta \left( R-\dfrac{\delta }{2}\right)
-          \end{align*}
+        \end{align*}
 \end{description}
 
 Wenn die Länge nicht gegeben ist oder nach Wieviel \% nimmt der Widerstand bei
