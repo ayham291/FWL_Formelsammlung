@@ -68,24 +68,24 @@ $\vec{r}:$ Aufpunkt $\quad \vec{r}^{\,\prime}:$ Quellpunkt
 }
 
 \begin{description}
-    \item Leitfähigkeit (äquivalente Leiterschichtdicke):
+    \item Äquivalente Leiterschichtdicke:
           \[
               \delta = \frac{1}{\sqrt{\pi\mu\sigma f}} = \sqrt{\frac{2}{\omega\mu\sigma}} \\
           \]
 
     \item Widerstand/ Oberflächenwiderstand:
           \begin{align*}
-              R   & = \frac{1}{\sigma} - \frac{l}{A_{\texttt{eff}}} \\
-              R_F & = \dfrac{1}{\sigma \delta}
+              R   & = \frac{l}{\sigma \cdot A_{\texttt{eff}}}  \text{ mit } A_{eff} = R^{2}\pi -\left( R-\delta \right) ^{2}\pi  \\
+              %R_F & = \dfrac{1}{\sigma \delta}
           \end{align*}
 
-    \item Feldstärke verglichen mit der Oberfläche:
+    \item \textbf{Feldstärke} verglichen mit der Oberfläche:
           \begin{align*}
               H\left( x,t\right) & =H_{0}\cdot e^{-x/\delta}\cdot \cos \left( \omega t-\dfrac{x}{\delta}\right)
           \end{align*}
           analog für $E$-Feld
 
-    \item Leistung verglichen mit der Oberfläche:
+    \item \textbf{Leistung} verglichen mit der Oberfläche:
           \begin{align*}
               P\left( x,t\right) & =\dfrac{1}{2} \cdot E_{0}\cdot e^{-x/\delta}\cdot H_{0}\cdot e^{-x/\delta}
           \end{align*}
