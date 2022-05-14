@@ -37,7 +37,26 @@ Feldänderung bei Bewegung
              & = dG = \opgrad G \cdot d \vec{s}
 \end{align*}
 
+\subsection{Schnittwinkel zweier Vektoren}
+\begin{align*}
+    \vec{E} \cdot \vec{H} & = |\vec{E}| \cdot |\vec{H}| \cdot cos(\varphi)                         \\
+    cos(\varphi)          & = \dfrac{E_x \cdot H_x + E_y \cdot H_y + E_z \cdot H_z}{|E| \cdot |H|}
+\end{align*}
 
+\subsection{Logarithmische Maße}
+\begin{description}
+    \item Dezibel [dB]
+          \begin{align*}
+              20 \cdot \log_{10} \left( \dfrac{U_1}{U_2}\right) & = 10 \cdot \log_{10} \left( \dfrac{P_1}{P_2}\right) \\
+              1 \textnormal{ dB}                                & \hat{=} 0,1151 \textnormal{ Np}
+          \end{align*}
+
+    \item Neper [Np]
+          \begin{align*}
+              \ln \left(\dfrac{U_1}{U_2}\right) &                                                                                             \\
+              1 \textnormal{ Np}                & \hat{=} 8,686 \textnormal{ dB} =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
+          \end{align*}
+\end{description}
 
 \subsection{Randbedingung}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
@@ -60,33 +79,33 @@ Feldänderung bei Bewegung
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
     Kart.                                                                              & Zyl.            & Kug.                           \\
     \specialrule{1.5pt}{0pt}{0pt}
-    $x$                                                                                & $r \cos \alpha$ & $r \sin \vartheta \cos \alpha$ \\
+    $x$                                                                                & $r \cos \varphi$ & $r \sin \vartheta \cos \varphi$ \\
     \hline
-    $y$                                                                                & $r \sin \alpha$ & $r \sin \vartheta \sin \alpha$ \\
+    $y$                                                                                & $r \sin \varphi$ & $r \sin \vartheta \sin \varphi$ \\
     \hline
     $z$                                                                                & $z$             & $r \cos \vartheta$             \\
     \specialrule{1.5pt}{0pt}{0pt}
     $\sqrt{x^{2}+y^{2}}$                                                               & $r$             &                                \\
     \hline
-    $\arctan \frac{y}{x}$                                                              & $\alpha$        &                                \\
+    $\arctan \frac{y}{x}$                                                              & $\varphi$        &                                \\
     \hline
     $z$                                                                                & $z$             &                                \\
     \hline
-    $d x \cos \alpha+d y \sin \alpha$                                                  & $dr$            &                                \\
+    $d x \cos \varphi+d y \sin \varphi$                                                  & $dr$            &                                \\
     \hline
-    $d y \cos \alpha-d x \sin \alpha$                                                  & $r d\alpha$     &                                \\
+    $d y \cos \varphi-d x \sin \varphi$                                                  & $r d\varphi$     &                                \\
     \hline
     $dz$                                                                               & $dz$            &                                \\
     \specialrule{1.5pt}{0pt}{0pt}
     $\sqrt{x^{2}+y^{2}+z^{2}}$                                                         &                 & $r$                            \\
     \hline
-    $\arctan \frac{y}{x}$                                                              &                 & $\alpha$                       \\
+    $\arctan \frac{y}{x}$                                                              &                 & $\varphi$                       \\
     \hline
     $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                             &                 & $\vartheta$                    \\
     \hline
-    $d x \sin \vartheta \cos \alpha+d y \sin \vartheta \sin \alpha+d z \cos \vartheta$ &                 & $dr$                           \\
+    $d x \sin \vartheta \cos \varphi+d y \sin \vartheta \sin \varphi+d z \cos \vartheta$ &                 & $dr$                           \\
     \hline
-    $d y \cos \alpha-d x \sin \alpha$                                                  &                 & $r \sin \vartheta d \alpha$    \\
+    $d y \cos \varphi-d x \sin \varphi$                                                  &                 & $r \sin \vartheta d \varphi$    \\
     \hline
-    $d x \cos \vartheta \cos \alpha+d y \cos \vartheta \sin \alpha-d z \sin \vartheta$ &                 & $r d \vartheta$                \\
+    $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                 & $r d \vartheta$                \\
 \end{tabularx}
