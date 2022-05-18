@@ -1,4 +1,19 @@
 \section{Wellen}
+$\underline{\gamma} = \alpha + j\beta$\\
+\\
+$\underline{\gamma}$ : Fortpflanzungskonst.\\
+$\alpha$ : Dämpfungskonst. [Np/m]\\
+$\beta$ : Phasenkonst. [rad/m]
+
+\subsection{Ausbreitung Allgemein}
+\begin{align*}
+    &\alpha = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}-1\right)}\\
+    &\beta  = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}+1\right)}\\
+    &\underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}\\
+    &E_2 = E_1 \cdot e^{-\alpha z}\\
+    &H = \dfrac{E}{Z_F}
+\end{align*}
+
 \subsection{dÀlembertsche Gleichung (allg.)}
 
 \begin{align*}
@@ -56,6 +71,10 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 \[
     \dfrac{d z}{d t} = \upsilon_{ph} = \dfrac{\omega}{k} = \frac{1}{\sqrt{ \mu_r \mu_0 \varepsilon_r \varepsilon_0}} \qquad \upsilon_{ph,\textnormal{Medium} \leq c_0}
 \]
+%\subsection{Ausbreitung im leeren Raum(Vakuum)}
+%\[
+%    \text{penis}
+%\]
 
 \subsubsection{Gruppengeschwindigkeit}
 \[
