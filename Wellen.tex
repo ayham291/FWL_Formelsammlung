@@ -1,11 +1,12 @@
 \section{Wellen}
-$\underline{\gamma} = \alpha + j\beta$\\
-\\
+$\underline{\gamma}=\alpha+j\beta$\\\\
 $\underline{\gamma}$ : Fortpflanzungskonst.\\
 $\alpha$ : Dämpfungskonst. [Np/m]\\
-$\beta$ : Phasenkonst. [rad/m]
+$\beta$ : Phasenkonst. [rad/m]\\\\
+$v$ : Phasengeschw. [m/s]
 
-\subsection{Ausbreitung Allgemein}
+\subsection{Ausbreitung}
+\subsubsection{Allgemein}
 \begin{align*}
     &\alpha = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}-1\right)}\\
     &\beta  = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}+1\right)}\\
@@ -13,6 +14,48 @@ $\beta$ : Phasenkonst. [rad/m]
     &E_2 = E_1 \cdot e^{-\alpha z}\\
     &H = \dfrac{E}{Z_F}
 \end{align*}
+
+\subsubsection{Im leeren Raum(Vakuum)}
+\begin{align*}
+    &\alpha = 0\\
+    &\beta = \dfrac{\omega}{c_0}\\
+    &\underline{Z}_{F0} = \sqrt{\dfrac{\mu_0}{\varepsilon_0}}\text{ }=\text{ }377\Omega\\
+    &\lambda = \dfrac{c_0}{f}\\
+    &v = c_0
+\end{align*}
+
+\subsubsection{Im Dielektrika mit geringem Verlust}
+verlustlos: $\sigma =0$
+\begin{align*}
+    &\alpha = 0\\
+    &\beta = \dfrac{\omega}{c_0}\cdot\sqrt{\mu_r\varepsilon_r}=\omega\cdot\sqrt{\mu\varepsilon}=\dfrac{2\pi}{\lambda}\\
+    &\underline{Z}_F = \sqrt{\dfrac{\mu}{\varepsilon}}\\
+    &\lambda = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}=\dfrac{2\pi}{\beta}\\
+    &v = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}
+\end{align*}
+
+\subsubsection{Im Dielektrika mit geringem Verlust}
+geringer Verlust: $0 < \sigma <<\omega\varepsilon$
+\begin{align*}
+    &\alpha = \dfrac{1}{2}\cdot\sigma\cdot\sqrt{\dfrac{\mu}{\varepsilon}}\\
+    &\beta = \omega\cdot\sqrt{\mu\varepsilon}\cdot\left(1+\dfrac{1}{8}\cdot\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}\right)\\
+    &\underline{Z}_F = \sqrt{\dfrac{\mu}{\varepsilon}}\\
+    &\lambda = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}=\dfrac{2\pi}{\beta}\\
+    &v = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}
+\end{align*}
+
+\subsubsection{Im guten Leiter}
+geringer Verlust: $\sigma >>\omega\varepsilon$
+\begin{align*}
+    &\alpha = \dfrac{1}{\delta}= \beta\\
+    %&\beta = \dfrac{1}{\delta}= \alpha\\
+    &\underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma}} = \sqrt{\dfrac{\omega\mu}{2\sigma}}\cdot\left(1+j\right)=\dfrac{1+j}{\sigma\cdot\delta}\\
+    &\lambda = \dfrac{2\pi}{\beta} = 2\pi \sqrt{\dfrac{2}{\omega\mu\sigma}}=2\pi\delta\\
+\end{align*}
+
+\subsection{Übergang}
+\subsubsection{Zwischen Dielektrika mit geringem Verlust}
+%bitte ergänzen 
 
 \subsection{dÀlembertsche Gleichung (allg.)}
 
@@ -62,7 +105,7 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 
 \subsection{Wellenlänge}
 \begin{align*}
-    \lambda & = \dfrac{2 \pi}{k} = \dfrac{\upsilon_{ph}}{f} = [m]                                                               \\
+    \lambda & = \dfrac{2 \pi}{k} = \dfrac{v_{ph}}{f} = [m]                                                               \\
             & = \lambda_0 \cdot \dfrac{1}{\sqrt{\mu_r \cdot \varepsilon_r}} = \dfrac{\lambda_0}{n} = \dfrac{2 \pi}{n \cdot k_0} \\
             & \lambda_0 = \dfrac{c_0}{f} = \dfrac{2\pi}{k_0}
 \end{align*}
@@ -81,13 +124,13 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
     \upsilon_{g} = \dfrac{d \omega}{d k} = \dfrac{\textnormal{Wegstück der Wellengruppe}}{\textnormal{Laufzeit der Wellengruppe}}
 \]
 
-\subsection{Feldwellenwiderstand}
-allgemein, idealen Dielektrikum\\
-freier Raum
-\begin{align*}
-    \underline{Z}_F    & = \dfrac{\underline{E}_{\textnormal{transversal}}}{\underline{H}_{\textnormal{transversal}}} = \sqrt{\dfrac{\mu}{\varepsilon}} \\
-    \underline{Z}_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}} \approx 120\pi \Omega \approx 377 \Omega
-\end{align*}
+% \subsection{Feldwellenwiderstand}
+% allgemein, idealen Dielektrikum\\
+% freier Raum
+% \begin{align*}
+%     \underline{Z}_F    & = \dfrac{\underline{E}_{\textnormal{transversal}}}{\underline{H}_{\textnormal{transversal}}} = \sqrt{\dfrac{\mu}{\varepsilon}} \\
+%     \underline{Z}_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}} \approx 120\pi \Omega \approx 377 \Omega
+% \end{align*}
 
 \subsection{Polarisation}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
