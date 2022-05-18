@@ -7,9 +7,9 @@ Durchflutungsgesetz\\
 Quellenfreiheit $B$-Feld\\
 Zusammenhang
 \begin{align*}
-    \varoiint_{A_\texttt{Hülle}} \vec{D} d \vec{A} & = Q_\texttt{eing.}                                                                      \\
+    \varoiint_{A_\texttt{Hülle}} \vec{D} d \vec{A} & = \iiint_{V} \rho \cdot dV = Q_\texttt{eing.}                                                                 \\
     \oint_\texttt{Rand} \vec{E} d \vec{s}          & = -\dfrac{d\Phi_\texttt{eing.}}{dt} = -\frac{d}{dt} \iint \vec{B} \, d\vec{A} = u_{ind} \\
-    \oint_\texttt{Rand} \vec{H} d \vec{s}          & = I_\texttt{eing.} + I_\texttt{versch.}                                                 \\
+    \oint_\texttt{Rand} \vec{H} d \vec{s}          & = \iint_{A} \vec{j} d \vec{a} + \iint_{A}\frac{ \partial \vec{D}}{ \partial t} d \vec{a} = I_\texttt{eing.} + I_\texttt{versch.}                                                 \\
     \varoiint_{A_\texttt{Hülle}} \vec{B} d \vec{A} & = 0
 \end{align*}
 
