@@ -3,27 +3,39 @@
 \subsubsection*{Divergenz/Rotation/Gradient}
 
 $\opdiv$: macht aus einem Vektor ein Skalar.\\
-$\operatorname{rot}$: bildet ein Vektor auf Vektorfeld ab.\\
+$\oprot$: bildet ein Vektor auf Vektorfeld ab.\\
 $\opgrad$: bildet ein Skalar-/Gradientenfeld in ein Vektorfeld ab.
 Zeigt Richtung stärkster Zunahme des Feldes.
 \begin{align*}
-    \opdiv \vec{G}             & = \nabla \cdot \vec{G} = \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
-                               & = 0 \quad\Rightarrow \textnormal{Volumen}                                                                                       \\
-                               & > 0 \quad\Rightarrow \textnormal{Quelle}                                                                                        \\
-                               & < 0 \quad\Rightarrow \textnormal{Senke}                                                                                         \\
-    \operatorname{rot} \vec{G} & = \nabla \times \vec{G} =
+    \opdiv \vec{G} & = \nabla \cdot \vec{G} = \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
+                   & = 0 \quad\Rightarrow \textnormal{Volumen}                                                                                       \\
+                   & > 0 \quad\Rightarrow \textnormal{Quelle}                                                                                        \\
+                   & < 0 \quad\Rightarrow \textnormal{Senke}                                                                                         \\
+    \oprot \vec{G} & = \nabla \times \vec{G} =
     \begin{pmatrix}
         \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
         \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
         \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
-    \end{pmatrix}                                                                                          \\
-    \opgrad G                  & = \nabla \cdot G = \hspace{6ex}
+    \end{pmatrix}                                                                              \\
+    \opgrad G      & = \nabla \cdot G = \hspace{6ex}
     \begin{pmatrix}
         \dfrac{\partial G}{\partial x} \\
         \dfrac{\partial G}{\partial y} \\
         \dfrac{\partial G}{\partial z}
     \end{pmatrix}
 \end{align*}
+
+
+\subsection{Rechenregeln}
+\begin{align*}
+    \nabla \cdot ( \vec{f} \times \vec{g}) & = ( \nabla \times \vec{f}) \cdot \vec{g} - ( \nabla \times \vec{g}) \cdot \vec{f} \\
+    \nabla \cdot (fg)                      & = f( \nabla g) + g( \nabla f)                                                     \\
+    \nabla \cdot (f \vec{g} )              & = g( \nabla \vec{f}) + f( \nabla \vec{g})                                         \\
+    \nabla \times (f \vec{g})              & = \nabla f \times \vec{g} + f( \nabla \times \vec{g} )                            \\
+    \oprot \opgrad f                       & = 0 \textnormal{ Gradientenfeld Quellenfrei}                                      \\
+    \opdiv \oprot \vec{f}                  & = 0 \textnormal{ Wirbelfeld Quellenfrei}
+\end{align*}
+
 
 \subsubsection*{Nabla Operator}
 \[
