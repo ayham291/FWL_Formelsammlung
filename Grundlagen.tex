@@ -47,20 +47,20 @@ Feldänderung bei Bewegung
 \begin{description}
     \item Dezibel [dB]
           \begin{align*}
-            & X[dB] = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) \text{; }
-            X[dB] = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right)\\
-            & U_1 = U_2 \cdot 10^{^\text{X}/\text{20dB}}\text{; }
-              P_1 = P_2 \cdot  10^{^\text{X}/\text{10dB}}\\
-            & 1 \text{ dB } \hat{=} \text{ } 0,1151 \text{ Np}
+               & X[dB] = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) \text{; }
+              X[dB] = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right)              \\
+               & U_1 = U_2 \cdot 10^{^\text{X}/\text{20dB}}\text{; }
+              P_1 = P_2 \cdot  10^{^\text{X}/\text{10dB}}                          \\
+               & 1 \text{ dB } \hat{=} \text{ } 0,1151 \text{ Np}
           \end{align*}
 
     \item Neper [Np]
           \begin{align*}
-            & X[Np] = \ln \left(\dfrac{U_1}{U_2}\right) \text{; }                                                                            
-              X[Np] = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right)\\
-              & U_1 = U_2 \cdot e^{\text{X}}\text{; }
-              P_1 = P_2 \cdot  e^{\text{2X}}\\
-            &1 \text{ Np } \text{ } \hat{=} \text{ } 8,686 \text{ dB} % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
+               & X[Np] = \ln \left(\dfrac{U_1}{U_2}\right) \text{; }
+              X[Np] = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right) \\
+               & U_1 = U_2 \cdot e^{\text{X}}\text{; }
+              P_1 = P_2 \cdot  e^{\text{2X}}                               \\
+               & 1 \text{ Np } \text{ } \hat{=} \text{ } 8,686 \text{ dB}  % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
           \end{align*}
 \end{description}
 
@@ -83,35 +83,35 @@ Feldänderung bei Bewegung
 
 \subsection{Vergleich/Umrechnung}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
-    Kart.                                                                              & Zyl.            & Kug.                           \\
+    Kart.                                                                                & Zyl.             & Kug.                            \\
     \specialrule{1.5pt}{0pt}{0pt}
-    $x$                                                                                & $r \cos \varphi$ & $r \sin \vartheta \cos \varphi$ \\
+    $x$                                                                                  & $r \cos \varphi$ & $r \sin \vartheta \cos \varphi$ \\
     \hline
-    $y$                                                                                & $r \sin \varphi$ & $r \sin \vartheta \sin \varphi$ \\
+    $y$                                                                                  & $r \sin \varphi$ & $r \sin \vartheta \sin \varphi$ \\
     \hline
-    $z$                                                                                & $z$             & $r \cos \vartheta$             \\
+    $z$                                                                                  & $z$              & $r \cos \vartheta$              \\
     \specialrule{1.5pt}{0pt}{0pt}
-    $\sqrt{x^{2}+y^{2}}$                                                               & $r$             &                                \\
+    $\sqrt{x^{2}+y^{2}}$                                                                 & $r$              &                                 \\
     \hline
-    $\arctan \frac{y}{x}$                                                              & $\varphi$        &                                \\
+    $\arctan \frac{y}{x}$                                                                & $\varphi$        &                                 \\
     \hline
-    $z$                                                                                & $z$             &                                \\
+    $z$                                                                                  & $z$              &                                 \\
     \hline
-    $d x \cos \varphi+d y \sin \varphi$                                                  & $dr$            &                                \\
+    $d x \cos \varphi+d y \sin \varphi$                                                  & $dr$             &                                 \\
     \hline
-    $d y \cos \varphi-d x \sin \varphi$                                                  & $r d\varphi$     &                                \\
+    $d y \cos \varphi-d x \sin \varphi$                                                  & $r d\varphi$     &                                 \\
     \hline
-    $dz$                                                                               & $dz$            &                                \\
+    $dz$                                                                                 & $dz$             &                                 \\
     \specialrule{1.5pt}{0pt}{0pt}
-    $\sqrt{x^{2}+y^{2}+z^{2}}$                                                         &                 & $r$                            \\
+    $\sqrt{x^{2}+y^{2}+z^{2}}$                                                           &                  & $r$                             \\
     \hline
-    $\arctan \frac{y}{x}$                                                              &                 & $\varphi$                       \\
+    $\arctan \frac{y}{x}$                                                                &                  & $\varphi$                       \\
     \hline
-    $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                             &                 & $\vartheta$                    \\
+    $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                               &                  & $\vartheta$                     \\
     \hline
-    $d x \sin \vartheta \cos \varphi+d y \sin \vartheta \sin \varphi+d z \cos \vartheta$ &                 & $dr$                           \\
+    $d x \sin \vartheta \cos \varphi+d y \sin \vartheta \sin \varphi+d z \cos \vartheta$ &                  & $dr$                            \\
     \hline
-    $d y \cos \varphi-d x \sin \varphi$                                                  &                 & $r \sin \vartheta d \varphi$    \\
+    $d y \cos \varphi-d x \sin \varphi$                                                  &                  & $r \sin \vartheta d \varphi$    \\
     \hline
-    $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                 & $r d \vartheta$                \\
+    $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                  & $r d \vartheta$                 \\
 \end{tabularx}
