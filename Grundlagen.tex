@@ -3,7 +3,7 @@
 \subsubsection*{Divergenz/Rotation/Gradient}
 
 $\opdiv$: macht aus einem Vektor ein Skalar.\\
-$\operatorname{rot}$: bildet ein Vektor auf Vektorfeld ab.\\
+$\oprot$: bildet ein Vektor auf Vektorfeld ab.\\
 $\opgrad$: bildet ein Skalar-/Gradientenfeld in ein Vektorfeld ab.
 Zeigt Richtung stärkster Zunahme des Feldes.
 \begin{align*}
@@ -11,7 +11,7 @@ Zeigt Richtung stärkster Zunahme des Feldes.
                                & = 0 \quad\Rightarrow \textnormal{Volumen}                                                                                       \\
                                & > 0 \quad\Rightarrow \textnormal{Quelle}                                                                                        \\
                                & < 0 \quad\Rightarrow \textnormal{Senke}                                                                                         \\
-    \operatorname{rot} \vec{G} & = \nabla \times \vec{G} =
+    \oprot \vec{G} & = \nabla \times \vec{G} =
     \begin{pmatrix}
         \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
         \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
@@ -32,8 +32,8 @@ Zeigt Richtung stärkster Zunahme des Feldes.
     \nabla \cdot (fg) & = f( \nabla g) + g( \nabla f)\\
     \nabla \cdot (f \vec{g} ) & = g( \nabla \vec{f}) + f( \nabla \vec{g})\\
     \nabla \times (f \vec{g}) & = \nabla f \times \vec{g} + f( \nabla \times \vec{g} )\\
-    rot grad f & = 0 \textnormal{ Grad.feld Quellenfrei}\\
-    div rot \vec{f} & = 0 \textnormal{ Wirbelfeld Quellenfrei}
+    \oprot \opgrad f & = 0 \textnormal{ Gradientenfeld Quellenfrei}\\
+    \opdiv \oprot \vec{f} & = 0 \textnormal{ Wirbelfeld Quellenfrei}
 \end{align*}
 
 
