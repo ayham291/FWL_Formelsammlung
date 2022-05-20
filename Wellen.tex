@@ -39,7 +39,7 @@ $v$ : Phasengeschw. [m/s]
 \begin{align*}
      & \alpha = 0                                                                         \\
      & \beta = \dfrac{\omega}{c_0}                                                        \\
-     & \underline{Z}_{F0} = \sqrt{\dfrac{\mu_0}{\varepsilon_0}}\text{ }=\text{ }377\Omega \\
+     & \boxed{\underline{Z}_{F0} = \sqrt{\dfrac{\mu_0}{\varepsilon_0}}\text{ }=\text{ }377\Omega} \\
      & \lambda = \dfrac{c_0}{f}                                                           \\
      & v = c_0
 \end{align*}
@@ -76,7 +76,31 @@ geringer Verlust: $\sigma >>\omega\varepsilon$
 \subsection{Übergang}
 \subsubsection{Zwischen Dielektrika mit geringem Verlust}
 %bitte ergänzen
-
+\makebox[0pt][l]{
+    \begin{minipage}{\columnwidth}
+        \centering
+        \includegraphics[width=.8\columnwidth]{Figures/UebergangzweiDielektrika.png}
+        \label{fig:UebergangzweiDielektrika}
+    \end{minipage}
+}\\
+\begin{align}
+    \lambda_1 = \dfrac{\lambda_0}{\sqrt{\mu_{r1}\varepsilon_{r1}}} && \lambda_2 = \dfrac{\lambda_0}{\sqrt{\mu_{r2}\varepsilon_{r2}}} \\
+     && = \dfrac{\lambda_1\cdot\sqrt{\mu_{r1}\varepsilon_{r1}}}{\sqrt{\mu_{r2}\varepsilon_{r2}}}\\
+     \beta_1 = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r1}\varepsilon_{r1}} && \beta_2 = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r2}\varepsilon_{r2}}\\
+     Z_{F1} = \dfrac{Z_{F0}}{\sqrt{\mu_{r1}\varepsilon_{r1}}}&& Z_{F2} = \dfrac{Z_{F0}}{\sqrt{\mu_{r2}\varepsilon_{r2}}}
+    \end{align} 
+\subsection{Energie und Poyntingvektor (Energieflussdichte)}
+\begin{align*}
+    &\vec{S} = \vec{E}\times\vec{H} \text{ in } [W/m^2]\\
+    &S = 1/2 \cdot E \cdot H = 1/2 \cdot \dfrac{E^2}{Z_{F0}} = 1/2 \cdot H^2 \cdot Z_{F0}\\
+    &\underline{S}_{Mittel} = 1/2 \cdot Re\{\vec{E}\times\vec{H}^*\}\\
+    &S = \dfrac{P}{A}\\
+\end{align*}
+\subsubsection{Leistung nach Dämpfung}
+\begin{align*}
+    &P_1 = P_0 \cdot e^{-2\alpha z}\\
+    & P = \dfrac{\hat{U}^2}{2 Z_L} \text{vom Kabel transportiert}
+\end{align*}
 \subsection{dÀlembertsche Gleichung (allg.)}
 
 \begin{align*}
