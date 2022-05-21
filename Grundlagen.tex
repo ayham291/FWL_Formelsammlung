@@ -56,24 +56,31 @@ Feldänderung bei Bewegung
 \end{align*}
 
 \subsection{Logarithmische Maße}
+
+{\samepage
+    \begin{itemize}
+        \setlength\itemsep{0pt}
+        \item $\si{dBm} \hat=  1\si{mW}$
+        \item $\si{dB\mu} V \hat= 1\si{\mu V}$
+        \item $\si{dBmV} \hat{=} 1mV$
+        \item $\si{dBi} \rightarrow$ Isotropic
+    \end{itemize}
+}
+
 \begin{description}
     \item Dezibel [dB]
-          \begin{align*}
-               & X[dB] = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) \text{; }
-              X[dB] = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right)              \\
-               & U_1 = U_2 \cdot 10^{^\text{X}/\text{20dB}}\text{; }
-              P_1 = P_2 \cdot  10^{^\text{X}/\text{10dB}}                          \\
-               & 1 \text{ dB } \hat{=} \text{ } 0,1151 \text{ Np}
-          \end{align*}
+          \begin{flalign*}
+              X[dB]     & = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) & X[dB] & = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right) & \\
+              U_1       & = U_2 \cdot 10^{^X/20\si{dB}}                     & P_1   & = P_2 \cdot  10^{^X/10\si{dB}}                    & \\
+              1 \si{dB} & \,\hat=                                           &       & 0,1151 \si{Np}                                    &
+          \end{flalign*}
 
     \item Neper [Np]
-          \begin{align*}
-               & X[Np] = \ln \left(\dfrac{U_1}{U_2}\right) \text{; }
-              X[Np] = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right) \\
-               & U_1 = U_2 \cdot e^{\text{X}}\text{; }
-              P_1 = P_2 \cdot  e^{\text{2X}}                               \\
-               & 1 \text{ Np } \text{ } \hat{=} \text{ } 8,686 \text{ dB}  % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
-          \end{align*}
+          \begin{flalign*}
+              X[Np]     & = \ln \left(\dfrac{U_1}{U_2}\right) & X[Np] & = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right) & \\
+              U_1       & = U_2 \cdot e^{X}                   & P_1   & = P_2 \cdot  e^{2X}                                    & \\
+              1 \si{Np} & \,\hat=                             &       & 8,686 \si{dB}                                          & % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
+          \end{flalign*}
 \end{description}
 
 \subsection{Randbedingung}
