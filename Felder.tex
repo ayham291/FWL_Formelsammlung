@@ -91,7 +91,9 @@ ist ein Wirbelfeld, quellenfrei und hat geschlossene Feldlinien.
 \end{align*}
 
 \subsubsection{Vektorpotential in Abhängigkeit von der Stromdichte}
-\[ \vec{A}(x, y, z)=\frac{\mu}{4 \pi} \iiint_{V^{\prime}} \frac{\vec{J}\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} d V^{\prime} \]
+\[
+    \vec{A}(x, y, z)=\frac{\mu}{4 \pi} \iiint_{V^{\prime}} \frac{\vec{J}\left(x^{\prime}, y^{\prime}, z^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|} d V^{\prime}
+\]
 
 \subsubsection{Biot-Savart-Gesetz}
 \[
@@ -104,43 +106,46 @@ mit $\opgrad \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|}=-\frac{\vec{r}-\v
     \vec{H}=\frac{I}{4 \pi} \oint_{C^{\prime}} \frac{\mathrm{d} \vec{s}^{\,\prime} \times\left(\vec{r}-\vec{r}^{\,\prime}\right)}{\left|\vec{r}-\vec{r}^{\,\prime}\right|^{3}}
 \]
 
-$\vec{r}:$ Aufpunkt $\quad \vec{r}^{\,\prime}:$ Quellpunkt
-
+{\footnotesize$\vec{r}:$ Aufpunkt $\quad \vec{r}^{\,\prime}:$ Quellpunkt}
 
 \subsection{Skineffekt}
 
 \makebox[0pt][l]{
-    \begin{minipage}{\columnwidth}
+    \begin{minipage}{0.7\columnwidth}
         \centering
-        \includegraphics[width=.4\columnwidth]{Figures/Skineffekt.png}\\
-        \hspace{-5em}
+        \includegraphics[width=.55\columnwidth]{Figures/Skineffekt.png}\\
         {\footnotesize$\sigma/\kappa$ : Leitfähigkeit. $[\si{A/Vm}] = [\si{1/\Omega m}]$}
     \end{minipage}
 }
 
 \begin{description}
     \item Äquivalente Leiterschichtdicke (Amp: $A \cdot \frac{1}{e}$):
-        \[
-            \delta = \frac{1}{\sqrt{\pi\mu\sigma f}} = \sqrt{\frac{2}{\omega\mu\sigma}} \qquad \left[ m \right] \\
-        \]
+          \[
+              \delta = \frac{1}{\sqrt{\pi\mu\sigma f}} = \sqrt{\frac{2}{\omega\mu\sigma}} \qquad \left[ m \right] \\
+          \]
 
     \item Widerstand/ Oberflächenwiderstand:
-          \begin{align*}
+          \begin{flalign*}
               R_{r\ll\delta}     & = \frac{l}{\sigma \cdot A_{\texttt{eff}}} \\
               R_{r\approx\delta} & =\dfrac{4l}{\sigma \pi d^{2}}             \\
               R_F                & = \dfrac{1}{\sigma \delta}
-          \end{align*}
+          \end{flalign*}
 
-    \item \textbf{Feldstärke} verglichen mit der Oberfläche:
-          \begin{align*}
-              H\left( x,t\right) & =H_{0}\cdot e^{^{-x}/_\delta}\cdot \cos \left( \omega t-\dfrac{x}{\delta}\right)
-          \end{align*}
-          analog für $E$-Feld
+    \item \textbf{Feldstärke} verglichen mit der Oberfläche:\\
+          \makebox[0pt][l]{
+              \begin{minipage}{0.5\columnwidth}
+                  \centering
+                  \[
+                      H\left( x,t\right) = H_{0}\cdot e^{^{-x}/_\delta}\cdot \cos \left( \omega t-\dfrac{x}{\delta}\right)
+                  \]
+                  \footnotesize analog für $E$-Feld
+              \end{minipage}
+          }
 
     \item \textbf{Leistung} verglichen mit der Oberfläche:
-          \begin{align*}
-              P\left( x,t\right) & =\dfrac{1}{2} \cdot E_{0}\cdot e^{^{-x}/_\delta}\cdot H_{0}\cdot e^{^{-x}/_\delta}
-          \end{align*}
+          \[
+              P\left( x,t\right) = \dfrac{1}{2} \cdot E_{0}\cdot e^{^{-x}/_\delta}\cdot H_{0}\cdot e^{^{-x}/_\delta}
+          \]
 
     \item Amplitude und Phase bezogen auf $\delta$:
           \begin{align*}
