@@ -3,21 +3,21 @@
 \subsubsection*{Divergenz/Rotation/Gradient}
 
 $\opdiv$: macht aus einem Vektor ein Skalar.\\
-$\operatorname{rot}$: bildet ein Vektor auf Vektorfeld ab.\\
+$\oprot$: bildet ein Vektor auf Vektorfeld ab.\\
 $\opgrad$: bildet ein Skalar-/Gradientenfeld in ein Vektorfeld ab.
 Zeigt Richtung stärkster Zunahme des Feldes.
 \begin{align*}
-    \opdiv \vec{G}             & = \nabla \cdot \vec{G} = \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
-                               & = 0 \quad\Rightarrow \textnormal{Volumen}                                                                                       \\
-                               & > 0 \quad\Rightarrow \textnormal{Quelle}                                                                                        \\
-                               & < 0 \quad\Rightarrow \textnormal{Senke}                                                                                         \\
-    \operatorname{rot} \vec{G} & = \nabla \times \vec{G} =
+    \opdiv \vec{G} & = \nabla \cdot \vec{G} = \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
+                   & = 0 \quad\Rightarrow \textnormal{Volumen}                                                                                       \\
+                   & > 0 \quad\Rightarrow \textnormal{Quelle}                                                                                        \\
+                   & < 0 \quad\Rightarrow \textnormal{Senke}                                                                                         \\
+    \oprot \vec{G} & = \nabla \times \vec{G} =
     \begin{pmatrix}
         \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
         \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
         \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
-    \end{pmatrix}                                                                                          \\
-    \opgrad G                  & = \nabla \cdot G = \hspace{6ex}
+    \end{pmatrix}                                                                              \\
+    \opgrad G      & = \nabla \cdot G = \hspace{6ex}
     \begin{pmatrix}
         \dfrac{\partial G}{\partial x} \\
         \dfrac{\partial G}{\partial y} \\
@@ -29,11 +29,11 @@ Zeigt Richtung stärkster Zunahme des Feldes.
 \subsection{Rechenregeln}
 \begin{align*}
     \nabla \cdot ( \vec{f} \times \vec{g}) & = ( \nabla \times \vec{f}) \cdot \vec{g} - ( \nabla \times \vec{g}) \cdot \vec{f} \\
-    \nabla \cdot (fg) & = f( \nabla g) + g( \nabla f)\\
-    \nabla \cdot (f \vec{g} ) & = g( \nabla \vec{f}) + f( \nabla \vec{g})\\
-    \nabla \times (f \vec{g}) & = \nabla f \times \vec{g} + f( \nabla \times \vec{g} )\\
-    rot grad f & = 0 \textnormal{ Grad.feld Quellenfrei}\\
-    div rot \vec{f} & = 0 \textnormal{ Wirbelfeld Quellenfrei}
+    \nabla \cdot (fg)                      & = f( \nabla g) + g( \nabla f)                                                     \\
+    \nabla \cdot (f \vec{g} )              & = g( \nabla \vec{f}) + f( \nabla \vec{g})                                         \\
+    \nabla \times (f \vec{g})              & = \nabla f \times \vec{g} + f( \nabla \times \vec{g} )                            \\
+    \oprot \opgrad f                       & = 0 \textnormal{ Gradientenfeld Quellenfrei}                                      \\
+    \opdiv \oprot \vec{f}                  & = 0 \textnormal{ Wirbelfeld Quellenfrei}
 \end{align*}
 
 
@@ -56,18 +56,31 @@ Feldänderung bei Bewegung
 \end{align*}
 
 \subsection{Logarithmische Maße}
+
+{\samepage
+    \begin{itemize}
+        \setlength\itemsep{0pt}
+        \item $\si{dBm} \hat=  1\si{mW}$
+        \item $\si{dB\mu} V \hat= 1\si{\mu V}$
+        \item $\si{dBmV} \hat{=} 1mV$
+        \item $\si{dBi} \rightarrow$ Isotropic
+    \end{itemize}
+}
+
 \begin{description}
     \item Dezibel [dB]
-          \begin{align*}
-              20 \cdot \log_{10} \left( \dfrac{U_1}{U_2}\right) & = 10 \cdot \log_{10} \left( \dfrac{P_1}{P_2}\right) \\
-              1 \textnormal{ dB}                                & \hat{=} 0,1151 \textnormal{ Np}
-          \end{align*}
+          \begin{flalign*}
+              X[dB]     & = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) & X[dB] & = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right) & \\
+              U_1       & = U_2 \cdot 10^{^X/20\si{dB}}                     & P_1   & = P_2 \cdot  10^{^X/10\si{dB}}                    & \\
+              1 \si{dB} & \,\hat=                                           &       & 0,1151 \si{Np}                                    &
+          \end{flalign*}
 
     \item Neper [Np]
-          \begin{align*}
-              \ln \left(\dfrac{U_1}{U_2}\right) &                                                                                             \\
-              1 \textnormal{ Np}                & \hat{=} 8,686 \textnormal{ dB} =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
-          \end{align*}
+          \begin{flalign*}
+              X[Np]     & = \ln \left(\dfrac{U_1}{U_2}\right) & X[Np] & = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right) & \\
+              U_1       & = U_2 \cdot e^{X}                   & P_1   & = P_2 \cdot  e^{2X}                                    & \\
+              1 \si{Np} & \,\hat=                             &       & 8,686 \si{dB}                                          & % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
+          \end{flalign*}
 \end{description}
 
 \subsection{Randbedingung}
@@ -89,35 +102,35 @@ Feldänderung bei Bewegung
 
 \subsection{Vergleich/Umrechnung}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
-    Kart.                                                                              & Zyl.            & Kug.                           \\
+    Kart.                                                                                & Zyl.             & Kug.                            \\
     \specialrule{1.5pt}{0pt}{0pt}
-    $x$                                                                                & $r \cos \varphi$ & $r \sin \vartheta \cos \varphi$ \\
+    $x$                                                                                  & $r \cos \varphi$ & $r \sin \vartheta \cos \varphi$ \\
     \hline
-    $y$                                                                                & $r \sin \varphi$ & $r \sin \vartheta \sin \varphi$ \\
+    $y$                                                                                  & $r \sin \varphi$ & $r \sin \vartheta \sin \varphi$ \\
     \hline
-    $z$                                                                                & $z$             & $r \cos \vartheta$             \\
+    $z$                                                                                  & $z$              & $r \cos \vartheta$              \\
     \specialrule{1.5pt}{0pt}{0pt}
-    $\sqrt{x^{2}+y^{2}}$                                                               & $r$             &                                \\
+    $\sqrt{x^{2}+y^{2}}$                                                                 & $r$              &                                 \\
     \hline
-    $\arctan \frac{y}{x}$                                                              & $\varphi$        &                                \\
+    $\arctan \frac{y}{x}$                                                                & $\varphi$        &                                 \\
     \hline
-    $z$                                                                                & $z$             &                                \\
+    $z$                                                                                  & $z$              &                                 \\
     \hline
-    $d x \cos \varphi+d y \sin \varphi$                                                  & $dr$            &                                \\
+    $d x \cos \varphi+d y \sin \varphi$                                                  & $dr$             &                                 \\
     \hline
-    $d y \cos \varphi-d x \sin \varphi$                                                  & $r d\varphi$     &                                \\
+    $d y \cos \varphi-d x \sin \varphi$                                                  & $r d\varphi$     &                                 \\
     \hline
-    $dz$                                                                               & $dz$            &                                \\
+    $dz$                                                                                 & $dz$             &                                 \\
     \specialrule{1.5pt}{0pt}{0pt}
-    $\sqrt{x^{2}+y^{2}+z^{2}}$                                                         &                 & $r$                            \\
+    $\sqrt{x^{2}+y^{2}+z^{2}}$                                                           &                  & $r$                             \\
     \hline
-    $\arctan \frac{y}{x}$                                                              &                 & $\varphi$                       \\
+    $\arctan \frac{y}{x}$                                                                &                  & $\varphi$                       \\
     \hline
-    $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                             &                 & $\vartheta$                    \\
+    $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                               &                  & $\vartheta$                     \\
     \hline
-    $d x \sin \vartheta \cos \varphi+d y \sin \vartheta \sin \varphi+d z \cos \vartheta$ &                 & $dr$                           \\
+    $d x \sin \vartheta \cos \varphi+d y \sin \vartheta \sin \varphi+d z \cos \vartheta$ &                  & $dr$                            \\
     \hline
-    $d y \cos \varphi-d x \sin \varphi$                                                  &                 & $r \sin \vartheta d \varphi$    \\
+    $d y \cos \varphi-d x \sin \varphi$                                                  &                  & $r \sin \vartheta d \varphi$    \\
     \hline
-    $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                 & $r d \vartheta$                \\
+    $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                  & $r d \vartheta$                 \\
 \end{tabularx}
