@@ -16,7 +16,7 @@
         \[
             \boxed{\vec{E} = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
             \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
-            \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{zeitraum Abhängigkeit}}
+            \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}}
         \]
         {\footnotesize Analog für H-Feld}
     \end{minipage}
@@ -49,8 +49,10 @@ $v$ : Phasengeschwindigkeit [m/s]
     \Aboxed{\underline{Z}_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}}\approx377\Omega}
 \end{align*}
 
-\subsubsection{Im Dielektrika mit geringem Verlust}
-verlustlos: $\sigma =0$, maximale Wirkleistung
+\subsubsection{Im verlustlosen/idealen Dielektrika}
+verlustlos: $\sigma =0$, maximale Wirkleistung 
+
+$Z_F$ rein reel $\rightarrow$ ebene Welle
 \begin{align*}
     \alpha                  & = 0                                                                                              \\
     \beta                   & = \dfrac{\omega}{c_0}\sqrt{\mu_r\varepsilon_r}=\omega\sqrt{\mu\varepsilon}=\dfrac{2\pi}{\lambda} \\
@@ -89,12 +91,12 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
     \end{minipage}
 }
 
-\begin{align}
+\begin{align*}
     \lambda_1 = \dfrac{\lambda_0}{\sqrt{\mu_{r1}\varepsilon_{r1}}}        &  & \lambda_2 = \dfrac{\lambda_0}{\sqrt{\mu_{r2}\varepsilon_{r2}}}                           \\
                                                                           &  & = \dfrac{\lambda_1\cdot\sqrt{\mu_{r1}\varepsilon_{r1}}}{\sqrt{\mu_{r2}\varepsilon_{r2}}} \\
     \beta_1 = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r1}\varepsilon_{r1}} &  & \beta_2 = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r2}\varepsilon_{r2}}                    \\
     Z_{F1} = \dfrac{Z_{F0}}{\sqrt{\mu_{r1}\varepsilon_{r1}}}              &  & Z_{F2} = \dfrac{Z_{F0}}{\sqrt{\mu_{r2}\varepsilon_{r2}}}
-\end{align}
+\end{align*}
 \subsection{Energie und Poyntingvektor (Energieflussdichte)}
 \begin{align*}
      & \vec{S} = \vec{E}\times\vec{H} \text{ in } [W/m^2]                                   \\
@@ -171,8 +173,10 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 \]
 
 \subsection{Polarisation}
-\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
-    Lineare     & wenn der Endpunkt des E–Vektors eine Linie     \\
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.2\hsize}X}
+    Lineare     & wenn der Endpunkt des E–Vektors eine Linie beschreibt  & $H$oder$E$  \\
     \hline
-    Elliptische & Endpunkt des E-Vektors eine Ellipse beschreibt
+    Elliptische & Endpunkt des E-Vektors eine Ellipse beschreibt & $E\neq H$\\
+    \hline
+    Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt & $E = H$ \\
 \end{tabularx}
