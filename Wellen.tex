@@ -35,9 +35,11 @@ $v$ : Phasengeschwindigkeit [m/s]
 \subsubsection{Allgemein}
 \begin{align*}
     \lambda                 & = \dfrac{2\pi}{\beta}                                                                                                                       \\
+    v_{ph}                  & = \lambda\cdot f                                                                                                                                        \\
     \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
     \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
-    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}_\text{transversal}}{\underline{H}_\text{transversal}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}
+    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}_\text{transversal}}{\underline{H}_\text{transversal}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}\\
+    E_2 &= E_1\cdot e^{-\alpha z}
 \end{align*}
 
 \subsubsection{Im leeren Raum(Vakuum)}
@@ -50,7 +52,7 @@ $v$ : Phasengeschwindigkeit [m/s]
 \end{align*}
 
 \subsubsection{Im verlustlosen/idealen Dielektrika}
-verlustlos: $\sigma =0$, maximale Wirkleistung 
+verlustlos: $\sigma =0$, maximale Wirkleistung
 
 $Z_F$ rein reel $\rightarrow$ ebene Welle
 \begin{align*}
@@ -65,9 +67,9 @@ $Z_F$ rein reel $\rightarrow$ ebene Welle
 geringer Verlust: $0 < \sigma \ll\omega\varepsilon$
 
 \begin{align*}
-    \alpha                  & = \dfrac{1}{2}\sigma\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{1}{2}\sigma Z_{F0}                  \\
-    \beta                   & = \omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\dfrac{\sigma^2}{\omega^2\varepsilon^2}\right) \\
-    \lambda                 & = \dfrac{c_0}{f}\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}                                            \\
+    \alpha                  & = \dfrac{\sigma}{2}\cdot\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{\sigma}{2}\cdot Z_{F0}                  \\
+    \beta                   & = \omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\cdot\dfrac{\sigma^2}{\omega^2\varepsilon^2}\right) \\
+    \lambda                 & = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}                                            \\
     v                       & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}                                                        \\
     \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{\mu}{\varepsilon}}}
 \end{align*}
@@ -174,11 +176,11 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 
 \subsection{Polarisation}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.2\hsize}X}
-    Lineare     & wenn der Endpunkt des E–Vektors eine Linie beschreibt  & $H$oder$E$  \\
+    Lineare      & wenn der Endpunkt des E–Vektors eine Linie beschreibt & $H$oder$E$ \\
     \hline
-    Elliptische & Endpunkt des E-Vektors eine Ellipse beschreibt & $E\neq H$\\
+    Elliptische  & Endpunkt des E-Vektors eine Ellipse beschreibt        & $E\neq H$  \\
     \hline
-    Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt & $E = H$ \\
+    Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt     & $E = H$    \\
 \end{tabularx}
 
 \subsubsection{Senkrechte Polarisation}
