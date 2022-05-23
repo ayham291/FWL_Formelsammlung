@@ -25,57 +25,57 @@
 \subsubsection*{Fortpflanzungskonstante $\gamma$}
 \[\boxed{\underline{\gamma}=\alpha+j\beta}\]
 
-$\alpha$ : Dämpfungskonst. [Np/m]
+$\alpha$ : Dämpfungskonstante [Np/m]
 
-$\beta$ : Phasenkonst. [rad/m]
+$\beta$ : Phasenkonstante [rad/m]
 
-$v$ : Phasengeschw. [m/s]
+$v$ : Phasengeschwindigkeit [m/s]
 
 \subsection{Ausbreitung}
 \subsubsection{Allgemein}
 \begin{align*}
-     & \alpha = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
-     & \beta  = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
-     & \underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}                                                                             \\
-     & E_2 = E_1 \cdot e^{-\alpha z}                                                                                                                      \\
-     & H = \dfrac{E}{Z_F}
+    \lambda                 & = \dfrac{2\pi}{\beta}                                                                                                                       \\
+    \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
+    \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
+    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}_\text{transversal}}{\underline{H}_\text{transversal}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}
 \end{align*}
 
 \subsubsection{Im leeren Raum(Vakuum)}
 \begin{align*}
-     & \alpha = 0                                                                                 \\
-     & \beta = \dfrac{\omega}{c_0}                                                                \\
-     & \boxed{\underline{Z}_{F0} = \sqrt{\dfrac{\mu_0}{\varepsilon_0}}\text{ }=\text{ }377\Omega} \\
-     & \lambda = \dfrac{c_0}{f}                                                                   \\
-     & v = c_0
+    \alpha                     & = 0                                                    \\
+    \beta                      & = \dfrac{\omega}{c_0}                                  \\
+    \lambda                    & = \dfrac{c_0}{f}                                       \\
+    v                          & = c_0                                                  \\
+    \Aboxed{\underline{Z}_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}}\approx377\Omega}
 \end{align*}
 
 \subsubsection{Im Dielektrika mit geringem Verlust}
-verlustlos: $\sigma =0$
+verlustlos: $\sigma =0$, maximale Wirkleistung
 \begin{align*}
-     & \alpha = 0                                                                                                       \\
-     & \beta = \dfrac{\omega}{c_0}\cdot\sqrt{\mu_r\varepsilon_r}=\omega\cdot\sqrt{\mu\varepsilon}=\dfrac{2\pi}{\lambda} \\
-     & \underline{Z}_F = \sqrt{\dfrac{\mu}{\varepsilon}}                                                                \\
-     & \lambda = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}=\dfrac{2\pi}{\beta}                            \\
-     & v = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}
+    \alpha                  & = 0                                                                                              \\
+    \beta                   & = \dfrac{\omega}{c_0}\sqrt{\mu_r\varepsilon_r}=\omega\sqrt{\mu\varepsilon}=\dfrac{2\pi}{\lambda} \\
+    \lambda                 & = \dfrac{c_0}{f}\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}                                             \\
+    v                       & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}                                                         \\
+    \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{\mu}{\varepsilon}}}
 \end{align*}
 
 \subsubsection{Im Dielektrika mit geringem Verlust}
 geringer Verlust: $0 < \sigma \ll\omega\varepsilon$
+
 \begin{align*}
-     & \alpha = \dfrac{1}{2}\cdot\sigma\cdot\sqrt{\dfrac{\mu}{\varepsilon}}                                                      \\
-     & \beta = \omega\cdot\sqrt{\mu\varepsilon}\cdot\left(1+\dfrac{1}{8}\cdot\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}\right) \\
-     & \underline{Z}_F = \sqrt{\dfrac{\mu}{\varepsilon}}                                                                         \\
-     & \lambda = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}=\dfrac{2\pi}{\beta}                                     \\
-     & v = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}
+    \alpha                  & = \dfrac{1}{2}\sigma\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{1}{2}\sigma Z_{F0}                  \\
+    \beta                   & = \omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\dfrac{\sigma^2}{\omega^2\varepsilon^2}\right) \\
+    \lambda                 & = \dfrac{c_0}{f}\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}                                            \\
+    v                       & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}                                                        \\
+    \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{\mu}{\varepsilon}}}
 \end{align*}
 
 \subsubsection{Im guten Leiter}
 geringer Verlust: $\sigma \gg\omega\varepsilon$
 \begin{align*}
-     & \alpha = \dfrac{1}{\delta}= \beta                                                                                                           \\
-     & \underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma}} = \sqrt{\dfrac{\omega\mu}{2\sigma}}\cdot\left(1+j\right)=\dfrac{1+j}{\sigma\cdot\delta} \\
-     & \lambda = \dfrac{2\pi}{\beta} = 2\pi \sqrt{\dfrac{2}{\omega\mu\sigma}}=2\pi\delta                                                           \\
+    \alpha                  & = \beta = \dfrac{1}{\delta} \sim \sqrt{f}                             \\
+    \lambda                 & = 2\pi \sqrt{\dfrac{2}{\omega\mu\sigma}}=2\pi\delta                   \\
+    \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{j\omega\mu}{\sigma}} = \dfrac{1+j}{\sigma\cdot\delta}}
 \end{align*}
 
 \subsection{Übergang}
