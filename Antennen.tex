@@ -1,0 +1,64 @@
+\section{Antennen}
+\subsection{Herz'scher Dipol}
+\subsubsection{Nahfeld: $r \ll \lambda$}
+
+überwiegend \textbf{Blindleistungsfeld}
+
+da E zu H 90° phasenverschoben
+\begin{align*}
+    H & = \vec{\Phi}\cdot\frac{I_0 \Delta l}{4\pi R^2}\cdot \sin\Theta                                                \\
+    E & = \frac{I_0 \Delta l}{4\pi j \omega\varepsilon R^3}(2\vec{R} \cdot \cos\Theta + \vec{\Theta}\cdot \sin\Theta)
+\end{align*}
+
+\begin{align*}
+    E_r       & = \frac{I l \lambda}{4\pi^2\varepsilon_0  c_0}\cdot \frac{1}{r^3} \cdot\cos\upsilon \cdot \sin(\omega t - \beta r) \\
+    E_v       & = \frac{I l \lambda}{4\pi^2\varepsilon_0  c_0}\cdot \frac{1}{r^3} \cdot\sin\upsilon \cdot \sin(\omega t - \beta r) \\
+    H_\varphi & = \frac{I l}{4\pi}\cdot \frac{1}{r^2}\cdot\sin\varphi\cdot\cos(\omega t -\beta r)
+\end{align*}
+
+\subsubsection{Fernfeld: $r \gg \lambda$}
+
+Überwiegend \textbf{Wirkleistungsfeld}, $\vec{S}$ nach außen somit Kugelwelle
+
+\vspace{1ex}
+mit $\eta = Z_{F0}$
+
+\begin{empheq}[box=\fbox] {align*}
+    H & = \vec{\Phi}\cdot j\frac{\beta I_0 \Delta l}{4\pi R}\cdot \sin\Theta                             \\
+    E & = \vec{\Theta}\cdot j\frac{\beta I_0 \Delta l }{4\pi R} \cdot \sin\Theta \cdot\eta e^{-j\beta R}
+\end{empheq}
+
+\begin{align*}
+    E_r       & = 0                                                                                                           \\
+    E_v       & = -\frac{I l }{2\varepsilon_0  c_0 \lambda}\cdot \frac{1}{r} \cdot\sin\upsilon \cdot \sin(\omega t - \beta r) \\
+    H_\varphi & = -\frac{I l}{2\lambda}\cdot \frac{1}{r}\cdot\sin\upsilon\cdot\sin(\omega t -\beta r)
+\end{align*}
+
+\subsubsection{Abgestrahlte Leistung im Fernfeld}
+\begin{align*}
+    P_{rad} = \frac{\eta {I_0}^2 \beta^2 (\Delta l')^2}{12\pi} = \frac{I_0^2\eta\pi}{3}\cdot \dfrac{\Delta l'^2}{\lambda^2}
+\end{align*}
+
+\subsection{Bezugsantennen}
+\[
+    \boxed{g = 10 \cdot log(G)dB}
+\]
+
+mit $P_0$ : Eingangsleistung der Antenne
+
+\begin{description}
+    \item \textbf{\underline{G$\rightarrow$Bezugsantenne:}}
+
+          Elementardipol  zu Kugelstrahler \[D = 1,50 \rightarrow g = 1,76\si{dBi}\]
+          Halbwellendipol zu Kugelstrahler \[D = 1,64 \rightarrow g = 2,15\si{dBi}\]
+
+    \item \textbf{\underline{EIRP}: Eqivalent \underline{Isoropic} Radiated Power}
+          \[
+              \text{EIRP} = P_0 \cdot G_i [dBi]
+          \]
+
+    \item \textbf{\underline{ERP}: Eqivalent Radiated Power (verlustloser Halbwellendipol)}
+          \[
+              \text{ERP} = P_0 \cdot G_d [dBd]
+          \]
+\end{description}
