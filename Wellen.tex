@@ -207,5 +207,28 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 \begin{align*}
     r_{m p} & = \frac{Z_{F 1} \cos \vartheta_{1}-Z_{F 2} \cos \vartheta_{2}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = r_{e p} = \frac{E_{r 0}}{E_{h 0}} =r_{p} \\
     t_{m p} & = \frac{2 Z_{F 1} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}}                                                                     \\
-    t_{e p} & = \frac{2 Z_{F 2} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = \frac{Z_{F 2}}{Z_{F 1}} t_{m p}
+    t_{e p} & = \frac{2 Z_{F 2} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = \frac{Z_{F 2}}{Z_{F 1}} \cdot t_{m p}
+\end{align*}
+
+\subsubsection{Winkel der Plarisation}
+\begin{itemize}
+    \item Snelliusche Brechungsgesetz
+    \item Grenzwinkel $\alpha_g$
+    \item[-] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
+    \begin{itemize}
+        \item[$\bullet$] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
+        \item[$\bullet$] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
+    \end{itemize}
+\end{itemize}
+
+\begin{align*}
+    \dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} &= \dfrac{k_{h}}{k_{g}} = \dfrac{\omega \sqrt{\mu_{r 1} \varepsilon_{r 1}}}{\omega \sqrt{\mu_{r 2} \varepsilon_{r 2}}} = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p h, 2}}{v_{p h, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}}\\
+    \alpha_g &= \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)\\
+    \alpha_{Bp} &= \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)\\
+    \alpha_{Bs} &= \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
+\end{align*}
+
+\subsubsection{Stehwellenverhältnis}
+\begin{align*}
+    s = \frac{E_{\max }}{E_{\min }}=\frac{H_{\max }}{H_{\min }}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \qquad 1<s<\infty
 \end{align*}
