@@ -43,16 +43,18 @@ Feldunterscheidung
 
 \subsection{Elektrostatik}
 $\bullet$ wirbelfreies Feld $\rightarrow$ Elektr. Ladungen sind Quellen des
-Feldes\\
-$\bullet$ Dipolmoment $\vec{p} = Q \cdot \vec{d}$
-
+Feldes
 \begin{align*}
     \opdiv \vec{D} = \nabla \cdot \vec{D}  & = \rho       \qquad          \vec{D} = \varepsilon \vec{E} \\
     \oprot \vec{E} = \nabla \times \vec{E} & = 0          \qquad          = \oprot \opgrad E            \\
-    \varphi = \frac{Q}{4 \pi \varepsilon_0} \cdot \left(\frac{1}{r_1} - \frac{1}{r_2}\right) & = \frac{Q}{4 \pi \varepsilon_0} \frac{\vec{p} \cdot \vec{r}}{r^3}\\
-    \vec{E}        =- \opgrad \varphi & = \frac{1}{4 \pi \varepsilon_0} \cdot \left( \frac{3( \vec{p} \cdot \vec{r}) \cdot \vec{r}}{r^5} - \frac{\vec{p}}{r^3}\right)\\
-    E(r) & = \frac{Q}{4 \pi \varepsilon_0 r^2} \cdot \vec{e}_r
 \end{align*}
+
+Dipolmoment $\vec{p} = Q \cdot \vec{d}$
+\begin{align*}
+    \varphi & = \frac{Q}{4 \pi \varepsilon_0} \cdot \left(\frac{1}{r_1} - \frac{1}{r_2}\right) = \frac{Q}{4 \pi \varepsilon_0} \frac{\vec{p} \cdot \vec{r}}{r^3}\\
+    \vec{E}    &    =- \opgrad \varphi = \frac{1}{4 \pi \varepsilon_0} \cdot \left( \frac{3( \vec{p} \cdot \vec{r}) \cdot \vec{r}}{r^5} - \frac{\vec{p}}{r^3}\right)\\
+\end{align*}
+
 \subsubsection{Potetialgleichung}
 \[
     \opdiv \opgrad \varphi = - \dfrac{\rho}{\varepsilon}
@@ -73,7 +75,7 @@ $\rightarrow$ \textbf{Laplace-Gleichung}
 \[ \varphi (r) = \dfrac{Q}{4 \pi \varepsilon \cdot r} \]
 
 \textbf{E-Feld einer Punktladung}
-\[ \vec{E}(r) = \dfrac{Q}{4 \pi \varepsilon \cdot r^2} \]
+\[ \vec{E}(r) = \dfrac{Q}{4 \pi \varepsilon \cdot r^2} \vec{e}_r \]
 
 \textbf{D-Feld einer Punktladung}
 \[ \vec{D}(r) = \dfrac{Q}{4 \pi \cdot r^2} \]
@@ -97,12 +99,14 @@ $\bullet$ Wirbelfeld, quellenfrei und hat geschlossene Feldlinien.\\
 $\bullet$ Nach $rot \vec{H} = j$ $\rightarrow$ nur wirbelfrei wenn $j = 0$\\
 $\bullet$ Damit Skalarpotential $ \varphi_m$ existiert muss H wirbelfrei\\
 $\bullet$ keine magnetischen Monopole $grad \vec{B} = 0$\\
-$\bullet$ Vektorpotential $ \vec{A}$ = Maß für $\Phi_{magn} $ durch Fläche A\\
-$\bullet$ Dipolmoment $ \vec{m} = I \cdot \vec{a}$
+$\bullet$ Vektorpotential $ \vec{A}$ = Maß für $\Phi_{magn} $ durch Fläche A
 \begin{align*}
     \oprot \vec{H} = \nabla \times \vec{H} & = \vec{J}  \qquad \vec{B} = \mu \vec{H}   \\
     \vec{H} & = - \nabla \varphi_m\\
     \opdiv \vec{B} = \nabla \cdot \vec{B}  & = 0        \qquad = \opdiv \oprot \vec{B}\\
+\end{align*}
+Dipolmoment $ \vec{m} = I \cdot \vec{a}$
+\begin{align*}
     \textnormal{I entl Leiter} \quad A(r) & = \frac{\mu_0 \cdot I}{4 \pi} \int \frac{d \vec{s}}{| \vec{r} - \vec{s}|} = \frac{ \mu_0}{4 \pi} \frac{\vec{m} \times \vec{r}}{r^3}\\
     \vec{B} = \nabla \times \vec{A} & = \frac{\mu_0}{4 \pi} \left(\frac{3(\vec{m} \cdot \vec{r})\vec{r}}{r^5} - \frac{\vec{m}}{r^3}\right)
 \end{align*}
