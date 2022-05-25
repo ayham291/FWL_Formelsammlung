@@ -16,7 +16,7 @@
         \[
             \boxed{\vec{E} = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
             \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
-            \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{zeitraum Abhängigkeit}}
+            \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}}
         \]
         {\footnotesize Analog für H-Feld}
     \end{minipage}
@@ -34,10 +34,11 @@ $v$ : Phasengeschwindigkeit [m/s]
 \subsection{Ausbreitung}
 \subsubsection{Allgemein}
 \begin{align*}
-    \lambda                 & = \dfrac{2\pi}{\beta}                                                                                                                       \\
+    \lambda                 & = \dfrac{2\pi}{\beta} \qquad E_2 = E_1 e^{-\alpha z}                                                                                        \\
+    v_{ph}                  & = \lambda\cdot f                                                                                                                            \\
     \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
     \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
-    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}_\text{transversal}}{\underline{H}_\text{transversal}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}
+    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}_\text{transversal}}{\underline{H}_\text{transversal}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}        \\
 \end{align*}
 
 \subsubsection{Im leeren Raum(Vakuum)}
@@ -49,8 +50,10 @@ $v$ : Phasengeschwindigkeit [m/s]
     \Aboxed{\underline{Z}_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}}\approx377\Omega}
 \end{align*}
 
-\subsubsection{Im Dielektrika mit geringem Verlust}
+\subsubsection{Im verlustlosen/idealen Dielektrika}
 verlustlos: $\sigma =0$, maximale Wirkleistung
+
+$Z_F$ rein reel $\rightarrow$ ebene Welle
 \begin{align*}
     \alpha                  & = 0                                                                                              \\
     \beta                   & = \dfrac{\omega}{c_0}\sqrt{\mu_r\varepsilon_r}=\omega\sqrt{\mu\varepsilon}=\dfrac{2\pi}{\lambda} \\
@@ -63,10 +66,10 @@ verlustlos: $\sigma =0$, maximale Wirkleistung
 geringer Verlust: $0 < \sigma \ll\omega\varepsilon$
 
 \begin{align*}
-    \alpha                  & = \dfrac{1}{2}\sigma\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{1}{2}\sigma Z_{F0}                  \\
-    \beta                   & = \omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\dfrac{\sigma^2}{\omega^2\varepsilon^2}\right) \\
-    \lambda                 & = \dfrac{c_0}{f}\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}                                            \\
-    v                       & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}                                                        \\
+    \alpha                  & = \dfrac{\sigma}{2}\cdot\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{\sigma}{2}\cdot Z_{F0}               \\
+    \beta                   & = \omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\cdot\dfrac{\sigma^2}{\omega^2\varepsilon^2}\right) \\
+    \lambda                 & = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}                                            \\
+    v                       & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}                                                             \\
     \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{\mu}{\varepsilon}}}
 \end{align*}
 
@@ -80,35 +83,30 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
 
 \subsection{Übergang}
 \subsubsection{Zwischen Dielektrika mit geringem Verlust}
-%bitte ergänzen
-\makebox[0pt][l]{
-    \begin{minipage}{\columnwidth}
-        \centering
-        \includegraphics[width=.8\columnwidth]{Figures/UebergangzweiDielektrika.png}
-        \label{fig:UebergangzweiDielektrika}
-    \end{minipage}
-}
 
-\begin{align}
-    \lambda_1 = \dfrac{\lambda_0}{\sqrt{\mu_{r1}\varepsilon_{r1}}}        &  & \lambda_2 = \dfrac{\lambda_0}{\sqrt{\mu_{r2}\varepsilon_{r2}}}                           \\
-                                                                          &  & = \dfrac{\lambda_1\cdot\sqrt{\mu_{r1}\varepsilon_{r1}}}{\sqrt{\mu_{r2}\varepsilon_{r2}}} \\
-    \beta_1 = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r1}\varepsilon_{r1}} &  & \beta_2 = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r2}\varepsilon_{r2}}                    \\
-    Z_{F1} = \dfrac{Z_{F0}}{\sqrt{\mu_{r1}\varepsilon_{r1}}}              &  & Z_{F2} = \dfrac{Z_{F0}}{\sqrt{\mu_{r2}\varepsilon_{r2}}}
-\end{align}
+\includegraphics[width=\columnwidth]{Figures/UebergangzweiDielektrika.png}
+\begin{align*}
+    \quad \qquad \lambda_1 & = \dfrac{\lambda_0}{\sqrt{\mu_{r1}\varepsilon_{r1}}}          & \lambda_2 & = \dfrac{\lambda_0}{\sqrt{\mu_{r2}\varepsilon_{r2}}}                                     \\
+    \quad \qquad           &                                                               &           & = \dfrac{\lambda_1\cdot\sqrt{\mu_{r1}\varepsilon_{r1}}}{\sqrt{\mu_{r2}\varepsilon_{r2}}} \\
+    \quad \qquad \beta_1   & = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r1}\varepsilon_{r1}} & \beta_2   & = \dfrac{2\pi}{\lambda_0}\cdot\sqrt{\mu_{r2}\varepsilon_{r2}}                            \\
+    \quad \qquad Z_{F1}    & = \dfrac{Z_{F0}}{\sqrt{\mu_{r1}\varepsilon_{r1}}}             & Z_{F2}    & = \dfrac{Z_{F0}}{\sqrt{\mu_{r2}\varepsilon_{r2}}}
+\end{align*}
+
 \subsection{Energie und Poyntingvektor (Energieflussdichte)}
 \begin{align*}
      & \vec{S} = \vec{E}\times\vec{H} \text{ in } [W/m^2]                                   \\
      & S = 1/2 \cdot E \cdot H = 1/2 \cdot \dfrac{E^2}{Z_{F0}} = 1/2 \cdot H^2 \cdot Z_{F0} \\
-     & \underline{S}_{Mittel} = 1/2 \cdot Re\{\vec{E}\times\vec{H}^*\}                      \\
+     & \underline{S}_{\texttt{Mittel}} = 1/2 \cdot Re\{\vec{E}\times\vec{H}^*\}             \\
      & S = \dfrac{P}{A}                                                                     \\
 \end{align*}
+
 \subsubsection{Leistung nach Dämpfung}
 \begin{align*}
      & P_1 = P_0 \cdot e^{-2\alpha z}                              \\
      & P = \dfrac{\hat{U}^2}{2 Z_L} \text{vom Kabel transportiert}
 \end{align*}
-\subsection{dÀlembertsche Gleichung (allg.)}
 
+\subsection{dÀlembertsche Gleichung (allg.)}
 \begin{align*}
     \Delta \vec{E}-\kappa \mu \frac{\partial \vec{E}}{\partial t}-\varepsilon \mu \frac{\partial^{2} \vec{E}}{\partial t^{2}} & = \operatorname{grad} \frac{\rho}{\varepsilon} \\
     \Delta \vec{H}-\kappa \mu \frac{\partial \vec{H}}{\partial t}-\varepsilon \mu \frac{\partial^{2} \vec{H}}{\partial t^{2}} & = 0
@@ -162,29 +160,52 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 
 \subsection{Phasengeschwindigkeit}
 \[
-    \dfrac{d z}{d t} = \upsilon_{ph} = c = \dfrac{\omega}{k} = \frac{1}{\sqrt{ \mu_r \mu_0 \varepsilon_r \varepsilon_0}} \qquad \upsilon_{ph,\textnormal{Medium} \leq c_0}
+    \dfrac{d z}{d t} = \upsilon_{ph} = c = \dfrac{\omega}{k} = \frac{1}{\sqrt{ \mu_r \mu_0 \varepsilon_r \varepsilon_0}} \qquad \upsilon_{ph,\texttt{Medium} \leq c_0}
 \]
-%\subsection{Ausbreitung im leeren Raum(Vakuum)}
-%\[
-%    \text{penis}
-%\]
 
 \subsubsection{Gruppengeschwindigkeit}
 \[
     \upsilon_{g} = \dfrac{d \omega}{d k} = \dfrac{\textnormal{Wegstück der Wellengruppe}}{\textnormal{Laufzeit der Wellengruppe}}
 \]
 
-% \subsection{Feldwellenwiderstand}
-% allgemein, idealen Dielektrikum\\
-% freier Raum
-% \begin{align*}
-%     \underline{Z}_F    & = \dfrac{\underline{E}_{\textnormal{transversal}}}{\underline{H}_{\textnormal{transversal}}} = \sqrt{\dfrac{\mu}{\varepsilon}} \\
-%     \underline{Z}_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}} \approx 120\pi \Omega \approx 377 \Omega
-% \end{align*}
-
 \subsection{Polarisation}
-\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
-    Lineare     & wenn der Endpunkt des E–Vektors eine Linie     \\
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.27\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.23\hsize}X}
+    Lineare      & wenn der Endpunkt des E–Vektors eine Linie beschreibt & $H$ oder $E$ \\
     \hline
-    Elliptische & Endpunkt des E-Vektors eine Ellipse beschreibt
+    Elliptische  & Endpunkt des E-Vektors eine Ellipse beschreibt        & $E\neq H$    \\
+    \hline
+    Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt     & $E = H$      \\
 \end{tabularx}
+
+\subsubsection{Senkrechte Polarisation}
+\input{Figures/senk_Polarisation.tex}
+
+\begin{itemize}
+    \item mag./elek. Reflexionsfaktor $[1]$
+    \item mag. Transmissionsfaktor $[1]$
+    \item elek. Transmissionsfaktor $[1]$
+\end{itemize}
+
+\begin{align*}
+    r_{m s} & = \frac{Z_{F 2} \cdot \cos \alpha-Z_{F 1} \cdot \cos \beta}{Z_{F 2} \cdot \cos \alpha+Z_{F 1} \cdot \cos \beta} = r_{e s} = r_{s} \\
+    t_{m s} & = \frac{2 \cdot Z_{F 1} \cdot \cos \alpha}{Z_{F 2} \cdot \cos \alpha+Z_{F 1} \cdot \cos \beta}                                    \\
+    t_{e s} & = \frac{2 \cdot Z_{F 2} \cdot \cos \alpha}{Z_{F 2} \cdot \cos \alpha+Z_{F 1} \cdot \cos \beta}                                    \\
+    t_{e s} & -r_{e s}= 1 \qquad t_{m s} = (1 - r_{m s}) \cdot \dfrac{\cos \alpha}{\cos \beta}                                                  \\
+    E_{g}   & = t_{e s} \cdot E_{h} \qquad E_{r} = r_{s} \cdot E_{h}                                                                            \\
+    H_{g}   & = t_{m s} \cdot H_{h} \qquad H_{r} = r_{s} \cdot H_{h}
+\end{align*}
+
+\subsubsection{Parallel Polarisation}
+\input{Figures/para_Polaristion.tex}
+
+\begin{itemize}
+    \item mag./elek. Reflexionsfaktor $[1]$
+    \item mag. Transmissionsfaktor $[1]$
+    \item elek. Transmissionsfaktor $[1]$
+\end{itemize}
+
+\begin{align*}
+    r_{m p} & = \frac{Z_{F 1} \cos \vartheta_{1}-Z_{F 2} \cos \vartheta_{2}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = r_{e p} = \frac{E_{r 0}}{E_{h 0}} =r_{p} \\
+    t_{m p} & = \frac{2 Z_{F 1} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}}                                                                     \\
+    t_{e p} & = \frac{2 Z_{F 2} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = \frac{Z_{F 2}}{Z_{F 1}} t_{m p}
+\end{align*}
