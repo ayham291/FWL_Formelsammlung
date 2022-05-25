@@ -36,7 +36,7 @@ $\lambda$ : Wellen [m]
 \subsection{Ausbreitung}
 \subsubsection{Allgemein}
 \begin{align*}
-    \lambda                 & = \dfrac{2\pi}{\beta} \qquad E_2 = E_1 e^{-\alpha z}                                               \\
+    \lambda                 & = \dfrac{2\pi}{\beta} \qquad E_2 = E_1 e^{-\alpha z}                                                                                        \\
     v_{ph}                  & = \lambda\cdot f = \dfrac{\omega}{\beta}                                                                                                    \\
     \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
     \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
@@ -233,21 +233,21 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 \begin{itemize}
     \item Snelliusche Brechungsgesetz
     \item Grenzwinkel $\alpha_g$
-    \item[-] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
-    \begin{itemize}
-        \item[$\bullet$] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
-        \item[$\bullet$] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
-    \end{itemize}
+    \item[--] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
+        \begin{itemize}
+            \item[\textbullet] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
+            \item[\textbullet] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
+        \end{itemize}
 \end{itemize}
 
 \begin{align*}
-    \dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} &= \dfrac{k_{h}}{k_{g}} = \dfrac{\omega \sqrt{\mu_{r 1} \varepsilon_{r 1}}}{\omega \sqrt{\mu_{r 2} \varepsilon_{r 2}}} = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p h, 2}}{v_{p h, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}}\\
-    \alpha_g &= \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)\\
-    \alpha_{Bp} &= \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)\\
-    \alpha_{Bs} &= \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
+    \dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} = \dfrac{k_{h}}{k_{g}} & = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p h, 2}}{v_{p h, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}} \\
+    \alpha_g                                                              & = \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)                                                                      \\
+    \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
+    \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 
 \subsubsection{Stehwellenverhältnis}
-\begin{align*}
-    s = \frac{E_{\max }}{E_{\min }}=\frac{H_{\max }}{H_{\min }}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \qquad 1<s<\infty
-\end{align*}
+\[
+    \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
+\]
