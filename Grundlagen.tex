@@ -6,17 +6,19 @@ $\opdiv$: Vektor $\rightarrow$ Skalar (Quelle / Senke)\\
 $\oprot$: Vektor auf Vektorfeld ( rot = 0 für E. erhaltendes Feld)\\
 $\opgrad$: Skalar-/Gradientenfeld $\rightarrow$ Vektorfeld (Richtung stärkster Feldänderung)
 \begin{align*}
-    \opdiv \vec{G} & = \nabla \cdot \vec{G} = \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
-                   & = 0 \quad\Rightarrow \textnormal{Volumen}                                                                                       \\
-                   & > 0 \quad\Rightarrow \textnormal{Quelle}                                                                                        \\
-                   & < 0 \quad\Rightarrow \textnormal{Senke}                                                                                         \\
-    \oprot \vec{G} & = \nabla \times \vec{G} =
+    \opdiv \vec{G} & = \nabla \cdot \vec{G}  & = & \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
+                   &                         &   & \begin{cases}
+                                                       = 0 \quad\Rightarrow \textnormal{Volumen} \\
+                                                       > 0 \quad\Rightarrow \textnormal{Quelle}  \\
+                                                       < 0 \quad\Rightarrow \textnormal{Senke}
+                                                   \end{cases}                                                              \\
+    \oprot \vec{G} & = \nabla \times \vec{G} & = &
     \begin{pmatrix}
         \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
         \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
         \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
-    \end{pmatrix}                                                                              \\
-    \opgrad G      & = \nabla \cdot G = \hspace{6ex}
+    \end{pmatrix}                                                                                   \\
+    \opgrad G      & = \nabla \cdot G        & = & \hspace{4.5ex}
     \begin{pmatrix}
         \dfrac{\partial G}{\partial x} \\
         \dfrac{\partial G}{\partial y} \\
@@ -27,12 +29,12 @@ $\opgrad$: Skalar-/Gradientenfeld $\rightarrow$ Vektorfeld (Richtung stärkster 
 
 \subsection{Rechenregeln}
 \begin{align*}
-    \nabla \cdot ( \vec{f} \times \vec{g}) & = ( \nabla \times \vec{f}) \cdot \vec{g} - ( \nabla \times \vec{g}) \cdot \vec{f} \\
-    \nabla \cdot (fg)                      & = f( \nabla g) + g( \nabla f)                                                     \\
-    \nabla \cdot (f \vec{g} )              & = g( \nabla \vec{f}) + f( \nabla \vec{g})                                         \\
-    \nabla \times (f \vec{g})              & = \nabla f \times \vec{g} + f( \nabla \times \vec{g} )                            \\
-    \oprot \opgrad f                       & = 0 \textnormal{ Gradientenfeld Quellenfrei}                                      \\
-    \opdiv \oprot \vec{f}                  & = 0 \textnormal{ Wirbelfeld Quellenfrei}
+     & \nabla \cdot (\vec{f} \times \vec{g}) & = & \qquad (\nabla \times \vec{f})\cdot\vec{g} - (\nabla\times\vec{g})\cdot\vec{f} \\
+     & \nabla \cdot (fg)                     & = & \qquad f(\nabla g) + g( \nabla f)                                              \\
+     & \nabla \cdot (f\vec{g})               & = & \qquad g(\nabla\vec{f}) + f(\nabla\vec{g})                                     \\
+     & \nabla \times (f\vec{g})              & = & \qquad \nabla f \times \vec{g} + f(\nabla\times\vec{g})                        \\
+     & \oprot \opgrad f                      & = & \qquad 0 \Rightarrow\textnormal{Gradientenfeld Quellenfrei}                    \\
+     & \opdiv \oprot \vec{f}                 & = & \qquad 0 \Rightarrow\textnormal{Wirbelfeld Quellenfrei}
 \end{align*}
 
 
