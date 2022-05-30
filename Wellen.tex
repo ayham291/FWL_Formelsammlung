@@ -31,11 +31,13 @@ $\beta$ : Phasenkonstante [rad/m]
 
 $v$ : Phasengeschwindigkeit [m/s]
 
+$\lambda$ : Wellen [m]
+
 \subsection{Ausbreitung}
 \subsubsection{Allgemein}
 \begin{align*}
     \lambda                 & = \dfrac{2\pi}{\beta} \qquad E_2 = E_1 e^{-\alpha z}                                                                                        \\
-    v_{ph}                  & = \lambda\cdot f                                                                                                                            \\
+    v_{ph}                  & = \lambda\cdot f = \dfrac{\omega}{\beta}                                                                                                    \\
     \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
     \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
     \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}_\text{transversal}}{\underline{H}_\text{transversal}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}        \\
@@ -144,8 +146,8 @@ sehr gute Leiter
 
 \textbf{Zeitabhängigkeit harmonisch:}
 \begin{align*}
-    \Delta \vec{H} & = (j \omega \mu \sigma - \omega^2 \varepsilon \mu ) \vec{H}\\
-    \Delta \vec{E} i& = (j \omega \mu \sigma - \omega^2 \varepsilon \mu ) \vec{E} + grad \frac{ \rho}{\varepsilon}
+    \Delta \vec{H}   & = (j \omega \mu \sigma - \omega^2 \varepsilon \mu ) \vec{H}                                  \\
+    \Delta \vec{E} i & = (j \omega \mu \sigma - \omega^2 \varepsilon \mu ) \vec{E} + grad \frac{ \rho}{\varepsilon}
 \end{align*}
 
 \textbf{keine Raumladung $ \rho = 0$}
@@ -155,7 +157,7 @@ sehr gute Leiter
 
 \textbf{Ebene Wellen}
 \begin{align*}
-    \Delta \vec{E} & = \frac{ \partial \vec{E}}{ \partial z^2} = j \omega \mu ( \sigma + j \omega \varepsilon) \vec{E}\\
+    \Delta \vec{E} & = \frac{ \partial \vec{E}}{ \partial z^2} = j \omega \mu ( \sigma + j \omega \varepsilon) \vec{E} \\
     \Delta \vec{H} & = \frac{ \partial \vec{E}}{ \partial z^2} = j \omega \mu ( \sigma + j \omega \varepsilon) \vec{H}
 \end{align*}
 
@@ -224,5 +226,28 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 \begin{align*}
     r_{m p} & = \frac{Z_{F 1} \cos \vartheta_{1}-Z_{F 2} \cos \vartheta_{2}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = r_{e p} = \frac{E_{r 0}}{E_{h 0}} =r_{p} \\
     t_{m p} & = \frac{2 Z_{F 1} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}}                                                                     \\
-    t_{e p} & = \frac{2 Z_{F 2} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = \frac{Z_{F 2}}{Z_{F 1}} t_{m p}
+    t_{e p} & = \frac{2 Z_{F 2} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = \frac{Z_{F 2}}{Z_{F 1}} \cdot t_{m p}
 \end{align*}
+
+\subsubsection{Winkel der Polarisation}
+\begin{itemize}
+    \item Snelliusche Brechungsgesetz
+    \item Grenzwinkel $\alpha_g$
+    \item[--] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
+        \begin{itemize}
+            \item[\textbullet] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
+            \item[\textbullet] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
+        \end{itemize}
+\end{itemize}
+
+\begin{align*}
+    \dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} = \dfrac{k_{h}}{k_{g}} & = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p h, 2}}{v_{p h, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}} \\
+    \alpha_g                                                              & = \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)                                                                      \\
+    \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
+    \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
+\end{align*}
+
+\subsubsection{Stehwellenverhältnis}
+\[
+    \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
+\]
