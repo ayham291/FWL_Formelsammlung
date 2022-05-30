@@ -60,3 +60,13 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
 
 \input{Figures/Mehrfach_Refexion.tex}
+
+\begin{align*}
+    &U_{1h} =  \frac{U_G\cdot Z_L}{R_I + Z_L}\\
+    &U_{1r} = r_A\cdot U_{1h}\\
+    &U_{2h} =  r_I\cdot U_{1r} = r_I\cdot r_A U_{1h}\\
+    &U_{2r} =  r_A\cdot U_{2h} = r_I\cdot r_A^2 U_{1h}\\
+    &U_{3h} =  r_I\cdot U_{2r} = r_I^2\cdot r_A^2 U_{1h}
+\end{align*}
+
+\input{Figures/Mehrfach_Reflexion_Circuit.tex}
