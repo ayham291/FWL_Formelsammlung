@@ -247,6 +247,50 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
     \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 
+\subsection{Senkrechter Einfall $ \Theta = 0$ }
+\begin{align*}
+    E_t & = t E_{i1} \\
+    E_r & = r E_i
+\end{align*}
+
+Elektrisches Feld:
+\begin{align*}
+    t E_{i1} & = E_{i1} + r E_{i1} \\
+    t        & = 1+ r
+\end{align*}
+
+Magnetisches Feld:
+\begin{align*}
+    \frac{t E_{i1}}{Z_{F2}} & = \frac{E_{i1}}{Z_{F1}} - \frac{r E_{i1}}{Z_{F1}} \\
+    \frac{t}{Z_{F2}}        & = \frac{1}{Z_{F1}} - \frac{r}{Z_{F1}}
+\end{align*}
+
+
+\begin{align*}
+    r & = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} \\
+    t & = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}}
+\end{align*}
+
+\subsubsection{Senkrechter Einfall idealer Dielekt. $\sigma = 0$}
+
+\includegraphics[width=\columnwidth]{Figures/senkrechterEinfall.png}
+
+\begin{align*}
+    Z_F    & = \sqrt{ \frac{\mu}{\varepsilon} } \\
+    \gamma & = j \omega \sqrt{ \mu \varepsilon}
+\end{align*}
+
+\begin{align*}
+    r & = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} = \frac{\sqrt{\frac{\mu_2}{\varepsilon_2}} - \sqrt{\frac{\mu_1}{\varepsilon_1}}}{\sqrt{\frac{\mu_2}{\varepsilon_2}} + \sqrt{\frac{\mu_1}{\varepsilon_1}}} \\
+    t & = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}}
+\end{align*}
+
+\begin{tabularx}{\columnwidth}{>{\hsize=.35\hsize}X|>{\hsize=.32\hsize}X>{\hsize=.18\hsize}X>{\hsize=.18\hsize}X}
+    idealer Leiter    & $ Z_{F2} = 0 $                    & $ r = -1 $ & $t = 0$ \\
+    \hline
+    ideales Dielektr. & $\mu_{r1} = \varepsilon_{r1} = 1$ &            &         \\
+\end{tabularx}
+
 \subsubsection{Stehwellenverhältnis}
 \[
     \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
