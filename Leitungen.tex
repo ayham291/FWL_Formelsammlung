@@ -11,26 +11,63 @@
 %\begin{multicols}{2}
 
 \subsubsection{Doppelleitung:}
-\begin{align*}
-    a & = \text{Leiter Radius}                   & d & = \text{Abstand zw. den Leitern}                \\
-    R & = \frac{1}{\pi a\delta\sigma_c}          & L & = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}      & \\
-    G & = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})} & C & = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}
-\end{align*}
+\[
+    a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
+\]
+
+\includegraphics[width=0.4\columnwidth]{Figures/Doppelleitung.png}
+{\renewcommand*{\arraystretch}{0.2}
+\begin{tabularx}{0.5\columnwidth}{|X|}
+    \hline
+    \[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
+    \hline
+    \[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
+    \hline
+    \[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
+    \hline
+    \[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
+    \hline
+\end{tabularx}}
 
 \subsubsection{Koaxial Leitung}
-\begin{align*}
-    a & = \text{innen Radius}                                              & b & = \text{innen Radius Außenleiter}               \\
-    R & = \frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right] & L & = \frac{\mu}{2\pi} \ln\frac{b}{a}     \\
-    G & = \frac{2\pi\sigma}{\ln (^b/_a)}                                   & C & = \frac{2\pi\varepsilon}{\ln (^b/_a)}
-\end{align*}
+\[
+    a = \text{innen Radius} \qquad b = \text{äußerer Radius} \\
+\]
+
+\includegraphics[width=0.4\columnwidth]{Figures/Koaxialleitung.png}
+{\renewcommand*{\arraystretch}{0.2}
+\begin{tabularx}{0.5\columnwidth}{|X|}
+    \hline
+    \[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
+    \hline
+    \[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
+    \hline
+    \[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
+    \hline
+    \[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
+    \hline
+\end{tabularx}}
 
 \subsubsection{Parallele Platten}
-\begin{align*}
-    w & = \text{Platten Breite}   & d & = \text{Abstand zw. Platten} \\
-    R & = \frac{2}{w\delta\sigma} & L & = \frac{\mu d}{w}            \\
-    G & = \frac{\sigma w}{d}      & C & = \frac{w\varepsilon}{d}
-\end{align*}
+\[
+    w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
+\]
 
+\includegraphics[width=0.4\columnwidth]{Figures/Parallele_Platten.png}
+{\renewcommand*{\arraystretch}{0.2}
+\begin{tabularx}{0.5\columnwidth}{|X|}
+    \hline
+    \[R=\frac{2}{w\delta\sigma}\] \\
+    \hline
+    \[L=\frac{\mu d}{w}\]          \\
+    \hline
+    \[G=\frac{\sigma w}{d}\]       \\
+    \hline
+    \[C=\frac{w\varepsilon}{d}\]  \\
+    \hline
+\end{tabularx}}
+
+\vspace{1ex}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \[
     LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}
