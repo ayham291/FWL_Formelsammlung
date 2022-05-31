@@ -197,48 +197,17 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
     Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt     & $E = H$      \\
 \end{tabularx}
 
-\subsubsection{Senkrechte Polarisation}
-\input{Figures/senk_Polarisation.tex}
-
-\begin{itemize}
-    \item mag./elek. Reflexionsfaktor $[1]$
-    \item mag. Transmissionsfaktor $[1]$
-    \item elek. Transmissionsfaktor $[1]$
-\end{itemize}
-
-\begin{align*}
-    r_{m s} & = \frac{Z_{F 2} \cdot \cos \alpha-Z_{F 1} \cdot \cos \beta}{Z_{F 2} \cdot \cos \alpha+Z_{F 1} \cdot \cos \beta} = r_{e s} = r_{s} \\
-    t_{m s} & = \frac{2 \cdot Z_{F 1} \cdot \cos \alpha}{Z_{F 2} \cdot \cos \alpha+Z_{F 1} \cdot \cos \beta}                                    \\
-    t_{e s} & = \frac{2 \cdot Z_{F 2} \cdot \cos \alpha}{Z_{F 2} \cdot \cos \alpha+Z_{F 1} \cdot \cos \beta}                                    \\
-    t_{e s} & -r_{e s}= 1 \qquad t_{m s} = (1 - r_{m s}) \cdot \dfrac{\cos \alpha}{\cos \beta}                                                  \\
-    E_{g}   & = t_{e s} \cdot E_{h} \qquad E_{r} = r_{s} \cdot E_{h}                                                                            \\
-    H_{g}   & = t_{m s} \cdot H_{h} \qquad H_{r} = r_{s} \cdot H_{h}
-\end{align*}
-
-\subsubsection{Parallel Polarisation}
-\input{Figures/para_Polaristion.tex}
-
-\begin{itemize}
-    \item mag./elek. Reflexionsfaktor $[1]$
-    \item mag. Transmissionsfaktor $[1]$
-    \item elek. Transmissionsfaktor $[1]$
-\end{itemize}
-
-\begin{align*}
-    r_{m p} & = \frac{Z_{F 1} \cos \vartheta_{1}-Z_{F 2} \cos \vartheta_{2}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = r_{e p} = \frac{E_{r 0}}{E_{h 0}} =r_{p} \\
-    t_{m p} & = \frac{2 Z_{F 1} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}}                                                                     \\
-    t_{e p} & = \frac{2 Z_{F 2} \cos \vartheta_{1}}{Z_{F 1} \cos \vartheta_{1}+Z_{F 2} \cos \vartheta_{2}} = \frac{Z_{F 2}}{Z_{F 1}} \cdot t_{m p}
-\end{align*}
+\input{Schraeger_Uebergang}
 
 \subsubsection{Winkel der Polarisation}
 \begin{itemize}
     \item Snelliusche Brechungsgesetz
     \item Grenzwinkel $\alpha_g$
     \item[--] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
-        \begin{itemize}
-            \item[\textbullet] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
-            \item[\textbullet] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
-        \end{itemize}
+          \begin{itemize}
+              \item[\textbullet] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
+              \item[\textbullet] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
+          \end{itemize}
 \end{itemize}
 
 \begin{align*}
