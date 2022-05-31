@@ -1,0 +1,59 @@
+
+
+\subsubsection{Senkrechte Polarisation}
+\input{Figures/senk_Polarisation.tex}
+
+\begin{itemize}
+    \item mag./elek. Reflexionsfaktor $[1]$
+    \item mag. Transmissionsfaktor $[1]$
+    \item elek. Transmissionsfaktor $[1]$
+\end{itemize}
+
+\begin{align*}
+    Z_{Fn}                            & = Z_{F0}\cdot\frac{1}{\sqrt{\varepsilon_{rn}}}                                                                                                                  \\
+    \frac{Z_{F1}}{Z_{F2}}             & = \frac{\sqrt{\varepsilon_{r2}}}{\sqrt{\varepsilon_{r1}}}                                                                                                       \\
+    \frac{\sin\theta_t}{\sin\theta_h} & = \frac{\lambda_2}{\lambda_1}= \frac{\beta_1}{\beta_2}= \frac{n_1}{n_2} \qquad n: Brechungsindex                                                                \\
+    \theta_h                          & = \theta_r                                                                                                                                                      \\
+    \sin\theta_t                      & = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}\cdot\theta_h                                                                                                 \\
+    r_s                               & =  r_{e s} = r_{m s} =                                                                                                                                          \\
+                                      & = \frac{Z_{F 2} \cdot \cos \theta_h-Z_{F 1} \cdot \cos \theta_t}{Z_{F 2} \cdot \cos \theta_h+Z_{F 1} \cdot \cos \theta_t} =                                     \\
+                                      & = \frac{\cos\theta_h-\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}}{\cos\theta_h+\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}} \\
+    t_{m s}                           & = Z_{F 1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_h+Z_{F 1} \cdot \cos \theta_t}                                                           \\
+                                      & = (1 - r_{s}) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                        \\
+                                      & = \frac{Z_{F1}}{Z_{F2}}\cdot t_{es}                                                                                                                             \\
+    t_{e s}                           & = Z_{F 2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_h+Z_{F 1} \cdot \cos \theta_t}                                                           \\
+                                      & = 1+r_{s}                                                                                                                                                       \\
+    E_{r}                             & = r_{s} \cdot E_{h}                                                                                                                                             \\
+    E_{t}                             & = t_{e s} \cdot E_{h}                                                                                                                                           \\
+    H_{r}                             & = r_{s} \cdot H_{h}                                                                                                                                             \\
+    H_{t}                             & = t_{m s} \cdot H_{h}
+\end{align*}
+
+\subsubsection{Parallel Polarisation}
+\input{Figures/para_Polaristion.tex}
+
+\begin{itemize}
+    \item mag./elek. Reflexionsfaktor $[1]$
+    \item mag. Transmissionsfaktor $[1]$
+    \item elek. Transmissionsfaktor $[1]$
+\end{itemize}
+
+\begin{align*}
+    Z_{Fn}                            & = Z_{F0}\cdot\frac{1}{\sqrt{\varepsilon_{rn}}}                                                                                                                                                                              \\
+    \frac{Z_{F1}}{Z_{F2}}             & = \frac{\sqrt{\varepsilon_{r2}}}{\sqrt{\varepsilon_{r1}}}                                                                                                                                                                   \\
+    \frac{\sin\theta_t}{\sin\theta_h} & = \frac{\lambda_2}{\lambda_1}= \frac{\beta_1}{\beta_2}= \frac{n_1}{n_2} \qquad n: Brechungsindex                                                                                                                            \\
+    \theta_h                          & = \theta_r                                                                                                                                                                                                                  \\
+    \sin\theta_t                      & = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}\cdot\theta_h                                                                                                                                                             \\
+    r_p                               & =  r_{e p} = r_{m p} =                                                                                                                                                                                                      \\
+                                      & = \frac{Z_{F 2} \cdot \cos \theta_t-Z_{F 1} \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_t+Z_{F 1} \cdot \cos \theta_h} =                                                                                                 \\
+                                      & = \frac{\varepsilon_{r2}\cos\theta_h-\sqrt{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}{\varepsilon_{r2}\cos\theta_h+\sqrt{{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}} \\
+    t_{e p}                           & = Z_{F 2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 1} \cdot \cos \theta_h+Z_{F 2} \cdot \cos \theta_t}                                                                                                                       \\
+                                      & = (1 + r_{p}) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                                                                                    \\
+                                      & = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp}                                                                                                                                                                                         \\
+    t_{m p}                           & = Z_{F 1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 1} \cdot \cos \theta_h+Z_{F 2} \cdot \cos \theta_t}                                                                                                                       \\
+                                      & = 1+r_{p}                                                                                                                                                                                                                   \\
+    % E_{r}                             & = r_{s} \cdot E_{h}                                                                                                                                                                                                         \\
+    % E_{t}                             & = t_{e s} \cdot E_{h}                                                                                                                                                                                                       \\
+    % H_{r}                             & = r_{s} \cdot H_{h}                                                                                                                                                                                                         \\
+    % H_{t}                             & = t_{m s} \cdot H_{h}                                                                                                                                                                                                       \\
+\end{align*}
