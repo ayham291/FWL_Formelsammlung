@@ -1,89 +1,20 @@
-\tikz{
-    %Kreise
-    \draw[-] (0,0) circle (1);              %äußerer Kreis
-    \draw[-] (0,0) circle (0.6);            %innerer Kreis
+\begin{center}
+    \begin{tikzpicture}
+        %Kreise
+        \draw[-,fill=black!20] (0,0) circle (1);              %äußerer Kreis
+        \draw[-,fill=white] (0,0) circle (0.6);               %innerer Kreis
 
-    %Pfeile
-    \draw[latex-latex] (-0.6,0) -- (0,0) node[midway, above]{\tiny{R-$\delta$}};
-    \draw[latex-latex] (0,-1) -- (0,0) node at (0,-0.4) [left]{\tiny R};
+        %Pfeile
+        \draw[latex-latex] (-0.6,0) -- (0,0) node[midway, above]{\tiny{R-$\delta$}};
+        \draw[latex-latex] (0,-1) -- (0,0) node at (0,-0.4) [left]{\tiny R};
 
-    \node at (0.8,0)[]{\footnotesize$\delta$};
-    \draw[-latex] (0.3,0) -- (0.6,0);
-    \draw[latex-] (1,0) -- (1.3,0);
+        \node at (0.8,0)[]{\footnotesize$\delta$};
+        \draw[-latex] (0.3,0) -- (0.6,0);
+        \draw[latex-] (1,0) -- (1.3,0);
 
-    \draw[latex-] (0.566,0.566) -- (1.2,1.2) node[above, right]{\scriptsize{Effektive Fläche}};
+        \draw[latex-] (0.566,0.566) -- (.9,.9) node[above, right]{\scriptsize{Effektive Fläche}};
 
-    %Legende
-    \node at (-0.8,-1.3)[]{\footnotesize{$\sigma/\kappa$ : Leitfähigkeit [A/Vm] = [1/$\Omega$m]}}
-
-
-
-
-    %--------------------------------------------------------------------
-    % %Linien
-    % \draw[-] (1,0) -- (1,6);
-    % \draw[-] (5,0) -- (5,6);
-
-    % %Pfeile mit Bezeichnungen
-    % \draw[->] (3.5,6.5) -- (5,6.5)node[right]{$z$};
-
-    % \draw[->] (1,6) -- (5,5) node[right]{$t_D$} node[midway, above]{$U_{1h}$};
-    % %\draw[-] (1,6) -- (3,5.5) node[above]{$U_{1h}$};
-
-    % \draw[->] (5,5) -- (1,4)node[left]{$2t_D$} node[midway, above]{$U_{1r}$};
-    % %\draw[-] (5,5) -- (3,4.5) node[above]{$U_{1r}$};
-
-    % \draw[->] (1,4) -- (5,3)node[right]{$3t_D$} node[midway, above]{$U_{2h}$};
-    % %\draw[-] (1,4) -- (3,3.5) node[above]{$U_{2h}$};
-
-    % \draw[->] (5,3) -- (1,2)node[left]{$4t_D$} node[midway, above]{$U_{2r}$};
-    % %\draw[-] (5,3) -- (3,2.5) node[above]{$U_{2r}$};
-
-    % \draw[->] (1,2) -- (5,1)node[right]{$5t_D$} node[midway, above]{$U_{3h}$};
-    % %\draw[-] (1,2) -- (3,1.5) node[above]{$U_{3h}$};
-
-
-    % \draw[dotted ] (5,1) -- (3,0.5);
-
-    % %Klammern mit Bezeichnungen
-    % \draw [black,
-    %     decorate,
-    %     decoration = {brace,
-    %             raise=5pt,
-    %             amplitude=5pt}] (1,4.2) --  (1,5.8);
-    % \node at(0.5,5)[left]{$U_{1h}$};
-
-    % \draw [black,
-    %     decorate,
-    %     decoration = {brace,
-    %             raise=5pt,
-    %             amplitude=5pt}] (5,4.8) --  (5,3.2);
-    % \node at (5.5,4)[right]{$U_{1h}(1+r_A)$};
-
-    % \draw [black,
-    %     decorate,
-    %     decoration = {brace,
-    %             raise=5pt,
-    %             amplitude=5pt}] (1,2.2) --  (1,3.8);
-    % \node at (0.5,3)[left]{$U_{1h}$};
-    % \node at (0.5,2.5)[left]{$+(1+r_I)U_{1r}$};
-
-    % \draw [black,
-    %     decorate,
-    %     decoration = {brace,
-    %             raise=5pt,
-    %             amplitude=5pt}] (5,2.8) --  (5,1.2);
-    % \node at (5.5,2)[right]{$U_{1h}(1+r_A)$};
-    % \node at (5.5,1.5)[right]{$+U_{2h}(1+r_A)$};
-
-
-    % \draw [black,
-    %     decorate,
-    %     decoration = {brace,
-    %             raise=5pt,
-    %             amplitude=5pt}] (1,0.2) --  (1,1.8);
-    % \node at (0.5,1.5)[left]{$U_{1h}$};
-    % \node at (0.5,1)[left]{$+(1+r_I)U_{1r}$};
-    % \node at (0.5,0.5)[left]{$+(1+r_I)U_{2r}$};
-
-}
+        %Legende
+        \node at (-0.1,-1.3)[]{\footnotesize{$\sigma/\kappa$ : Leitfähigkeit [A/Vm] = [1/$\Omega$m]}};
+    \end{tikzpicture}
+\end{center}
