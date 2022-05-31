@@ -1,0 +1,42 @@
+\begin{center}
+\resizebox{\columnwidth}{!}{
+        \begin{circuitikz}%[american voltages]
+            %Schaltbild
+            \draw(0,0)
+            to[V,v=$u_G(t)$](0,2)                               %Spannungsquelle
+            to[R=$Z_g$](2,2)                                    %Quelleninnenwiderstand
+            to[short,o-o](6,2)                                  %Leitung mit Knoten
+            to[short](8 ,2)
+            to[R= $Z_A$](8,0)                                   %Lastwiderstand
+            to[short](6,0)                                      
+            to[short,o-o](2,0)                                  %Leitung mit Knoten
+            to[short](0,0);   
+            
+            %linke gestrichelte linie
+            \draw[dotted](2,0)--(2,-0.5) node[left]{$l=0$};
+            \draw[dotted](2,-0.5)--(2,-1) node[left]{$z=d$};
+            \draw[dotted](2,-1)--(2,-1.5);
+
+            %Pfeil in richtung l
+            \draw[-latex](2,-0.5) -- (6,-0.5);
+            \node at (3,-0.5)[above]{positiv $l$};
+            
+            %rechte gestrichelte Linue
+            \draw[dotted](6,0)--(6,-0.5) node[right]{$l=d$};          
+            \draw[dotted](6,-0.5)--(6,-1) node[right]{$z=0$};
+            \draw[dotted](6,-1)--(6,-1.5);
+
+            %pfeil in richtung z
+            \draw[latex-](2,-1) -- (6,-1);
+            \node at (5,-1)[above]{positiv $z$};
+
+            %Pfeil in vorwärts richtung
+            \draw[-latex](2,1.25) -- (5,1.25);
+            \node at (3.5,1.25)[above]{hinlaufende Welle};
+
+            %Pfeil in rückwärts richtung
+            \draw[latex-](3,0.5) -- (6,0.5);
+            \node at (4.5,0.5)[above]{rücklaufende Welle};
+        \end{circuitikz}
+}
+\end{center}

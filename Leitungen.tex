@@ -32,7 +32,7 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 
 \subsection{Übertragungsleitung mit Last}
 
-\includegraphics[width=\columnwidth]{Figures/UebertragungleitungmitLast.png}
+\input{Figures/Uebertragung_mit_Last.tex}
 
 \begin{align*}
     U(z) & = U^+ e^{\gamma z} + U^- e^{-\gamma z} = U^+ e^{\gamma d} + U^ - e^{-\gamma d}                      \\
@@ -43,11 +43,11 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     \underline{z}_n & = \frac{\underline{Z}_A}{Z_L}                     & \underline{r} & = \frac{\underline{z}_n-1}{\underline{z}_n+1}= \frac{1-\underline{y}_n}{1+\underline{y}_n} \\
     \underline{r}_A & = \frac{\underline{Z}_A-Z_L}{\underline{Z}_A+Z_L} & m             & = \frac{1-|\underline{r}|}{1+|\underline{r}|}
 \end{align*}
-\subsubsection{Reflexionsfaktor entlang einer Leitung}
 
+\subsubsection{Reflexionsfaktor entlang einer Leitung}
 \begin{align*}
-    r_E    & = r_A  ^{-2\gamma l} = r_A  e^{-2\alpha l} e^{-j2\beta l} \\
-    \alpha & = -\frac{\ln(r_A)}{2l} [\si{Np/m}] & \beta  & = \dfrac{\phi_2 -\phi_1}{2l} [\si{rad/m}]
+    r_E    & = r_A  ^{-2\gamma l} = r_A  e^{-2\alpha l} e^{-j2\beta l}                                                     \\
+    \alpha & = -\frac{\ln(r_A)}{2l} [\si{Np/m}]                        & \beta & = \dfrac{\phi_2 -\phi_1}{2l} [\si{rad/m}]
 \end{align*}
 
 \subsubsection{Stehwellenverhältnis}
@@ -56,3 +56,15 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(z)|}{1-|r(z)|} =
     \frac{|U_H|+|U_R|}{|U_H|-|U_R|}
 \end{align*}
+
+\subsection{Mehrfachreflexionen bei fehlender Anpassung}
+
+\input{Figures/Mehrfach_Refexion.tex}
+\begin{align*}
+    U_{1h} & = \frac{U_G\cdot Z_L}{R_I + Z_L}            \\
+    U_{1r} & = r_A\cdot U_{1h}                           \\
+    U_{2h} & = r_I\cdot U_{1r} = r_I\cdot r_A U_{1h}     \\
+    U_{2r} & = r_A\cdot U_{2h} = r_I\cdot r_A^2 U_{1h}   \\
+    U_{3h} & = r_I\cdot U_{2r} = r_I^2\cdot r_A^2 U_{1h}
+\end{align*}
+\input{Figures/Mehrfach_Reflexion_Circuit.tex}
