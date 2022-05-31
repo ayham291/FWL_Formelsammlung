@@ -137,13 +137,17 @@ mit $\opgrad \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|}=-\frac{\vec{r}-\v
 
 \subsection{Skineffekt}
 
-\makebox[0pt][l]{
-    \begin{minipage}{0.7\columnwidth}
-        \centering
-        \includegraphics[width=.55\columnwidth]{Figures/Skineffekt.png}\\
-        {\footnotesize$\sigma/\kappa$ : Leitfähigkeit. $[\si{A/Vm}] = [\si{1/\Omega m}]$}
-    \end{minipage}
-}
+% \makebox[0pt][l]{
+%     \begin{minipage}{0.7\columnwidth}
+%         \centering
+%         \includegraphics[width=.55\columnwidth]{Figures/Skineffekt.png}\\
+%         {\footnotesize$\sigma/\kappa$ : Leitfähigkeit. $[\si{A/Vm}] = [\si{1/\Omega m}]$}
+%     \end{minipage}
+% }
+
+%\vspace{2cm}
+
+\input{Figures/Skineffekt.tex}
 
 \begin{description}
     \item Äquivalente Leiterschichtdicke (Amp: $A \cdot \frac{1}{e}$):
@@ -151,7 +155,7 @@ mit $\opgrad \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|}=-\frac{\vec{r}-\v
               \delta = \frac{1}{\sqrt{\pi\mu\sigma f}} = \sqrt{\frac{2}{\omega\mu\sigma}} \qquad \left[ m \right] \\
           \]
 
-    \item Widerstand/ Oberflächenwiderstand:
+    \item Widerstand/Oberflächenwiderstand:
           \begin{flalign*}
               R_{r\ll\delta}     & = \frac{l}{\sigma \cdot A_{\texttt{eff}}} \\
               R_{r\approx\delta} & =\dfrac{4l}{\sigma \pi d^{2}}             \\
