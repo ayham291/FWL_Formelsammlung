@@ -18,7 +18,7 @@
             \draw[dotted](2,-1)--(2,-1.5);
 
             %Pfeil in richtung l
-            \draw[->](2,-0.5) -- (6,-0.5);
+            \draw[-latex](2,-0.5) -- (6,-0.5);
             \node at (3,-0.5)[above]{positiv $l$};
             
             %rechte gestrichelte Linue
@@ -27,15 +27,15 @@
             \draw[dotted](6,-1)--(6,-1.5);
 
             %pfeil in richtung z
-            \draw[->](6,-1) -- (2,-1);
+            \draw[latex-](2,-1) -- (6,-1);
             \node at (5,-1)[above]{positiv $z$};
 
             %Pfeil in vorwärts richtung
-            \draw[->](2,1.25) -- (5,1.25);
+            \draw[-latex](2,1.25) -- (5,1.25);
             \node at (3.5,1.25)[above]{hinlaufende Welle};
 
             %Pfeil in rückwärts richtung
-            \draw[->](6,0.5) -- (3,0.5);
+            \draw[latex-](3,0.5) -- (6,0.5);
             \node at (4.5,0.5)[above]{rücklaufende Welle};
         \end{circuitikz}
     \end{tikzpicture}
