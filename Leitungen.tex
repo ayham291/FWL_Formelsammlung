@@ -2,7 +2,13 @@
 
 \subsection{Leitungsparameter}
 
+
 \includegraphics[width=\columnwidth]{Figures/Leitungsparameter.png}
+
+%für Leitungsparameter Grafik von Sattler füllt eine Seite
+%\includegraphics[width=\columnwidth]{Figures/Leitungsparameterberechnen.png}
+%\includegraphics[width=\columnwidth]{Figures/ZahlentabelleLeitungsparameter.png}
+%\begin{multicols}{2}
 
 \subsubsection{Doppelleitung:}
 \begin{align*}
@@ -13,7 +19,7 @@
 
 \subsubsection{Koaxial Leitung}
 \begin{align*}
-    a & = \text{innen Radius}                                              & b & = \text{äußerer Radius}               \\
+    a & = \text{innen Radius}                                              & b & = \text{innen Radius Außenleiter}               \\
     R & = \frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right] & L & = \frac{\mu}{2\pi} \ln\frac{b}{a}     \\
     G & = \frac{2\pi\sigma}{\ln (^b/_a)}                                   & C & = \frac{2\pi\varepsilon}{\ln (^b/_a)}
 \end{align*}
@@ -55,3 +61,5 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     \mathrm{SWR} = \frac{U_\text{max}}{U_\text{min}} =
     \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(z)|}{1-|r(z)|}
 \end{align*}
+
+%\end{multicols}
