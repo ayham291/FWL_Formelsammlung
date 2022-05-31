@@ -1,28 +1,23 @@
-\resizebox{0.4\textwidth}{!}{
-    %\centering
-    \begin{tikzpicture}
-        \begin{circuitikz}%[american voltages]
-            \draw(2,0)
-            to[short](0,0)
+\begin{center}
+    \resizebox{\columnwidth}{!}{
+        \begin{circuitikz}
+            \draw(0,0)
             to[V,v=$u_G(t)$](0,2)                           %Spannungsquelle
             to[R=$R_I \neq Z_L$](2,2)                       %Quelleninnenwiderstand
-            to[transmission line](6,2)                      %Leitung oben
-            to[short](8,2)
-            to[R= $R_A\neq Z_L$](8,0)                       %Lastwiderstand
-            to[short](6,0)
-            (4,2) to [open, v=$u(z\mathpunct{,}t)$] (4,0)   %Spannungspfeil u(z,t)
+            to[TL, o-o](5,2)                                %Leitung oben
+            to[short](7,2)
+            to[R=$R_A \neq Z_L$](7,0)                       %Quelleninnenwiderstand
+            to[short](5,0)
+            (2,0) to [TL, o-o](5,0)                         %Leitung unten
+            (2,0) to [short](0,0)
             (2,2) to [open, v=$u_E(t)$] (2,0)               %Spannungspfeil u_E(t)
-            (6,2) to [open, v=$u_A(t)$] (6,0);              %Spannungspfeil u_A(t)
-            \draw(2,0) to [transmission line](6,0);         %Leitung unten
-            \draw[-] (2,2) circle (0.1);                    %TOR 1 oben
-            \draw[-] (6,2) circle (0.1);                    %TOR 2 oben
-            \draw[-] (2,0) circle (0.1);                    %TOR 1 unten
-            \draw[-] (6,0) circle (0.1);                    %TOR 2 unten
-            \draw[dotted](2,2)--(2,2.5);
-            \draw[dotted](6,2)--(6,2.5);
-            \draw[<->](2,2.5) -- (6,2.5);
-            \node at(4,2.5)[above]{$l_e$};
-            \node at(4,-0.75)[above]{$Z_L\mathpunct{,}c$};
+            (3.5,2) to [open, v=$u(z\mathpunct{,}t)$] (3.5,0)   %Spannungspfeil u(z,t)
+            (5,2) to [open, v=$u_A(t)$] (5,0);              %Spannungspfeil u_A(t)
+            \draw[dotted] (2,2) -- (2,2.5);
+            \draw[dotted] (5,2) -- (5,2.5);
+            \draw[<->, yshift=3ex] (2,2) -- (5,2);
+            \node at (3.5,2) [above, yshift=3.5ex] {$l_e$};
+            \node at (3.5,0) [below, yshift=-1.4ex] {$Z_{L\mathpunct{,}C}$};
         \end{circuitikz}
-    \end{tikzpicture}
-}
+    }
+\end{center}
