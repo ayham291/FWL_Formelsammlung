@@ -103,11 +103,23 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
      & S                               & = & \dfrac{P}{A_\texttt{Fläche}} \qquad \si{\left[\frac{W}{m^2}\right]}                                      \\
 \end{align*}
 
+\subsubsection{Leistung}
+
+\begin{align*}
+    W_{M} & = 1/_2\cdot\mu\cdot H^2         \\
+    W_{E} & = 1/_2\cdot\varepsilon\cdot E^2
+\end{align*}
+
 \subsubsection{Leistung nach Dämpfung}
 
 \begin{align*}
-    P_1 & = P_0 \cdot e^{-2\alpha z}                                      \\
-    P   & = \dfrac{\hat{U}^2}{2 Z_L} \quad \text{vom Kabel transportiert}
+    P_1 & = P_0 \cdot e^{-2\alpha z}
+\end{align*}
+
+\subsubsection{Leistung vom Kabel transportiert}
+
+\begin{align*}
+    P & = \dfrac{\hat{U}^2}{2 Z_L}
 \end{align*}
 
 \subsection{dÀlembertsche Gleichung (allg.)}
@@ -219,51 +231,105 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
     \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 
-\subsection{Senkrechter Einfall $ \Theta = 0$ }
+\subsection{Senkrechter Einfall $ \theta_h = 0$ }
+
+\input{Figures/Senkrechter_Uebergang.tex}
+
 \begin{align*}
-    E_t & = t E_{i1} \\
-    E_r & = r E_i
+    t  = \frac{2 \cdot Z_{F2}}{Z_{F1} + Z_{F2}}\qquad r  = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} \\
+    \qquad = \frac{\sqrt{\varepsilon_{r2}}-\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r2}}+\sqrt{\varepsilon_{r1}}}
+\end{align*}
+
+\begin{align*}
+    0<t<2 \qquad 0<|r|<1
 \end{align*}
 
 Elektrisches Feld:
+
+
 \begin{align*}
-    t E_{i1} & = E_{i1} + r E_{i1} \\
-    t        & = 1+ r
+    E_t & = t \cdot E_h \\
+    E_r & = r \cdot E_h
+\end{align*}
+
+\begin{align*}
+    %\vec{E_t}    & = \vec{E_h} + \vec{E_r} \\
+    E_t          & = E_h + E_r             \\
+    t\cdot E_{h} & = E_{h} + r\cdot  E_{h} \\
+    t          & = 1+ r
 \end{align*}
 
 Magnetisches Feld:
+
+% \begin{align*}
+%     r_m & = r = r_e                                                    \\
+%     t_m & = \frac{2}{1+\sqrt{^{\varepsilon_{r1}}/_{\varepsilon_{r2}}}}
+% \end{align*}
+
 \begin{align*}
-    \frac{t E_{i1}}{Z_{F2}} & = \frac{E_{i1}}{Z_{F1}} - \frac{r E_{i1}}{Z_{F1}} \\
-    \frac{t}{Z_{F2}}        & = \frac{1}{Z_{F1}} - \frac{r}{Z_{F1}}
+    H_t & = t \cdot H_h \\
+    H_r & = r \cdot H_h
+\end{align*}
+
+\begin{align*}
+    %\vec{H_t}                   & = \vec{H_h}-\vec{H_r}                                \\
+    H_t                         & = H_h + H_r                                          \\
+    \frac{t\cdot E_{h}}{Z_{F2}} & = \frac{E_{h}}{Z_{F1}} - \frac{r\cdot E_{h}}{Z_{F1}} \\
+    \frac{t}{Z_{F2}}            & = \frac{1}{Z_{F1}} - \frac{r}{Z_{F1}}
 \end{align*}
 
 
-\begin{align*}
-    r & = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} \\
-    t & = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}}
-\end{align*}
 
-\subsubsection{Senkrechter Einfall idealer Dielekt. $\sigma = 0$}
 
-\includegraphics[width=\columnwidth]{Figures/senkrechterEinfall.png}
+\subsection{Senkrechter Einfall ideales/verlustl. Dielekt. $\sigma = 0$}
+
+%\includegraphics[width=\columnwidth]{Figures/senkrechterEinfall.png}
 
 \begin{align*}
-    Z_F    & = \sqrt{ \frac{\mu}{\varepsilon} } \\
-    \gamma & = j \omega \sqrt{ \mu \varepsilon}
+    reel: Z_F & = \sqrt{\frac{\mu}{\varepsilon}}\\
+    imaginär: \gamma & = j \omega \sqrt{ \mu \varepsilon}
 \end{align*}
 
 \begin{align*}
     r & = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} = \frac{\sqrt{\frac{\mu_2}{\varepsilon_2}} - \sqrt{\frac{\mu_1}{\varepsilon_1}}}{\sqrt{\frac{\mu_2}{\varepsilon_2}} + \sqrt{\frac{\mu_1}{\varepsilon_1}}} \\
-    t & = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}}
+    t & = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}} = \frac{2\sqrt{\varepsilon_{r1}\mu_{r2}}}{\sqrt{\varepsilon_{r1}\mu_{r2}}+\sqrt{\varepsilon_{r2}\mu_{r1}}}
 \end{align*}
 
-\begin{tabularx}{\columnwidth}{>{\hsize=.35\hsize}X|>{\hsize=.32\hsize}X>{\hsize=.18\hsize}X>{\hsize=.18\hsize}X}
-    idealer Leiter    & $ Z_{F2} = 0 $                    & $ r = -1 $ & $t = 0$ \\
-    \hline
-    ideales Dielektr. & $\mu_{r1} = \varepsilon_{r1} = 1$ &            &         \\
-\end{tabularx}
+% \begin{tabularx}{\columnwidth}{>{\hsize=.35\hsize}X|>{\hsize=.32\hsize}X>{\hsize=.18\hsize}X>{\hsize=.18\hsize}X}
+%     idealer Leiter    & $ Z_{F2} = 0 $                    & $ r = -1 $ & $t = 0$ \\
+%     \hline
+%     ideales Dielektr. & $\mu_{r1} = \varepsilon_{r1} = 1$ &            &         \\
+% \end{tabularx}
 
-\subsubsection{Stehwellenverhältnis}
+\subsubsection{Spezialfall $\underline{Medium 1}$ ist Luft}
+\begin{align*}
+    \Aboxed{&\mu_{r1} = \varepsilon_{r1} = 1}\\
+    r &= \frac{\sqrt{\mu_{r2}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}}\\
+    t &= \frac{2\sqrt{\mu_{r2}}}{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}
+\end{align*}
+
+\subsubsection{Spezialfall $\underline{Medium 2}$ ist Luft}
+\begin{align*}
+    \Aboxed{&\mu_{r2} = \varepsilon_{r2} = 1}\\
+    r &= \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\mu_{r1}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\mu_{r1}}}}\\
+    t &= \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\mu_{r1}}+\sqrt{\varepsilon_{r1}}}
+\end{align*}
+
+\subsubsection{Spezialfall $\underline{beide Medien}$ NICHT magnetisch}
+\begin{align*}
+    \Aboxed{&\mu_{r1} = \mu_{r2} = 1}\\
+    r &= \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}}\\
+    t &= \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}
+\end{align*}
+
+\subsubsection{Spezialfall $\underline{Medium 2}$ idealer Leiter}
+\begin{align*}
+    Z_{F2} &= 0\\
+    r &= -1\\
+    t &= 0
+\end{align*}
+
+\subsection{Stehwellenverhältnis}
 \[
     \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
 \]
