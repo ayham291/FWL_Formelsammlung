@@ -26,9 +26,9 @@
     a = \text{innen Radius} \qquad b = \text{außen Radius} \\
 \]
 \begin{align*}
-    \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi\\
-    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r=\\
-    & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+    \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                    \\
+    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r=               \\
+                  & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
 \end{align*}
 
 \includegraphics[width=0.4\columnwidth]{Figures/Koaxialleitung.png}
@@ -88,10 +88,10 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 
 \subsubsection{Verlustlose Übertragungsleitung}
 \begin{align*}
-    \underline{\gamma} & = j\omega\sqrt{LC}= j\beta \\
-    Z_L                & =\frac{U^+}{U^-}       = \sqrt{\frac{L}{C}}    \\
-    v                  & = \frac{\omega}{\beta} = \frac{1}{\sqrt{LC}}= \frac{1}{\sqrt{\mu\varepsilon}}= \frac{c_0}{\sqrt{\mu_r\varepsilon_r}}\\
-    \lambda & = \frac{2\pi}{\beta}=\frac{1}{f\sqrt{LC}}= \frac{v}{f}= \frac{c_0}{f\sqrt{\mu_r\varepsilon_r}}
+    \underline{\gamma} & = j\omega\sqrt{LC}= j\beta                                                                                           \\
+    Z_L                & =\frac{U^+}{U^-}       = \sqrt{\frac{L}{C}}                                                                          \\
+    v                  & = \frac{\omega}{\beta} = \frac{1}{\sqrt{LC}}= \frac{1}{\sqrt{\mu\varepsilon}}= \frac{c_0}{\sqrt{\mu_r\varepsilon_r}} \\
+    \lambda            & = \frac{2\pi}{\beta}=\frac{1}{f\sqrt{LC}}= \frac{v}{f}= \frac{c_0}{f\sqrt{\mu_r\varepsilon_r}}
 \end{align*}
 
 \subsubsection{vernachlässigbarer Widerstandsbelag}
@@ -126,6 +126,58 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     \mathrm{SWR} = \frac{U_\text{max}}{U_\text{min}} =
     \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(z)|}{1-|r(z)|} =
     \frac{|U_H|+|U_R|}{|U_H|-|U_R|}
+\end{align*}
+
+\subsubsection{Position von Extrema}
+\begin{align*}
+    \Aboxed{r_A & = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}                                 \\
+    z_{min}     & =\frac{\lambda}{4\pi}(\theta_r+(2n+1)\cdot\pi)\rightarrow\text{Minima alle }\frac{\lambda}{2} \\
+    z_{max}     & =\frac{\lambda}{4\pi}(\theta_r+2n\pi)\rightarrow\text{Maxima alle }\frac{\lambda}{2}
+\end{align*}
+
+\subsubsection{Spezialfall: Angepasste Leitung}
+\begin{align*}
+    Z_A  & = Z_L = Z(z)                              \\
+    r_A  & = 0\qquad\rightarrow\text{reflexionsfrei} \\
+    SWR  & = 1                                       \\
+    U(z) & = U^+\cdot e ^{j\beta z}                  \\
+    I(z) & = I^+ \cdot e^{j\beta z}                  \\
+         & = \frac{U^+}{Z_L}\cdot e^{j\beta z}
+\end{align*}
+
+\subsubsection{Spezialfall: Kurzgeschlossene Leitung}
+\begin{align*}
+    Z_A  & = 0                                                                        \\
+    Z(z) & = j Z_L\cdot\tan(\beta z)        \qquad\rightarrow\text{rein imaginär}     \\
+    r_A  & = -1                                                                       \\
+    SWR  & = \infty                                                                   \\
+    U(z) & = U^+\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                   \\
+    I(z) & = U^+\cdot 2\cos(\beta z)    \qquad\rightarrow I(z=0)=I_A=\frac{2U^+}{Z_L}
+\end{align*}
+
+\subsubsection{Spezialfall: Leerlaufende Leitung}
+\begin{align*}
+    Z_A  & = \infty                                                                   \\
+    Z(z) & = -jZ_L\cdot \cot(\beta z) \qquad\rightarrow\text{rein imaginär}           \\
+    r_A  & = 1                                                                        \\
+    SWR  & = \infty                                                                   \\
+    U(z) & = U^+\cdot 2\cos(\beta z) \qquad\rightarrow U(z=0)=0                       \\
+    I(z) & = U^+\cdot 2j\sin(\beta z) \qquad\rightarrow I(z=0)=I_A = \frac{2U^+}{Z_L}
+\end{align*}
+
+\subsubsection{Spezialfall: Ohm'sch abgeschlossene Leitung}
+\begin{center}
+    $r_A = $reell   
+\end{center}
+
+\begin{align*}
+    \underline{R_A > Z_L} & \rightarrow\theta_r = 0                      \\
+     & \rightarrow z_{max}=\frac{\lambda}{2}\cdot n
+\end{align*}
+
+\begin{align*}
+    \underline{R_A < Z_L} & \rightarrow\theta_r = \pi                      \\
+     & \rightarrow z_{min}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
