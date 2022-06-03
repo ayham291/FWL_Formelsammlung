@@ -23,8 +23,13 @@
 
 \subsubsection{Koaxial Leitung}
 \[
-    a = \text{innen Radius} \qquad b = \text{innen Radius Außenleiter} \\
+    a = \text{innen Radius} \qquad b = \text{außen Radius} \\
 \]
+\begin{align*}
+    \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi\\
+    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r=\\
+    & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+\end{align*}
 
 \includegraphics[width=0.4\columnwidth]{Figures/Koaxialleitung.png}
 {\renewcommand*{\arraystretch}{0.2}
