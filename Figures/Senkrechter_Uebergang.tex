@@ -1,0 +1,32 @@
+\begin{center}
+    \tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+        %     %default radius will be 1pt. 
+        cross/.default={3.5pt}}
+    \begin{tikzpicture}
+        %Kreuz
+        \draw[dotted] (-3,0) -- (3,0);
+        \draw[-] (0,-2.5) -- (0,2.5)                        node[below left] {Material(1)} 
+                                                            node[below right] {Material(2)}
+                                                            node at (0,-2.5)[above left] {$\varepsilon_1, \mu_1, \sigma_1$}
+                                                            node at (0,-2.5)[above right] {$\varepsilon_2, \mu_2, \sigma_2$};
+        %Rücklaufende
+        \draw[-latex] (-2,1.5) -- (-3,1.5)                  node[above] {$S_r$};
+        \draw[-latex] (-2,1.5) -- (-2,2.5)                  node[above] {$E_r$};
+        \draw[-] (-2,1.5) circle (0.15)                     node[below right] {$H_r$};
+        \draw(-2,1.5) node [cross] {};
+        \draw[dotted] (-3,1.5) -- (0,1.5);
+
+        %Hinlaufende
+        \draw[dotted] (-3,-1.5) -- (0,-1.5);
+        \draw[-latex] (-2,-1.5) -- (-1,-1.5)                node[above left] {$S_h$};
+        \draw[-latex] (-2,-1.5) -- (-2,-0.5)                node[above] {$E_h$};
+        \draw[-] (-2,-1.5) circle (0.15)                    node[below right] {$H_h$};
+        \draw[-,fill=black!100] (-2,-1.5) circle (0.05);
+
+        %Transmitierte
+        \draw[-latex] (2,0) -- (3,0)                        node[right] {$S_t$};
+        \draw[-latex] (2,0) -- (2,1)                        node[below right] {$E_t$};
+        \draw[-] (2,0) circle (0.15)                        node[below right] {$H_t$};
+        \draw[-,fill=black!100] (2,0) circle (0.05);
+    \end{tikzpicture}
+\end{center}
