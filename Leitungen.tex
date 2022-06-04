@@ -7,57 +7,62 @@
     a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
 \]
 
-\includegraphics[width=0.4\columnwidth]{Figures/Doppelleitung.png}
+\input{Figures/Doppelleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
-\begin{tabularx}{0.5\columnwidth}{|X|}
-    \hline
-    \[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
-    \hline
-    \[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
-    \hline
-    \[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
-    \hline
-    \[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
-    \hline
-\end{tabularx}}
+    \begin{tabularx}{0.5\columnwidth}{|X|}
+        \hline
+        \[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
+        \hline
+        \[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
+        \hline
+        \[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
+        \hline
+        \[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
+        \hline
+    \end{tabularx}}
 
 \subsubsection{Koaxial Leitung}
 \[
-    a = \text{innen Radius} \qquad b = \text{innen Radius Außenleiter} \\
+    a = \text{innen Radius} \qquad b = \text{außen Radius} \\
 \]
+\begin{align*}
+    \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                    \\
+    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                \\
+                  & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+\end{align*}
 
-\includegraphics[width=0.4\columnwidth]{Figures/Koaxialleitung.png}
+\input{Figures/Koaxialleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
-\begin{tabularx}{0.5\columnwidth}{|X|}
-    \hline
-    \[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
-    \hline
-    \[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
-    \hline
-    \[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
-    \hline
-    \[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
-    \hline
-\end{tabularx}}
+    \begin{tabularx}{0.5\columnwidth}{|X|}
+        \hline
+        \[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
+        \hline
+        \[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
+        \hline
+        \[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
+        \hline
+        \[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
+        \hline
+    \end{tabularx}}
 
 \subsubsection{Parallele Platten}
 \[
     w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
 \]
 
-\includegraphics[width=0.4\columnwidth]{Figures/Parallele_Platten.png}
+\input{Figures/Parallele_Platten.tex}
 {\renewcommand*{\arraystretch}{0.2}
-\begin{tabularx}{0.5\columnwidth}{|X|}
-    \hline
-    \[R=\frac{2}{w\delta\sigma}\] \\
-    \hline
-    \[L=\frac{\mu d}{w}\]          \\
-    \hline
-    \[G=\frac{\sigma w}{d}\]       \\
-    \hline
-    \[C=\frac{w\varepsilon}{d}\]  \\
-    \hline
-\end{tabularx}}
+    \begin{tabularx}{0.5\columnwidth}{|X|}
+        \hline
+        \[R=\frac{2}{w\delta\sigma}\] \\
+        \hline
+        \[L=\frac{\mu d}{w}\]         \\
+        \hline
+        \[G=\frac{\sigma w}{d}\]      \\
+        \hline
+        \[C=\frac{w\varepsilon}{d}\]  \\
+        \hline
+    \end{tabularx}}
 
 \vspace{1ex}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
@@ -69,16 +74,24 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \begin{align*}
     U(z) & = U^+ e^{\gamma z} + U^- e^{-\gamma z} = U^+ e^{\gamma d} + U^ - e^{-\gamma d}                      \\
     I(z) & = I^+ e^{\gamma z} + I^- e^{-\gamma z} = \frac{U^+}{Z_L}e^{\gamma d} - \frac{U^-}{Z_L}e^{-\gamma d} \\
-    Z_L & = \frac{U^+}{I^+} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}
+    Z_L  & = \frac{U^+}{I^+} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}
 \end{align*}
 
 \begin{align*}
-    \gamma & = j \omega \sqrt{LC} \cdot \sqrt{ \frac{RG}{j^2 \omega^2 LC} + \frac{G}{j \omega C} + \frac{R}{j \omega L} + 1}\\
-    \lambda & = \frac{2 \pi}{\beta} \\
-    v_{Ph} & = \frac{\omega}{\beta} \\
-    l_{elektr.} & = \beta \cdot l\\
-    \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
-    \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)}
+    \gamma      & = j \omega \sqrt{LC} \cdot \sqrt{ \frac{RG}{j^2 \omega^2 LC} + \frac{G}{j \omega C} + \frac{R}{j \omega L} + 1}                             \\
+    \lambda     & = \frac{2 \pi}{\beta}                                                                                                                       \\
+    v_{Ph}      & = \frac{\omega}{\beta}                                                                                                                      \\
+    l_{elektr.} & = \beta \cdot l                                                                                                                             \\
+    \alpha      & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
+    \beta       & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)}
+\end{align*}
+
+\subsubsection{Verlustlose Übertragungsleitung}
+\begin{align*}
+    \underline{\gamma} & = j\omega\sqrt{LC}= j\beta                                                                                           \\
+    Z_L                & =\frac{U^+}{U^-}       = \sqrt{\frac{L}{C}}                                                                          \\
+    v                  & = \frac{\omega}{\beta} = \frac{1}{\sqrt{LC}}= \frac{1}{\sqrt{\mu\varepsilon}}= \frac{c_0}{\sqrt{\mu_r\varepsilon_r}} \\
+    \lambda            & = \frac{2\pi}{\beta}=\frac{1}{f\sqrt{LC}}= \frac{v}{f}= \frac{c_0}{f\sqrt{\mu_r\varepsilon_r}}
 \end{align*}
 
 \subsubsection{vernachlässigbarer Widerstandsbelag}
@@ -113,6 +126,58 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     \mathrm{SWR} = \frac{U_\text{max}}{U_\text{min}} =
     \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(z)|}{1-|r(z)|} =
     \frac{|U_H|+|U_R|}{|U_H|-|U_R|}
+\end{align*}
+
+\subsubsection{Position von Extrema}
+\begin{align*}
+    \Aboxed{r_A & = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}                                 \\
+    z_{min}     & =\frac{\lambda}{4\pi}(\theta_r+(2n+1)\cdot\pi)\rightarrow\text{Minima alle }\frac{\lambda}{2} \\
+    z_{max}     & =\frac{\lambda}{4\pi}(\theta_r+2n\pi)\rightarrow\text{Maxima alle }\frac{\lambda}{2}
+\end{align*}
+
+\subsubsection{Spezialfall: Angepasste Leitung}
+\begin{align*}
+    Z_A  & = Z_L = Z(z)                              \\
+    r_A  & = 0\qquad\rightarrow\text{reflexionsfrei} \\
+    SWR  & = 1                                       \\
+    U(z) & = U^+\cdot e ^{j\beta z}                  \\
+    I(z) & = I^+ \cdot e^{j\beta z}                  \\
+         & = \frac{U^+}{Z_L}\cdot e^{j\beta z}
+\end{align*}
+
+\subsubsection{Spezialfall: Kurzgeschlossene Leitung}
+\begin{align*}
+    Z_A  & = 0                                                                        \\
+    Z(z) & = j Z_L\cdot\tan(\beta z)        \qquad\rightarrow\text{rein imaginär}     \\
+    r_A  & = -1                                                                       \\
+    SWR  & = \infty                                                                   \\
+    U(z) & = U^+\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                   \\
+    I(z) & = U^+\cdot 2\cos(\beta z)    \qquad\rightarrow I(z=0)=I_A=\frac{2U^+}{Z_L}
+\end{align*}
+
+\subsubsection{Spezialfall: Leerlaufende Leitung}
+\begin{align*}
+    Z_A  & = \infty                                                                   \\
+    Z(z) & = -jZ_L\cdot \cot(\beta z) \qquad\rightarrow\text{rein imaginär}           \\
+    r_A  & = 1                                                                        \\
+    SWR  & = \infty                                                                   \\
+    U(z) & = U^+\cdot 2\cos(\beta z) \qquad\rightarrow U(z=0)=0                       \\
+    I(z) & = U^+\cdot 2j\sin(\beta z) \qquad\rightarrow I(z=0)=I_A = \frac{2U^+}{Z_L}
+\end{align*}
+
+\subsubsection{Spezialfall: Ohm'sch abgeschlossene Leitung}
+\begin{center}
+    $r_A = $reell
+\end{center}
+
+\begin{align*}
+    \underline{R_A > Z_L} & \rightarrow\theta_r = 0                      \\
+                          & \rightarrow z_{max}=\frac{\lambda}{2}\cdot n
+\end{align*}
+
+\begin{align*}
+    \underline{R_A < Z_L} & \rightarrow\theta_r = \pi                    \\
+                          & \rightarrow z_{min}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
