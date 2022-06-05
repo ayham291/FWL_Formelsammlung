@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+        %     %default radius will be 1pt. 
+        cross/.default={3.5pt}}
+
+        %Außenleiter
+        \draw[-](-0.53,0.53)--(0.97,2.03);
+        \draw[-](0.53,-0.53)--(1.63,0.57);
+
+        \draw[-](0,0) circle (0.75);
+
+        %Innenleiter
+        \draw[-](-0.106,0.106)--(0.41,0.622);
+        \draw[-](0.106,-0.106)--(0.622,0.41);
+
+        \draw[-](0,0) circle (0.15);
+        \draw(0,0) node [cross] {};
+
+\end{tikzpicture}

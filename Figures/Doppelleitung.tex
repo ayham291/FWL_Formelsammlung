@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+    \tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+        %     %default radius will be 1pt. 
+        cross/.default={3.5pt}}
+
+        %linker Außenleiter
+        \draw[-](-0.53,0.53)--(0.97,2.03);
+
+        
+        \draw[-](48:0.75) arc (48:312:0.75);
+
+        %linker Innenleiter
+        \draw[dashed](-0.106,0.106)--(0.41,0.622);
+        \draw[dashed](0.106,-0.106)--(0.922,0.71);
+
+        \draw[-](0,0) circle (0.15);
+        \draw(0,0) node [cross] {};
+
+
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %Rechter Außenleiter
+        \draw[-](0.48,0.58)--(1.97,2.03);
+        \draw[-](1.53,-0.53)--(2.63,0.57);
+
+        %Rechter Innenleiter
+        \draw[dashed](0.894,0.106)--(1.41,0.622);
+        \draw[dashed](1.106,-0.106)--(1.622,0.41);
+
+        \draw[-](1,0) circle (0.15);
+        \draw[-,fill=black!100] (1,0) circle (0.05);
+
+        \draw([shift={(228:0.75)}]1,0) arc (-132:132:0.75);
+
+\end{tikzpicture}
