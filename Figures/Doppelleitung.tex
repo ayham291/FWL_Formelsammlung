@@ -1,22 +1,37 @@
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%Shape: Ellipse  
-\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (256.6,107.4) .. controls (256.6,90.83) and (266.09,77.4) .. (277.8,77.4) .. controls (289.51,77.4) and (299,90.83) .. (299,107.4) .. controls (299,123.97) and (289.51,137.4) .. (277.8,137.4) .. controls (266.09,137.4) and (256.6,123.97) .. (256.6,107.4) -- cycle ;
-%Shape: Ellipse  
-\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (214.2,107.4) .. controls (214.2,90.83) and (223.69,77.4) .. (235.4,77.4) .. controls (247.11,77.4) and (256.6,90.83) .. (256.6,107.4) .. controls (256.6,123.97) and (247.11,137.4) .. (235.4,137.4) .. controls (223.69,137.4) and (214.2,123.97) .. (214.2,107.4) -- cycle ;
-%Straight Lines  
-\draw    (235.4,77.4) -- (284.77,77.4) ;
-%Straight Lines  
-\draw    (235.4,137.4) -- (284.77,137.4) ;
-%Shape: Arc  
-\draw  [draw opacity=0] (349.76,137.4) .. controls (360.71,137.28) and (369.56,123.89) .. (369.56,107.4) .. controls (369.56,90.92) and (360.73,77.55) .. (349.8,77.4) -- (349.61,107.4) -- cycle ; \draw   (349.76,137.4) .. controls (360.71,137.28) and (369.56,123.89) .. (369.56,107.4) .. controls (369.56,90.92) and (360.73,77.55) .. (349.8,77.4) ;  
-%Straight Lines  
-\draw    (284.95,77.4) -- (349.8,77.4) ;
-%Straight Lines  
-\draw    (284.95,137.4) -- (349.8,137.4) ;
-%Flowchart: Summing Junction  
-\draw   (228.62,107.4) .. controls (228.62,102.1) and (231.65,97.8) .. (235.4,97.8) .. controls (239.15,97.8) and (242.18,102.1) .. (242.18,107.4) .. controls (242.18,112.7) and (239.15,117) .. (235.4,117) .. controls (231.65,117) and (228.62,112.7) .. (228.62,107.4) -- cycle ; \draw   (230.6,100.61) -- (240.2,114.19) ; \draw   (240.2,100.61) -- (230.6,114.19) ;
-%Shape: Ellipse  
-\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (271.02,107.4) .. controls (271.02,102.1) and (274.05,97.8) .. (277.8,97.8) .. controls (281.55,97.8) and (284.58,102.1) .. (284.58,107.4) .. controls (284.58,112.7) and (281.55,117) .. (277.8,117) .. controls (274.05,117) and (271.02,112.7) .. (271.02,107.4) -- cycle ;
-%Shape: Ellipse  
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (274.27,107.4) .. controls (274.27,104.64) and (275.85,102.4) .. (277.8,102.4) .. controls (279.75,102.4) and (281.33,104.64) .. (281.33,107.4) .. controls (281.33,110.16) and (279.75,112.4) .. (277.8,112.4) .. controls (275.85,112.4) and (274.27,110.16) .. (274.27,107.4) -- cycle ;
+\begin{tikzpicture}
+    \tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+        %     %default radius will be 1pt. 
+        cross/.default={3.5pt}}
+
+        %linker Außenleiter
+        \draw[-](-0.53,0.53)--(0.97,2.03);
+
+        
+        \draw[-](48:0.75) arc (48:312:0.75);
+
+        %linker Innenleiter
+        \draw[dashed](-0.106,0.106)--(0.41,0.622);
+        \draw[dashed](0.106,-0.106)--(0.922,0.71);
+
+        \draw[-](0,0) circle (0.15);
+        \draw(0,0) node [cross] {};
+
+
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %Rechter Außenleiter
+        \draw[-](0.48,0.58)--(1.97,2.03);
+        \draw[-](1.53,-0.53)--(2.63,0.57);
+
+        %Rechter Innenleiter
+        \draw[dashed](0.894,0.106)--(1.41,0.622);
+        \draw[dashed](1.106,-0.106)--(1.622,0.41);
+
+        \draw[-](1,0) circle (0.15);
+        \draw[-,fill=black!100] (1,0) circle (0.05);
+
+        \draw([shift={(228:0.75)}]1,0) arc (-132:132:0.75);
+
 \end{tikzpicture}

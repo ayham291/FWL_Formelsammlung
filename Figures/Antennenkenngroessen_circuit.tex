@@ -1,0 +1,30 @@
+\begin{center}
+    \resizebox{\columnwidth}{!}{
+        \begin{circuitikz}
+            \draw(0,3.5) node[below]{$l$}
+            to[R=$R_V$](5,3.5)
+            to[R=$R_S$](5,1.5)
+            to[L=$jX_A$](5,0)
+            to[short](0,0) node[above]{$l'$}
+            to[open, o-o](0,3.5);
+            \draw[-](-0.5,1.75) --(-0.5,1.25) node[below]{$\underline{Z}_A$};
+            \draw[-latex](-0.5,1.75)--(1,1.75);
+            % to[V,v=$u_G(t)$](0,2)                               %Spannungsquelle
+            % to[R=$R_I \neq Z_L$](2,2)                           %Quelleninnenwiderstand
+            % to[TL, o-o](5,2)                                    %Leitung oben
+            % to[short](7,2)
+            % to[R=$R_A \neq Z_L$](7,0)                           %Quelleninnenwiderstand
+            % to[short](5,0)
+            % (2,0) to [TL, o-o](5,0)                             %Leitung unten
+            % (2,0) to [short](0,0)
+            % (2,2) to [open, v=$u_E(t)$] (2,0)                   %Spannungspfeil u_E(t)
+            % (3.5,2) to [open, v=$u(z\mathpunct{,}t)$] (3.5,0)   %Spannungspfeil u(z,t)
+            % (5,2) to [open, v=$u_A(t)$] (5,0);                  %Spannungspfeil u_A(t)
+            % \draw[dotted] (2,2) -- (2,2.5);
+            % \draw[dotted] (5,2) -- (5,2.5);
+            % \draw[Latex-Latex, yshift=3ex] (2,2) -- (5,2);
+            % \node at (3.5,2) [above, yshift=3.5ex] {$l_e$};
+            % \node at (3.5,0) [below, yshift=-1.4ex] {$Z_L\mathpunct{,}c$};
+        \end{circuitikz}
+    }
+\end{center}

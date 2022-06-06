@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[fill=orange]
+  ([shift={(-40:1cm)}]-1.1,0) arc (-40:40:1cm)
+  --
+  ([shift={(-40+180:1cm)}]1.1,0) arc (-40+180:40+180:1cm)
+  -- cycle;
+\end{tikzpicture}
+\begin{tikzpicture}
+  \tikzset{translate/.style={shift={(#1)}}}
+  \draw[fill=cyan]
+  ([translate=-40:1cm]-1.1,0) arc (-40:40:1cm)
+  --
+  ([translate=-40+180:1cm]1.1,0) arc (-40+180:40+180:1cm)
+  -- cycle;
+\end{tikzpicture}
+\end{document}
