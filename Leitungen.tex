@@ -6,8 +6,8 @@
 \[
     a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
 \]
+
 \input{Figures/Doppelleitung.tex}
-%\includegraphics[width=0.4\columnwidth]{Figures/Doppelleitung.png}
 {\renewcommand*{\arraystretch}{0.2}
     \begin{tabularx}{0.5\columnwidth}{|X|}
         \hline
@@ -27,12 +27,11 @@
 \]
 \begin{align*}
     \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                    \\
-    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r=               \\
+    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                \\
                   & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
 \end{align*}
 
 \input{Figures/Koaxialleitung.tex}
-%\includegraphics[width=0.4\columnwidth]{Figures/Koaxialleitung.png}
 {\renewcommand*{\arraystretch}{0.2}
     \begin{tabularx}{0.5\columnwidth}{|X|}
         \hline
@@ -50,8 +49,8 @@
 \[
     w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
 \]
- \input{Figures/Parallele_Platten.tex}
-% \includegraphics[width=0.4\columnwidth]{Figures/Parallele_Platten.png}
+
+\input{Figures/Parallele_Platten.tex}
 {\renewcommand*{\arraystretch}{0.2}
     \begin{tabularx}{0.5\columnwidth}{|X|}
         \hline
@@ -167,18 +166,18 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \end{align*}
 
 \subsubsection{Spezialfall: Ohm'sch abgeschlossene Leitung}
-\begin{center}
-    $r_A = $reell   
-\end{center}
+\[
+    r_A = \texttt{reell}
+\]
 
 \begin{align*}
     \underline{R_A > Z_L} & \rightarrow\theta_r = 0                      \\
-     & \rightarrow z_{max}=\frac{\lambda}{2}\cdot n
+                          & \rightarrow z_{max}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
 \begin{align*}
-    \underline{R_A < Z_L} & \rightarrow\theta_r = \pi                      \\
-     & \rightarrow z_{min}=\frac{\lambda}{2}\cdot n
+    \underline{R_A < Z_L} & \rightarrow\theta_r = \pi                    \\
+                          & \rightarrow z_{min}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
