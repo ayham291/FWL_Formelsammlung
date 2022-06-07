@@ -130,9 +130,13 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 
 \subsubsection{Position von Extrema}
 \begin{align*}
-    \Aboxed{r_A & = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}                                 \\
-    z_{min}     & =\frac{\lambda}{4\pi}(\theta_r+(2n+1)\cdot\pi)\rightarrow\text{Minima alle }\frac{\lambda}{2} \\
-    z_{max}     & =\frac{\lambda}{4\pi}(\theta_r+2n\pi)\rightarrow\text{Maxima alle }\frac{\lambda}{2}
+    \Aboxed{r_A       & = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}                                                                   \\
+    f_{min}           & \rightarrow \text{Minimum(Knoten) der Spannungen}                                                                               \\
+    f_{max}           & \rightarrow \text{Maximum(Bäuche) der Spannungen}                                                                               \\
+    \lambda_{min/max} & = \frac{c_0}{f_{min/max}\sqrt{\mu_1\varepsilon_1}}                                                                              \\
+    z_{min}           & =\frac{-n\cdot\lambda_{min}}{2}                                          & \rightarrow & n = -\frac{2z}{\lambda_{min}}          \\
+    z_{max}           & =\frac{-(2n+1)\lambda_{max}}{4}                                          & \rightarrow & \text{n einsetzen und nach z auflösen} \\
+    z                 & = \frac{\lambda_{min}\cdot\lambda_{max}}{4(\lambda_{min}-\lambda_{max})}
 \end{align*}
 
 \subsubsection{Spezialfall: Angepasste Leitung}
@@ -184,10 +188,16 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 
 \input{Figures/Mehrfach_Refexion.tex}
 \begin{align*}
-    U_{1h} & = \frac{U_G\cdot Z_L}{R_I + Z_L}            \\
-    U_{1r} & = r_A\cdot U_{1h}                           \\
-    U_{2h} & = r_I\cdot U_{1r} = r_I\cdot r_A U_{1h}     \\
-    U_{2r} & = r_A\cdot U_{2h} = r_I\cdot r_A^2 U_{1h}   \\
-    U_{3h} & = r_I\cdot U_{2r} = r_I^2\cdot r_A^2 U_{1h}
+    %u_{1h} & = u_G\cdot\frac{ Z_L}{R_I + Z_L}            \\
+    u_{1r} & = r_A\cdot u_{1h}                                \\
+    u_{2h} & = r_I\cdot u_{1r} = r_I\cdot r_A\cdot u_{1h}     \\
+    u_{2r} & = r_A\cdot u_{2h} = r_I\cdot r_A^2\cdot u_{1h}   \\
+    u_{3h} & = r_I\cdot u_{2r} = r_I^2\cdot r_A^2\cdot u_{1h}
 \end{align*}
 \input{Figures/Mehrfach_Reflexion_Circuit.tex}
+\begin{align*}
+     & \text{Reflexionsfaktor Leitungsanfang: } & \underline{r}_I & = \frac{R_I - Z_L}{R_I + Z_L}                 \\
+     & \text{Reflexionsfaktor Leitungsende: }   & \underline{r}_A & = \frac{R_A - Z_L}{R_A + Z_L}                 \\
+     & \text{Signallaufzeit: }                  & t_d             & = \frac{l}{c_0}\cdot\sqrt{\mu_r\varepsilon_r} \\
+     & \text{Hinlaufende Welle}                 & u_{1h}          & = \hat{u}_G \cdot\frac{Z_L}{Z_L+R_I}
+\end{align*}
