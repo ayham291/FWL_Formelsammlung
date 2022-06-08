@@ -124,44 +124,46 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \end{align*}
 
 \subsubsection{Position von Extrema}
+\begin{gather*}
+    \boxed{r_A = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}\\
+    f_\texttt{min}\rightarrow \text{Minimum(Knoten) der Spannungen}\\
+    f_\texttt{max}\rightarrow \text{Maximum(Bäuche) der Spannungen}
+\end{gather*}
 \begin{align*}
-    \Aboxed{r_A       & = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}                                                                   \\
-    f_{min}           & \rightarrow \text{Minimum(Knoten) der Spannungen}                                                                               \\
-    f_{max}           & \rightarrow \text{Maximum(Bäuche) der Spannungen}                                                                               \\
-    \lambda_{min/max} & = \frac{c_0}{f_{min/max}\sqrt{\mu_1\varepsilon_1}}                                                                              \\
-    z_{min}           & =\frac{-n\cdot\lambda_{min}}{2}                                          & \rightarrow & n = -\frac{2z}{\lambda_{min}}          \\
-    z_{max}           & =\frac{-(2n+1)\lambda_{max}}{4}                                          & \rightarrow & \text{n einsetzen und nach z auflösen} \\
-    z                 & = \frac{\lambda_{min}\cdot\lambda_{max}}{4(\lambda_{min}-\lambda_{max})}
+    \lambda_\texttt{min/max} & = \frac{c_0}{f_\texttt{min/max}\sqrt{\mu_1\varepsilon_1}}                                                                            \\
+    z_\texttt{min}           & =\frac{-n\cdot\lambda_\texttt{min}}{2}                                        \qquad\rightarrow n = -\frac{2z}{\lambda_\texttt{min}} \\
+    z_\texttt{max}           & =\frac{-(2n+1)\lambda_\texttt{max}}{4}                                                                                               \\
+    z                        & = \frac{\lambda_\texttt{min}\cdot\lambda_\texttt{max}}{4(\lambda_\texttt{min}-\lambda_\texttt{max})}
 \end{align*}
 
 \subsubsection{Spezialfall: Angepasste Leitung}
 \begin{align*}
-    Z_A  & = Z_L = Z(z)                              \\
-    r_A  & = 0\qquad\rightarrow\text{reflexionsfrei} \\
-    SWR  & = 1                                       \\
-    U(z) & = U^+\cdot e ^{j\beta z}                  \\
-    I(z) & = I^+ \cdot e^{j\beta z}                  \\
-         & = \frac{U^+}{Z_L}\cdot e^{j\beta z}
+    Z_A          & = Z_L = Z(z)                              \\
+    r_A          & = 0\qquad\rightarrow\text{reflexionsfrei} \\
+    \mathrm{SWR} & = 1                                       \\
+    U(z)         & = U^+\cdot e ^{j\beta z}                  \\
+    I(z)         & = I^+ \cdot e^{j\beta z}                  \\
+                 & = \frac{U^+}{Z_L}\cdot e^{j\beta z}
 \end{align*}
 
 \subsubsection{Spezialfall: Kurzgeschlossene Leitung}
 \begin{align*}
-    Z_A  & = 0                                                                        \\
-    Z(z) & = j Z_L\cdot\tan(\beta z)        \qquad\rightarrow\text{rein imaginär}     \\
-    r_A  & = -1                                                                       \\
-    SWR  & = \infty                                                                   \\
-    U(z) & = U^+\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                   \\
-    I(z) & = U^+\cdot 2\cos(\beta z)    \qquad\rightarrow I(z=0)=I_A=\frac{2U^+}{Z_L}
+    Z_A          & = 0                                                                        \\
+    Z(z)         & = j Z_L\cdot\tan(\beta z)        \qquad\rightarrow\text{rein imaginär}     \\
+    r_A          & = -1                                                                       \\
+    \mathrm{SWR} & = \infty                                                                   \\
+    U(z)         & = U^+\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                   \\
+    I(z)         & = U^+\cdot 2\cos(\beta z)    \qquad\rightarrow I(z=0)=I_A=\frac{2U^+}{Z_L}
 \end{align*}
 
 \subsubsection{Spezialfall: Leerlaufende Leitung}
 \begin{align*}
-    Z_A  & = \infty                                                                   \\
-    Z(z) & = -jZ_L\cdot \cot(\beta z) \qquad\rightarrow\text{rein imaginär}           \\
-    r_A  & = 1                                                                        \\
-    SWR  & = \infty                                                                   \\
-    U(z) & = U^+\cdot 2\cos(\beta z) \qquad\rightarrow U(z=0)=0                       \\
-    I(z) & = U^+\cdot 2j\sin(\beta z) \qquad\rightarrow I(z=0)=I_A = \frac{2U^+}{Z_L}
+    Z_A          & = \infty                                                                   \\
+    Z(z)         & = -jZ_L\cdot \cot(\beta z) \qquad\rightarrow\text{rein imaginär}           \\
+    r_A          & = 1                                                                        \\
+    \mathrm{SWR} & = \infty                                                                   \\
+    U(z)         & = U^+\cdot 2\cos(\beta z) \qquad\rightarrow U(z=0)=0                       \\
+    I(z)         & = U^+\cdot 2j\sin(\beta z) \qquad\rightarrow I(z=0)=I_A = \frac{2U^+}{Z_L}
 \end{align*}
 
 \subsubsection{Spezialfall: Ohm'sch abgeschlossene Leitung}
@@ -170,13 +172,13 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \]
 
 \begin{align*}
-    \underline{R_A > Z_L} & \rightarrow\theta_r = 0                      \\
-                          & \rightarrow z_{max}=\frac{\lambda}{2}\cdot n
+    \underline{R_A > Z_L} & \rightarrow\theta_r = 0                             \\
+                          & \rightarrow z_\texttt{max}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
 \begin{align*}
-    \underline{R_A < Z_L} & \rightarrow\theta_r = \pi                    \\
-                          & \rightarrow z_{min}=\frac{\lambda}{2}\cdot n
+    \underline{R_A < Z_L} & \rightarrow\theta_r = \pi                           \\
+                          & \rightarrow z_\texttt{min}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
