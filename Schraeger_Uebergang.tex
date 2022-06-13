@@ -1,4 +1,4 @@
-\subsection{Senkrechte Polarisation}
+\subsection{Senkrechte (E-Feld) Polarisation (H-Feld parallel)}
 \input{Figures/senk_Polarisation_copy.tex}
 
 \[ \boxed{\texttt{mit } Z_{F0} = 120\pi \approx 377\si{\ohm}} \]
@@ -25,7 +25,7 @@
             & = (1 - r_{s}) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                        \\
             & = \frac{Z_{F1}}{Z_{F2}}\cdot t_{es}                                                                                                                             \\
     t_{e s} & = Z_{F 2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_h+Z_{F 1} \cdot \cos \theta_t}                                                           \\
-            & = 1-r_{s}%vorzeichen unklar
+            & = 1+r_{s}
 \end{align*}
 
 \begin{align*}
@@ -35,7 +35,7 @@
     H_{t} & = t_{m s} \cdot H_{h}
 \end{align*}
 
-\subsection{Parallel Polarisation}
+\subsection{Parallel (E-Feld) Polarisation (H-Feld senkrecht)}
 \input{Figures/para_Polaristion_copy.tex}
 
 \[ \boxed{\texttt{mit } Z_{F0} = 120\pi \approx 377\si{\ohm}} \]
@@ -58,16 +58,16 @@
     r_p     & =  r_{e p} = r_{m p} =                                                                                                                                                                                                      \\
             & = \frac{Z_{F 2} \cdot \cos \theta_t-Z_{F 1} \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_t+Z_{F 1} \cdot \cos \theta_h} =                                                                                                 \\
             & = \frac{\varepsilon_{r2}\cos\theta_h-\sqrt{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}{\varepsilon_{r2}\cos\theta_h+\sqrt{{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}} \\
+    t_{m p} & = Z_{F 1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 1} \cdot \cos \theta_h+Z_{F 2} \cdot \cos \theta_t}                                                                                                                       \\
+            & = 1-r_{p}                                                                                                                                                                                                                   \\
     t_{e p} & = Z_{F 2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 1} \cdot \cos \theta_h+Z_{F 2} \cdot \cos \theta_t}                                                                                                                       \\
             & = (1 + r_{p}) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                                                                                    \\
-            & = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp}                                                                                                                                                                                         \\
-    t_{m p} & = Z_{F 1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 1} \cdot \cos \theta_h+Z_{F 2} \cdot \cos \theta_t}                                                                                                                       \\
-            & = 1-r_{p}
+            & = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp}
 \end{align*}
 
 \begin{align*}
-    E_{r} & = r_{s} \cdot E_{h}   \\
-    E_{t} & = t_{e s} \cdot E_{h} \\
-    H_{r} & = r_{s} \cdot H_{h}   \\
-    H_{t} & = t_{m s} \cdot H_{h} \\
+    E_{r} & = r_{p} \cdot E_{h}   \\
+    E_{t} & = t_{e p} \cdot E_{h} \\
+    H_{r} & = r_{p} \cdot H_{h}   \\
+    H_{t} & = t_{m p} \cdot H_{h} \\
 \end{align*}
