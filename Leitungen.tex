@@ -130,9 +130,9 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     f_\texttt{max}\rightarrow \text{Maximum(Bäuche) der Spannungen}
 \end{gather*}
 \begin{align*}
-    \lambda_\texttt{min/max} & = \frac{c_0}{f_\texttt{min/max}\sqrt{\mu_1\varepsilon_1}}                                                                            \\
-    z_\texttt{min}           & =\frac{-n\cdot\lambda_\texttt{min}}{2}                                        \qquad\rightarrow n = -\frac{2z}{\lambda_\texttt{min}} \\
-    z_\texttt{max}           & =\frac{-(2n+1)\lambda_\texttt{max}}{4}                                                                                               \\
+    \lambda_\texttt{min/max} & = \frac{c_0}{f_\texttt{min/max}\sqrt{\mu_{r1}\varepsilon_{r1}}}                                                                                                 \\
+    z_\texttt{min}           & =\frac{-n\cdot\lambda_\texttt{min}}{2}                                        \qquad\rightarrow n = -\frac{2z}{\lambda_\texttt{min}}                            \\
+    z_\texttt{max}           & =\frac{-(2n+1)\lambda_\texttt{max}}{4}                                        \qquad\rightarrow n = -\frac{4z+\lambda_\texttt{max}}{2\cdot\lambda_\texttt{max}} \\
     z                        & = \frac{\lambda_\texttt{min}\cdot\lambda_\texttt{max}}{4(\lambda_\texttt{min}-\lambda_\texttt{max})}
 \end{align*}
 
@@ -172,7 +172,7 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \]
 
 \begin{align*}
-    \underline{R_A > Z_L} & \rightarrow\theta_r = 0                             \\
+    \underline{R_A > Z_L} & \rightarrow\theta_r = 0 \rightarrow r_A \texttt{ ist negativ} \\
                           & \rightarrow z_\texttt{max}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
