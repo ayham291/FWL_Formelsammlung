@@ -96,6 +96,18 @@ mit $\eta = Z_{F0}$
                    & = I_0^2\cdot\frac{4}{3}\cdot Z_F\cdot\frac{\pi^5}{a^4\cdot\sqrt{\varepsilon_r^3}}\cdot\left(\frac{f}{c_0}\right)^4
 \end{align*}
 
+\subsubsection{Lineare Antenne}
+\begin{align*}
+    I(z') & = I_0\cdot\sin\left[\beta\left(\frac{L}{2}-|z'|\right)\right]
+\end{align*}
+
+\subsubsection{Dipolantenne}
+\begin{align*}
+    H   & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta} \\
+    E   & = H\cdot\eta                                                                                                                                                      \\
+    I_0 & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}
+\end{align*}
+
 \subsection{Bezugsantennen}
 \[
     \boxed{g = 10 \cdot log(G)\si{dB}}
@@ -122,6 +134,7 @@ mit $P_0$ : Eingangsleistung der Antenne
 
 \subsection{Senden und Empfangen}
 \begin{align*}
-    P_E & = S_E\cdot A_W =                                                         \\
-        & = P_S\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+    \Aboxed{A_W & = G_{RX}\cdot\frac{\lambda^2}{4\pi}}                                     \\
+    P_E         & = S_E\cdot A_W                                                           \\
+                & = P_S\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
 \end{align*}
