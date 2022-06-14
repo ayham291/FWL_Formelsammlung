@@ -40,7 +40,7 @@ $\lambda$ : Wellen [m]
     v_{ph}                  & = \lambda\cdot f = \dfrac{\omega}{\beta}                                                                                                    \\
     \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
     \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
-    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}}{\underline{H}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}        \\
+    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}}{\underline{H}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}                                              \\
 \end{align*}
 
 \subsubsection{Im leeren Raum(Vakuum)}
@@ -230,7 +230,7 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 \begin{align*}
     \alpha_g & = \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)
 \end{align*}
-\subsection{Brewster-/Polarisationswinkel, $r=0$}
+\subsection[Brewster-/Polarisationswinkel]{Brewster-/Polarisationswinkel, $r=0$}
 \begin{itemize}
     \item Snelliusche Brechungsgesetz
           %\item Grenzwinkel $\alpha_g$
@@ -260,7 +260,7 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
     % \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 \newpage
-\subsection{Senkrechter Einfall $ \theta_h = 0$ }
+\subsection[Senkrechter Einfall]{Senkrechter Einfall $ \theta_h = 0$ }
 
 \input{Figures/Senkrechter_Uebergang.tex}
 
@@ -310,13 +310,13 @@ Magnetisches Feld:
 
 
 
-\subsubsection{Senkrechter Einfall ideales/verlustl. Dielekt. $\sigma = 0$}
+\subsubsection[Senkrechter Einfall ideales/verlustl. Dielekt.]{Senkrechter Einfall ideales/verlustl. Dielekt. $\sigma = 0$}
 
 %\includegraphics[width=\columnwidth]{Figures/senkrechterEinfall.png}
 
 \begin{align*}
-    reel: Z_F        & = \sqrt{\frac{\mu}{\varepsilon}}   \\
-    imaginär: \gamma & = j \omega \sqrt{ \mu \varepsilon}
+    \text{reel: }Z_F          & = \sqrt{\frac{\mu}{\varepsilon}} \\
+    \texttt{imaginär: }\gamma & = j \omega\sqrt{\mu\varepsilon}
 \end{align*}
 
 \begin{align*}
@@ -330,28 +330,28 @@ Magnetisches Feld:
 %     ideales Dielektr. & $\mu_{r1} = \varepsilon_{r1} = 1$ &            &         \\
 % \end{tabularx}
 
-\subsubsection{Spezialfall $\underline{Medium 1}$ ist Luft}
+\subsubsection[Spezialfall Medium 1 ist Luft]{Spezialfall $\underline{Medium 1}$ ist Luft}
 \begin{align*}
     \Aboxed{ & \mu_{r1} = \varepsilon_{r1} = 1}                                                            \\
     r        & = \frac{\sqrt{\mu_{r2}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}} \\
     t        & = \frac{2\sqrt{\mu_{r2}}}{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}
 \end{align*}
 
-\subsubsection{Spezialfall $\underline{Medium 2}$ ist Luft}
+\subsubsection[Spezialfall Medium 2 ist Luft]{Spezialfall $\underline{Medium 2}$ ist Luft}
 \begin{align*}
     \Aboxed{ & \mu_{r2} = \varepsilon_{r2} = 1}                                                            \\
     r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\mu_{r1}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\mu_{r1}}}} \\
     t        & = \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\mu_{r1}}+\sqrt{\varepsilon_{r1}}}
 \end{align*}
 
-\subsubsection{Spezialfall $\underline{beide Medien}$ NICHT magnetisch}
+\subsubsection[Spezialfall beide Medien NICHT magnetisch]{Spezialfall $\underline{beide Medien}$ NICHT magnetisch}
 \begin{align*}
     \Aboxed{ & \mu_{r1} = \mu_{r2} = 1}                                                                                    \\
     r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}} \\
     t        & = \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}
 \end{align*}
 
-\subsubsection{Spezialfall $\underline{Medium 2}$ idealer Leiter}
+\subsubsection[Spezialfall Medium 2 idealer Leiter]{Spezialfall $\underline{Medium 2}$ idealer Leiter}
 \begin{align*}
     Z_{F2}       & = 0                                 \\
     r            & = -1                                \\

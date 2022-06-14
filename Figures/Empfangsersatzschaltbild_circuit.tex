@@ -1,0 +1,16 @@
+\begin{center}
+\resizebox{\columnwidth}{!}{
+        \begin{circuitikz}%[american voltages]
+            %Schaltbild
+            \draw(0,0) node[below right]{$U_0=l_{eff}\cdot E$}
+            to[V,v=$U_0 $](0,2)                               %Spannungsquelle
+            to[R=$R_S$](2,2)                                   %Strahlungswiderstand
+            to[short](4 ,2)
+            to[R= $R_S$](4,0)  
+            to[short](0,0);  
+            \draw(3,2) node[below]{$l$}
+            to[open,o-o](3,0) node[above]{$l'$}; 
+        
+        \end{circuitikz}
+}
+\end{center}

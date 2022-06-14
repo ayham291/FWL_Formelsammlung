@@ -1,11 +1,16 @@
 \section{Leitungen}
-
 \subsection{Leitungsparameter}
 
+{\small\[
+        \sigma = \text{Leitwert des Dielektr.} \qquad \sigma_c = \text{Leitwert des Leiters}
+    \]}
+
+\vspace{-5ex}
+
 \subsubsection{Doppelleitung:}
-\[
-    a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
-\]
+{\small\[
+        a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
+    \]}
 
 \input{Figures/Doppelleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
@@ -22,9 +27,12 @@
     \end{tabularx}}
 
 \subsubsection{Koaxial Leitung}
-\[
-    a = \text{innen Radius} \qquad b = \text{außen Radius} \\
-\]
+{\small\[
+        a = \text{innen Radius} \qquad b = \text{außen Radius} \\
+    \]}
+
+\vspace{-5ex}
+
 \begin{align*}
     \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                    \\
     \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                \\
@@ -46,9 +54,9 @@
     \end{tabularx}}
 
 \subsubsection{Parallele Platten}
-\[
-    w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
-\]
+{\small\[
+        w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
+    \]}
 
 \input{Figures/Parallele_Platten.tex}
 {\renewcommand*{\arraystretch}{0.2}
@@ -62,7 +70,13 @@
         \hline
         \[C=\frac{w\varepsilon}{d}\]  \\
         \hline
-    \end{tabularx}}
+    \end{tabularx}
+}
+
+\textbf{
+    \color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
+    \color{red}{Länge verdoppeln!!!}
+}
 
 \vspace{1ex}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
@@ -72,9 +86,9 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 
 \subsection{Allgemeine Lösung Leitungsgleichung}
 \begin{align*}
-    U(z) & = U^+ e^{\gamma z} + U^- e^{-\gamma z} = U^+ e^{\gamma d} + U^ - e^{-\gamma d}                      \\
-    I(z) & = I^+ e^{\gamma z} + I^- e^{-\gamma z} = \frac{U^+}{Z_L}e^{\gamma d} - \frac{U^-}{Z_L}e^{-\gamma d} \\
-    Z_L  & = \frac{U^+}{I^+} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}
+    U(z) & = U_h e^{\gamma z} + U_r e^{-\gamma z} = U_h e^{\gamma d} + U_r e^{-\gamma d}                       \\
+    I(z) & = I_h e^{\gamma z} + I_r e^{-\gamma z} = \frac{U_h}{Z_L}e^{\gamma d} - \frac{U_r}{Z_L}e^{-\gamma d} \\
+    Z_L  & = \frac{U_h}{I_h} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}
 \end{align*}
 
 \begin{align*}
@@ -89,7 +103,7 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \subsubsection{Verlustlose Übertragungsleitung}
 \begin{align*}
     \underline{\gamma} & = j\omega\sqrt{LC}= j\beta                                                                                           \\
-    Z_L                & =\frac{U^+}{U^-}       = \sqrt{\frac{L}{C}}                                                                          \\
+    Z_L                & =\frac{U_h}{U_r}       = \sqrt{\frac{L}{C}}                                                                          \\
     v                  & = \frac{\omega}{\beta} = \frac{1}{\sqrt{LC}}= \frac{1}{\sqrt{\mu\varepsilon}}= \frac{c_0}{\sqrt{\mu_r\varepsilon_r}} \\
     \lambda            & = \frac{2\pi}{\beta}=\frac{1}{f\sqrt{LC}}= \frac{v}{f}= \frac{c_0}{f\sqrt{\mu_r\varepsilon_r}}
 \end{align*}
@@ -106,8 +120,8 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \input{Figures/Uebertragung_mit_Last.tex}
 
 \begin{align*}
-    U(z) & = U^+ e^{\gamma z} + U^- e^{-\gamma z} = U^+ e^{\gamma d} + U^ - e^{-\gamma d}                      \\
-    I(z) & = I^+ e^{\gamma z} + I^- e^{-\gamma z} = \frac{U^+}{Z_L}e^{\gamma d} - \frac{U^-}{Z_L}e^{-\gamma d}
+    U(z) & = U_h e^{\gamma z} + U_r e^{-\gamma z} = U_h e^{\gamma d} + U_r e^{-\gamma d}                       \\
+    I(z) & = I_h e^{\gamma z} + I_r e^{-\gamma z} = \frac{U_h}{Z_L}e^{\gamma d} - \frac{U_r}{Z_L}e^{-\gamma d}
 \end{align*}
 
 \subsubsection{Reflexionsfaktor entlang einer Leitung}
@@ -141,9 +155,9 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     Z_A          & = Z_L = Z(z)                              \\
     r_A          & = 0\qquad\rightarrow\text{reflexionsfrei} \\
     \mathrm{SWR} & = 1                                       \\
-    U(z)         & = U^+\cdot e ^{j\beta z}                  \\
-    I(z)         & = I^+ \cdot e^{j\beta z}                  \\
-                 & = \frac{U^+}{Z_L}\cdot e^{j\beta z}
+    U(z)         & = U_h\cdot e ^{j\beta z}                  \\
+    I(z)         & = I_h \cdot e^{j\beta z}                  \\
+                 & = \frac{U_h}{Z_L}\cdot e^{j\beta z}
 \end{align*}
 
 \subsubsection{Spezialfall: Kurzgeschlossene Leitung}
@@ -152,18 +166,18 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     Z(z)         & = j Z_L\cdot\tan(\beta z)        \qquad\rightarrow\text{rein imaginär}     \\
     r_A          & = -1                                                                       \\
     \mathrm{SWR} & = \infty                                                                   \\
-    U(z)         & = U^+\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                   \\
-    I(z)         & = U^+\cdot 2\cos(\beta z)    \qquad\rightarrow I(z=0)=I_A=\frac{2U^+}{Z_L}
+    U(z)         & = U_h\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                   \\
+    I(z)         & = U_h\cdot 2\cos(\beta z)    \qquad\rightarrow I(z=0)=I_A=\frac{2U_h}{Z_L}
 \end{align*}
 
 \subsubsection{Spezialfall: Leerlaufende Leitung}
 \begin{align*}
-    Z_A          & = \infty                                                                   \\
-    Z(z)         & = -jZ_L\cdot \cot(\beta z) \qquad\rightarrow\text{rein imaginär}           \\
-    r_A          & = 1                                                                        \\
-    \mathrm{SWR} & = \infty                                                                   \\
-    U(z)         & = U^+\cdot 2\cos(\beta z) \qquad\rightarrow U(z=0)=0                       \\
-    I(z)         & = U^+\cdot 2j\sin(\beta z) \qquad\rightarrow I(z=0)=I_A = \frac{2U^+}{Z_L}
+    Z_A          & = \infty                                                                         \\
+    Z(z)         & = -jZ_L\cdot \cot(\beta z) \qquad\rightarrow\text{rein imaginär}                 \\
+    r_A          & = 1                                                                              \\
+    \mathrm{SWR} & = \infty                                                                         \\
+    U(z)         & = U_h\cdot 2\cos(\beta z) \qquad\rightarrow U(z=0)=0                             \\
+    I(z)         & = U_h\cdot 2j\sin(\beta z) \qquad\rightarrow I(z=0)=I_A = \frac{2\cdot U_h}{Z_L}
 \end{align*}
 
 \subsubsection{Spezialfall: Ohm'sch abgeschlossene Leitung}
