@@ -120,9 +120,25 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \input{Figures/Uebertragung_mit_Last.tex}
 
 \begin{align*}
-    U(z) & = U_h e^{\gamma z} + U_r e^{-\gamma z} = U_h e^{\gamma d} + U_r e^{-\gamma d}                       \\
-    I(z) & = I_h e^{\gamma z} + I_r e^{-\gamma z} = \frac{U_h}{Z_L}e^{\gamma d} - \frac{U_r}{Z_L}e^{-\gamma d}
+    U(z) & = U_h\cdot  e^{\gamma z} + U_r\cdot  e^{-\gamma z} = U_h\cdot  e^{\gamma d} + U_r\cdot  e^{-\gamma d}                       \\
+    I(z) & = I_h\cdot  e^{\gamma z} + I_r\cdot  e^{-\gamma z} = \frac{U_h}{Z_L}e^{\gamma d} - \frac{U_r}{Z_L}e^{-\gamma d}
 \end{align*}
+
+\subsubsection{Vorgehen Eingangswiderstand} 
+Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E} 
+\begin{enumerate}
+    \item Lastimpedanz
+          \[ \underline{Z}_A = \dfrac{1}{\frac{1}{R_A} + j \omega C_A} \]
+    \item Reflexion am Leitungsende
+          \[ \underline{r}_A = \underline{r}(z=0) = \dfrac{Z_A - \underline{Z}_L}{Z_A + \underline{Z}_L} \]
+    \item Reflexion am Leitungsanfang \label{Ref L_anfang}
+          \[ \underline{r}_E = \underline{r}(z=d) =  \underline{r}_A \cdot e^{-j 2 \beta d}\]
+    \item Bestimmung der Impedanz \label{Bestimmen Z_E}
+          \[ \underline{Z}_E = \underline{Z}_L \cdot \dfrac{1 + \underline{r}_E}{1 - \underline{r}_E}\]
+    \item Eingangswiderstand
+          \[ \underline{Z}_E = \dfrac{1}{\frac{1}{\underline{Z}_E} + j \omega C_E}\]
+\end{enumerate}
+
 
 \subsubsection{Reflexionsfaktor entlang einer Leitung}
 \begin{align*}
@@ -149,6 +165,10 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     z_\texttt{max}           & =\frac{-(2n+1)\lambda_\texttt{max}}{4}                                        \qquad\rightarrow n = -\frac{4z+\lambda_\texttt{max}}{2\cdot\lambda_\texttt{max}} \\
     z                        & = \frac{\lambda_\texttt{min}\cdot\lambda_\texttt{max}}{4(\lambda_\texttt{min}-\lambda_\texttt{max})}
 \end{align*}
+
+\vspace{20pt}
+\textbf{Spezialfälle auf der nächsten Seiten}
+\newpage
 
 \subsubsection{Spezialfall: Angepasste Leitung}
 \begin{align*}
