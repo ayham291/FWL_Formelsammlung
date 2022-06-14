@@ -86,18 +86,15 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 
 \subsection{Allgemeine Lösung Leitungsgleichung}
 \begin{align*}
-    U(z) & = U_h e^{\gamma z} + U_r e^{-\gamma z} = U_h e^{\gamma d} + U_r e^{-\gamma d}                       \\
-    I(z) & = I_h e^{\gamma z} + I_r e^{-\gamma z} = \frac{U_h}{Z_L}e^{\gamma d} - \frac{U_r}{Z_L}e^{-\gamma d} \\
-    Z_L  & = \frac{U_h}{I_h} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}
-\end{align*}
-
-\begin{align*}
-    \gamma      & = j \omega \sqrt{LC} \cdot \sqrt{ \frac{RG}{j^2 \omega^2 LC} + \frac{G}{j \omega C} + \frac{R}{j \omega L} + 1}                             \\
-    \lambda     & = \frac{2 \pi}{\beta}                                                                                                                       \\
-    v_{Ph}      & = \frac{\omega}{\beta}                                                                                                                      \\
-    l_{elektr.} & = \beta \cdot l                                                                                                                             \\
-    \alpha      & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
-    \beta       & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)}
+    \underline{U}(z)    & = U_h e^{\underline{\gamma} z} + U_r e^{-\underline{\gamma} z} = U_h e^{\underline{\gamma} d} + U_r e^{-\underline{\gamma} d}                                                                 \\
+    \underline{I}(z)    & = I_h e^{\underline{\gamma} z} + I_r e^{-\underline{\gamma} z} = \frac{U_h}{Z_L}e^{\underline{\gamma} d} - \frac{U_r}{Z_L}e^{-\underline{\gamma} d}                                           \\
+    \underline{Z}_L     & = \frac{U_h}{I_h} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}                                                                             \\
+    \underline{\gamma}  & = j \omega \sqrt{LC} \cdot \sqrt{ \frac{RG}{j^2 \omega^2 LC} + \frac{G}{j \omega C} + \frac{R}{j \omega L} + 1}                               \\
+    \lambda             & = \frac{2 \pi}{\beta}                                                                                                                         \\
+    v_{Ph}              & = \frac{\omega}{\beta}                                                                                                                        \\
+    l_{elektr.}         & = \beta \cdot l                                                                                                                               \\
+    \alpha              & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}     \\
+    \beta               & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)}
 \end{align*}
 
 \subsubsection{Verlustlose Übertragungsleitung}
@@ -120,8 +117,8 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \input{Figures/Uebertragung_mit_Last.tex}
 
 \begin{align*}
-    U(z) & = U_h\cdot  e^{\gamma z} + U_r\cdot  e^{-\gamma z} = U_h\cdot  e^{\gamma d} + U_r\cdot  e^{-\gamma d}                       \\
-    I(z) & = I_h\cdot  e^{\gamma z} + I_r\cdot  e^{-\gamma z} = \frac{U_h}{Z_L}e^{\gamma d} - \frac{U_r}{Z_L}e^{-\gamma d}
+    U(z) & = U_h\cdot  e^{\underline{\gamma} z} + U_r\cdot  e^{-\underline{\gamma} z} = U_h\cdot  e^{\underline{\gamma} d} + U_r\cdot  e^{-\underline{\gamma} d}                       \\
+    I(z) & = I_h\cdot  e^{\underline{\gamma} z} + I_r\cdot  e^{-\underline{\gamma} z} = \frac{U_h}{Z_L}e^{\underline{\gamma} d} - \frac{U_r}{Z_L}e^{-\underline{\gamma} d}
 \end{align*}
 
 \subsubsection{Vorgehen Eingangswiderstand} 
@@ -142,7 +139,7 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
 
 \subsubsection{Reflexionsfaktor entlang einer Leitung}
 \begin{align*}
-    r_E    & = r_A  ^{-2\gamma l} = r_A  e^{-2\alpha l} e^{-j2\beta l}                                                     \\
+    r_E    & = r_A  ^{-2\underline{\gamma} l} = r_A  e^{-2\alpha l} e^{-j2\beta l}                                                     \\
     \alpha & = -\frac{\ln(r_A)}{2l} [\si{Np/m}]                        & \beta & = \dfrac{\phi_2 -\phi_1}{2l} [\si{rad/m}]
 \end{align*}
 
