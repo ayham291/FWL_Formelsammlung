@@ -1,13 +1,17 @@
 \begin{center}
     \begin{tikzpicture}
         %Kreise
-        \draw[,fill=blue] (0,0) circle (0.15);              %äußerer Kreis
-        \draw[,fill=white] (0,0) circle (0.12) node at(0.01,-0.03)[]{-};   %innerer Kreis
-        \node at(0,-0.1)[below]{\tiny{Q}};                
+        %Kreise
+        \fill[blue]   (0,0) circle (0.15);    %äußerer Kreis
+        \fill[white]  (0,0) circle (0.1);     %innerer Kreis
+        \node at(-0.05,-0.03)[left]{-};           
+        \node at(0,-0.1)[below]{\tiny{Q}}; 
 
-        \draw[,fill=red] (0,1.5) circle (0.15);             %äußerer Kreis
-        \draw[,fill=white] (0,1.5) circle (0.12) node[]{+}; %innerer Kreis
+        \node at(0,1.5)[left]{\tiny{+}};
+        \fill[red]    (0,1.5) circle (0.15);  %äußerer Kreis
+        \fill[white]  (0,1.5) circle (0.1);  %innerer Kreis 
         \node at(0,1.6)[above]{\tiny{Q}};                
+             
 
         %Pfeile
         \draw[-latex] (0,0.15)  -- (0,1.35) node[left, midway]{\tiny{d}};
