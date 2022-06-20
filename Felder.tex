@@ -134,21 +134,35 @@ mit $\opgrad \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|}=-\frac{\vec{r}-\v
     \Aboxed{\vec{p} = Q\cdot\vec{d}}
 \end{align*}
 
-\input{Figures/Elektrischer_Dipol_1.tex}
+\makebox[0pt][l]{
+    \begin{minipage}[b]{0.5\columnwidth}
+        \input{Figures/Elektrischer_Dipol_1.tex}
+    \end{minipage}
+    \begin{minipage}[b]{0.5\columnwidth}
+        \input{Figures/Elektrischer_Dipol_2.tex}
+    \end{minipage}
+}
 
-\begin{align*}
-    \varphi & = \frac{Q}{4\pi\varepsilon_0}\left(\frac{1}{r_1}-\frac{1}{r_2}\right)                                        \\
-            & = \frac{Q}{4\pi\varepsilon_0}\cdot\frac{r_2-r_1}{r^2}                                                        \\
-    \vec{E} & = -\nabla\varphi                                                                                             \\
-            & = \frac{1}{4\pi\varepsilon_0}\cdot\left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^5}-\frac{\vec{p}}{r^3}\right)
-\end{align*}
+\makebox[0pt][l]{
+    \begin{minipage}[]{0.5\columnwidth}
+        \begin{align*}
+            \varphi & = \frac{Q}{4\pi\varepsilon_0}\left(\frac{1}{r_1}-\frac{1}{r_2}\right)                                        \\
+                    & = \frac{Q}{4\pi\varepsilon_0}\cdot\frac{r_2-r_1}{r^2}                                                        \\
+            \vec{E} & = -\nabla\varphi                                                                                             \\
+                    & = \frac{1}{4\pi\varepsilon_0}\cdot\left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^5}-\frac{\vec{p}}{r^3}\right)
+        \end{align*}
+    \end{minipage}
 
-\input{Figures/Elektrischer_Dipol_2.tex}
+    \begin{minipage}[]{0.5\columnwidth}
+        \begin{align*}
+            \varphi & \approx\frac{Qd\cos\theta}{4\pi\varepsilon_0r^2}                  \\
+                    & = \frac{1}{4\pi\varepsilon_0}\cdot\frac{\vec{p}\cdot\vec{r}}{r^3}
+        \end{align*}
+    \end{minipage}
+}
 
-\begin{align*}
-    \varphi & \approx\frac{Qd\cos\theta}{4\pi\varepsilon_0r^2}                  \\
-            & = \frac{1}{4\pi\varepsilon_0}\cdot\frac{\vec{p}\cdot\vec{r}}{r^3}
-\end{align*}
+\subsubsection{Magnetischer Dipol}
+\input{Figures/Magnetischer_Dipol.tex}
 
 \subsection{Skineffekt}
 
