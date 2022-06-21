@@ -16,7 +16,7 @@ phasenverschoben
 \begin{empheq}[box=\fbox]{align*}
     \vec{H} & \approx \frac{I_0 \Delta l'}{4\pi R^2}\cdot\sin\theta\cdot\vec{e}_\phi                                            \\
     \vec{E} & \approx \frac{I_0 \Delta l'}{2\pi j \omega\varepsilon R^3}\cos\theta\cdot\vec{e}_R\\
-            & +       \frac{I_0 \Delta l'}{4\pi j \omega\varepsilon R^3}\sin\theta\cdot\vec{e}_\theta
+    & +       \frac{I_0 \Delta l'}{4\pi j \omega\varepsilon R^3}\sin\theta\cdot\vec{e}_\theta
 \end{empheq}
 
 % \begin{empheq}[box=\fbox]{align*}
@@ -51,22 +51,46 @@ mit $\eta = Z_{F0}$
     S_{av}         & = \frac{Z_FI_0^2\beta^2(\Delta l')^2}{32\pi^2R^2}\cdot\sin^2\theta\cdot\vec{e}_R \\
                    & = \frac{1}{2}\Re\left\{\vec{E}\times\vec{H}^*\right\}
 \end{align*}
-
-\subsection{Magnetischer Dipol}
+\subsubsection{Strahlungswiderstand}
 \begin{align*}
+    R_{rad} & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2 \\
+            & = 80\pi^2\Omega\left(\frac{\Delta l'}{\lambda}\right)^2
+\end{align*}
+\subsection{Magnetischer Dipol}
+
+\begin{center}
+    \input{Figures/Magnetischer_Dipol_2.tex}
+\end{center}
+
+\begin{align*}
+    \vec{A}  & = \frac{\mu m}{4\pi R^2}(1+j\beta R) e^{-j\beta R}\sin\theta\cdot\vec{e}_\phi \\
     \Delta l & \rightarrow \beta\pi\ a^2
 \end{align*}
 
-\subsubsection{Fernfeld}
 \begin{empheq}[box=\fbox]{align*}
-    E & = \vec{\Phi}\cdot j\frac{\eta I_0\beta^2\pi a^2}{4\pi R}\cdot e^{-j\beta R}\cdot\sin\theta \\
-    H & = \vec{\theta}\cdot j\frac{I_0\beta^2\pi a^2}{4\pi R}\cdot e^{-j\beta R}\cdot\sin\theta
+    {\vec{H}}   & = -\frac{j\omega\mu\beta^2m}{2\pi Z_{F0}}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                             \\
+    & = -\frac{j\omega\mu\beta^2m}{4\pi Z_{F0}}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta   \\
+    {\vec{E}}   & =  \frac{j\omega\mu\beta^2m}{4\pi}e^{-j\beta R}\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi
 \end{empheq}
 
+\subsubsection{Fernfeld}
+\begin{empheq}[box=\fbox]{align*}
+    E & \approx -\frac{\beta m\omega\mu}{4\pi R}e^{-j\beta R}\sin\theta\cdot\vec{e}_\phi \\
+    H & \approx -\frac{\beta m\omega\mu}{4\pi R Z_{F0}}e^{-j\beta R}\sin\theta\cdot\vec{e}_\theta
+\end{empheq}
+\subsubsection{Abgestrahlte Leistung im Fernfeld}
 \begin{align*}
-    P_\texttt{rad} & = I_0^2\cdot\frac{\eta\pi}{3}\cdot\left(\frac{\beta\pi a^2}{\lambda}\right)^2                                      \\
-                   & = I_0^2\cdot\frac{4}{3}\cdot Z_F\cdot\frac{\pi^5}{a^4\cdot\sqrt{\varepsilon_r^3}}\cdot\left(\frac{f}{c_0}\right)^4
+    P_\texttt{rad} & = \frac{Z_F\beta^4m^2}{12\pi}                                     \\
+                   & = \frac{m^2\mu\omega^4}{12\pi v_p^3}                              \\
+    S_{av}         & = \frac{Z_F\beta^4m^2}{32\pi^2R^2}\cdot\sin^2\theta\cdot\vec{e}_R \\
+                   & = \frac{1}{2}\Re\left\{\vec{E}\times\vec{H}^*\right\}
 \end{align*}
+
+\subsubsection{Nahfeld}
+\begin{empheq}[box=\fbox]{align*}
+    E & \approx -\frac{jm\omega\mu}{4\pi R^2}\sin\theta\cdot\vec{e}\phi \\
+    H & \approx \frac{m}{4\pi R^3}(2\cos\theta\cdot\vec{e}_R+\sin\theta\cdot\vec{e}_\theta)
+\end{empheq}
 
 \subsubsection{Lineare Antenne}
 \begin{align*}
