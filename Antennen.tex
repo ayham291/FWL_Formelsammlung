@@ -53,8 +53,8 @@ mit $\eta = Z_{F0}$
 \end{align*}
 \subsubsection{Strahlungswiderstand}
 \begin{align*}
-    R_{rad} & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2 \\
-            & = 80\pi^2\Omega\left(\frac{\Delta l'}{\lambda}\right)^2
+    R_{S} & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2 \\
+          & = 80\pi^2\Omega\left(\frac{\Delta l'}{\lambda}\right)^2
 \end{align*}
 \subsection{Magnetischer Dipol}
 
@@ -92,16 +92,20 @@ mit $\eta = Z_{F0}$
     H & \approx \frac{m}{4\pi R^3}(2\cos\theta\cdot\vec{e}_R+\sin\theta\cdot\vec{e}_\theta)
 \end{empheq}
 
-\subsubsection{Lineare Antenne}
+\subsection{Lineare Antenne}
 \begin{align*}
     I(z') & = I_0\cdot\sin\left[\beta\left(\frac{L}{2}-|z'|\right)\right]
 \end{align*}
 
 \subsubsection{Dipolantenne}
 \begin{align*}
-    H   & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta} \\
-    E   & = H\cdot\eta                                                                                                                                                      \\
-    I_0 & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}
+    \vec{H}      & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\phi \\
+    \vec{E}      & = H\cdot Z_F\cdot\vec{e}_\theta                                                                                                                                                    \\
+    I_0          & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}                                                                                                                                               \\
+                 & \text{Die mittlere Strahlungsleistungsdichte}                                                                                                                                      \\
+    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\right)^2\cdot\vec{e}_R                       \\
+                 & \text{Die gesamte Strahlungsleistung}                                                                                                                                              \\
+    P_S          & = \frac{Z_FI_0^2}{4\pi}\int^{\theta=\pi}_{\theta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\theta}\cdot\vec{e}_\theta
 \end{align*}
 
 \subsection{Antennenkenngrößen}
@@ -123,19 +127,21 @@ mit $\eta = Z_{F0}$
     \eta & = \frac{P_S}{P_S + P_V} = \frac{R_S}{R_S + R_V}
 \end{align*}
 
+\subsubsection{Richtcharakeristik}
+\begin{align*}
+    C(\varphi,\vartheta) & = \frac{E(\varphi,\vartheta)}{E_{max}} = \frac{H(\varphi,\vartheta)}{H_{max}} = \frac{U(\varphi,\vartheta)}{U_{max}}
+\end{align*}
+
 \subsubsection{Richtfaktor und Gewinn}
+\begin{align*}
+    D & =\frac{S_{max}}{S_{iso}} \\
+    G & = \eta\cdot D
+\end{align*}
 \begin{align*}
      & D\left[\si{dB}\right]  &  & G\left[\si{dB}\right]  \\
      & d\left[\si{dBi}\right] &  & g\left[\si{dBi}\right] \\
-     &                        &  & G  = \eta\cdot D       \\
      & d = 10\cdot\log_{10} D &  & g  = 10\cdot\log_{10}G
 \end{align*}
-
-\subsubsection{Wirksame Antennenfläche}
-\begin{align*}
-    A_W & = \frac{\lambda^2}{4\pi}\cdot G
-\end{align*}
-
 
 \subsection{Bezugsantennen}
 \[
@@ -162,8 +168,10 @@ mit $P_0$ : Eingangsleistung der Antenne
 \end{description}
 
 \subsection{Senden und Empfangen}
+\input{Figures/Empfangsersatzschaltbild_circuit.tex}
+
 \begin{align*}
-    \Aboxed{A_W & = G_{RX}\cdot\frac{\lambda^2}{4\pi}}                                     \\
+    \Aboxed{A_W & = A_{eff} = G_{RX}\cdot\frac{\lambda^2}{4\pi}}                           \\
     P_E         & = S_E\cdot A_W                                                           \\
                 & = P_S\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
 \end{align*}
