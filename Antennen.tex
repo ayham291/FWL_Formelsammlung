@@ -19,12 +19,24 @@
     \eta & = \frac{P_S}{P_S + P_V} = \frac{R_S}{R_S + R_V}
 \end{align*}
 
-\subsubsection{Richtfaktor und Gewinn}
+\subsubsection{Richtcharakteristik}
+$C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 \begin{align*}
-     & D\left[\si{dB}\right]  &  & G\left[\si{dB}\right]  \\
-     & d\left[\si{dBi}\right] &  & g\left[\si{dBi}\right] \\
-     &                        &  & G  = \eta\cdot D       \\
-     & d = 10\cdot\log_{10} D &  & g  = 10\cdot\log_{10}G
+    C(\vartheta, \varphi) &= \frac{E(\vartheta, \varphi)}{E_{\max }}=\frac{H(\vartheta, \varphi)}{H_{\max }} \qquad 0 \leq C(\vartheta, \varphi) \leq 1\\
+    C_{i}(\vartheta, \varphi) &= \frac{E(\vartheta, \varphi)}{E_{i}}=\frac{H(\vartheta, \varphi)}{H_{i}}     \qquad C_{i}>1 
+\end{align*}
+
+\subsubsection{Richtfunktion/Richtfaktor}
+In $[\si{dB}]$ angeben !
+\begin{align*}
+    D(\vartheta, \varphi) &= \frac{S(\vartheta, \varphi)}{S_{i}} \\
+    D =\max \{D(\vartheta, \varphi)\} &= \frac{S_{\max}}{S_{i}} \\
+    D(\vartheta, \varphi) &= C_{i}^{2}(\vartheta, \varphi) = D \cdot C^{2}(\vartheta, \varphi)
+\end{align*}
+
+\subsubsection{Gewinn}
+\begin{align*}
+    G &= \eta \cdot D \qquad [\si{dB}]\\
 \end{align*}
 
 \subsubsection{Wirksame Antennenfläche}
@@ -32,8 +44,8 @@
     A_W & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
 \end{align*}
 
-\subsection{Herz'scher Dipol}
 
+\subsection{Herz'scher Dipol}
 \subsubsection{Allgemein}
 
 \begin{empheq}[box=\fbox]{align*}
@@ -41,6 +53,11 @@
     &\underline{E}_{\theta}=\frac{Z_{F} \underline{I} \ell}{4 \pi r^{3} k} \sin \theta \cdot e^{-j k r} \left[k r-\mathrm{j}+\mathrm{j}(k r)^{2}\right]\\
     &\underline{H}_{\varphi}=\frac{\underline{I} \ell}{4 \pi r^{2}} \sin \theta \cdot e^{-j k r} [1+\mathrm{j} k r]
 \end{empheq}
+\begin{align*}
+    S_{\max } &=\frac{1}{2} H^{2} Z_{F 0} = \frac{15 \pi \Omega}{r^{2}}\left(\frac{I \ell}{\lambda}\right)^{2} \\
+    S_{\text {mittel}} &=\frac{P_{s}}{\text { Kugeloberfläche }} = \frac{10 \pi \Omega}{r^{2}}\left(\frac{I \ell}{\lambda}\right)^{2} \\
+    D &=\frac{15}{10}=1,5
+\end{align*}
 
 \subsubsection[Nahfeld]{Nahfeld: $r \ll \lambda$}
 
@@ -82,7 +99,9 @@ mit $\eta = Z_{F0}$
 
 \subsection{Magnetischer Dipol}
 \begin{align*}
-    \Delta l & \rightarrow \beta\pi\ a^2
+    \Delta l & \rightarrow \beta\pi\ a^2\\
+    P_S &= 40\pi^2 \Omega \cdot I^2 \cdot \left(\dfrac{l}{\lambda}\right)^2 \\
+    R_S &= 80\pi^2 \cdot \left(\dfrac{l}{\lambda}\right)^2 \Omega
 \end{align*}
 
 \subsubsection{Fernfeld}
