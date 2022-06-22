@@ -29,7 +29,7 @@
 
 \subsubsection{Wirksame Antennenfläche}
 \begin{align*}
-    A_W & = \frac{\lambda^2}{4\pi}\cdot G
+    A_W & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
 \end{align*}
 
 \subsection{Herz'scher Dipol}
@@ -105,12 +105,12 @@ mit $\eta = Z_{F0}$
 \begin{align*}
     H   & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta} \\
     E   & = H\cdot\eta                                                                                                                                                      \\
-    I_0 & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}
+    I_0 & = \sqrt{\frac{2\cdot P_{S}}{R_S}}
 \end{align*}
 
 \subsection{Bezugsantennen}
 \[
-    \boxed{g = 10 \cdot log(G)\si{dB}}
+    \boxed{g = 10 \cdot log(G) \si{dB}}
 \]
 
 mit $P_0$ : Eingangsleistung der Antenne
@@ -133,8 +133,25 @@ mit $P_0$ : Eingangsleistung der Antenne
 \end{description}
 
 \subsection{Senden und Empfangen}
+\begin{description}
+    \item Senden = transmit = TX
+    \item Empfangen = receive = RX
+\end{description}
+
 \begin{align*}
     \Aboxed{A_W & = G_{RX}\cdot\frac{\lambda^2}{4\pi}}                                     \\
-    P_E         & = S_E\cdot A_W                                                           \\
-                & = P_S\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+    P_{RX}      & = S_{RX}\cdot A_W                                                        \\
+                & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+\end{align*}
+
+\subsubsection{Freiraumdämpfung/Freiraumdämpfungsmaß}
+\begin{align*}
+    F = \dfrac{P_{TX}}{P_{RX}} \cdot \left(\dfrac{4 \pi d}{\lambda}\right)^2 &\qquad [1] \\ 
+    a_{0} = 20 \lg \left(\frac{4 \pi d}{\lambda}\right) =20 \lg \left(\frac{4 \pi d f}{c_{0}}\right)   &\qquad [\si{dB}]
+\end{align*}
+
+\subsubsection{Leistungspegel/Freiraumpegel}
+\begin{align*}  
+    L &= 10 \lg \frac{P}{1 mW} \qquad [\si{dBm}] \\
+    L_{RX} &= L_{TX}+g_{TX}+g_{RX}-a_{0} \qquad [\si{dB}]
 \end{align*}
