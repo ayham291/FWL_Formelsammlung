@@ -1,13 +1,12 @@
 \section{Antennen}
 \subsection{Herz'scher Dipol}
-
 \subsubsection{Allgemein}
 
-\begin{empheq}[box=\fbox]{align*}
-    {\vec{H}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi\\
-    {\vec{E}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                                                             \\
-    & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta
-\end{empheq}
+{\footnotesize\begin{empheq}[box=\fbox]{align*}
+    {\vec{H}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi                                 \\
+    {\vec{E}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                           \\
+              & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta
+\end{empheq}}%
 
 \subsubsection[Nahfeld]{Nahfeld(Fresnel-Zone):\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$}
 
@@ -18,12 +17,6 @@ phasenverschoben
     \vec{E} & \approx \frac{I_0 \Delta l'}{2\pi j \omega\varepsilon R^3}\cos\theta\cdot\vec{e}_R\\
     & +       \frac{I_0 \Delta l'}{4\pi j \omega\varepsilon R^3}\sin\theta\cdot\vec{e}_\theta
 \end{empheq}
-
-% \begin{empheq}[box=\fbox]{align*}
-%     E_r       & = \frac{I l \lambda}{4\pi^2\varepsilon_0  c_0}\cdot \frac{1}{r^3} \cdot\cos\theta \cdot \sin(\omega t - \beta r) \\
-%     E_\theta       & = \frac{I l \lambda}{4\pi^2\varepsilon_0  c_0}\cdot \frac{1}{r^3} \cdot\sin\theta \cdot \sin(\omega t - \beta r) \\
-%     H_\varphi & = \frac{I l}{4\pi}\cdot \frac{1}{r^2}\cdot\sin\varphi\cdot\cos(\omega t -\beta r)
-% \end{empheq}
 
 \subsubsection[Fernfeld]{Fernfeld(Fraunhofer-Zone):\\ $\frac{\lambda}{2\pi R}\ll 1$ oder $\beta R\gg 1$}
 
@@ -36,12 +29,6 @@ mit $\eta = Z_{F0}$
     H & \approx  j\frac{\beta I_0 \Delta l'}{4\pi R}\cdot e^{-j\beta R}\cdot\sin\theta\cdot\vec{e}_\phi                           \\
     E & \approx  j\frac{\beta Z_F I_0 \Delta l'}{4\pi R}\cdot e^{-j\beta R}\cdot\sin\theta\cdot \vec{e}_\theta
 \end{empheq}
-
-% \begin{empheq}[box=\fbox]{align*}
-%     E_r       & = 0                                                                                                           \\
-%     E_\theta       & = -\frac{I l }{2\varepsilon_0  c_0 \lambda}\cdot \frac{1}{r} \cdot\sin\theta \cdot \sin(\omega t - \beta r) \\
-%     H_\varphi & = -\frac{I l}{2\lambda}\cdot \frac{1}{r}\cdot\sin\theta\cdot\sin(\omega t -\beta r)
-% \end{empheq}
 
 \subsubsection{Abgestrahlte Leistung im Fernfeld}
 \begin{align*}
@@ -67,11 +54,11 @@ mit $\eta = Z_{F0}$
     \Delta l & \rightarrow \beta\pi\ a^2
 \end{align*}
 
-\begin{empheq}[box=\fbox]{align*}
+{\footnotesize\begin{empheq}[box=\fbox]{align*}
     {\vec{H}}   & = -\frac{j\omega\mu\beta^2m}{2\pi Z_{F0}}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                             \\
     & = -\frac{j\omega\mu\beta^2m}{4\pi Z_{F0}}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta   \\
     {\vec{E}}   & =  \frac{j\omega\mu\beta^2m}{4\pi}e^{-j\beta R}\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi
-\end{empheq}
+\end{empheq}}%
 
 \subsubsection{Fernfeld}
 \begin{empheq}[box=\fbox]{align*}
@@ -127,25 +114,34 @@ mit $\eta = Z_{F0}$
     \eta & = \frac{P_S}{P_S + P_V} = \frac{R_S}{R_S + R_V}
 \end{align*}
 
-\subsubsection{Richtcharakeristik}
+\subsubsection{Richtcharakteristik}
+$C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 \begin{align*}
-    C(\varphi,\vartheta) & = \frac{E(\varphi,\vartheta)}{E_{max}} = \frac{H(\varphi,\vartheta)}{H_{max}} = \frac{U(\varphi,\vartheta)}{U_{max}}
+    C(\vartheta, \varphi)     & = \frac{E(\vartheta, \varphi)}{E_{\max}}=\frac{H(\vartheta, \varphi)}{H_{\max}} = \frac{U(\varphi,\vartheta)}{U_{\max}} & 0 \leq C(\vartheta, \varphi) \leq 1 \\
+    C_{i}(\vartheta, \varphi) & = \frac{E(\vartheta, \varphi)}{E_{i}}=\frac{H(\vartheta, \varphi)}{H_{i}}                                               & C_{i}>1
 \end{align*}
 
-\subsubsection{Richtfaktor und Gewinn}
+\subsubsection{Richtfunktion/Richtfaktor}
+In $[\si{dB}]$ angeben !
 \begin{align*}
-    D & =\frac{S_{max}}{S_{iso}} \\
-    G & = \eta\cdot D
+    D(\vartheta, \varphi)             & = \frac{S(\vartheta, \varphi)}{S_{i}}                               \\
+    D =\max \{D(\vartheta, \varphi)\} & = \frac{S_{\max}}{S_{i}}                                            \\
+    D(\vartheta, \varphi)             & = C_{i}^{2}(\vartheta, \varphi) = D \cdot C^{2}(\vartheta, \varphi)
 \end{align*}
+
+\subsubsection{Gewinn}
 \begin{align*}
-     & D\left[\si{dB}\right]  &  & G\left[\si{dB}\right]  \\
-     & d\left[\si{dBi}\right] &  & g\left[\si{dBi}\right] \\
-     & d = 10\cdot\log_{10} D &  & g  = 10\cdot\log_{10}G
+    G & = \eta \cdot D \qquad [\si{dB}] \\
+\end{align*}
+
+\subsubsection{Wirksame Antennenfläche}
+\begin{align*}
+    A_W & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
 \end{align*}
 
 \subsection{Bezugsantennen}
 \[
-    \boxed{g = 10 \cdot log(G)\si{dB}}
+    \boxed{g = 10 \cdot log(G) \si{dB}}
 \]
 
 mit $P_0$ : Eingangsleistung der Antenne
@@ -170,8 +166,25 @@ mit $P_0$ : Eingangsleistung der Antenne
 \subsection{Senden und Empfangen}
 \input{Figures/Empfangsersatzschaltbild_circuit.tex}
 
+\begin{description}
+    \item Senden = transmit = TX
+    \item Empfangen = receive = RX
+\end{description}
+
 \begin{align*}
-    \Aboxed{A_W & = A_{eff} = G_{RX}\cdot\frac{\lambda^2}{4\pi}}                           \\
-    P_E         & = S_E\cdot A_W                                                           \\
-                & = P_S\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+    \Aboxed{A_W & = G_{RX}\cdot\frac{\lambda^2}{4\pi}}                                        \\
+    P_{RX}      & = S_{RX}\cdot A_W                                                           \\
+                & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+\end{align*}
+
+\subsubsection{Freiraumdämpfung/Freiraumdämpfungsmaß}
+\begin{align*}
+    F = \dfrac{P_{TX}}{P_{RX}} \cdot \left(\dfrac{4 \pi d}{\lambda}\right)^2 &\qquad [1] \\ 
+    a_{0} = 20 \lg \left(\frac{4 \pi d}{\lambda}\right) =20 \lg \left(\frac{4 \pi d f}{c_{0}}\right)   &\qquad [\si{dB}]
+\end{align*}
+
+\subsubsection{Leistungspegel/Freiraumpegel}
+\begin{align*}  
+    L &= 10 \lg \left(\frac{P}{1 mW}\right) \qquad [\si{dBm}] \\
+    L_{RX} &= L_{TX}+g_{TX}+g_{RX}-a_{0} \qquad [\si{dB}]
 \end{align*}
