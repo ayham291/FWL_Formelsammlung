@@ -4,7 +4,7 @@ This repository/formulary is based on Felder, Wellen und Leitungen
 lecture at Ostbayerische Technische Hochschule
 
 [Hier ist die
-PDF](https://latexonline.cc/compile?git=https://github.com/ayham291/FWL_Formelsammlung&target=main.tex&force=true)
+PDF](https://latexonline.cc/compile?git=https://github.com/ayham291/FWL_Formelsammlung&target=main.tex&force=true) oder unter dem Ordner pdf
 
 compiled with
 [latexonline.cc](https://github.com/aslushnikov/latex-online)
