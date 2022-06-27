@@ -136,7 +136,7 @@ In $[\si{dB}]$ angeben !
 
 \subsubsection{Wirksame Antennenfläche}
 \begin{align*}
-    A_W & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
+    A_{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
 \end{align*}
 
 \subsection{Bezugsantennen}
@@ -172,9 +172,10 @@ mit $P_0$ : Eingangsleistung der Antenne
 \end{description}
 
 \begin{align*}
-    \frac{P_{RX}}{P_{TX}} & = A_{eff,RX}\cdot A_{eff,TX}\cdot\frac{1}{\lambda^2r^2} = D_{i,RX}\cdot D_{i,TX}\cdot\left(\frac{\lambda}{4\pi r}\right)^2 \\
-    \Aboxed{A_W           & = G_{RX}\cdot\frac{\lambda^2}{4\pi}{\cdot\frac{3}{2}\cdot\sin^2\theta}}                                                                                       \\
-    P_{RX}                & = S_{RX}\cdot A_W                                                                                                          \\
+    \frac{P_{RX}}{P_{TX}} & = A_{eff,RX}\cdot A_{eff,TX}\cdot\frac{1}{\lambda^2r^2}                                            \\
+                          & = D_{i,RX}\cdot\eta_{RX}\cdot D_{i,TX}\cdot\eta_{TX}\cdot\left(\frac{\lambda}{4\pi r}\right)^2     \\
+    \Aboxed{A_{eff}(\theta)   & = G_{RX}\cdot\frac{\lambda^2}{4\pi}\overbrace{\cdot\frac{3}{2}\cdot\sin^2\theta}^{{D_{i,\theta}}}} \\
+    P_{RX}                & = S_{RX}\cdot A_{eff}                                                                                  \\
                           & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
 \end{align*}
 
