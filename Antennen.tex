@@ -3,10 +3,10 @@
 \subsubsection{Allgemein}
 
 {\footnotesize\begin{empheq}[box=\fbox]{align*}
-    {\vec{H}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi                                 \\
-    {\vec{E}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                           \\
-              & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta
-\end{empheq}}%
+        {\vec{H}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi                                 \\
+        {\vec{E}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                           \\
+        & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta
+    \end{empheq}}%
 
 \subsubsection[Nahfeld]{Nahfeld(Fresnel-Zone):\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$}
 
@@ -86,12 +86,12 @@ mit $\eta = Z_{F0}$
 
 \subsubsection{Dipolantenne}
 \begin{align*}
-    \vec{H}      & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\phi \\
-    \vec{E}      & = H\cdot Z_F\cdot\vec{e}_\theta                                                                                                                                                    \\
-    I_0          & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}                                                                                                                                               \\
-                 & \text{Die mittlere Strahlungsleistungsdichte}                                                                                                                                      \\
-    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\right)^2\cdot\vec{e}_R                       \\
-                 & \text{Die gesamte Strahlungsleistung}                                                                                                                                              \\
+    \vec{H}      & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\phi      \\
+    \vec{E}      & = H\cdot Z_F\cdot\vec{e}_\theta                                                                                                                                                         \\
+    I_0          & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}                                                                                                                                                    \\
+                 & \text{Die mittlere Strahlungsleistungsdichte}                                                                                                                                           \\
+    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\right)^2\cdot\vec{e}_R                            \\
+                 & \text{Die gesamte Strahlungsleistung}                                                                                                                                                   \\
     P_S          & = \frac{Z_FI_0^2}{4\pi}\int^{\theta=\pi}_{\theta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\theta}\cdot\vec{e}_\theta
 \end{align*}
 
@@ -136,7 +136,7 @@ In $[\si{dB}]$ angeben !
 
 \subsubsection{Wirksame Antennenfläche}
 \begin{align*}
-    A_W & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
+    A_{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
 \end{align*}
 
 \subsection{Bezugsantennen}
@@ -172,19 +172,21 @@ mit $P_0$ : Eingangsleistung der Antenne
 \end{description}
 
 \begin{align*}
-    \Aboxed{A_W & = G_{RX}\cdot\frac{\lambda^2}{4\pi}}                                        \\
-    P_{RX}      & = S_{RX}\cdot A_W                                                           \\
-                & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+    \frac{P_{RX}}{P_{TX}} & = A_{eff,RX}\cdot A_{eff,TX}\cdot\frac{1}{\lambda^2r^2}                                            \\
+                          & = D_{i,RX}\cdot\eta_{RX}\cdot D_{i,TX}\cdot\eta_{TX}\cdot\left(\frac{\lambda}{4\pi r}\right)^2     \\
+    \Aboxed{A_{eff}(\theta)   & = G_{RX}\cdot\frac{\lambda^2}{4\pi}\overbrace{\cdot\frac{3}{2}\cdot\sin^2\theta}^{{D_{i,\theta}}}} \\
+    P_{RX}                & = S_{RX}\cdot A_{eff}                                                                                  \\
+                          & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
 \end{align*}
 
 \subsubsection{Freiraumdämpfung/Freiraumdämpfungsmaß}
 \begin{align*}
-    F = \dfrac{P_{TX}}{P_{RX}} \cdot \left(\dfrac{4 \pi d}{\lambda}\right)^2 &\qquad [1] \\ 
-    a_{0} = 20 \lg \left(\frac{4 \pi d}{\lambda}\right) =20 \lg \left(\frac{4 \pi d f}{c_{0}}\right)   &\qquad [\si{dB}]
+    F = \dfrac{P_{TX}}{P_{RX}} \cdot \left(\dfrac{4 \pi d}{\lambda}\right)^2                         & \qquad [1]       \\
+    a_{0} = 20 \lg \left(\frac{4 \pi d}{\lambda}\right) =20 \lg \left(\frac{4 \pi d f}{c_{0}}\right) & \qquad [\si{dB}]
 \end{align*}
 
 \subsubsection{Leistungspegel/Freiraumpegel}
-\begin{align*}  
-    L &= 10 \lg \left(\frac{P}{1 mW}\right) \qquad [\si{dBm}] \\
-    L_{RX} &= L_{TX}+g_{TX}+g_{RX}-a_{0} \qquad [\si{dB}]
+\begin{align*}
+    L      & = 10 \lg \left(\frac{P}{1 mW}\right) \qquad [\si{dBm}] \\
+    L_{RX} & = L_{TX}+g_{TX}+g_{RX}-a_{0} \qquad [\si{dB}]
 \end{align*}
