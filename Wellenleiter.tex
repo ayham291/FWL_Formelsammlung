@@ -17,19 +17,21 @@
 \begin{align*}
     \alpha_d = \pi\sqrt{\varepsilon_r}\cdot\tan\delta\cdot\frac{f}{c_0}
 \end{align*}
+
 \subsection{Streifenleiter}
+
 \input{Figures/Wellenleiter_Streifenleiter.tex}
 \subsubsection{Effektive Permittivitätszahl}
 \begin{align*}
-    \varepsilon_{r,eff} & = \frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2\sqrt{1+10\cdot\frac{\text{h}}{\text{w}}}}
+    \varepsilon_{r,\texttt{eff}} & = \frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2\sqrt{1+10\cdot\frac{\mathrm{h}}{\mathrm{w}}}}
 \end{align*}
 \subsubsection{Schmale Streifen}
 \begin{align*}
-    Z_L & = \frac{60\Omega}{\sqrt{\varepsilon_{r,eff}}}\cdot\ln\left(\frac{8\text{h}}{\text{w}}+\frac{\text{w}}{4\text{h}}\right)
+    Z_L & = \frac{60\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\ln\left(\frac{8\text{h}}{\text{w}}+\frac{\mathrm{w}}{4\mathrm{h}}\right)
 \end{align*}
 \subsubsection{Breite Streifen}
 \begin{align*}
-    Z_L & = \frac{120\pi\Omega}{\sqrt{\varepsilon_{r,eff}}}\cdot\frac{1}{\frac{\text{w}}{\text{h}}+2,42-0,44\cdot\frac{\text{h}}{\text{w}}+\left(1-\frac{\text{h}}{\text{w}}\right)^6}
+    Z_L & = \frac{120\pi\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\frac{1}{\frac{\text{w}}{\text{h}}+2,42-0,44\cdot\frac{\mathrm{h}}{\mathrm{w}}+\left(1-\frac{\mathrm{h}}{\mathrm{w}}\right)^6}
 \end{align*}
 
 \subsection{Hohlleiter}
