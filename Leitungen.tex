@@ -1,4 +1,6 @@
 \section{Leitungen}
+\includegraphics[width=1\columnwidth]{Figures/ZahlentabelleLeitungsparameter.png}
+
 \subsection{Leitungsparameter}
 
 {\small\[
@@ -10,7 +12,7 @@
         a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
     \]}
 
-\input{Figures/Doppelleitung.tex}
+\input{Figures/Leitungen_Doppelleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
     \begin{tabularx}{0.5\columnwidth}{|X|}
         \hline
@@ -34,8 +36,7 @@
     \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                \\
                   & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
 \end{align*}
-
-\input{Figures/Koaxialleitung.tex}
+\input{Figures/Leitungen_Koaxialleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
     \begin{tabularx}{0.5\columnwidth}{|X|}
         \hline
@@ -48,13 +49,26 @@
         \[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
         \hline
     \end{tabularx}}
-
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
 \subsubsection{Parallele Platten}
 {\small\[
         w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
     \]}
 
-\input{Figures/Parallele_Platten.tex}
+\begin{align*}
+                  & \text{Für Sinus-Anregung:}                                                                                         \\
+    I             & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta z\cdot e^{j\omega t}}                         \\
+    U             & = \int \vec{E} d\vec{s} \stackrel{w\gg d}{=} E\cdot d \rightarrow E = \frac{U_0}{d}\cdot^{-j\beta z}\cdot\vec{e}_x \\
+    I             & = \oint \vec{H} d\vec{s} =  H\cdot w \rightarrow H = \frac{I_0}{w}\cdot^{-j\beta z}\cdot\vec{e}_y                  \\
+    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
+                  & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+\end{align*}
+
+\input{Figures/Leitungen_Parallele_Platten.tex}
 {\renewcommand*{\arraystretch}{0.2}
     \begin{tabularx}{0.5\columnwidth}{|X|}
         \hline
@@ -69,16 +83,14 @@
     \end{tabularx}
 }
 
-\textbf{\color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
-    \color{red}{Länge verdoppeln!!!}
-}
-
 \vspace{1ex}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \[
     LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}
 \]
-
+\textbf{\color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
+    \color{red}{Länge verdoppeln!!!}
+}
 \subsection{Allgemeine Lösung Leitungsgleichung}
 \begin{align*}
     \underline{U}(z)   & = U_h e^{\underline{\gamma} z} + U_r e^{-\underline{\gamma} z} = U_h e^{\underline{\gamma} d} + U_r e^{-\underline{\gamma} d}                       \\
@@ -86,7 +98,7 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     \underline{Z}_L    & = \frac{U_h}{I_h} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}                                                                                   \\
     \underline{\gamma} & = j \omega \sqrt{LC} \cdot \sqrt{ \frac{RG}{j^2 \omega^2 LC} + \frac{G}{j \omega C} + \frac{R}{j \omega L} + 1}                                     \\
     \lambda            & = \frac{2 \pi}{\beta}                                                                                                                               \\
-    v_{Ph}             & = \frac{\omega}{\beta}                                                                                                                              \\
+    v_p                & = \frac{\omega}{\beta}                                                                                                                              \\
     l_\texttt{elektr.} & = \beta \cdot l                                                                                                                                     \\
     \alpha             & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}           \\
     \beta              & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)}
@@ -96,8 +108,8 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \begin{align*}
     \underline{\gamma} & = j\omega\sqrt{LC}= j\beta                                                                                           \\
     Z_L                & =\frac{U_h}{U_r}       = \sqrt{\frac{L}{C}}                                                                          \\
-    v                  & = \frac{\omega}{\beta} = \frac{1}{\sqrt{LC}}= \frac{1}{\sqrt{\mu\varepsilon}}= \frac{c_0}{\sqrt{\mu_r\varepsilon_r}} \\
-    \lambda            & = \frac{2\pi}{\beta}=\frac{1}{f\sqrt{LC}}= \frac{v}{f}= \frac{c_0}{f\sqrt{\mu_r\varepsilon_r}}
+    v_p                & = \frac{\omega}{\beta} = \frac{1}{\sqrt{LC}}= \frac{1}{\sqrt{\mu\varepsilon}}= \frac{c_0}{\sqrt{\mu_r\varepsilon_r}} \\
+    \lambda            & = \frac{2\pi}{\beta}=\frac{1}{f\sqrt{LC}}= \frac{v_p}{f}= \frac{c_0}{f\sqrt{\mu_r\varepsilon_r}}
 \end{align*}
 
 \subsubsection{vernachlässigbarer Widerstandsbelag}
@@ -109,7 +121,7 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 
 \subsection{Übertragungsleitung mit Last}
 
-\input{Figures/Uebertragung_mit_Last.tex}
+\input{Figures/Leitungen_Uebertragung_mit_Last.tex}
 
 \begin{align*}
     U(z) & = U_h\cdot  e^{\underline{\gamma} z} + U_r\cdot  e^{-\underline{\gamma} z} = U_h\cdot  e^{\underline{\gamma} d} + U_r\cdot  e^{-\underline{\gamma} d}           \\
@@ -209,7 +221,7 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
 
 \columnbreak
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
-\input{Figures/Mehrfach_Refexion.tex}
+\input{Figures/Leitungen_Mehrfach_Refexion.tex}
 \begin{align*}
     %u_{1h} & = u_G\cdot\frac{ Z_L}{R_I + Z_L}            \\
     u_{1r} & = r_A\cdot u_{1h}                                \\
@@ -217,7 +229,7 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
     u_{2r} & = r_A\cdot u_{2h} = r_I\cdot r_A^2\cdot u_{1h}   \\
     u_{3h} & = r_I\cdot u_{2r} = r_I^2\cdot r_A^2\cdot u_{1h}
 \end{align*}
-\input{Figures/Mehrfach_Reflexion_Circuit.tex}
+\input{Figures/Leitungen_Mehrfach_Reflexion_Circuit.tex}
 \begin{align*}
      & \text{Reflexionsfaktor Leitungsanfang: } & \underline{r}_I & = \frac{R_I - Z_L}{R_I + Z_L}                 \\
      & \text{Reflexionsfaktor Leitungsende: }   & \underline{r}_A & = \frac{R_A - Z_L}{R_A + Z_L}                 \\
