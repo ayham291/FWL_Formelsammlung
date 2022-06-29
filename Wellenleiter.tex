@@ -21,11 +21,14 @@ d = Innendurchmesser
 \begin{align*}
     \alpha_d = \pi\sqrt{\varepsilon_r}\cdot\tan\delta\cdot\frac{f}{c_0}
 \end{align*}
-\subsection{Streifenleiter}
+\subsection{Mikrostreifenleiter}
 \input{Figures/Wellenleiter_Streifenleiter.tex}
 \subsubsection{Effektive Permittivitätszahl}
 \begin{align*}
-    \varepsilon_{r,eff} & = \frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2\sqrt{1+10\cdot\frac{\text{h}}{\text{w}}}}
+     & \text{Unterschiedliche Phasengeschwindigkeit $\rightarrow$ Dispersion}                                              \\
+     & \varepsilon_{r,eff}  = \frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2\sqrt{1+10\cdot\frac{\text{h}}{\text{w}}}} \\
+     & \text{Je größer $\frac{\text{w}}{\text{h}}$ desto mehr nähert sich $\varepsilon_{r,eff}$ an $\varepsilon_r$ und}    \\
+     & \lambda              = \frac{\lambda_0}{\sqrt{\varepsilon_{r,eff}\cdot\mu_{r,eff}}}
 \end{align*}
 \subsubsection{Schmale Streifen}
 \begin{align*}
@@ -39,4 +42,13 @@ d = Innendurchmesser
 \subsection{Hohlleiter}
 \begin{align*}
     f_c & = \frac{c_0}{2a}
+\end{align*}
+
+\subsection{VSWR (Voltage Standing Wave Ratio) und Return Loss}
+\begin{align*}
+    s        & = VSWR = \frac{1+|r|}{1-|r|}\geq 1 \\
+    |r|      & = \frac{s-1}s+{1}                  \\
+    \alpha_r & = -20\log(r)dB                     \\
+             & \text{Missmatch Loss}              \\
+    ML       & = -10\log(1-r^2)dB
 \end{align*}
