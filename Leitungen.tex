@@ -11,7 +11,6 @@
 {\small\[
         a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
     \]}
-
 \input{Figures/Leitungen_Doppelleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
     \begin{tabularx}{0.5\columnwidth}{|X|}
@@ -30,7 +29,6 @@
 {\small\[
         a = \text{innen Radius} \qquad b = \text{außen Radius} \\
     \]}
-
 \begin{align*}
     \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                    \\
     \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                \\
@@ -49,18 +47,14 @@
         \[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
         \hline
     \end{tabularx}}
-\linebreak
-\linebreak
-\linebreak
-\linebreak
-\linebreak
+
 \subsubsection{Parallele Platten}
 {\small\[
         w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
     \]}
 
+Für Sinus-Anregung:
 \begin{align*}
-                  & \text{Für Sinus-Anregung:}                                                                                         \\
     I             & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta z\cdot e^{j\omega t}}                         \\
     U             & = \int \vec{E} d\vec{s} \stackrel{w\gg d}{=} E\cdot d \rightarrow E = \frac{U_0}{d}\cdot^{-j\beta z}\cdot\vec{e}_x \\
     I             & = \oint \vec{H} d\vec{s} =  H\cdot w \rightarrow H = \frac{I_0}{w}\cdot^{-j\beta z}\cdot\vec{e}_y                  \\
@@ -120,9 +114,7 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \includegraphics[width=\columnwidth]{Figures/vernachlaessigbarerLeiterwertbelag.png}
 
 \subsection{Übertragungsleitung mit Last}
-
 \input{Figures/Leitungen_Uebertragung_mit_Last.tex}
-
 \begin{align*}
     U(z) & = U_h\cdot  e^{\underline{\gamma} z} + U_r\cdot  e^{-\underline{\gamma} z} = U_h\cdot  e^{\underline{\gamma} d} + U_r\cdot  e^{-\underline{\gamma} d}           \\
     I(z) & = I_h\cdot  e^{\underline{\gamma} z} + I_r\cdot  e^{-\underline{\gamma} z} = \frac{U_h}{Z_L}e^{\underline{\gamma} d} - \frac{U_r}{Z_L}e^{-\underline{\gamma} d}
