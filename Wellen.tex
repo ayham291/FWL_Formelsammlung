@@ -10,17 +10,39 @@
 \end{itemize}
 
 \subsubsection*{Wellengleichung}
-\makebox[0pt][l]{
-    \begin{minipage}{\columnwidth}
-        \centering
-        \[
-            \boxed{\vec{E} = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
-            \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
-            \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}}
-        \]
-        {\footnotesize Analog für H-Feld}
-    \end{minipage}
-}
+% \makebox[0pt][l]{
+%     \begin{minipage}{\columnwidth}
+%         \centering
+%         \[
+%             \boxed{\vec{E}(z,t) = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
+%             \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
+%             \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}}
+%         \]
+%         {\footnotesize Analog für H-Feld}
+%         \[
+%             \boxed{\underline{\vec{E}}(z,t)   = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
+%             \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
+%             \cdot \underbrace{e^{j(\omega t - \beta z)}}_\text{Zeit- und Raumabhängigkeit}
+%             \cdot \vec{e}_z
+%         \]
+%         \[
+
+%             = E_0\cdot e^{-\underline{\gamma z}}\cdot e^{j\omega t}}
+%         \]
+%     \end{minipage}
+% }
+\begin{empheq}[]{align*}
+    \boxed{\vec{E}(z,t) 
+        = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
+        \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
+        \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}}
+\end{empheq}
+\begin{empheq}[]{align*}
+    \boxed{\underline{\vec{E}}(z,t) 
+         = E_0\cdot e^{-\alpha z}\cdot e^{j(\omega t-\beta z)}\cdot\vec{e}_z 
+         = E_0\cdot e^{-\underline{\gamma}z}\cdot e^{j\omega t}
+    }
+\end{empheq}
 
 \subsubsection*{Fortpflanzungskonstante $\gamma$}
 \[\boxed{\underline{\gamma}=\alpha+j\beta}\]
