@@ -15,7 +15,7 @@
 
 \underline{\textbf{Dielektrische Verluste}} $G\ll\omega C$,$\tan\delta= (^G/_{\omega C})$
 \begin{align*}
-    \alpha_d = \pi\sqrt{\varepsilon_r}\cdot\tan\delta\cdot\frac{f}{c_0}
+    \alpha_d = \pi\sqrt{\varepsilon_r}\cdot\tan\delta\cdot\frac{f}{c_0} \sim f
 \end{align*}
 
 \subsection{Mikrostreifenleiter}
@@ -27,11 +27,11 @@
      & \text{Je größer $\frac{\text{w}}{\text{h}}$ desto mehr nähert sich $\varepsilon_{r,\texttt{eff}}$ an $\varepsilon_r$ und}    \\
      & \lambda              = \frac{\lambda_0}{\sqrt{\varepsilon_{r,\texttt{eff}}\cdot\mu_{r,\texttt{eff}}}}
 \end{align*}
-\subsubsection{Schmale Streifen}
+\subsubsection[Schmale Streifen]{Schmale Streifen (ca 20-200$\Omega$)}
 \begin{align*}
     Z_L & = \frac{60\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\ln\left(\frac{8\text{h}}{\text{w}}+\frac{\mathrm{w}}{4\mathrm{h}}\right)
 \end{align*}
-\subsubsection{Breite Streifen}
+\subsubsection[Breite Streifen]{Breite Streifen (ca 20-200$\Omega$)}
 \begin{align*}
     Z_L & = \frac{120\pi\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\frac{1}{\frac{\text{w}}{\text{h}}+2,42-0,44\cdot\frac{\mathrm{h}}{\mathrm{w}}+\left(1-\frac{\mathrm{h}}{\mathrm{w}}\right)^6}
 \end{align*}
@@ -45,7 +45,7 @@
 \underline{VSWR}
 \begin{align*}
     s   & = \mathrm{VSWR} = \frac{1+|r|}{1-|r|}\geq 1 \\
-    1 & \geq |r| = \frac{s-1}s+{1} < 2
+    |r| & = \frac{s-1}{s+1} 
 \end{align*}
 \underline{Return Loss}
 \begin{align*}
@@ -55,3 +55,36 @@
 \begin{align*}
     ML & = -10\log(1-r^2)dB
 \end{align*}
+\subsection{Lichtwellenleiter oder Glasfaser}
+APF := All Plastic Fiber
+
+POF := Polymerfaser
+
+LWL := Lichtwellenleiter 
+
+$B\cdot l$ := Bandbreitenlängenprodukt
+
+\underline{Dispersion:}
+
+    \footnotesize{Die von der Frequenz des Lichts abhängende Ausbreitungsgeschwindigkeit des Lichts in Medien.
+    Dies hat zur Folge, dass Licht an Übergangsflächen unterschiedlich stark gebrochen wird.
+    Somit verflacht sich beispielsweise ein (Dirac-)Impuls zu einer Gauß'schen Glocke.}
+
+    \underline{Stufenprofil:}
+
+    \footnotesize{Multimode: leichtes Einkoppeln, geringes $B\cdot l$ wegen Modendispersion
+
+    Single/Monomode: schwieriges Einkoppeln, großes $B\cdot l$, keine Modendispersion
+
+    }
+    \underline{Gradientenprofil:}
+
+    \footnotesize{Multimode: Kompromiss beim Einkoppeln und Reichweite mit $B\cdot l$}
+
+    \underline{Bandbreitenlängenprodukt:}
+
+    \footnotesize{$B' =  B\cdot l[\frac{MHz}{km}]$ = konstant
+
+    $B \sim \frac{1}{l}$ und $l\sim \frac{1}{B}$
+
+    Bandbreite ist gegen Übertragungslänge austauschbar, solange Dämpfung keine Rolle spielt.}
