@@ -122,11 +122,11 @@ $C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 \end{align*}
 
 \subsubsection{Richtfunktion/Richtfaktor}
-In $[\si{dB}]$ angeben !
+In $[\si{dB}]$ angeben!
 \begin{align*}
-    D(\vartheta, \varphi)             & = \frac{S(\vartheta, \varphi)}{S_{i}}                               \\
-    D =\max \{D(\vartheta, \varphi)\} & = \frac{S_{\max}}{S_{i}}                                            \\
-    D(\vartheta, \varphi)             & = C_{i}^{2}(\vartheta, \varphi) = D \cdot C^{2}(\vartheta, \varphi)
+    D(\vartheta, \varphi) & = \frac{S(\vartheta, \varphi)}{S_{i}}                               \\
+    D(\vartheta, \varphi) & = C_{i}^{2}(\vartheta, \varphi) = D \cdot C^{2}(\vartheta, \varphi) \\
+    D                     & = \max \{D(\vartheta, \varphi)\} = \frac{S_{\max}}{S_{i}}
 \end{align*}
 
 \subsubsection{Gewinn}
@@ -136,7 +136,7 @@ In $[\si{dB}]$ angeben !
 
 \subsubsection{Wirksame Antennenfläche}
 \begin{align*}
-    A_{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_{eff}^2
+    A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2
 \end{align*}
 
 \subsection{Bezugsantennen}
@@ -172,11 +172,11 @@ mit $P_0$ : Eingangsleistung der Antenne
 \end{description}
 
 \begin{align*}
-    \frac{P_{RX}}{P_{TX}} & = A_{eff,RX}\cdot A_{eff,TX}\cdot\frac{1}{\lambda^2r^2}                                            \\
-                          & = D_{i,RX}\cdot\eta_{RX}\cdot D_{i,TX}\cdot\eta_{TX}\cdot\left(\frac{\lambda}{4\pi r}\right)^2     \\
-    \Aboxed{A_{eff}(\theta)   & = G_{RX}\cdot\frac{\lambda^2}{4\pi}\overbrace{\cdot\frac{3}{2}\cdot\sin^2\theta}^{{D_{i,\theta}}}} \\
-    P_{RX}                & = S_{RX}\cdot A_{eff}                                                                                  \\
-                          & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+    \frac{P_{RX}}{P_{TX}}          & = A_{\texttt{eff},RX}\cdot A_{\texttt{eff},TX}\cdot\frac{1}{\lambda^2r^2}                          \\
+                                   & = D_{i,RX}\cdot\eta_{RX}\cdot D_{i,TX}\cdot\eta_{TX}\cdot\left(\frac{\lambda}{4\pi r}\right)^2     \\
+    \Aboxed{A_\texttt{eff}(\theta) & = G_{RX}\cdot\frac{\lambda^2}{4\pi}\overbrace{\cdot\frac{3}{2}\cdot\sin^2\theta}^{{D_{i,\theta}}}} \\
+    P_{RX}                         & = S_{RX}\cdot A_\texttt{eff}                                                                       \\
+                                   & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
 \end{align*}
 
 \subsubsection{Freiraumdämpfung/Freiraumdämpfungsmaß}
