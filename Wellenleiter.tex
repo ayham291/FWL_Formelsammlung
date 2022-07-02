@@ -60,35 +60,42 @@ Je größer $\dfrac{\mathrm{w}}{\mathrm{h}}$ desto mehr nähert sich $\varepsilo
     \mathrm{ML} = -10\log(1-r^2)dB
 \]
 \subsection{Lichtwellenleiter oder Glasfaser}
-APF := All Plastic Fiber
 
-POF := Polymerfaser
+\begin{description}
+    \setlength\itemsep{1pt}
+    \item APF := All Plastic Fiber
+    \item POF := Polymerfaser
+    \item LWL := Lichtwellenleiter
+    \item $B\cdot l$ := Bandbreitenlängenprodukt
+\end{description}
 
-LWL := Lichtwellenleiter 
+\begin{description}
+    \item \underline{Dispersion:}
 
-$B\cdot l$ := Bandbreitenlängenprodukt
+          {\small Die von der Frequenz des Lichts abhängende
+              Ausbreitungsgeschwindigkeit des Lichts in Medien. Dies hat zur Folge,
+              dass Licht an Übergangsflächen unterschiedlich stark gebrochen wird.
+              Somit verflacht sich beispielsweise ein (Dirac-)Impuls zu einer Gauß'schen
+              Glocke.
+          }
+    \item \underline{Stufenprofil:}
 
-\underline{Dispersion:}
+          {\small Multimode: leichtes Einkoppeln, geringes $B\cdot l$ wegen
+              Modendispersion
 
-    \footnotesize{Die von der Frequenz des Lichts abhängende Ausbreitungsgeschwindigkeit des Lichts in Medien.
-    Dies hat zur Folge, dass Licht an Übergangsflächen unterschiedlich stark gebrochen wird.
-    Somit verflacht sich beispielsweise ein (Dirac-)Impuls zu einer Gauß'schen Glocke.}
+              Single/Monomode: schwieriges Einkoppeln, großes $B\cdot l$, keine
+              Modendispersion
+          }
+    \item \underline{Gradientenprofil:}
 
-    \underline{Stufenprofil:}
+          {\small Multimode: Kompromiss beim Einkoppeln und Reichweite mit $B\cdot l$}
+    \item \underline{Bandbreitenlängenprodukt:}
 
-    \footnotesize{Multimode: leichtes Einkoppeln, geringes $B\cdot l$ wegen Modendispersion
+          {\small $B' =  B\cdot l[\frac{MHz}{km}]$ = konstant
 
-    Single/Monomode: schwieriges Einkoppeln, großes $B\cdot l$, keine Modendispersion
+              $B \sim \frac{1}{l}$ und $l\sim \frac{1}{B}$
 
-    }
-    \underline{Gradientenprofil:}
-
-    \footnotesize{Multimode: Kompromiss beim Einkoppeln und Reichweite mit $B\cdot l$}
-
-    \underline{Bandbreitenlängenprodukt:}
-
-    \footnotesize{$B' =  B\cdot l[\frac{MHz}{km}]$ = konstant
-
-    $B \sim \frac{1}{l}$ und $l\sim \frac{1}{B}$
-
-    Bandbreite ist gegen Übertragungslänge austauschbar, solange Dämpfung keine Rolle spielt.}
+              Bandbreite ist gegen Übertragungslänge austauschbar, solange
+              Dämpfung keine Rolle spielt.
+          }
+\end{description}
