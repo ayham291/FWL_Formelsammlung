@@ -10,17 +10,21 @@
 \end{itemize}
 
 \subsubsection*{Wellengleichung}
-\makebox[0pt][l]{
-    \begin{minipage}{\columnwidth}
-        \centering
-        \[
-            \boxed{\vec{E} = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
-            \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
-            \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}}
-        \]
-        {\footnotesize Analog für H-Feld}
-    \end{minipage}
-}
+\underline{Tatsächlicher Zeitverlauf}(Realteil von $\underline{\vec{E}}(z,t)$)
+\begin{empheq}[]{align*}
+    \boxed{\vec{E}(z,t) 
+        = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
+        \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
+        \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}
+        \cdot\vec{e}_z}
+\end{empheq}
+\underline{Komplexer Amplitudenvektor}
+\begin{empheq}[]{align*}
+    \boxed{\underline{\vec{E}}(z,t) 
+         = E_0\cdot e^{-\alpha z}\cdot e^{j(\omega t-\beta z)}\cdot\vec{e}_z 
+         = E_0\cdot e^{-\underline{\gamma}z}\cdot e^{j\omega t}\cdot\vec{e}_z
+    }
+\end{empheq}
 
 \subsubsection*{Fortpflanzungskonstante $\gamma$}
 \[\boxed{\underline{\gamma}=\alpha+j\beta}\]
@@ -100,12 +104,12 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
 
 \subsection{Energie und Poyntingvektor (Energieflussdichte)}
 \begin{align*}
-     & \vec{S}             & = & \vec{E}\times\vec{H} \qquad \si{\left[\frac{W}{m^2}\right]} \\
-     & S                   & = & \frac{1}{2} \cdot E \cdot H =                               \\
-     &                     & = & \frac{1}{2} \cdot \dfrac{E^2}{Z_{F0}} =                     \\
-     &                     & = & \frac{1}{2} \cdot H^2 \cdot Z_{F0}                          \\
-     & \vec{S}_{\text{av}} & = & \frac{1}{2} \cdot Re\{\vec{E}\times\vec{H}^*\}              \\
-     & S                   & = & \dfrac{P}{A_\texttt{Fläche}}                                \\
+      \vec{S}             & =  \vec{E}\times\vec{H} \qquad \si{\left[\frac{W}{m^2}\right]} \\
+      S                   & =  \frac{1}{2} \cdot E \cdot H =                               \\
+                          & =  \frac{1}{2} \cdot \dfrac{E^2}{Z_{F0}} =                     \\
+                          & =  \frac{1}{2} \cdot H^2 \cdot Z_{F0}                          \\
+      \vec{S}_{\text{av}} & =  \frac{1}{2} \cdot Re\{\vec{E}\times\vec{H}^*\}              \\
+      S                   & =  \dfrac{P}{A_\texttt{Fläche}}                                \\
 \end{align*}
 
 \subsubsection{Leistung}
