@@ -9,52 +9,56 @@
 
 \subsubsection{Dämpfung}
 \underline{\textbf{Ohm'sche Verluste}} $R\ll\omega L$
-\begin{align*}
-    \alpha_0 = \frac{\sqrt{\frac{f\cdot\mu}{\pi\cdot\sigma}}}{120\Omega}\cdot\frac{\sqrt{\varepsilon_r}}{D}\cdot\frac{1+\frac{D}{d}}{\ln \frac{D}{d}}
-\end{align*}
+\[
+    \alpha_0 = \frac{\sqrt{\dfrac{f\cdot\mu}{\pi\cdot\sigma}}}{120\Omega}\cdot\frac{\sqrt{\varepsilon_r}}{D}\cdot\dfrac{1+\dfrac{D}{d}}{\ln \dfrac{D}{d}}
+\]
 
 \underline{\textbf{Dielektrische Verluste}} $G\ll\omega C$,$\tan\delta= (^G/_{\omega C})$
-\begin{align*}
+\[
     \alpha_d = \pi\sqrt{\varepsilon_r}\cdot\tan\delta\cdot\frac{f}{c_0} \sim f
-\end{align*}
+\]
 
 \subsection{Mikrostreifenleiter}
 \input{Figures/Wellenleiter_Streifenleiter.tex}
 \subsubsection{Effektive Permittivitätszahl}
-\begin{align*}
-     & \text{Unterschiedliche Phasengeschwindigkeit $\rightarrow$ Dispersion}                                                       \\
-     & \varepsilon_{r,\texttt{eff}}  = \frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2\sqrt{1+10\cdot\frac{\text{h}}{\text{w}}}} \\
-     & \text{Je größer $\frac{\text{w}}{\text{h}}$ desto mehr nähert sich $\varepsilon_{r,\texttt{eff}}$ an $\varepsilon_r$ und}    \\
-     & \lambda              = \frac{\lambda_0}{\sqrt{\varepsilon_{r,\texttt{eff}}\cdot\mu_{r,\texttt{eff}}}}
-\end{align*}
+Unterschiedliche Phasengeschwindigkeit $\rightarrow$ Dispersion
+\[
+         \varepsilon_{r,\texttt{eff}}  = \frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2\sqrt{1+10\cdot\frac{\text{h}}{\text{w}}}} \\
+\]
+
+Je größer $\dfrac{\mathrm{w}}{\mathrm{h}}$ desto mehr nähert sich $\varepsilon_{r,\texttt{eff}}$ an $\varepsilon_r$ und 
+\[
+    \lambda = \frac{\lambda_0}{\sqrt{\varepsilon_{r,\texttt{eff}}\cdot\mu_{r,\texttt{eff}}}}
+\]
+
 \subsubsection[Schmale Streifen]{Schmale Streifen (ca 20-200$\Omega$)}
-\begin{align*}
-    Z_L & = \frac{60\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\ln\left(\frac{8\text{h}}{\text{w}}+\frac{\mathrm{w}}{4\mathrm{h}}\right)
-\end{align*}
+\[
+    Z_L = \frac{60\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\ln\left(\frac{8\mathrm{h}}{\mathrm{w}}+\frac{\mathrm{w}}{4\mathrm{h}}\right)
+\]
 \subsubsection[Breite Streifen]{Breite Streifen (ca 20-200$\Omega$)}
-\begin{align*}
-    Z_L & = \frac{120\pi\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\frac{1}{\frac{\text{w}}{\text{h}}+2,42-0,44\cdot\frac{\mathrm{h}}{\mathrm{w}}+\left(1-\frac{\mathrm{h}}{\mathrm{w}}\right)^6}
-\end{align*}
+\[
+    Z_L = \frac{120\pi\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\frac{1}{\dfrac{\mathrm{w}}{\mathrm{h}}+2,42-0,44\cdot\dfrac{\mathrm{h}}{\mathrm{w}}+\left(1-\dfrac{\mathrm{h}}{\mathrm{w}}\right)^6}
+\]
 
 \subsection{Hohlleiter}
-\begin{align*}
-    f_c & = \frac{c_0}{2a}
-\end{align*}
+\[
+    f_c = \frac{c_0}{2a}
+\]
 
 \subsection{VSWR (Voltage Standing Wave Ratio) und Return Loss}
 \underline{VSWR}
 \begin{align*}
     s   & = \mathrm{VSWR} = \frac{1+|r|}{1-|r|}\geq 1 \\
-    |r| & = \frac{s-1}{s+1} 
+    |r| & = \frac{s-1}{s+1}
 \end{align*}
 \underline{Return Loss}
-\begin{align*}
-    \alpha_r & = -20\log(r)dB
-\end{align*}
+\[
+    \alpha_r = -20\log(r)dB
+\]
 \underline{Missmatch Loss}
-\begin{align*}
-    ML & = -10\log(1-r^2)dB
-\end{align*}
+\[
+    \mathrm{ML} = -10\log(1-r^2)dB
+\]
 \subsection{Lichtwellenleiter oder Glasfaser}
 APF := All Plastic Fiber
 
