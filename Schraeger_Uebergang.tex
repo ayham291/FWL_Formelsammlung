@@ -18,21 +18,23 @@
     \item elektrischer Transmissionsfaktor $[1]$
 \end{itemize}
 \begin{align*}
-    r_s     & =  r_{e s} = r_{m s} =                                                                                                                                          \\
-            & = \frac{Z_{F 2} \cdot \cos \theta_h-Z_{F 1} \cdot \cos \theta_t}{Z_{F 2} \cdot \cos \theta_h+Z_{F 1} \cdot \cos \theta_t}                                       \\
-            & = \frac{\cos\theta_h-\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}}{\cos\theta_h+\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}} \\
-    t_{m s} & = Z_{F 1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_h+Z_{F 1} \cdot \cos \theta_t}                                                           \\
-            & = (1 - r_{s}) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                        \\
-            & = \frac{Z_{F1}}{Z_{F2}}\cdot t_{es}                                                                                                                             \\
-    t_{e s} & = Z_{F 2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_h+Z_{F 1} \cdot \cos \theta_t}                                                           \\
-            & = 1+r_{s}
+    r_s    & =  r_{es} = r_{ms} =                                                                                                                                            \\
+           & = \frac{Z_{F2} \cdot \cos \theta_h-Z_{F1} \cdot \cos \theta_t}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                           \\
+           & = \frac{\cos\theta_h-\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}}{\cos\theta_h+\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}} \\
+    t_{ms} & = Z_{F1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                                              \\
+           & = (1 - r_s) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                          \\
+           & = \frac{Z_{F1}}{Z_{F2}}\cdot t_{es}                                                                                                                             \\
+    t_{es} & = Z_{F2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                                              \\
+           & = 1+r_s
 \end{align*}
 
 \begin{align*}
-    E_{r} & = r_{s} \cdot E_{h}   \\
-    E_{t} & = t_{e s} \cdot E_{h} \\
-    H_{r} & = r_{s} \cdot H_{h}   \\
-    H_{t} & = t_{m s} \cdot H_{h}
+    E_r & = r_s \cdot E_h    \\
+    E_t & = t_{es} \cdot E_h \\
+    H_r & = r_s \cdot H_h    \\
+    H_t & = t_{ms} \cdot H_h \\
+    E_t & = H_t\cdot Z_{F2}  \\
+    E_h & = H_h\cdot Z_{F1}
 \end{align*}
 
 \subsection{Parallel (E-Feld) Polarisation (H-Feld senkrecht)}
@@ -55,19 +57,20 @@
     \item elektrischer Transmissionsfaktor $[1]$
 \end{itemize}
 \begin{align*}
-    r_p     & =  r_{e p} = r_{m p} =                                                                                                                                                                                                      \\
-            & = \frac{Z_{F 2} \cdot \cos \theta_t-Z_{F 1} \cdot \cos \theta_h}{Z_{F 2} \cdot \cos \theta_t+Z_{F 1} \cdot \cos \theta_h} =                                                                                                 \\
-            & = \frac{\varepsilon_{r2}\cos\theta_h-\sqrt{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}{\varepsilon_{r2}\cos\theta_h+\sqrt{{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}} \\
-    t_{m p} & = Z_{F 1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 1} \cdot \cos \theta_h+Z_{F 2} \cdot \cos \theta_t}                                                                                                                       \\
-            & = 1+r_{p}                                                                                                                                                                                                                   \\
-    t_{e p} & = Z_{F 2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F 1} \cdot \cos \theta_h+Z_{F 2} \cdot \cos \theta_t}                                                                                                                       \\
-            & = (1-r_{p}) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                                                                                    \\
-            & = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp}
+    r_p    & =  r_{ep} = r_{mp} =                                                                                                                                                                                                        \\
+           & = \frac{Z_{F2} \cdot \cos \theta_t-Z_{F1} \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_t+Z_{F1} \cdot \cos \theta_h} =                                                                                                     \\
+           & = \frac{\varepsilon_{r2}\cos\theta_h-\sqrt{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}{\varepsilon_{r2}\cos\theta_h+\sqrt{{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}} \\
+    t_{mp} & = Z_{F1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F1} \cdot \cos \theta_h+Z_{F2} \cdot \cos \theta_t}                                                                                                                          \\
+           & = 1+r_p                                                                                                                                                                                                                     \\
+    t_{ep} & = Z_{F2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F1} \cdot \cos \theta_h+Z_{F2} \cdot \cos \theta_t}                                                                                                                          \\
+           & = (1-r_p) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                                                                                        \\
+           & = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp}
 \end{align*}
 
 \begin{align*}
-    E_{r} & = r_{p} \cdot E_{h}   \\
-    E_{t} & = t_{e p} \cdot E_{h} \\
-    H_{r} & = r_{p} \cdot H_{h}   \\
-    H_{t} & = t_{m p} \cdot H_{h} \\
+    E_r & = r_p\cdot E_h    \\
+    E_t & = t_{ep}\cdot E_h \\
+    H_r & = r_p\cdot H_h    \\
+    H_t & = t_{mp}\cdot H_h \\
+    E_t & = H_t\cdot Z_{F2}
 \end{align*}
