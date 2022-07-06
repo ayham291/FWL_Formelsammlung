@@ -30,9 +30,10 @@
         a = \text{innen Radius} \qquad b = \text{außen Radius} \\
     \]}
 \begin{align*}
-    \vec{H}(r, z) & = \frac{I}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                    \\
-    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                \\
-                  & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+    \vec{H}(r, z)            & = \frac{\hat{I}}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                   \\
+    \vec{E}(r, z)            & = \frac{\hat{I}}{2\pi r}\cdot Z_{F0}\cdot e^{-j\beta z} \cdot\vec{e}_r
+                             & = \frac{\hat{U}}{r \cdot\ln{(^{b}/_{a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r        \\
+    \vec{S}_{zeit.Mittel} & = \frac{1}{2}\cdot\left[\frac{\hat{I}}{2\pi r}\right]^2\cdot Z_{F0}\cdot\vec{e}_z
 \end{align*}
 \input{Figures/Leitungen_Koaxialleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
@@ -91,6 +92,7 @@ Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
     \underline{I}(z)   & = I_h e^{\underline{\gamma} z} + I_r e^{-\underline{\gamma} z} = \frac{U_h}{Z_L}e^{\underline{\gamma} d} - \frac{U_r}{Z_L}e^{-\underline{\gamma} d} \\
     \underline{Z}_L    & = \frac{U_h}{I_h} = \sqrt{ \frac{R + j \omega L}{G + j \omega C}}                                                                                   \\
     \underline{\gamma} & = j \omega \sqrt{LC} \cdot \sqrt{ \frac{RG}{j^2 \omega^2 LC} + \frac{G}{j \omega C} + \frac{R}{j \omega L} + 1}                                     \\
+                       & = \sqrt{(R+j\omega L)\cdot(G+j\omega C)}                                                                                                            \\
     \lambda            & = \frac{2 \pi}{\beta}                                                                                                                               \\
     v_p                & = \frac{\omega}{\beta}                                                                                                                              \\
     l_\texttt{elektr.} & = \beta \cdot l                                                                                                                                     \\

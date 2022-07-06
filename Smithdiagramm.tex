@@ -3,7 +3,8 @@
 \subsection{Allgemein}
 \begin{center}
     \begin{align*}
-        \Aboxed{r(z) & = r_A \cdot e^{-j2\beta z}}
+        \Aboxed{r(z) & = r_A \cdot e^{-j2\beta z}}                                              \\
+        \Aboxed{Z(z) & = Z_L\cdot\frac{Z_A+jZ_L\cdot\tan(\beta z)}{Z_L+jZ_A\cdot\tan(\beta z)}}
     \end{align*}
     \input{Figures/Smithdiagramm_Smithchart.tex}
 \end{center}
@@ -11,4 +12,12 @@
     \underline{z}_n & = \frac{\underline{Z}_n}{Z_L}                                                                                                                   \\
     \underline{r}_n & = \frac{\underline{Z}_n-Z_L}{\underline{Z}_n+Z_L}= \frac{\underline{z}_n-1}{\underline{z}_n+1}    = \frac{1-\underline{y}_n}{1+\underline{y}_n} \\
     m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}
+    s               & = \frac{1}{m}
 \end{align*}
+\subsection[Kurzgeschlossene Leitung]{Kurzgeschlossene Leitung  $\underline{z}_A = 0$}
+\begin{align*}
+    \underline{Z}  & = j\cdot Z_L\cdot\tan\left(\frac{2\pi}{\lambda}\cdot l\right)           \\
+    |\hat{U}_1(l)| & = U_{max}\cdot\sin\left(\frac{2\pi}{\lambda}\cdot l\right)              \\
+    \hat{U}_E      & = \hat{U}_{generator}\cdot\frac{\underline{Z}_E}{\underline{Z}_{generator}+\underline{Z}_E}
+\end{align*}
+

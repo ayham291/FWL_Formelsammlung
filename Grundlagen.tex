@@ -8,16 +8,16 @@ $\opgrad$: Skalar-/Gradientenfeld $\rightarrow$ Vektorfeld (Richtung stärkster 
 \begin{align*}
     \opdiv \vec{G} & = \nabla \cdot \vec{G}  & = & \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
                    &                         &   & \begin{cases}
-                                                       = 0 \quad\Rightarrow \textnormal{Volumen} \\
-                                                       > 0 \quad\Rightarrow \textnormal{Quelle}  \\
-                                                       < 0 \quad\Rightarrow \textnormal{Senke}
-                                                   \end{cases}                                                              \\
+        = 0 \quad\Rightarrow \textnormal{Volumen} \\
+        > 0 \quad\Rightarrow \textnormal{Quelle}  \\
+        < 0 \quad\Rightarrow \textnormal{Senke}
+    \end{cases}                                                                              \\
     \oprot \vec{G} & = \nabla \times \vec{G} & = &
     \begin{pmatrix}
         \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
         \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
         \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
-    \end{pmatrix}                                                                                   \\
+    \end{pmatrix}                                                                                                                             \\
     \opgrad G      & = \nabla \cdot G        & = & \hspace{4.5ex}
     \begin{pmatrix}
         \dfrac{\partial G}{\partial x} \\
@@ -55,7 +55,7 @@ Feldänderung bei Bewegung
     \vec{E} \cdot \vec{H} & = |\vec{E}| \cdot |\vec{H}| \cdot cos(\varphi)                         \\
     cos(\varphi)          & = \dfrac{E_x \cdot H_x + E_y \cdot H_y + E_z \cdot H_z}{|E| \cdot |H|}
 \end{align*}
-
+\columnbreak
 \subsection{Logarithmische Maße}
 
 {\samepage
@@ -67,6 +67,26 @@ Feldänderung bei Bewegung
         \item $\si{dBi} \rightarrow$ Isotropic
     \end{itemize}
 }
+\subsection{Kreuzprodukt}
+\begin{align*}
+    \vec{a}\times\vec{b} & =
+    \begin{pmatrix}
+        a_x \\
+        a_y \\
+        a_z
+    \end{pmatrix}
+    \times
+    \begin{pmatrix}
+        b_x \\
+        b_y \\
+        b_z
+    \end{pmatrix} =
+    \begin{pmatrix}
+        a_yb_z-a_zb_y \\
+        a_zb_x-a_xb_z \\
+        a_xb_y-a_yb_x
+    \end{pmatrix}
+\end{align*}
 
 \begin{description}
     \item Dezibel [dB]
