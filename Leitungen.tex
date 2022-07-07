@@ -30,9 +30,9 @@
         a = \text{innen Radius} \qquad b = \text{außen Radius} \\
     \]}
 \begin{align*}
-    \vec{H}(r, z)            & = \frac{\hat{I}}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                   \\
-    \vec{E}(r, z)            & = \frac{\hat{I}}{2\pi r}\cdot Z_{F0}\cdot e^{-j\beta z} \cdot\vec{e}_r
-                             & = \frac{\hat{U}}{r \cdot\ln{(^{b}/_{a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r        \\
+    \vec{H}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                   \\
+    \vec{E}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot Z_{F0}\cdot e^{-j\beta z} \cdot\vec{e}_r
+                          & = \frac{\hat{U}}{r \cdot\ln{(^{b}/_{a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r        \\
     \vec{S}_{zeit.Mittel} & = \frac{1}{2}\cdot\left[\frac{\hat{I}}{2\pi r}\right]^2\cdot Z_{F0}\cdot\vec{e}_z
 \end{align*}
 \input{Figures/Leitungen_Koaxialleitung.tex}
@@ -151,6 +151,14 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
     \frac{|U_H|+|U_R|}{|U_H|-|U_R|}
 \end{align*}
 
+\subsubsection{Leistung}
+\begin{align*}
+    P_{A} & = P_{H}-P_{R}                                                                                                 \\
+          & = \frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}}-\frac{1}{2} \cdot \frac{\hat{U}_{r}^{2}}{Re\{Z_{L}\}} \\
+          & =\frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}} \cdot\left(1-r^{2}\right)                              \\
+          & = P_{\max} \cdot\left(1-r^{2}\right)
+\end{align*}
+
 \subsubsection{Position von Extrema}
 \begin{gather*}
     \boxed{r_A = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}\\
@@ -180,11 +188,12 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
 
 \subsubsection{Spezialfall: Kurzgeschlossene Leitung}
 \begin{align*}
-    Z_A          & = 0                                                                        \\
-    Z(z)         & = j Z_L\cdot\tan(\beta z)        \qquad\rightarrow\text{rein imaginär}     \\
-    r_A          & = -1                                                                       \\
-    \mathrm{SWR} & = \infty                                                                   \\
-    U(z)         & = U_h\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                   \\
+    Z_A          & = 0                                                                                         \\
+    Z(z)         & = j Z_L\cdot\tan(\beta z)        \qquad\rightarrow\text{rein imaginär}                      \\
+    r_A          & = -1                                                                                        \\
+    \mathrm{SWR} & = \infty                                                                                    \\
+    U(z)         & = U_h\cdot 2j\sin(\beta z)    \qquad\rightarrow U(z=0)=0                                    \\
+    \hat{U}_E    & = \hat{U}_{generator}\cdot\frac{\underline{Z}_E}{\underline{Z}_{generator}+\underline{Z}_E} \\
     I(z)         & = U_h\cdot 2\cos(\beta z)    \qquad\rightarrow I(z=0)=I_A=\frac{2U_h}{Z_L}
 \end{align*}
 
