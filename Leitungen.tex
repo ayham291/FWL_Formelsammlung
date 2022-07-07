@@ -145,10 +145,11 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
 \end{align*}
 
 \subsubsection{Stehwellenverhältnis}
+siehe auch Kap. \ref{sec:Smith_All}
 \begin{align*}
-    \mathrm{SWR} = \frac{U_\text{max}}{U_\text{min}} =
-    \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(z)|}{1-|r(z)|} =
-    \frac{|U_H|+|U_R|}{|U_H|-|U_R|}
+    \mathrm{SWR}      & = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(z)|}{1-|r(z)|} = \frac{|U_H|+|U_R|}{|U_H|-|U_R|} \\
+                      & = \dfrac{R_{max}}{Z_L}                                                                                                                \\
+    \mathrm{SWR}^{-1} & = \dfrac{R_{min}}{Z_L}
 \end{align*}
 
 \subsubsection{Leistung}
@@ -159,6 +160,7 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
           & = P_{\max} \cdot\left(1-r^{2}\right)
 \end{align*}
 
+\pagebreak
 \subsubsection{Position von Extrema}
 \begin{gather*}
     \boxed{r_A = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}\\
@@ -172,9 +174,6 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
     z                        & = \frac{\lambda_\texttt{min}\cdot\lambda_\texttt{max}}{4(\lambda_\texttt{min}-\lambda_\texttt{max})}
 \end{align*}
 
-\vspace{20pt}
-\textbf{Spezialfälle auf der nächsten Seiten}
-\pagebreak
 
 \subsubsection{Spezialfall: Angepasste Leitung}
 \begin{align*}
@@ -222,7 +221,6 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
                           & \rightarrow z_\texttt{min}=\frac{\lambda}{2}\cdot n
 \end{align*}
 
-\columnbreak
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
 \input{Figures/Leitungen_Mehrfach_Refexion.tex}
 \begin{align*}
