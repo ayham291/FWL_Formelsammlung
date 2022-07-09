@@ -1,6 +1,6 @@
 \section{Smith-Diagramm}
 
-\subsection{Allgemein}
+\subsection{Allgemein} \label{sec:Smith_All}
 \begin{center}
     \begin{align*}
         \Aboxed{r(z) & = r_A \cdot e^{-j2\beta z}}                                              \\
@@ -14,10 +14,17 @@
     m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}
     s               & = \frac{1}{m}
 \end{align*}
-\subsection[Kurzgeschlossene Leitung]{Kurzgeschlossene Leitung  $\underline{z}_A = 0$}
-\begin{align*}
-    \underline{Z}  & = j\cdot Z_L\cdot\tan\left(\frac{2\pi}{\lambda}\cdot l\right)           \\
-    |\hat{U}_1(l)| & = U_{max}\cdot\sin\left(\frac{2\pi}{\lambda}\cdot l\right)              \\
-    \hat{U}_E      & = \hat{U}_{generator}\cdot\frac{\underline{Z}_E}{\underline{Z}_{generator}+\underline{Z}_E}
-\end{align*}
 
+\subsubsection{Vorgehen}
+\begin{enumerate}
+    \item Lastimpedanz Bestimmen
+    \item Normieren
+          \[\underline{z}_A = \frac{\underline{Z}_A}{Z_L} \]
+    \item ins Chart eintragen (Betrag Reflexionsfaktor an Skala ablesen)
+    \item um Leitungslänge weiter laufen (ergibt $\underline{z}_E$)
+    \item Eingangsimpedanz ablesen
+          \[\underline{Z}_E = \underline{z}_E \cdot Z_L\]
+\end{enumerate}
+
+\subsubsection{Impedanz/Admetanz umrechnen}
+Im Smithchart spiegeln (Phase $\pm 180^{\circ}$/$\pm \pi$)
