@@ -11,8 +11,8 @@ mini dot/.style={circle, inner sep=0pt, minimum size=2pt, pos=1, fill, node cont
 }
 
 \begin{tikzpicture}
-    \draw[-latex](0,0)--(0,-1) node[right, midway]{$|r|_A$};
-    \draw[dashed](0,0)--(0,-2.25) node[below]{$\text{Phase von }|r|_A$};
+    \draw[-latex](0,0)--(0,-1) node[right, midway]{$|r_A|$};
+    \draw[dashed](0,0)--(0,-2.25) node[below]{$\text{Phase von }|r_A|$};
     \draw [black,
         decorate,
         decoration = {brace,
@@ -22,6 +22,9 @@ mini dot/.style={circle, inner sep=0pt, minimum size=2pt, pos=1, fill, node cont
     \draw[-,fill=black!100] (-1,0) circle (0.05) node[above right]{$\text{\tiny{SWR}}^\text{\tiny{-1}}$};
     \draw[-,fill=black!100] (0,0) circle (0.05);
     \draw[-,fill=black!100] (1,0) circle (0.05) node[above right]{$\text{\tiny{SWR}}$};
+    \node at (-2,0)[above right]{KS};
+    \node at (0,0)[above right]{1};
+    \node at (2,0)[above right]{LL};
     \path (0,0) coordinate (c);
     \draw[-](-2.5,0)--(2.5,0);
     \node[, rotate around={85:(c)}] at (0,2.47){t};

@@ -1,5 +1,6 @@
 \section{Antennen}
 \subsection{Herz'scher Dipol}
+\boxed{\vec{p} = Q\cdot\vec{d}}
 \subsubsection{Allgemein}
 
 {\footnotesize\begin{empheq}[box=\fbox]{align*}
@@ -40,11 +41,16 @@ mit $\eta = Z_{F0}$
 \end{align*}
 \subsubsection{Strahlungswiderstand}
 \begin{align*}
-    R_{S} & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2 \\
-          & = 80\pi^2\Omega\left(\frac{\Delta l'}{\lambda}\right)^2
+    R_{S} & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2
+    = 80\pi^2\Omega\left(\frac{\Delta l'}{\lambda}\right)^2
+\end{align*}
+\subsubsection{Verlustwiderstand}
+\begin{align*}
+    R_{v} & = \frac{l}{\sigma\cdot A_\delta}
 \end{align*}
 \subsection{Magnetischer Dipol}
-
+\boxed{\vec{m} = \vec{I}\pi\vec{a}^2\vec{e}_z}
+\boxed{m = I\cdot A}
 \begin{center}
     \input{Figures/Antennen_Magnetischer_Dipol.tex}
 \end{center}
@@ -86,13 +92,15 @@ mit $\eta = Z_{F0}$
 
 \subsubsection{Dipolantenne}
 \begin{align*}
-    \vec{H}      & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\phi      \\
-    \vec{E}      & = H\cdot Z_F\cdot\vec{e}_\theta                                                                                                                                                         \\
-    I_0          & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}                                                                                                                                                    \\
-                 & \text{Die mittlere Strahlungsleistungsdichte}                                                                                                                                           \\
-    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\right)^2\cdot\vec{e}_R                            \\
-                 & \text{Die gesamte Strahlungsleistung}                                                                                                                                                   \\
-    P_S          & = \frac{Z_FI_0^2}{4\pi}\int^{\theta=\pi}_{\theta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\theta}\cdot\vec{e}_\theta
+    \vec{H}      & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\phi         \\
+    \vec{E}      & = H\cdot Z_F\cdot\vec{e}_\theta                                                                                                                                                            \\
+    I_0          & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}                                                                                                                                                       \\
+                 & \text{Die mittlere Strahlungsleistungsdichte}                                                                                                                                              \\
+    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\right)^2\cdot\vec{e}_R                               \\
+                 & \text{Die gesamte Strahlungsleistung}                                                                                                                                                      \\
+    P_S          & = \frac{Z_{F0}I_0^2}{4\pi}\int^{\theta=\pi}_{\theta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\theta}\cdot\vec{e}_\theta \\
+                 & = \int_A S_{AV}\cdot d\vec{a}                                                                                                                                                              \\
+                 & = \int^{2\pi}_{\Phi = 0}\int^{\pi}_{\Theta = 0} S_{AV} R^2 \sin\Theta \cdot d\Theta \cdot d\Phi
 \end{align*}
 
 \subsection{Antennenkenngrößen}
