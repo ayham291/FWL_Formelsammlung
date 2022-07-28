@@ -7,9 +7,41 @@
         \sigma = \text{Leitwert des Dielektr.} \qquad \sigma_c = \text{Leitwert des Leiters}
     \]}
 
+\subsubsection{Parallele Platten}
+{\small\[
+        w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
+    \]}
+
+Für Sinus-Anregung:
+\begin{align*}
+    I & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta z\cdot e^{j\omega t}}                         \\
+    U & = \int \vec{E} d\vec{s} \stackrel{w\gg d}{=} E\cdot d \rightarrow E = \frac{U_0}{d}\cdot^{-j\beta z}\cdot\vec{e}_x \\
+    I & = \oint \vec{H} d\vec{s} =  H\cdot w \rightarrow H = \frac{I_0}{w}\cdot^{-j\beta z}\cdot\vec{e}_y                  % \\
+    % \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
+    %               & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+\end{align*}
+
+\input{Figures/Leitungen_Parallele_Platten.tex}
+{\renewcommand*{\arraystretch}{0.2}
+    \begin{tabularx}{0.5\columnwidth}{|X|}
+        \hline
+        \[R=\frac{2}{w\delta\sigma}\] \\
+        \hline
+        \[L=\frac{\mu d}{w}\]         \\
+        \hline
+        \[G=\frac{\sigma w}{d}\]      \\
+        \hline
+        \[C=\frac{w\varepsilon}{d}\]  \\
+        \hline
+    \end{tabularx}
+}
+
 \subsubsection{Doppelleitung:}
 {\small\[
-        a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern} \\
+        a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern}\\
+    \]}
+{\small\[
+        \text{cosh am TR: MENU $\rightarrow$ 1; OPTN $\rightarrow$ 1 $\rightarrow$ 5}\\
     \]}
 \input{Figures/Leitungen_Doppelleitung.tex}
 {\renewcommand*{\arraystretch}{0.2}
@@ -49,39 +81,16 @@
         \hline
     \end{tabularx}}
 
-\subsubsection{Parallele Platten}
-{\small\[
-        w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
-    \]}
 
-Für Sinus-Anregung:
-\begin{align*}
-    I             & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta z\cdot e^{j\omega t}}                         \\
-    U             & = \int \vec{E} d\vec{s} \stackrel{w\gg d}{=} E\cdot d \rightarrow E = \frac{U_0}{d}\cdot^{-j\beta z}\cdot\vec{e}_x \\
-    I             & = \oint \vec{H} d\vec{s} =  H\cdot w \rightarrow H = \frac{I_0}{w}\cdot^{-j\beta z}\cdot\vec{e}_y                  \\
-    \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
-                  & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
-\end{align*}
-
-\input{Figures/Leitungen_Parallele_Platten.tex}
-{\renewcommand*{\arraystretch}{0.2}
-    \begin{tabularx}{0.5\columnwidth}{|X|}
-        \hline
-        \[R=\frac{2}{w\delta\sigma}\] \\
-        \hline
-        \[L=\frac{\mu d}{w}\]         \\
-        \hline
-        \[G=\frac{\sigma w}{d}\]      \\
-        \hline
-        \[C=\frac{w\varepsilon}{d}\]  \\
-        \hline
-    \end{tabularx}
-}
 
 \vspace{1ex}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \[
     LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}
+\]
+Innere Induktivität:
+\[
+    L_i = \frac{R}{w}
 \]
 \textbf{\color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
     \color{red}{Länge verdoppeln!!!}
@@ -149,18 +158,24 @@ siehe auch Kap. \ref{sec:Smith_All}
 \begin{align*}
     \mathrm{SWR}      & = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(z)|}{1-|r(z)|} = \frac{|U_H|+|U_R|}{|U_H|-|U_R|} \\
                       & = \dfrac{R_{max}}{Z_L}                                                                                                                \\
-    \mathrm{SWR}^{-1} & = \dfrac{R_{min}}{Z_L}
+    \mathrm{SWR}^{-1} & = \dfrac{R_{min}}{Z_L} \qquad |r_A| = \frac{SWR+1}{SWR-1}
 \end{align*}
 
 \subsubsection{Leistung}
 \begin{align*}
-    P_{A} & = P_{H}-P_{R}                                                                                                 \\
-          & = \frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}}-\frac{1}{2} \cdot \frac{\hat{U}_{r}^{2}}{Re\{Z_{L}\}} \\
-          & =\frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}} \cdot\left(1-r^{2}\right)                              \\
-          & = P_{\max} \cdot\left(1-r^{2}\right)
+    P_{A}            & = P_{H}-P_{R}                                                                                                 \\
+                     & = \frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}}-\frac{1}{2} \cdot \frac{\hat{U}_{r}^{2}}{Re\{Z_{L}\}} \\
+                     & =\frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}} \cdot\left(1-r^{2}\right)                              \\
+                     & = P_{\max} \cdot\left(1-r^{2}\right)                                                                          \\
+                     & = \underline{U}_A\cdot\underline{I}_A^*                                                                       \\
+    P_V              & = P_q -P_A                                                                                                    \\
+    \underline{I}(z) & = \hat{I}\cdot e^{-\alpha z}\angle \beta z
+\end{align*}
+\subsubsection{Gleichspannungswert (=Endwert)}
+\begin{align*}
+    U_A & = U_q\cdot\frac{R_A}{R_i+R_A}
 \end{align*}
 
-\pagebreak
 \subsubsection{Position von Extrema}
 \begin{gather*}
     \boxed{r_A = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}\\
@@ -234,6 +249,15 @@ siehe auch Kap. \ref{sec:Smith_All}
 \begin{align*}
      & \text{Reflexionsfaktor Leitungsanfang: } & \underline{r}_I & = \frac{R_I - Z_L}{R_I + Z_L}                 \\
      & \text{Reflexionsfaktor Leitungsende: }   & \underline{r}_A & = \frac{R_A - Z_L}{R_A + Z_L}                 \\
+     & \text{Hinlaufende Welle}                 & u_{1h}          & = \hat{u}_G \cdot\frac{Z_L}{Z_L+R_I}          \\
      & \text{Signallaufzeit: }                  & t_d             & = \frac{l}{c_0}\cdot\sqrt{\mu_r\varepsilon_r} \\
-     & \text{Hinlaufende Welle}                 & u_{1h}          & = \hat{u}_G \cdot\frac{Z_L}{Z_L+R_I}
+     &                                          &                 & = \frac{l}{v_p}
 \end{align*}
+\subsection{Kettenmatrix einer Leitung}
+\[
+    A =
+    \left[ {\begin{array}{cc}
+                    \cosh(\gamma l)               & Z_L \sinh(\gamma l) \\
+                    \frac{1}{Z_L} \sinh(\gamma l) & \cosh(\gamma l)     \\
+                \end{array} } \right]
+\]

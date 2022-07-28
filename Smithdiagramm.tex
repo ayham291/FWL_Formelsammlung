@@ -1,30 +1,79 @@
 \section{Smith-Diagramm}
 
 \subsection{Allgemein} \label{sec:Smith_All}
+
+
+$m$             : Anpassungsfaktor
+
+$s$             : inverser Anpassungsfaktor
+
+$\underline{r}$ : Reflexionsfaktor
+
+$1$             : Anpassungspunkt
+
 \begin{center}
     \begin{align*}
-        \Aboxed{r(z) & = r_A \cdot e^{-j2\beta z}}                                              \\
-        \Aboxed{Z(z) & = Z_L\cdot\frac{Z_A+jZ_L\cdot\tan(\beta z)}{Z_L+jZ_A\cdot\tan(\beta z)}}
+        \Aboxed{r(z)  = r_A \cdot e^{-j2\beta z}}                                              \\
+        \Aboxed{Z(z)  = Z_L\cdot\frac{Z_A+jZ_L\cdot\tan(\beta z)}{Z_L+jZ_A\cdot\tan(\beta z)}} \\
+        \text{mit} \beta = \frac{2\pi}{\lambda}                                                \\
+        \text{auch ohne Quelle gültig!}
     \end{align*}
     \input{Figures/Smithdiagramm_Smithchart.tex}
 \end{center}
 \begin{align*}
     \underline{z}_n & = \frac{\underline{Z}_n}{Z_L}                                                                                                                   \\
     \underline{r}_n & = \frac{\underline{Z}_n-Z_L}{\underline{Z}_n+Z_L}= \frac{\underline{z}_n-1}{\underline{z}_n+1}    = \frac{1-\underline{y}_n}{1+\underline{y}_n} \\
-    m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}
+    m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}                                                                                                   \\
     s               & = \frac{1}{m}
 \end{align*}
 
-\subsubsection{Vorgehen}
-\begin{enumerate}
-    \item Lastimpedanz Bestimmen
-    \item Normieren
-          \[\underline{z}_A = \frac{\underline{Z}_A}{Z_L} \]
-    \item ins Chart eintragen (Betrag Reflexionsfaktor an Skala ablesen)
-    \item um Leitungslänge weiter laufen (ergibt $\underline{z}_E$)
-    \item Eingangsimpedanz ablesen
-          \[\underline{Z}_E = \underline{z}_E \cdot Z_L\]
-\end{enumerate}
-
-\subsubsection{Impedanz/Admetanz umrechnen}
+\subsection{Impedanz/Admetanz umrechnen}
 Im Smithchart spiegeln (Phase $\pm 180^{\circ}$/$\pm \pi$)
+
+\subsection{Zusammenschaltungen}
+% \begin{center}
+%     \includegraphics[width=.45\columnwidth]{Figures/Smithdiagramm_Zusammenschaltungen.png}
+% \end{center}
+
+\columnbreak
+
+\subsection[Von Last zu Quelle]{Lastseite $\rightarrow$ Quelle}
+\begin{enumerate}
+    \item $Z_L$ ins Diagramm einzeichen
+    \item Lastimpedanz bestimmen,
+          wenn zB Parallelschaltung etc
+    \item Normieren
+          \[\underline{z}_a = \frac{\underline{Z}_A}{Z_L} \]
+    \item Ins Chart eintragen
+    \item Linie vom Mittelpunkt durch $\underline{z}_a$ nach außen
+
+          Ablesen und Notieren:
+
+          $\rightarrow$Relative Länge $\left[\frac{l}{\lambda}\right]$
+
+          $\rightarrow$Relativer Winkel
+    \item Kreis einzeichen
+
+          Ablesen und Notiere:
+
+          $\rightarrow$Maxima: rechter Schnittpunkt mit Re-Achse
+
+          $\rightarrow$Minima: linker  Schnittpunkt mit Re-Achse
+
+          $\rightarrow$Rexlexionsfaktor abmessen und aus Skala oben auslesen
+    \item Um Leitungslänge im UZS laufen
+          $\rightarrow$ Linie vom Mittelpunkt durch neuen Punkt nach außen
+
+          Ablesen und Notieren:
+
+          $\rightarrow$Relativer Winkel
+    \item Wenn $\alpha\neq 0$
+
+          $\rightarrow$ Dämpung ausrechen
+          $\rightarrow$ Um Faktor nach innen Spiralieren
+
+    \item Dieser Punkt ist $\underline{z}_e$
+    \item Eingangsimpedanz ablesen
+          \[\underline{Z}_E = \underline{z}_e \cdot Z_L\]
+\end{enumerate}
+\input{Figures/Smithdiagramm_Zusammenschaltungen.tex}  
