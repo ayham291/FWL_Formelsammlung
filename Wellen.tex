@@ -12,17 +12,17 @@
 \subsubsection*{Wellengleichung}
 \underline{Tatsächlicher Zeitverlauf}(Realteil von $\underline{\vec{E}}(z,t)$)
 \begin{empheq}[]{align*}
-    \boxed{\vec{E}(z,t) 
-        = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
-        \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
-        \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}
-        \cdot\vec{e}_z}
+    \boxed{\vec{E}(z,t)
+    = \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
+    \cdot \overbrace{e^{-\alpha z}}^{\mathclap{\text{Dämpfung}}}
+    \cdot \underbrace{cos(\omega t \overbrace{-}^{\mathclap{\text{positive z-Richtung}}} \beta z)}_\text{Zeit- und Raumabhängigkeit}
+    \cdot\vec{e}_z}
 \end{empheq}
 \underline{Komplexer Amplitudenvektor}
 \begin{empheq}[]{align*}
-    \boxed{\underline{\vec{E}}(z,t) 
-         = E_0\cdot e^{-\alpha z}\cdot e^{j(\omega t-\beta z)}\cdot\vec{e}_z 
-         = E_0\cdot e^{-\underline{\gamma}z}\cdot e^{j\omega t}\cdot\vec{e}_z
+    \boxed{\underline{\vec{E}}(z,t)
+        = E_0\cdot e^{-\alpha z}\cdot e^{j(\omega t-\beta z)}\cdot\vec{e}_z
+        = E_0\cdot e^{-\underline{\gamma}z}\cdot e^{j\omega t}\cdot\vec{e}_z
     }
 \end{empheq}
 
@@ -104,19 +104,20 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
 
 \subsection{Energie und Poyntingvektor (Energieflussdichte)}
 \begin{align*}
-      \vec{S}             & =  \vec{E}\times\vec{H} \qquad \si{\left[\frac{W}{m^2}\right]} \\
-      S                   & =  \frac{1}{2} \cdot E \cdot H =                               \\
-                          & =  \frac{1}{2} \cdot \dfrac{E^2}{Z_{F0}} =                     \\
-                          & =  \frac{1}{2} \cdot H^2 \cdot Z_{F0}                          \\
-      \vec{S}_{\text{av}} & =  \frac{1}{2} \cdot Re\{\vec{E}\times\vec{H}^*\}              \\
-      S                   & =  \dfrac{P}{A_\texttt{Fläche}}                                \\
+    \vec{S}             & =  \vec{E}\times\vec{H} \qquad \si{\left[\frac{W}{m^2}\right]} \\
+    \vec{S}_{\text{av}} & =  \frac{1}{2} \cdot Re\{\vec{E}\times\vec{H}^*\}              \\
+    S_{AV}              & =  \frac{1}{2} \cdot E \cdot H =                               \\
+                        & =  \frac{1}{2} \cdot \dfrac{E^2}{Z_{F0}} =                     \\
+                        & =  \frac{1}{2} \cdot H^2 \cdot Z_{F0}                          \\
+                        & =  \dfrac{P}{A_\texttt{Fläche}}                                \\
 \end{align*}
 
 \subsubsection{Leistung}
 
 \begin{align*}
-    P     & = \iint\vec{S}_{\text{av}}d\vec{a} \\
-    W_{M} & = 1/_2\cdot\mu\cdot H^2            \\
+    P     & = \iint\vec{S}_{\text{av}}d\vec{a}                   \\
+          & = Re\left\{\underline{U}\cdot\underline{I}^*\right\} \\
+    W_{M} & = 1/_2\cdot\mu\cdot H^2                              \\
     W_{E} & = 1/_2\cdot\varepsilon\cdot E^2
 \end{align*}
 
@@ -282,7 +283,7 @@ Im Vakuum: $k_{0}=\frac{\omega}{c_{0}}$
 
 \begin{align*}
     t  = \frac{2 \cdot Z_{F2}}{Z_{F1} + Z_{F2}}\qquad r  = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} \\
-    \qquad = \frac{\sqrt{\varepsilon_{r2}}-\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r2}}+\sqrt{\varepsilon_{r1}}}
+    %\qquad = \frac{\sqrt{\varepsilon_{r2}}-\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r2}}+\sqrt{\varepsilon_{r1}}}
 \end{align*}
 
 \begin{align*}
