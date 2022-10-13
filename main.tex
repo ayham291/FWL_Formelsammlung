@@ -2,16 +2,18 @@
 \usepackage{preamble}
 
 \def\FS{Formelsammlung}
-\def\Fach{Felder, Wellen und Leitungen}
+\def\Fach{FWL}
+\def\fachlong{Felder, Wellen und Leitungen}
 \title{\FS \\ \Fach}
+% \subtitle{Felder, Wellen und Leitungen}
 \date{\today}
-\def\Semester{Sommersemester 22}
+\def\Semester{Wintersemester 22/23}
 \IfFileExists{info.tex}
 {
     \input{info.tex}
 }
 {
-    \author{\href{https://www.youtube.com/watch?v=yMR45cZbvDw}{Die Prinzen - Alles nur geklaut}}
+    \author{Tony Pham}
     \def\MatNr{MATNR}
 }
 
@@ -27,14 +29,15 @@
         \Huge
         \textsc{\MyTitle}\\
         \vspace*{\stretch{0.25}}
-        \normalsize
+        \Large
         \Semester
 
         \vspace*{\stretch{2}}
         {\renewcommand{\arraystretch}{1.5}
+        \Large
             \begin{tabular}{l l}
                 Name:            & \hspace{4cm}\MyAuthor \\
-                Matrikelnummer:  & \hspace{4cm}\MatNr    \\
+                % Matrikelnummer:  & \hspace{4cm}\MatNr    \\
                 Letzte Änderung: & \hspace{4cm}\MyDate   \\
                 Lizenz:          & \hspace{4cm}GPLv3
             \end{tabular}

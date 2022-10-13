@@ -27,7 +27,7 @@
 \usepackage{multicol}
 \usepackage{mathtools}
 \usepackage{graphicx}
-\graphicspath{{./Bilder}}
+\graphicspath{{./Figures}}
 \usepackage{float}
 \usepackage{xcolor, soul}
 \definecolor{purple}{RGB}{200,0,255}
@@ -50,7 +50,7 @@
 \hypersetup{
     pdftitle=FWL Formelsammlung,
     pdfsubject=FWL,
-    pdfauthor=Ayham Alhalaibi,
+    pdfauthor=Tony Pham,
     colorlinks,
     citecolor=black,
     filecolor=black,
@@ -98,3 +98,5 @@ hidealllines=true, nobreak=true, frametitlerule=true, skipabove=3pt, skipbelow=0
 
 \setlength{\arraycolsep}{1.0pt}
 \def\arraystretch{2}
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
