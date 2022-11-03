@@ -1,31 +1,53 @@
 \section{Grundlagen}
-\subsection{mathematische}
-\subsubsection*{Divergenz/Rotation/Gradient}
+\subsection{Differentialoperatoren}
 
-$\opdiv$: Vektor $\rightarrow$ Skalar (Quelle / Senke)\\
-$\oprot$: Vektor auf Vektorfeld ( rot = 0 für E. erhaltendes Feld)\\
-$\opgrad$: Skalar-/Gradientenfeld $\rightarrow$ Vektorfeld (Richtung stärkster Feldänderung)
+\textbf{Divergenz} $\opdiv$: Vektor $\rightarrow$ Skalar\\
+gibt für jeden Punkt im Raum an, ob Feldlinien entstehen oder verschwinden.
 \begin{align*}
-    \opdiv \vec{G} & = \nabla \cdot \vec{G}  & = & \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
-                   &                         &   & \begin{cases}
-        = 0 \quad\Rightarrow \textnormal{Volumen} \\
-        > 0 \quad\Rightarrow \textnormal{Quelle}  \\
-        < 0 \quad\Rightarrow \textnormal{Senke}
-    \end{cases}                                                                              \\
-    \oprot \vec{G} & = \nabla \times \vec{G} & = &
-    \begin{pmatrix}
-        \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
-        \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
-        \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
-    \end{pmatrix}                                                                                                                             \\
-    \opgrad G      & = \nabla \cdot G        & = & \hspace{4.5ex}
+    \opdiv \vec{G} = \nabla \cdot \vec{G}   =  \dfrac{\partial G_x}{\partial x} 
+    + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
+                                 \begin{cases}
+    = 0 \quad\Rightarrow \textnormal{Volumen} \\
+    > 0 \quad\Rightarrow \textnormal{Quelle}  \\
+    < 0 \quad\Rightarrow \textnormal{Senke}
+\end{cases}                                      
+\end{align*}
+Bsp: $\opdiv \vec{B} = 0$, da mag. Felder in sich geschlossen.\\
+
+\textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld\\
+gibt für jeden Punkt im Raum Betrag und Richtung der Rotationsgeschwindigkeit an.
+\begin{align*}
+\oprot \vec{G} = \nabla \times \vec{G} = 
+\begin{pmatrix}
+    \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
+    \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
+    \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
+\end{pmatrix}
+\end{align*}
+Bsp: energieerhaltende (konservatives) Felder $ \rightarrow \oprot = 0$\\
+
+\textbf{Gradient} $\opgrad$: Skalarfeld $\rightarrow$ Vektor/Gradientenfeld (in Richtung steilster Anstieg, max. Änderung), \textit{S.380 Papula}
+\begin{align*}
+    % \opdiv \vec{G} & = \nabla \cdot \vec{G}  & = & \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
+    %                &                         &   & \begin{cases}
+    %     = 0 \quad\Rightarrow \textnormal{Volumen} \\
+    %     > 0 \quad\Rightarrow \textnormal{Quelle}  \\
+    %     < 0 \quad\Rightarrow \textnormal{Senke}
+    % \end{cases}                                                                              \\
+    % \oprot \vec{G} & = \nabla \times \vec{G} & = &
+    % \begin{pmatrix}
+    %     \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
+    %     \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
+    %     \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
+    % \end{pmatrix}                                                                                                                             \\
+    \opgrad G (x,y,z) & = \nabla \cdot G (x,y,z)  =  
+    % \hspace{4.5ex}
     \begin{pmatrix}
         \dfrac{\partial G}{\partial x} \\
         \dfrac{\partial G}{\partial y} \\
         \dfrac{\partial G}{\partial z}
     \end{pmatrix}
 \end{align*}
-
 
 \subsection{Rechenregeln}
 \begin{align*}
@@ -36,7 +58,6 @@ $\opgrad$: Skalar-/Gradientenfeld $\rightarrow$ Vektorfeld (Richtung stärkster 
      & \oprot \opgrad f                      & = & \qquad 0 \Rightarrow\textnormal{Gradientenfeld Quellenfrei}                    \\
      & \opdiv \oprot \vec{f}                 & = & \qquad 0 \Rightarrow\textnormal{Wirbelfeld Quellenfrei}
 \end{align*}
-
 
 \subsubsection*{Nabla Operator}
 \[
@@ -58,7 +79,7 @@ Feldänderung bei Bewegung
 \columnbreak
 \subsection{Logarithmische Maße}
 
-{\samepage
+% {\samepage
     \begin{itemize}
         \setlength\itemsep{0pt}
         \item $\si{dBm} \hat=  1\si{mW}$
@@ -66,7 +87,7 @@ Feldänderung bei Bewegung
         \item $\si{dBmV} \hat{=} 1mV$
         \item $\si{dBi} \rightarrow$ Isotropic
     \end{itemize}
-}
+% }
 \subsection{Kreuzprodukt}
 \begin{align*}
     \vec{a}\times\vec{b} & =
