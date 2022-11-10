@@ -1,82 +1,101 @@
 \section{Grundlagen}
 \subsection{Differentialoperatoren}
 
-\textbf{Divergenz} $\opdiv$: Vektor $\rightarrow$ Skalar\\
-gibt für jeden Punkt im Raum an, ob Feldlinien entstehen oder verschwinden.
+\textbf{Nabla-Operator}
 \begin{align*}
-    \opdiv \vec{G} = \nabla \cdot \vec{G}   =  \dfrac{\partial G_x}{\partial x} 
-    + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
+    \nabla & = \vec{\nabla} = 
+    \begin{psmallmatrix}
+        \partial G / \partial x \\
+        \partial G / \partial y \\
+        \partial G / \partial z
+    \end{psmallmatrix}
+\end{align*}
+
+\textbf{Laplace-Operator}
+\begin{align*}
+    \varDelta  & = \vec{\nabla} \cdot \vec{\nabla} = \textrm{div (grad)} = 
+    \dfrac{\partial ^2}{\partial x^2}+\dfrac{\partial ^2}{\partial y^2}+\dfrac{\partial ^2}{\partial z^2}
+\end{align*}
+
+\textbf{Divergenz} $\opdiv$: Vektorfeld $\rightarrow$ Skalar\\
+\small{Quelldichte, gibt für jeden Punkt im Raum an, ob Feldlinien entstehen oder verschwinden. \textit{mFS S.382}}
+\begin{align*}
+    \opdiv \vec{F} = \nabla \cdot \vec{F}   =  \dfrac{\partial F_x}{\partial x} 
+    + \dfrac{\partial F_y}{\partial y} + \dfrac{\partial F_z}{\partial z}\\ 
                                  \begin{cases}
-    = 0 \quad\Rightarrow \textnormal{Volumen} \\
     > 0 \quad\Rightarrow \textnormal{Quelle}  \\
-    < 0 \quad\Rightarrow \textnormal{Senke}
+    < 0 \quad\Rightarrow \textnormal{Senke} \\
+    = 0 \quad\Rightarrow \textnormal{quellenfrei} 
 \end{cases}                                      
-\end{align*}
-Bsp: $\opdiv \vec{B} = 0$, da mag. Felder in sich geschlossen.\\
+\end{align*}\\
+% Bsp: $\opdiv \vec{B} = 0$, da mag. Felder in sich geschlossen.\\
 
-\textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld\\
-gibt für jeden Punkt im Raum Betrag und Richtung der Rotationsgeschwindigkeit an.
+\textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld\\ 
+\small{Wirbeldichte, gibt für jeden Punkt im Raum Betrag und Richtung der Rotationsgeschwindigkeit an. \textit{mFS S.382}}
 \begin{align*}
-\oprot \vec{G} = \nabla \times \vec{G} = 
+\oprot \vec{F} = \nabla \times \vec{F} = 
 \begin{pmatrix}
-    \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
-    \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
-    \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
-\end{pmatrix}
-\end{align*}
-Bsp: energieerhaltende (konservatives) Felder $ \rightarrow \oprot = 0$\\
+    \dfrac{\partial F_z}{\partial y} - \dfrac{\partial F_y}{\partial z} \\
+    \dfrac{\partial F_x}{\partial z} - \dfrac{\partial F_z}{\partial x} \\
+    \dfrac{\partial F_y}{\partial x} - \dfrac{\partial F_x}{\partial y}
+\end{pmatrix} =
+\begin{vmatrix}
+    \vec{e}_x & \vec{e}_y & \vec{e}_z \\
+    \dfrac{\partial}{\partial x} & \dfrac{\partial }{\partial x} & \dfrac{\partial }{\partial z} \\
+    \vec{F}_x & \vec{F}_y & \vec{F}_z
+\end{vmatrix}
+\end{align*}\\
+% Bsp: energieerhaltende (konservatives) Felder $ \rightarrow \oprot = 0$\\
 
-\textbf{Gradient} $\opgrad$: Skalarfeld $\rightarrow$ Vektor/Gradientenfeld (in Richtung steilster Anstieg, max. Änderung), \textit{S.380 Papula}
-\begin{align*}
-    % \opdiv \vec{G} & = \nabla \cdot \vec{G}  & = & \dfrac{\partial G_x}{\partial x} + \dfrac{\partial G_y}{\partial y} + \dfrac{\partial G_z}{\partial z} \\
-    %                &                         &   & \begin{cases}
-    %     = 0 \quad\Rightarrow \textnormal{Volumen} \\
-    %     > 0 \quad\Rightarrow \textnormal{Quelle}  \\
-    %     < 0 \quad\Rightarrow \textnormal{Senke}
-    % \end{cases}                                                                              \\
-    % \oprot \vec{G} & = \nabla \times \vec{G} & = &
-    % \begin{pmatrix}
-    %     \dfrac{\partial G_z}{\partial y} - \dfrac{\partial G_y}{\partial z} \\
-    %     \dfrac{\partial G_x}{\partial z} - \dfrac{\partial G_z}{\partial x} \\
-    %     \dfrac{\partial G_y}{\partial x} - \dfrac{\partial G_x}{\partial y}
-    % \end{pmatrix}                                                                                                                             \\
-    \opgrad G (x,y,z) & = \nabla \cdot G (x,y,z)  =  
+\textbf{Gradient} $\opgrad$: Skalarfeld $\rightarrow$ Vektor/Gradientenfeld\\ 
+\small{zeigt in Richtung steilster Anstieg von $\phi$, \textit{mFS S.380}}
+\begin{align*}                                                                                          
+    \opgrad \phi = \nabla \cdot \phi =  
     % \hspace{4.5ex}
-    \begin{pmatrix}
-        \dfrac{\partial G}{\partial x} \\
-        \dfrac{\partial G}{\partial y} \\
-        \dfrac{\partial G}{\partial z}
-    \end{pmatrix}
+    \begin{psmallmatrix}
+        \partial \phi / \partial x \\
+        \partial \phi / \partial y \\
+        \partial \phi / \partial z
+        % \dfrac{\partial G}{\partial x}\\
+        % \dfrac{\partial G}{\partial y}\\
+        % \dfrac{\partial G}{\partial z}
+    \end{psmallmatrix}
+    = \dfrac{\partial \phi}{\partial x} \vec{e}_x + \dfrac{\partial \phi}{\partial y} \vec{e}_y + 
+    \dfrac{\partial \phi}{\partial z} \vec{e}_z  
 \end{align*}
 
-\subsection{Rechenregeln}
+\subsubsection{Rechenregeln}
+$\phi, \psi$: Skalarfelder \qquad $\vec{A}, \vec{B}$: Vektorfelder
 \begin{align*}
-     & \nabla \cdot (\vec{f} \times \vec{g}) & = & \qquad (\nabla \times \vec{f})\cdot\vec{g} - (\nabla\times\vec{g})\cdot\vec{f} \\
-     & \nabla \cdot (fg)                     & = & \qquad f(\nabla g) + g( \nabla f)                                              \\
-     & \nabla \cdot (f\vec{g})               & = & \qquad g(\nabla\vec{f}) + f(\nabla\vec{g})                                     \\
-     & \nabla \times (f\vec{g})              & = & \qquad \nabla f \times \vec{g} + f(\nabla\times\vec{g})                        \\
-     & \oprot \opgrad f                      & = & \qquad 0 \Rightarrow\textnormal{Gradientenfeld Quellenfrei}                    \\
-     & \opdiv \oprot \vec{f}                 & = & \qquad 0 \Rightarrow\textnormal{Wirbelfeld Quellenfrei}
+     & \nabla \cdot (\vec{A} \times \vec{B}) & = & \qquad (\nabla \times \vec{A})\cdot\vec{B} - (\nabla\times\vec{B})\cdot\vec{A} \\
+     & \nabla \cdot (\phi \cdot \psi)        & = & \qquad \phi (\nabla \psi) + \psi( \nabla \phi)                                  \\
+     & \nabla \cdot (\phi \cdot \vec{A})           & = & \qquad \phi (\nabla \vec{A}) + \vec{A}(\nabla \phi)                             \\
+     & \nabla \times (\phi \cdot \vec{A})          & = & \qquad \nabla \phi \times \vec{A} + \phi (\nabla \times \vec{A})                        
+    %  & \oprot \opgrad f                      & = & \qquad 0 \Rightarrow\textnormal{Gradientenfeld Quellenfrei}                    \\
+    %  & \opdiv \oprot \vec{f}                 & = & \qquad 0 \Rightarrow\textnormal{Wirbelfeld Quellenfrei}
 \end{align*}
 
-\subsubsection*{Nabla Operator}
-\[
-    \nabla = \vec{\nabla} = \left( \dfrac{\partial G}{\partial x},
-    \dfrac{\partial G}{\partial y}, \dfrac{\partial G}{\partial z} \right)
-\]
-
-Feldänderung bei Bewegung
+\subsubsection{Spezielle Vektorfelder}
+quellenfreies Vektorfeld $\rightarrow$ Wirbelfeld:
 \begin{align*}
-    \Delta G & = \dfrac{\partial G}{\partial x} \Delta x + \dfrac{\partial G}{\partial y} \Delta y + \dfrac{\partial G}{\partial z} \Delta z \\
-             & = dG = \opgrad G \cdot d \vec{s}
+\opdiv \vec{F} = \opdiv (\oprot \vec{E}) = 0 \quad \Leftrightarrow \quad  \vec{F} = \oprot \vec{E}
+\end{align*}
+wirbelfreies Vektorfeld $\rightarrow$ Skalarfeld: 
+\begin{align*}
+    \oprot \vec{F} = \oprot (\opgrad \phi) = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
+    \end{align*}
+quellen- und wirbelfreies Vektorfeld:
+\begin{align*}
+    \oprot \vec{F} = \opdiv (\opgrad \phi) = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
 \end{align*}
 
-\subsection{Schnittwinkel zweier Vektoren}
-\begin{align*}
-    \vec{E} \cdot \vec{H} & = |\vec{E}| \cdot |\vec{H}| \cdot cos(\varphi)                         \\
-    cos(\varphi)          & = \dfrac{E_x \cdot H_x + E_y \cdot H_y + E_z \cdot H_z}{|E| \cdot |H|}
-\end{align*}
-\columnbreak
+% Feldänderung bei Bewegung
+% \begin{align*}
+%     \Delta G & = \dfrac{\partial G}{\partial x} \Delta x + \dfrac{\partial G}{\partial y} \Delta y + \dfrac{\partial G}{\partial z} \Delta z \\
+%              & = dG = \opgrad G \cdot d \vec{s}
+% \end{align*}
+
+% \columnbreak
 \subsection{Logarithmische Maße}
 
 % {\samepage
@@ -87,57 +106,71 @@ Feldänderung bei Bewegung
         \item $\si{dBmV} \hat{=} 1mV$
         \item $\si{dBi} \rightarrow$ Isotropic
     \end{itemize}
-% }
-\subsection{Kreuzprodukt}
-\begin{align*}
-    \vec{a}\times\vec{b} & =
-    \begin{pmatrix}
-        a_x \\
-        a_y \\
-        a_z
-    \end{pmatrix}
-    \times
-    \begin{pmatrix}
-        b_x \\
-        b_y \\
-        b_z
-    \end{pmatrix} =
-    \begin{pmatrix}
-        a_yb_z-a_zb_y \\
-        a_zb_x-a_xb_z \\
-        a_xb_y-a_yb_x
-    \end{pmatrix}
-\end{align*}
+    % }
+    \begin{description}
+        \item Dezibel [dB]
+        \begin{flalign*}
+            X[dB]     & = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) & X[dB] & = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right) & \\
+            U_1       & = U_2 \cdot 10^{^X/20\si{dB}}                     & P_1   & = P_2 \cdot  10^{^X/10\si{dB}}                    & \\
+            1 \si{dB} & \,\hat=                                           &       & 0,1151 \si{Np}                                    &
+        \end{flalign*}
+        
+        \item Neper [Np]
+        \begin{flalign*}
+            X[Np]     & = \ln \left(\dfrac{U_1}{U_2}\right) & X[Np] & = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right) & \\
+            U_1       & = U_2 \cdot e^{X}                   & P_1   & = P_2 \cdot  e^{2X}                                    & \\
+            1 \si{Np} & \,\hat=                             &       & 8,686 \si{dB}                                          & % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
+        \end{flalign*}
+    \end{description}
+    
+    \subsection{Vektorrechnung}
+    \subsubsection{Kreuzprodukt}
+    \textit{mFS S.53}
+    \begin{align*}
+        \vec{a}\times\vec{b} & =
+            \begin{pmatrix}
+                a_x \\
+                a_y \\
+                a_z
+            \end{pmatrix}
+            \times
+            \begin{pmatrix}
+                b_x \\
+                b_y \\
+                b_z
+            \end{pmatrix} =
+            \begin{pmatrix}
+                a_yb_z-a_zb_y \\
+                a_zb_x-a_xb_z \\
+                a_xb_y-a_yb_x
+            \end{pmatrix}
+        \end{align*}
 
-\begin{description}
-    \item Dezibel [dB]
-          \begin{flalign*}
-              X[dB]     & = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) & X[dB] & = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right) & \\
-              U_1       & = U_2 \cdot 10^{^X/20\si{dB}}                     & P_1   & = P_2 \cdot  10^{^X/10\si{dB}}                    & \\
-              1 \si{dB} & \,\hat=                                           &       & 0,1151 \si{Np}                                    &
-          \end{flalign*}
+        \subsubsection{Schnittwinkel zweier Vektoren}
+        \textit{mFS S.52}
+        \begin{align*}
+            \vec{E} \cdot \vec{H} & = |\vec{E}| \cdot |\vec{H}| \cdot cos(\varphi)                         \\
+            cos(\varphi)          & = \dfrac{E_x \cdot H_x + E_y \cdot H_y + E_z \cdot H_z}{|E| \cdot |H|}
+        \end{align*}
+        
+        \subsubsection{Betrag eines Vektors}
+        \begin{align*}
+        \vert \vec{r}  \vert & = r = \sqrt{r^2_x + r^2_y + r^2_z}
+        \end{align*}
 
-    \item Neper [Np]
-          \begin{flalign*}
-              X[Np]     & = \ln \left(\dfrac{U_1}{U_2}\right) & X[Np] & = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right) & \\
-              U_1       & = U_2 \cdot e^{X}                   & P_1   & = P_2 \cdot  e^{2X}                                    & \\
-              1 \si{Np} & \,\hat=                             &       & 8,686 \si{dB}                                          & % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
-          \end{flalign*}
-\end{description}
+        \subsection{Randbedingung}
+        \begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
+            Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$) \\
+            \hline
+            Neumann-RB   & Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an   \\
+        \end{tabularx}
 
-\subsection{Randbedingung}
-\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
-    Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$) \\
-    \hline
-    Neumann-RB   & Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an   \\
-\end{tabularx}
-
-\subsection{Begriffe}
-\begin{tabularx}{0.45\textwidth}{>{\hsize=.1\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.4\hsize}X}
-           & Begriff           & Beschreibung \\
-    \hline
-    $\rho$ & Raumladungsdichte &              \\
-\end{tabularx}
+% \subsection{Begriffe}
+% \begin{tabularx}{0.45\textwidth}{>{\hsize=.1\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.4\hsize}X}
+%            & Begriff           & Beschreibung \\
+%     \hline
+%     $\rho$ & Raumladungsdichte &              \\
+% \end{tabularx}
 
 
 
