@@ -76,17 +76,18 @@ $\phi, \psi$: Skalarfelder \qquad $\vec{A}, \vec{B}$: Vektorfelder
 \end{align*}
 
 \subsubsection{Spezielle Vektorfelder}
-quellenfreies Vektorfeld $\rightarrow$ Wirbelfeld:
+quellenfreies Vektorfeld $\rightarrow$ Vektorpotential:
 \begin{align*}
 \opdiv \vec{F} = \opdiv (\oprot \vec{E}) = 0 \quad \Leftrightarrow \quad  \vec{F} = \oprot \vec{E}
 \end{align*}
-wirbelfreies Vektorfeld $\rightarrow$ Skalarfeld: 
+wirbelfreies Vektorfeld $\rightarrow$ Skalarpotential: 
 \begin{align*}
     \oprot \vec{F} = \oprot (\opgrad \phi) = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
-    \end{align*}
+\end{align*}
 quellen- und wirbelfreies Vektorfeld:
 \begin{align*}
-    \oprot \vec{F} = \opdiv (\opgrad \phi) = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
+    \oprot \vec{F} = 0 \quad \opdiv \vec{F} = 0\\
+    \opdiv (\opgrad \phi) = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
 \end{align*}
 
 % Feldänderung bei Bewegung
@@ -111,7 +112,7 @@ quellen- und wirbelfreies Vektorfeld:
         \item Dezibel [dB]
         \begin{flalign*}
             X[dB]     & = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) & X[dB] & = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right) & \\
-            U_1       & = U_2 \cdot 10^{^X/20\si{dB}}                     & P_1   & = P_2 \cdot  10^{^X/10\si{dB}}                    & \\
+            U_1       & = U_2 \cdot 10^{\frac{X}{20\si{dB}}}                     & P_1   & = P_2 \cdot  10^{\frac{X}{10\si{dB}}}       & \\
             1 \si{dB} & \,\hat=                                           &       & 0,1151 \si{Np}                                    &
         \end{flalign*}
         
