@@ -102,7 +102,20 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
     \quad \qquad Z_{F1}    & = \dfrac{Z_{F0}}{\sqrt{\mu_{r1}\varepsilon_{r1}}}             & Z_{F2}    & = \dfrac{Z_{F0}}{\sqrt{\mu_{r2}\varepsilon_{r2}}}
 \end{align*}
 
-\subsection{Energie und Poyntingvektor (Energieflussdichte)}
+\subsection{Poyntingvektor}
+gibt Leistungsfluss einer EM-Welle und Richtung der Energieströmung an.\\
+
+\begin{tabular}{|l|l|}
+\hline
+Zeitbereich & Frequenzbereich\\
+\hline
+$\vec{S} = \vec{E} \times \vec{H}$ & $\vec{\underline{S}} = \frac{1}{2} (\underline{\vec{E}} \times \underline{\vec{H}}^*)$ \\
+$\vec{S}_{av} = \overline{\vec{S}(t)} = \frac{1}{T} \int_{0}^{T} \vec{S}(t) \,dt $ & $\vec{S}_{av} = \frac{1}{2} \Re{\underline{\vec{E}} \times \underline{\vec{H}}^*}$\\
+\hline
+\multicolumn{2}{|c|}{Leistungsflussdichte $\quad S_{av} = |\vec{S}_{av}|$}\\
+\hline
+\end{tabular}
+
 \begin{align*}
     \vec{S}             & =  \vec{E}\times\vec{H} \qquad \si{\left[\frac{W}{m^2}\right]} \\
     \vec{S}_{\text{av}} & =  \frac{1}{2} \cdot Re\{\vec{E}\times\vec{H}^*\}              \\
@@ -117,8 +130,8 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
 \begin{align*}
     P     & = \iint\vec{S}_{\text{av}}d\vec{a}                   \\
           & = Re\left\{\underline{U}\cdot\underline{I}^*\right\} \\
-    W_{M} & = 1/_2\cdot\mu\cdot H^2                              \\
-    W_{E} & = 1/_2\cdot\varepsilon\cdot E^2
+    w_{e} & = 1/_2\cdot\mu\cdot H^2                              \\
+    w_{e} & = 1/_2\cdot\varepsilon\cdot E^2
 \end{align*}
 
 \subsubsection{Leistung nach Dämpfung}
