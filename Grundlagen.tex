@@ -1,6 +1,5 @@
 \section{Grundlagen}
 \subsection{Differentialoperatoren}
-
 \textbf{Nabla-Operator}
 \begin{align*}
     \nabla & = \vec{\nabla} = 
@@ -147,37 +146,45 @@ quellen- und wirbelfreies Vektorfeld:
     \endgroup
     
     \subsection{Logarithmische Maße}
+    Feldgröße $U_n$: Spannung, Strom, Schalldruck \\
+    Leistungsgröße $P_n$: Energie, Intensität, Leistung
+
     % {\samepage
-    \begin{itemize}
-        \setlength\itemsep{0pt}
-        \item $\si{dBm} \hat=  1\si{mW}$
-            \item $\si{dB\mu} V \hat= 1\si{\mu V}$
-            \item $\si{dBmV} \hat{=} 1mV$
-            \item $\si{dBi} \rightarrow$ Isotropic
-        \end{itemize}
+    % \begin{itemize}
+    %     \setlength\itemsep{0pt}
+    %     \item $\si{dBm} \hat=  1\si{mW}$
+    %         \item $\si{dB\mu} V \hat= 1\si{\mu V}$
+    %         \item $\si{dBmV} \hat{=} 1mV$
+    %         \item $\si{dBi} \rightarrow$ Isotropic
+    % \end{itemize}
         % }
-        \begin{description}
+        \begin{description} 
             \item \textbf{Dezibel} [dB]
             \begin{flalign*}
-                1 \si{dB} & =  0,1151 \si{Np} \\  
-                X[dB]     & = 20 \cdot \log_{} \left( \dfrac{U_1}{U_2}\right) & X[dB] & = 10 \cdot \log_{} \left( \dfrac{P_1}{P_2}\right) & \\
-                U_1       & = U_2 \cdot 10^{\frac{X}{20\si{dB}}}                     & P_1   & = P_2 \cdot  10^{\frac{X}{10\si{dB}}}       &                                  
+                1 \, \si{dB} & =  0,1151 \, \si{Np} \\  
+                x & = 20 \cdot \log_{} \dfrac{U_1}{U_2} \,[\si{dB}] & x & = 10 \cdot \log_{}  \dfrac{P_1}{P_2} \,[\si{dB}] & \\
+                U_1 & = U_2 \cdot 10^{\frac{x}{20\si{dB}}} & P_1   & = P_2 \cdot  10^{\frac{x}{10\si{dB}}} &               
             \end{flalign*}
             
             \item \textbf{Neper} [Np]
             \begin{flalign*}
-                X[Np]     & = \ln \left(\dfrac{U_1}{U_2}\right) & X[Np] & = \dfrac{1}{2} \cdot \ln \left(\dfrac{P_1}{P_2}\right) & \\
-                U_1       & = U_2 \cdot e^{X}                   & P_1   & = P_2 \cdot  e^{2X}                                    & \\
-                1 \si{Np} & \,\hat=                             &       & 8,686 \si{dB}                                          & % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
+                1 \si{Np} & =  8,686 \si{dB} \\   
+                x & = \ln \dfrac{U_1}{U_2} \,[\si{Np}] & x & = \dfrac{1}{2} \cdot \ln \dfrac{P_1}{P_2} \,[\si{Np}] & \\
+                U_1       & = U_2 \cdot e^{x}                   & P_1   & = P_2 \cdot  e^{2x} &
+                % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
             \end{flalign*}
+
+            \item \textbf{Umrechnung}
+            
+            \begin{tabular}{l|l|l}
+                Faktor & Energiegröße $P_n$ & Feldgröße $U_n$\\
+                \hline
+                1
+            \end{tabular}
+                
         \end{description}
 
-        \subsection{Randbedingung}
-        \begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
-            Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$) \\
-            \hline
-            Neumann-RB   & Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an   \\
-        \end{tabularx}
+
 
 % \subsection{Begriffe}
 % \begin{tabularx}{0.45\textwidth}{>{\hsize=.1\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.4\hsize}X}
@@ -222,4 +229,11 @@ quellen- und wirbelfreies Vektorfeld:
     $d y \cos \varphi-d x \sin \varphi$                                                  &                  & $r \sin \vartheta d \varphi$    \\
     \hline
     $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                  & $r d \vartheta$                 \\
+\end{tabularx}
+
+\subsection{Randbedingung}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
+    Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$) \\
+    \hline
+    Neumann-RB   & Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an   \\
 \end{tabularx}
