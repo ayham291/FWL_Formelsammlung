@@ -75,18 +75,21 @@ $\phi, \psi$: Skalarfelder \qquad $\vec{A}, \vec{B}$: Vektorfelder
 \end{align*}
 
 \subsubsection{Spezielle Vektorfelder}
-quellenfreies Vektorfeld $\rightarrow$ Vektorpotential:
+quellenfreies Vektorfeld $\vec{F}$ $\rightarrow$ Vektorpotential $\vec{E}$
 \begin{align*}
 \opdiv \vec{F} = \opdiv (\oprot \vec{E}) = 0 \quad \Leftrightarrow \quad  \vec{F} = \oprot \vec{E}
 \end{align*}
-wirbelfreies Vektorfeld $\rightarrow$ Skalarpotential: 
+wirbelfreies Vektorfeld $\vec{F}$ $\rightarrow$ Skalarpotential $\phi$
 \begin{align*}
     \oprot \vec{F} = \oprot (\opgrad \phi) = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
 \end{align*}
-quellen- und wirbelfreies Vektorfeld:
+quellen- und wirbelfreies Vektorfeld $\vec{F}$:
 \begin{align*}
     \oprot \vec{F}  & = 0 \quad \opdiv \vec{F} = 0\\
     \opdiv (\opgrad \phi) & = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
+\end{align*}
+\begin{align*}
+    \oprot (\oprot \vec{F})  & = \opgrad (\opdiv \vec{F}) - \varDelta \vec{F} 
 \end{align*}
 
 % Feldänderung bei Bewegung
@@ -144,7 +147,9 @@ quellen- und wirbelfreies Vektorfeld:
                 \end{pmatrix}
             \end{align*}
     \endgroup
-    
+    Trick: Regel von Sarrus anwenden!
+
+
     \subsection{Logarithmische Maße}
     Feldgröße $U_n$: Spannung, Strom, Schalldruck \\
     Leistungsgröße $P_n$: Energie, Intensität, Leistung
@@ -193,8 +198,12 @@ quellen- und wirbelfreies Vektorfeld:
 %     $\rho$ & Raumladungsdichte &              \\
 % \end{tabularx}
 
-
-
+\subsection{Randbedingung}
+\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
+    Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$) \\
+    \hline
+    Neumann-RB   & Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an   \\
+\end{tabularx}
 
 \subsection{Vergleich/Umrechnung}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
@@ -229,11 +238,4 @@ quellen- und wirbelfreies Vektorfeld:
     $d y \cos \varphi-d x \sin \varphi$                                                  &                  & $r \sin \vartheta d \varphi$    \\
     \hline
     $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                  & $r d \vartheta$                 \\
-\end{tabularx}
-
-\subsection{Randbedingung}
-\begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
-    Dirichlet-RB & Funktion nimmt an den Rändern einen bestimmten Wert an (Bsp.: $\rho_r = 5V$) \\
-    \hline
-    Neumann-RB   & Die Normalableitung der Fkt. nimmt an den Rändern einen bestimmten Wert an   \\
 \end{tabularx}
