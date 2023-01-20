@@ -148,47 +148,71 @@ quellen- und wirbelfreies Vektorfeld $\vec{F}$:
             \end{align*}
     \endgroup
     Trick: Regel von Sarrus anwenden!
-
-
-    \subsection{Logarithmische Maße}
-    Feldgröße $U_n$: Spannung, Strom, Schalldruck \\
-    Leistungsgröße $P_n$: Energie, Intensität, Leistung
-
-    % {\samepage
-    % \begin{itemize}
-    %     \setlength\itemsep{0pt}
-    %     \item $\si{dBm} \hat=  1\si{mW}$
-    %         \item $\si{dB\mu} V \hat= 1\si{\mu V}$
-    %         \item $\si{dBmV} \hat{=} 1mV$
-    %         \item $\si{dBi} \rightarrow$ Isotropic
-    % \end{itemize}
-        % }
-        \begin{description} 
-            \item \textbf{Dezibel} [dB]
+    
+    \subsection{Logarithmische Maße/Pegel}
+    \textbf{Feld}größe $F_n$: Spannung, Strom, $\vec{E}$-, $\vec{H}$-Feld, Schalldruck \\
+    \textbf{Leistungs}größe $P_n$: Energie, \underline{Intensität}, Leistung\\
+	Wichtig: Feldgrößen sind \textbf{Effektivwerte}!
+        \begin{itemize} 
+            \item \textbf{Dämpfungsmaß} $ a $ in Dezibel [dB] und Neper [Np]
             \begin{flalign*}
-                1 \, \si{dB} & =  0,1151 \, \si{Np} \\  
-                x & = 20 \cdot \log_{} \dfrac{U_1}{U_2} \,[\si{dB}] & x & = 10 \cdot \log_{}  \dfrac{P_1}{P_2} \,[\si{dB}] & \\
-                U_1 & = U_2 \cdot 10^{\frac{x}{20\si{dB}}} & P_1   & = P_2 \cdot  10^{\frac{x}{10\si{dB}}} &               
-            \end{flalign*}
-            
-            \item \textbf{Neper} [Np]
-            \begin{flalign*}
-                1 \si{Np} & =  8,686 \si{dB} \\   
-                x & = \ln \dfrac{U_1}{U_2} \,[\si{Np}] & x & = \dfrac{1}{2} \cdot \ln \dfrac{P_1}{P_2} \,[\si{Np}] & \\
-                U_1       & = U_2 \cdot e^{x}                   & P_1   & = P_2 \cdot  e^{2x} &
-                % =\dfrac{20}{\ln 10} \cdot \ln \left( \dfrac{U_1}{U_2}\right)
-            \end{flalign*}
-
-            \item \textbf{Umrechnung}
-            
-            \begin{tabular}{l|l|l}
-                Faktor & Energiegröße $P_n$ & Feldgröße $U_n$\\
-                \hline
-                1
-            \end{tabular}
-                
-        \end{description}
-
+                1 \, \si{dB} & =  0,1151 \, \si{Np} & 1 \, \si{Np} & = 8,686 \, \si{dB} & \\  
+                a \,[\si{dB}]  & = 20 \cdot \log_{} \dfrac{F_1}{F_2} & a \,[\si{dB}]  & = 10 \cdot \log_{}  \frac{P_1}{P_2}& \\
+                \frac{F_1}{F_2} & =  10^{\frac{a[\si{dB}]}{20\si{dB}}} & \frac{P_1}{P_2}   & =   10^{\frac{a[\si{dB}]}{10\si{dB}}} &\\
+                a \,[\si{Np}]  & = \ln \dfrac{F_1}{F_2} & a \,[\si{Np}]  & = \dfrac{1}{2} \cdot \ln \dfrac{P_1}{P_2} & \\
+                \frac{F_1}{F_2} & =  e^{a[\si{Np}]}                   & \frac{P_1}{P_2}   & = e^{2a[\si{Np}]} &
+	            \end{flalign*}
+        	\item \textbf{absolute Pegel} $ L $ mit Bezugsgrößen $ P_0, F_0 $
+			\begin{flalign*}
+				L \,[\si{dB}]  & = 20 \cdot \log_{} \dfrac{F_1}{F_0} & L \,[\si{dB}]  & = 10 \cdot \log_{}  \frac{P_1}{P_0}& \\
+				\frac{F_1}{F_0} & =  10^{\frac{L[\si{dB}]}{20\si{dB}}} & \frac{P_1}{P_0}   & =   10^{\frac{L[\si{dB}]}{10\si{dB}}} &
+			\end{flalign*}
+            \renewcommand\arraystretch{1.4}
+			\begin{tabularx}{0.8\columnwidth}{l|X|X}
+			\hline
+			Einheit & Bezugswert & Formelzeichen\\
+			\hline
+			dBm, dB(mW) & $ P_0 = 1mW $ & $ L_{\texttt{P/mW}}$ \\
+			dBW, dB(W) & $ P_0 = 1W $ & $ L_{\texttt{P/W}}$ \\
+			\hline
+			dBV, dB(V) & $ F_0 = 1V $ & $ L_{\texttt{U/V}}$ \\
+			dB$\mu$V, dB($\mu$V) & $ F_0 = 1\mu V $ & $ L_{\texttt{U/$\mu$V}}$ \\
+			dB$\mu$A, dB($\mu$A) & $ F_0 = 1\mu A $ & $ L_{\texttt{I/$ \mu $A}}$ \\
+			dB($ \mu $V/m) & $ F_0 = 1 \tfrac{\mu V}{m} $ & $ L_{\texttt{E/($ \mu $V/m)}}$\\
+			dB($ \mu $A/m) & $ F_0 = 1 \tfrac{\mu A}{m} $ & $ L_{\texttt{H/($ \mu $A/m)}}$\\
+			\hline
+			\end{tabularx}
+			
+            \item \textbf{Umrechnung} (Annäherungswerte)
+            \renewcommand\arraystretch{1.2}
+            \begin{table}[H]
+	            \begin{tabularx}{1\columnwidth}{l|X|X}
+	            	\hline
+            		Faktor $ \tfrac{F_1}{F_0} \, \text{bzw.} \, \tfrac{P_1}{P_0}$ & Energiegröße $P_n$ & Feldgröße $F_n$\\
+            		\hline
+            		1 & 0 & 0 \\
+            		100 & 20 \si{dB} & 40 \si{dB} \\
+            		1000 & 30 \si{dB} & 60  \si{dB} \\
+            		0,1 & -10 \si{dB} & -20 \si{dB} \\
+            		0,01 & -20 \si{dB} & -40 \si{dB} \\
+            		0,001 & -30 \si{dB} & -60 \si{dB} \\
+            		2 & 3 \si{dB} & 6 \si{dB} \\
+            		4 & 6 \si{dB} & 12 \si{dB} \\
+            		8 & 9 \si{dB} & 18 \si{dB} \\
+            		0,5 & -3,01 \si{dB} & -6,02 \si{dB} \\
+            		1,25 & 0,97 \si{dB} & 1,94 \si{dB} \\
+            		0,8 & -0,97 \si{dB} & -1,94 \si{dB} \\
+            		\hline
+            	\end{tabularx}    
+            \end{table}
+        \item \textbf{relativer Pegel / Maß}\\
+        Maß = Differenz zweier (Leistungs)pegel bei\\ gleichem Bezugswert $ P_0 $
+        \begin{equation*}
+        	\Delta L = L_2 - L_1 = 10 \cdot \log \left( \frac{P_2}{P_1}\right)  \si{dB}
+        \end{equation*}
+        \end{itemize}
+%\textit{Pegel}: feste Bezugsgröße $ P_0 $\\
+%\textit{Maß}: beliebige Bezugsgröße $ P_2 $ bzw. Differenz zweier Pegel\\
 
 
 % \subsection{Begriffe}
@@ -197,6 +221,14 @@ quellen- und wirbelfreies Vektorfeld $\vec{F}$:
 %     \hline
 %     $\rho$ & Raumladungsdichte &              \\
 % \end{tabularx}
+
+\subsubsection{Rechnen mit Pegeln}
+Rechenregeln für Logarithmen (10er-Basis): \quad $ x,y,a > 0 $
+\begin{flalign*}
+	\log (x\cdot y) &= \log (x) - \log (y) & \log (\tfrac{x}{y}) & = \log (x) - \log (y) &\\
+	\log (x^a) &= a\cdot \log(x)  & \log \sqrt[a]{x} & = \frac{1}{a} \cdot \log (x) &\\
+   \mathtt{Pegel} &= 10 \cdot \log(\mathtt{Faktor}) & \mathtt{Faktor}& = 10 ^{\tfrac{\mathtt{Pegel}}{10}}
+\end{flalign*}
 
 \subsection{Randbedingung}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.3\hsize}X|>{\hsize=.7\hsize}X}
