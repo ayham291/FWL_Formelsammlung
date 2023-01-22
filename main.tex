@@ -54,10 +54,16 @@
 \tableofcontents\clearpage
 
 \pagestyle{fancy}
-\lhead{T.Pham}
-\rhead{FWL}
-\cfoot{\vspace{-20pt}\thepage}
+\fancyhf{}
+%\rhead{\rightmark}
+%\fancyhead[R]{\leftmark}
+\lhead{FWL}
+%\rhead{FWL}
 \pagenumbering{arabic}
+%\cfoot{\vspace{-20pt}Seite \thepage \quad von \pageref{LastPage}}
+\cfoot{\thepage \, von \pageref{LastPage}}
+\lfoot{Tony Pham}
+%\fancyhead[L]{\leftmark}
 % \setlength{\columnsep}{1pt}
 \raggedcolumns
 

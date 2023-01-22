@@ -55,6 +55,54 @@
 %	\hline
 \end{tabularx}
 \end{table}
+\subsection{Vektorrechnung}
+\subsubsection{Betrag, Richtungswinkel, Normierung}
+\textbf{Betrag}
+\begin{align*}
+	\vert \vec{r}  \vert & = r = \sqrt{r^2_x + r^2_y + r^2_z}
+\end{align*}
+\textbf{Richtungswinkel}
+\begin{align*}
+	\cos(\alpha) = \dfrac{a_x}{\vert \vec{a} \vert} \qquad \cos(\beta) = \dfrac{a_y}{\vert \vec{a} \vert} \qquad
+	\cos(\gamma) = \dfrac{a_z}{\vert \vec{a} \vert}
+\end{align*}
+\textbf{Normierung, Einheitsvektor}
+\begin{align*}
+	\vec{e}_a =  \dfrac{\vec{a}}{\vert \vec{a} \vert}, \quad \vert \vec{e}_a \vert = 1
+\end{align*}
+
+\subsubsection{Skalarprodukt}
+\begin{align*}
+	\vec{a} \cdot \vec{b} & = |\vec{a}| \cdot |\vec{b}| \cdot cos(\varphi) \qquad \vec{a} \cdot \vec{b}  = 0\\
+	cos(\varphi)          &  = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|} = \dfrac{a_x \cdot b_x + a_y \cdot b_y + a_z \cdot b_z}{|\vec{a}| \cdot |\vec{b}|}
+\end{align*}
+
+\subsubsection{Kreuzprodukt}
+
+\begingroup
+\renewcommand*{\arraystretch}{.95}
+\begin{align*}
+	A_{Para} & = \vert \vec{c} \vert = \vert \vec{a} \times \vec{b} \vert = \vert \vec{a} \vert \cdot \vert \vec{b} \vert \cdot \sin(\varphi)\\
+	\vec{a}\times\vec{b} & =
+	\begin{pmatrix}
+		a_x \\
+		a_y \\
+		a_z
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+		b_x \\
+		b_y \\
+		b_z
+	\end{pmatrix} =
+	\begin{pmatrix}
+		a_yb_z-a_zb_y \\
+		a_zb_x-a_xb_z \\
+		a_xb_y-a_yb_x
+	\end{pmatrix}
+\end{align*}
+\endgroup
+Trick: Regel von Sarrus anwenden!
 
 \subsection{Differentialoperatoren}
 \textbf{Nabla-Operator}
@@ -73,7 +121,7 @@
     \dfrac{\partial ^2}{\partial x^2}+\dfrac{\partial ^2}{\partial y^2}+\dfrac{\partial ^2}{\partial z^2}
 \end{align*}
 
-\textbf{Divergenz} $\opdiv$: Vektorfeld $\rightarrow$ Skalar\\
+\textbf{Divergenz} $\opdiv$: Vektorfeld $\rightarrow$ Skalar \qquad S.382\\
 \small{Quelldichte, gibt für jeden Punkt im Raum an, ob Feldlinien entstehen oder verschwinden.}
 \begin{align*}
     \boxed{\opdiv \vec{F} = \nabla \cdot \vec{F}}   =  \dfrac{\partial F_x}{\partial x} 
@@ -86,7 +134,7 @@
 \end{align*}
 % Bsp: $\opdiv \vec{B} = 0$, da mag. Felder in sich geschlossen.\\
 
-\textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld\\ 
+\textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld \qquad S.382\\ 
 \small{Wirbeldichte, gibt für jeden Punkt im Raum Betrag und Richtung der Rotationsgeschwindigkeit an.}
 \begin{align*}
 \boxed{\oprot \vec{F} = \nabla \times \vec{F} } = 
@@ -101,7 +149,7 @@
     \vec{F}_x & \vec{F}_y & \vec{F}_z
 \end{vmatrix}
 \end{align*}\\
-Vektorfeld skalar annotiert: $\vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z$
+Vektorfeld skalar annotiert: $\vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z$\\
 % Bsp: energieerhaltende (konservatives) Felder $ \rightarrow \oprot = 0$\\
 
 \textbf{Gradient} $\opgrad$: Skalarfeld $\rightarrow$ Vektor/Gradientenfeld\\ 
@@ -156,55 +204,7 @@ quellen- und wirbelfreies Vektorfeld $\vec{F}$:
 
 % \columnbreak
 
-\subsection{Vektorrechnung}
-\subsubsection{Betrag, Richtungswinkel, Normierung}
-\textbf{Betrag}
-\begin{align*}
-    \vert \vec{r}  \vert & = r = \sqrt{r^2_x + r^2_y + r^2_z}
-\end{align*}
-\textbf{Richtungswinkel}
-\begin{align*}
-    \cos(\alpha) = \dfrac{a_x}{\vert \vec{a} \vert} \qquad \cos(\beta) = \dfrac{a_y}{\vert \vec{a} \vert} \qquad
-        \cos(\gamma) = \dfrac{a_z}{\vert \vec{a} \vert}
-    \end{align*}
-    \textbf{Normierung, Einheitsvektor}
-    \begin{align*}
-        \vec{e}_a =  \dfrac{\vec{a}}{\vert \vec{a} \vert}, \quad \vert \vec{e}_a \vert = 1
-    \end{align*}
-    
-    \subsubsection{Skalarprodukt}
-    \begin{align*}
-        \vec{a} \cdot \vec{b} & = |\vec{a}| \cdot |\vec{b}| \cdot cos(\varphi) \qquad \vec{a} \cdot \vec{b}  = 0\\
-        cos(\varphi)          &  = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|} = \dfrac{a_x \cdot b_x + a_y \cdot b_y + a_z \cdot b_z}{|\vec{a}| \cdot |\vec{b}|}
-    \end{align*}
 
-    \subsubsection{Kreuzprodukt}
-    
-    \begingroup
-        \renewcommand*{\arraystretch}{.95}
-        \begin{align*}
-        A_{Para} & = \vert \vec{c} \vert = \vert \vec{a} \times \vec{b} \vert = \vert \vec{a} \vert \cdot \vert \vec{b} \vert \cdot \sin(\varphi)\\
-        \vec{a}\times\vec{b} & =
-                \begin{pmatrix}
-                    a_x \\
-                    a_y \\
-                    a_z
-                \end{pmatrix}
-                \times
-                \begin{pmatrix}
-                    b_x \\
-                    b_y \\
-                    b_z
-                \end{pmatrix} =
-                \begin{pmatrix}
-                    a_yb_z-a_zb_y \\
-                    a_zb_x-a_xb_z \\
-                    a_xb_y-a_yb_x
-                \end{pmatrix}
-            \end{align*}
-    \endgroup
-    Trick: Regel von Sarrus anwenden!
-    
     \subsection{Logarithmische Maße/Pegel}
     \textbf{Feld}größe $F_n$: Spannung, Strom, $\vec{E}$-, $\vec{H}$-Feld, Schalldruck \\
     \textbf{Leistungs}größe $P_n$: Energie, \underline{Intensität}, Leistung\\
@@ -323,3 +323,6 @@ Rechenregeln für Logarithmen (10er-Basis): \quad $ x,y,a > 0 $
     \hline
     $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                  & $r d \vartheta$                 \\
 \end{tabularx}
+
+\subsubsection{Schema KOS Kugel/Zylinder}
+\input{Figures/KOS_Kugelbild.tex}
