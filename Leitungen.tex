@@ -128,7 +128,7 @@ $ \underline{Z}_2 = 0 \qquad \underline{U}_2 = \underline{U}_{(l=0)} = 0 \righta
 	I(l)         & = \underline{I}_h \cdot 2 \cos(\beta l) =\underline{I}_2 \cdot \cos(\beta l) \qquad \underline{I}_2 =\frac{2\underline{U}_h}{Z_L} \\
 %	\hat{U}_E    & = \hat{U}_{generator}\cdot\frac{\underline{Z}_E}{\underline{Z}_{generator}+\underline{Z}_E} \\
 \end{align*}
-
+Bildung einer Stehen
 \subsubsection{Leerlauf an Leitungsende}
 $ \underline{Z}_2 = \infty \qquad \underline{I}_2 = \underline{I}_{(l=0)} = 0 \rightarrow \underline{I}_h = - \underline{I}_r \qquad \underline{U}_h = \underline{U}_r $
 \begin{align*}
@@ -263,97 +263,3 @@ siehe auch Kap. \ref{sec:Smith_All}
                     \frac{1}{Z_L} \sinh(\gamma l) & \cosh(\gamma l)     \\
                 \end{array} } \right]
 \]
-\subsection{Leitungsparameter}
-
-{\small\[
-	\sigma = \text{Leitwert des Dielektr.} \qquad \sigma_c = \text{Leitwert des Leiters}
-	\]}
-
-\subsubsection{Parallele Platten}
-{\small\[
-	w  = \text{Platten Breite} \qquad d  = \text{Abstand zw. Platten}
-	\]}
-
-Für Sinus-Anregung:
-\begin{align*}
-	I & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta z\cdot e^{j\omega t}}                         \\
-	U & = \int \vec{E} d\vec{s} \stackrel{w\gg d}{=} E\cdot d \rightarrow E = \frac{U_0}{d}\cdot^{-j\beta z}\cdot\vec{e}_x \\
-	I & = \oint \vec{H} d\vec{s} =  H\cdot w \rightarrow H = \frac{I_0}{w}\cdot^{-j\beta z}\cdot\vec{e}_y                  % \\
-	% \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
-	%               & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
-\end{align*}
-
-\input{Figures/Leitungen_Parallele_Platten.tex}
-{\renewcommand*{\arraystretch}{0.2}
-	\begin{tabularx}{0.5\columnwidth}{|X|}
-		\hline
-		\[R=\frac{2}{w\delta\sigma}\] \\
-		\hline
-		\[L=\frac{\mu d}{w}\]         \\
-		\hline
-		\[G=\frac{\sigma w}{d}\]      \\
-		\hline
-		\[C=\frac{w\varepsilon}{d}\]  \\
-		\hline
-	\end{tabularx}
-}
-
-\subsubsection{Doppelleitung:}
-{\small\[
-	a = \text{Leiter Radius} \qquad d = \text{Abstand zw. den Leitern}\\
-	\]}
-{\small\[
-	\text{cosh am TR: MENU $\rightarrow$ 1; OPTN $\rightarrow$ 1 $\rightarrow$ 5}\\
-	\]}
-\input{Figures/Leitungen_Doppelleitung.tex}
-{\renewcommand*{\arraystretch}{0.2}
-	\begin{tabularx}{0.5\columnwidth}{|X|}
-		\hline
-		\[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
-		\hline
-		\[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
-		\hline
-		\[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
-		\hline
-		\[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
-		\hline
-\end{tabularx}}
-
-\subsubsection{Koaxial Leitung}
-{\small\[
-	a = \text{innen Radius} \qquad b = \text{außen Radius} \\
-	\]}
-\begin{align*}
-	\vec{H}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                   \\
-	\vec{E}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot Z_{F0}\cdot e^{-j\beta z} \cdot\vec{e}_r
-	& = \frac{\hat{U}}{r \cdot\ln{(^{b}/_{a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r        \\
-	\vec{S}_{zeit.Mittel} & = \frac{1}{2}\cdot\left[\frac{\hat{I}}{2\pi r}\right]^2\cdot Z_{F0}\cdot\vec{e}_z
-\end{align*}
-\input{Figures/Leitungen_Koaxialleitung.tex}
-{\renewcommand*{\arraystretch}{0.2}
-	\begin{tabularx}{0.5\columnwidth}{|X|}
-		\hline
-		\[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
-		\hline
-		\[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
-		\hline
-		\[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
-		\hline
-		\[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
-		\hline
-\end{tabularx}}
-
-
-
-\vspace{1ex}
-Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
-\[
-LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}
-\]
-Innere Induktivität:
-\[
-L_i = \frac{R}{w}
-\]
-\textbf{\color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
-	\color{red}{Länge verdoppeln!!!}
-}

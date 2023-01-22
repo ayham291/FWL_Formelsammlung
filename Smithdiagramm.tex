@@ -3,21 +3,41 @@
 \subsection{Allgemein} \label{sec:Smith_All}
 
 
-$m$             : Anpassungsfaktor
+%$m$             : Anpassungsfaktor
+%
+%$s$             : inverser Anpassungsfaktor
+%
+%$\underline{r}$ : Reflexionsfaktor
+%
+%$1$             : Anpassungspunkt
 
-$s$             : inverser Anpassungsfaktor
+\subsubsection{Normierte Impedanz}
+\begin{align*}
+	\underline{z}_n= \frac{Z(l)}{Z_L} = \frac{Z_2+jZ_L\cdot\tan(\beta l)}{Z_L+jZ_2\cdot\tan(\beta l)}
+\end{align*}
 
-$\underline{r}$ : Reflexionsfaktor
 
-$1$             : Anpassungspunkt
+\subsubsection{Reflexionsfaktor}
+%$ \underline{U}_r(l) = \underline{U}_r(l=0) \cdot e^{-j\beta l} \qquad \underline{U}_h(l) = \underline{U}_h(l=0) \cdot e^{j\beta l} $
+$ \underline{r}(l) = \underline{r} \qquad \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $
+Immer gültig, auch ohne Quelle!
+\begin{flalign*}
+	\underline{r} &= \underline{r}_2 \cdot e^{-j2\beta l} = r \cdot e^{-j(\Psi_0+2\beta l)} =r\cdot e^{j\Psi} \\ &=\frac{\underline{z}_n-1}{\underline{z}_n+1}\\
+	\underline{r}_2 & = \frac{\underline{Z}_2-Z_L}{\underline{Z}_2+Z_L} = \frac{\underline{U}_2-\underline{I}_2Z_L}{\underline{U}_2 +\underline{I}_2 Z_L}\\
+	 \underline{z}_n & = \frac{1+\underline{r}}{1-\underline{r}}
+\end{flalign*}
+%    \begin{align*}
+%        \Aboxed{ \underline{z}'(l) = \frac{Z(l)}{Z_L} = \frac{Z_2+jZ_L\cdot\tan(\beta l)}{Z_L+jZ_2\cdot\tan(\beta l)}} \\
+%        \text{mit} \beta = \frac{2\pi}{\lambda}                                                \\
+%        \text{auch ohne Quelle gültig!}
+%    \end{align*}
 
+\subsubsection{Anpassungsfaktor}
+Werte von $ m \rightarrow$ Werte von $ \Re{\underline{z}_n}: 0 \leq m \leq1 $
+\begin{align*}
+	m = \frac{U_{min}}{U_{max}} = \frac{I_{min}}{I_{max}}=\frac{1-|\underline{r}|}{1+|\underline{r}} \qquad  |\underline{r}| = \frac{1-m}{1+m} \qquad s=\frac{1}{m}
+\end{align*}
 \begin{center}
-    \begin{align*}
-        \Aboxed{r(z)  = r_A \cdot e^{-j2\beta z}}                                              \\
-        \Aboxed{Z(z)  = Z_L\cdot\frac{Z_A+jZ_L\cdot\tan(\beta z)}{Z_L+jZ_A\cdot\tan(\beta z)}} \\
-        \text{mit} \beta = \frac{2\pi}{\lambda}                                                \\
-        \text{auch ohne Quelle gültig!}
-    \end{align*}
     \input{Figures/Smithdiagramm_Smithchart.tex}
 \end{center}
 \begin{align*}
@@ -28,9 +48,9 @@ $1$             : Anpassungspunkt
 \end{align*}
 
 \subsection{Impedanz/Admetanz umrechnen}
-Im Smithchart spiegeln (Phase $\pm 180^{\circ}$/$\pm \pi$)
+Spiegelung von $ \underline{z}_n $ um Mittelpunkt ergibt $ \underline{y}_n $.  (Phase $\pm 180^{\circ}$/$\pm \pi$)
 
-\subsection{Zusammenschaltungen}
+%\subsection{Zusammenschaltungen}
 % \begin{center}
 %     \includegraphics[width=.45\columnwidth]{Figures/Smithdiagramm_Zusammenschaltungen.png}
 % \end{center}
@@ -39,28 +59,28 @@ Im Smithchart spiegeln (Phase $\pm 180^{\circ}$/$\pm \pi$)
 
 \subsection[Von Last zu Quelle]{Lastseite $\rightarrow$ Quelle}
 \begin{enumerate}
-    \item $Z_L$ ins Diagramm einzeichen
+    \item $Z_L = Z_B$ ins Diagramm einzeichnen
     \item Lastimpedanz bestimmen,
-          wenn zB Parallelschaltung etc
+          wenn z.B. Parallelschaltung etc.
     \item Normieren
-          \[\underline{z}_a = \frac{\underline{Z}_A}{Z_L} \]
-    \item Ins Chart eintragen
-    \item Linie vom Mittelpunkt durch $\underline{z}_a$ nach außen
+          \[\underline{z}_n = \frac{\underline{Z}(l)}{Z_L} \]
+    \item Ims Chart eintragen
+    \item Linie vom Mittelpunkt durch $\underline{z}_ns$ nach außen
 
           Ablesen und Notieren:
 
-          $\rightarrow$Relative Länge $\left[\frac{l}{\lambda}\right]$
+          $\rightarrow$ Relative Länge $\left[\frac{l}{\lambda}\right]$
 
-          $\rightarrow$Relativer Winkel
+          $\rightarrow$ Relativer Winkel in \textbf{Degree}
     \item Kreis einzeichen
 
-          Ablesen und Notiere:
+          Ablesen und Notieren:
 
-          $\rightarrow$Maxima: rechter Schnittpunkt mit Re-Achse
+          $\rightarrow$ \textbf{Maxima}: rechter Schnittpunkt mit Re-Achse
 
-          $\rightarrow$Minima: linker  Schnittpunkt mit Re-Achse
+          $\rightarrow$ \textbf{Minima}: linker Schnittpunkt mit Re-Achse
 
-          $\rightarrow$Rexlexionsfaktor abmessen und aus Skala oben auslesen
+          $\rightarrow$ $ \underline{r} $ abmessen und aus oberer Skala auslesen
     \item Um Leitungslänge im UZS laufen
           $\rightarrow$ Linie vom Mittelpunkt durch neuen Punkt nach außen
 
