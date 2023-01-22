@@ -1,5 +1,61 @@
 \section{Grundlagen}
-\subsection{title}
+\subsection{Einheiten}
+\begin{table}[H]
+	\renewcommand{\arraystretch}{2.15}
+\begin{tabularx}{0.9\columnwidth}{lXl}
+	Größe & Symbol & Einheit\\
+	\hline
+	Permiabilitätskonstante & $\mu$ &  $\dfrac{\texttt{Vs}}{\texttt{Am}}$\\
+	\hline
+	Dilelektrizitätskonstante & $\varepsilon$ &  $\dfrac{\texttt{As}}{\texttt{Vm}}$\\
+		\hline
+	elek. Ladung/Fluss & $ Q, q $ & $ C=As $\\
+	\hline
+	elek. Feldstärke & $ \vec{E} $ & $\dfrac{\texttt{V}}{\texttt{m}}$\\
+	\hline
+	elek. Flussdichte & $ \vec{D} $ & $\dfrac{\texttt{As}}{\texttt{m}^2}=\dfrac{\texttt{C}}{\texttt{m}^2}$\\
+	\hline
+	Kapazität & $C$ &  $F= \dfrac{\texttt{As}}{\texttt{V}}$\\
+		\hline
+	mag. Fluss& $\phi, \Phi$ &  $Wb = Vs$\\
+		\hline
+	mag. Feldstärke & $\vec{H}$ &  $\dfrac{A}{m}$\\
+		\hline
+	mag. Flussdichte & $\vec{B}$ &  $T = \dfrac{\texttt{Vs}}{\texttt{m}^2}$\\
+	\hline
+	Induktivität & $L$ &  $H = \dfrac{\texttt{Vs}}{\texttt{A}}$\\
+		\hline
+	Strahlungsdichte & $S_{av}, I$ &  $\dfrac{\texttt{W}}{\texttt{m}^2}$\\
+				
+%	A, W & Arbeit, Energie & J = VAs = Ws\\
+%	$\vec{A}$ & mag. Vektorpotenzial & $\dfrac{Vs}{m} = \dfrac{T}{m}$ ($\vec{B}$ = $\nabla \times \vec{A}$)\\
+%	$\vec{B}$ & mag. Flussdichte & $T = \dfrac{Vs}{m^2}$\\
+%	C & Kapazität & $F = \dfrac{As}{V}$\\
+%	$\vec{D}$ & dielek. Verschiebung/Erregung & $\dfrac{As}{m^2}$\\
+%	e, q, Q & (Elementar-)ladung & C = As\\
+%	$\vec{E}$ & elek. Feldstärke & $\dfrac{V}{m}$ \\
+%	$\vec{H}$ & mag. Feldstärke/Erregung & $\dfrac{A}{m}$\\
+%	$\vec{J}$ & Stromdichte & $\dfrac{A}{m^2}$\\
+%	$\vec{J}_F$ & Flächenstromdichte & $\dfrac{A}{m}$\\
+%	$\vec{M}$ & Drehmoment & J = Nm = VAs\\
+%	F & Kraft & $\dfrac{kgm}{s} = N$\\
+%	$R_{mag}$ & mag. Widerstand & $\dfrac{S}{s} = \dfrac{A}{Vs}$\\
+%	$\vec{S}$ & Poynting-Vektor & $\dfrac{W}{m^2}$\\
+%	Z & Wellenwiderstand & $\Omega$\\
+%	$\delta_s$ & Eindringtiefe & m \\
+%	$\varepsilon$ & Dielektrizitätskonstante & $\dfrac{As}{Vm}$\\
+%	$\varphi$ & elek. Skalarpotenzial & V \\
+%	$\varphi_m$ & mag. Skalarpotenzial & A \\
+%	$\rho$ & Raumladungsdichte & $\dfrac{As}{m^3}$\\
+%	$\rho$ & spez. Widerstand & $\dfrac{\Omega}{m} = \dfrac{VA}{m}$\\
+%	$\kappa, \sigma$ & elek. Leitfähigkeit & $\dfrac{S}{m} = \dfrac{A}{Vm}$\\
+%	$\lambda$ & Wellenlänge & m\\
+%	$\Phi_e$ & elek. Fluss & C = As\\
+%	$\Phi_m$ & mag. Fluss & $Wb = \dfrac{T}{m^2}$\\
+%	\hline
+\end{tabularx}
+\end{table}
+
 \subsection{Differentialoperatoren}
 \textbf{Nabla-Operator}
 \begin{align*}
@@ -27,7 +83,7 @@
     < 0 \quad\Rightarrow \textnormal{Senke} \\
     = 0 \quad\Rightarrow \textnormal{quellenfrei} 
 \end{cases}                                      
-\end{align*}\\
+\end{align*}
 % Bsp: $\opdiv \vec{B} = 0$, da mag. Felder in sich geschlossen.\\
 
 \textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld\\ 
@@ -45,6 +101,7 @@
     \vec{F}_x & \vec{F}_y & \vec{F}_z
 \end{vmatrix}
 \end{align*}\\
+Vektorfeld skalar annotiert: $\vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z$
 % Bsp: energieerhaltende (konservatives) Felder $ \rightarrow \oprot = 0$\\
 
 \textbf{Gradient} $\opgrad$: Skalarfeld $\rightarrow$ Vektor/Gradientenfeld\\ 
@@ -78,19 +135,17 @@ $\phi, \psi$: Skalarfelder \qquad $\vec{A}, \vec{B}$: Vektorfelder
 \subsubsection{Spezielle Vektorfelder}
 quellenfreies Vektorfeld $\vec{F}$ $\rightarrow$ Vektorpotential $\vec{E}$
 \begin{align*}
-\opdiv \vec{F} = \opdiv (\oprot \vec{E}) = 0 \quad \Leftrightarrow \quad  \vec{F} = \oprot \vec{E}
+\opdiv \vec{F} = \boxed{\opdiv (\oprot \vec{E}) = 0} \quad \Leftrightarrow \quad  \vec{F} = \oprot \vec{E}
 \end{align*}
 wirbelfreies Vektorfeld $\vec{F}$ $\rightarrow$ Skalarpotential $\phi$
 \begin{align*}
-    \oprot \vec{F} = \oprot (\opgrad \phi) = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
+    \oprot \vec{F} = \boxed{\oprot (\opgrad \phi) = 0} \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
 \end{align*}
 quellen- und wirbelfreies Vektorfeld $\vec{F}$:
 \begin{align*}
-    \oprot \vec{F}  & = 0 \quad \opdiv \vec{F} = 0\\
-    \opdiv (\opgrad \phi) & = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
-\end{align*}
-\begin{align*}
-    \oprot (\oprot \vec{F})  & = \opgrad (\opdiv \vec{F}) - \varDelta \vec{F} 
+    &\oprot \vec{F}  = 0 \quad \opdiv \vec{F} = 0\\
+    &\opdiv (\opgrad \phi) = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi\\
+    &\oprot (\oprot \vec{F})  = \opgrad (\opdiv \vec{F}) - \varDelta \vec{F} 
 \end{align*}
 
 % Feldänderung bei Bewegung
@@ -231,7 +286,10 @@ Rechenregeln für Logarithmen (10er-Basis): \quad $ x,y,a > 0 $
    \mathtt{Pegel} &= 10 \cdot \log(\mathtt{Faktor}) & \mathtt{Faktor}& = 10 ^{\tfrac{\mathtt{Pegel}}{10}}
 \end{flalign*}
 
-\subsection{Umrechnung der KOS}
+\subsection{Koordinatensysteme}
+
+
+\subsubsection{Umrechnungstabelle}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
     Kart.                                                                                & Zyl.             & Kug.                            \\
     \specialrule{1.5pt}{0pt}{0pt}

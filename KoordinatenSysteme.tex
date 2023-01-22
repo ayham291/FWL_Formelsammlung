@@ -1,135 +1,202 @@
-\subsection{Kartesische Koordinaten}
-\begin{description}
-      \item Skalarfeld:
-            \[
-                  \quad \phi = \phi(x;y;z)
-            \]
-      \item Vektorfeld:
-            \[
-                  \quad \vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z
-            \]
-      \item Rechtssystem:
-            \[
-                  \vec{e}_x \times \vec{e}_y=\vec{e}_z
-            \]
-      \item Linienelemente:
-            \[
-                  ds=\sqrt{d x^{2}+d y^{2}+d z^{2}}
-            \]
-      \item Gradient:
-            \[
-                  \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial x} \vec{e}_x+\frac{\partial \phi}{\partial y} \vec{e}_y+\frac{\partial \phi}{\partial z} \vec{e}_z
-            \]
-      \item Divergenz:
-            \[
-                  \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{\partial D_{x}}{\partial x}+\frac{\partial D_{y}}{\partial y}+\frac{\partial D_{z}}{\partial z}
-            \]
-      \item Rotation:
-            \[
-                  \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E} =
-                  \left[\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right] \vec{e}_x+\left[\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\right] \vec{e}_y+\left[\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}\right] \vec{e}_z
-            \]
-      \item Laplace Operator:
-            \[
-                  \Delta =\nabla\cdot\nabla =\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}
-            \]
-            \begin{align*}
-                  \Delta \vec{E} & = \opgrad \opdiv \vec{E}-\operatorname{rot} \operatorname{rot} \vec{E} = \Delta E_x \vec{e}_x+\Delta E_y \vec{e}_y+\Delta E_z \vec{e}_z                                                                                                                                                                                                                                                                                                         \\
-                                 & = \left[\frac{\partial^{2} E_x}{\partial x^{2}}+\frac{\partial^{2} E_x}{\partial y^{2}}+\frac{\partial^{2} E_x}{\partial z^{2}}\right] \vec{e}_x+\left[\frac{\partial^{2} E_y}{\partial x^{2}}+\frac{\partial^{2} E_y}{\partial y^{2}}+\frac{\partial^{2} E_y}{\partial z^{2}}\right] \vec{e}_y+ \left[\frac{\partial^{2} E_z}{\partial x^{2}}+\frac{\partial^{2} E_z}{\partial y^{2}}+\frac{\partial^{2} E_z}{\partial z^{2}}\right] \vec{e}_z
-            \end{align*}
-\end{description}
+\subsubsection{Kartesische Koordinaten}
+\begin{flalign*}
+	&\text{Variablen:}\quad x,y,z \qquad \qquad \text{Einheitsvektoren:}\quad \vec{e}_x, \vec{e}_y,\vec{e}_z \qquad \qquad
+	\text{Rechtssystem:}\quad \vec{e}_x \times \vec{e}_y=\vec{e}_z &&&\\
+	&\text{Linienelemente:} \quad  ds=\sqrt{d x^{2}+d y^{2}+d z^{2}} \qquad\qquad \text{Volumenelemente:} \quad  dV = dx \, dy \, dz &&&\\
+	&\text{Flächenelemente:} \quad  dA_{xy}= dx \, dy \, \vec{e}_z \quad dA_{yz} = dy \, dz \, \vec{e}_x \quad dA_{xz} = dx \, dz \, \vec{e}_y
+	&&&\\
+	&\text{Skalarfeld:}\quad \phi = \phi(x;y;z) \qquad \text{Vektorfeld:} \quad \boxed{\vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z} &&&\\
+	&\text{\textbf{Gradient}:}\quad \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial x} \vec{e}_x+\frac{\partial \phi}{\partial y} \vec{e}_y+\frac{\partial \phi}{\partial z} \vec{e}_z
+	\qquad\qquad \text{\textbf{Divergenz}:}
+	\quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{\partial D_{x}}{\partial x}+\frac{\partial D_{y}}{\partial y}+\frac{\partial D_{z}}{\partial z} 
+	&&&\\
+	&\text{\textbf{Rotation}:} \quad                   \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E} =
+	\left[\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right] \vec{e}_x+\left[\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\right] \vec{e}_y+\left[\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}\right] \vec{e}_z&&&\\
+	&\text{\textbf{La-Place}}: \quad \Delta \equiv \nabla\cdot\nabla =\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}} \qquad                   
+	\Delta \vec{E} = \opgrad \opdiv \vec{E}-\operatorname{rot} \operatorname{rot} \vec{E} = \Delta E_x \vec{e}_x+\Delta E_y \vec{e}_y+\Delta E_z \vec{e}_z \\
+	&\Delta \vec{E} = \left[\frac{\partial^{2} E_x}{\partial x^{2}}+\frac{\partial^{2} E_x}{\partial y^{2}}+\frac{\partial^{2} E_x}{\partial z^{2}}\right] \vec{e}_x+\left[\frac{\partial^{2} E_y}{\partial x^{2}}+\frac{\partial^{2} E_y}{\partial y^{2}}+\frac{\partial^{2} E_y}{\partial z^{2}}\right] \vec{e}_y+ \left[\frac{\partial^{2} E_z}{\partial x^{2}}+\frac{\partial^{2} E_z}{\partial y^{2}}+\frac{\partial^{2} E_z}{\partial z^{2}}\right] \vec{e}_z     
+	&&&\\
+\end{flalign*}
+%\begin{description}
+%      \item Skalarfeld:
+%            \[
+%                  \quad \varphi = \varphi(x;y;z)
+%            \]
+%      \item Vektorfeld:
+%            \[
+%                  \quad \vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z
+%            \]
+%      \item Rechtssystem:
+%            \[
+%                  \vec{e}_x \times \vec{e}_y=\vec{e}_z
+%            \]
+%      \item Linienelemente:
+%            \[
+%                  ds=\sqrt{d x^{2}+d y^{2}+d z^{2}}
+%            \]
+%      \item Gradient:
+%            \[
+%                  \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial x} \vec{e}_x+\frac{\partial \phi}{\partial y} \vec{e}_y+\frac{\partial \phi}{\partial z} \vec{e}_z
+%            \]
+%      \item Divergenz:
+%            \[
+%                  \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{\partial D_{x}}{\partial x}+\frac{\partial D_{y}}{\partial y}+\frac{\partial D_{z}}{\partial z}
+%            \]
+%      \item Rotation:
+%            \[
+%                  \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E} =
+%                  \left[\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right] \vec{e}_x+\left[\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\right] \vec{e}_y+\left[\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}\right] \vec{e}_z
+%            \]
+%      \item Laplace Operator:
+%            \[
+%                  \Delta =\nabla\cdot\nabla =\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}
+%            \]
+%            \begin{align*}
+%                  \Delta \vec{E} & = \opgrad \opdiv \vec{E}-\operatorname{rot} \operatorname{rot} \vec{E} = \Delta E_x \vec{e}_x+\Delta E_y \vec{e}_y+\Delta E_z \vec{e}_z                                                                                                                                                                                                                                                                                                         \\
+%                                 & = \left[\frac{\partial^{2} E_x}{\partial x^{2}}+\frac{\partial^{2} E_x}{\partial y^{2}}+\frac{\partial^{2} E_x}{\partial z^{2}}\right] \vec{e}_x+\left[\frac{\partial^{2} E_y}{\partial x^{2}}+\frac{\partial^{2} E_y}{\partial y^{2}}+\frac{\partial^{2} E_y}{\partial z^{2}}\right] \vec{e}_y+ \left[\frac{\partial^{2} E_z}{\partial x^{2}}+\frac{\partial^{2} E_z}{\partial y^{2}}+\frac{\partial^{2} E_z}{\partial z^{2}}\right] \vec{e}_z
+%            \end{align*}
+%\end{description}
 
-\subsection{Zylinderkoordinaten}
-\begin{description}
-      \item Skalarfeld:
-            \[
-                  \quad \phi = \phi(r;\varphi;z)
-            \]
-      \item Vektorfeld:
-            \[
-                  \quad \vec{F} = \vec{F}(r;\varphi;z) = F_r\vec{e}_r+F_\varphi\vec{e}_\varphi+F_z\vec{e}_z
-            \]
-      \item Linienelemente:
-            \[
-                  \quad d s=\sqrt{d r^{2}+r^{2} d \varphi^{2}+d z^{2}}
-            \]
-      \item Volumenelemente:
-            \[
-                  \quad d v=r d r d \varphi d z
-            \]
-      \item Gradient:
-            \[
-                  \quad \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial r} \vec{e}_r
-                  +\frac{1}{r} \frac{\partial \phi}{\partial \varphi} \vec{e}_\varphi
-                  +\frac{\partial \phi}{\partial z} \vec{e}_z
-            \]
-      \item Divergenz:
-            \[
-                  \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r}\cdot\frac{\partial}{\partial r}\left(r\cdot\vec{D}_{r}\right)
-                  +\frac{1}{r}\cdot\frac{\partial \vec{D}_{\varphi}}{\partial \varphi}
-                  +\frac{\partial \vec{D}_{z}}{\partial z}
-            \]
-      \item Rotation:
-            \[
-                  \quad \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E}=
-                  \left[\frac{1}{r}\cdot\frac{\partial E_z}{\partial \varphi}-\frac{\partial E_\varphi}{\partial z}\right] \vec{e}_r
-                  +\left[\frac{\partial E_r}{\partial z}-\frac{\partial E_z}{\partial r}\right] \vec{e}_\varphi
-                  +\frac{1}{r}\left[\frac{\partial}{\partial r}\left(r\cdot E_\varphi\right)-\frac{\partial E_r}{\partial \varphi}\right] \vec{e}_z
-            \]
-      \item Laplace Operator:
-            \[
-                  \quad \Delta\phi
-                  = \frac{1}{r}\cdot\frac{\partial }{\partial r}\left(r\cdot\frac{\partial\phi}{\partial r}\right)
-                  + \frac{1}{r^2}\cdot\frac{\partial^2 \phi}{\partial \varphi^2}
-                  + \frac{\partial^2 \phi}{\partial z^2}
-            \]
-            \[
-                  \vec{E} =  \left[\Delta E_r-\frac{2}{r^{2}} \frac{\partial E_\varphi}{\partial \varphi}-\frac{E_r}{r^{2}}\right] \vec{e}_r
-                  +\left[\Delta E_\varphi+\frac{2}{r^{2}} \frac{\partial E_r}{\partial \varphi}-\frac{E_\varphi}{r^{2}}\right] \vec{e}_\varphi+\left[\Delta E_z\right] \vec{e}_z
-            \]
-\end{description}
+\subsubsection{Zylinderkoordinaten}
+\begin{flalign*}
+	&\text{Variablen:}\quad r,\varphi,z \qquad \qquad \text{Einheitsvektoren:}\quad \vec{e}_r, \vec{e}_\varphi,\vec{e}_z \qquad \qquad
+	\text{Rechtssystem:}\quad \vec{e}_r \times \vec{e}_\varphi=\vec{e}_z &&&\\
+	&\text{Linienelemente:} \quad  ds=\sqrt{d r^{2}+d \varphi^{2}+d z^{2}} \qquad\qquad \text{Volumenelemente:} \quad  dV = \mathbf{r} \, dr \, d\varphi \, dz &&&\\
+	&\text{Flächenelemente:} \quad  dA_{r\varphi} = \mathbf{r} \, dr \, d\varphi \, \vec{e}_z \quad dA_{rz} = dr \, dz \, \vec{e}_\varphi \quad dA_{\varphi z} = \mathbf{r} \, d\varphi \, dz \, \vec{e}_r
+	&&&\\
+	&\text{Skalarfeld:}\quad \phi = \phi(x;\varphi;z) \qquad \text{Vektorfeld:} \quad \boxed{\vec{F} = \vec{F}(r;\varphi;z) = F_r\vec{e}_r+F_\varphi\vec{e}_\varphi+F_z\vec{e}_z} &&&\\
+	&\text{\textbf{Gradient}:}\quad \opgrad \phi \equiv \nabla \phi= \frac{\partial \phi}{\partial r} \vec{e}_r
+	+\frac{1}{r} \frac{\partial \phi}{\partial \varphi} \vec{e}_\varphi
+	+\frac{\partial \phi}{\partial z} \vec{e}_z &&&\\
+	&\text{\textbf{Divergenz}:}
+      \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r}\cdot\frac{\partial}{\partial r}\left(r\cdot\vec{D}_{r}\right)
+		+\frac{1}{r}\cdot\frac{\partial \vec{D}_{\varphi}}{\partial \varphi}
+		+\frac{\partial \vec{D}_{z}}{\partial z}
+	&&&\\
+	&\text{\textbf{Rotation}:}                   \quad \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E}=
+	\left[\frac{1}{r}\cdot\frac{\partial E_z}{\partial \varphi}-\frac{\partial E_\varphi}{\partial z}\right] \vec{e}_r
+	+\left[\frac{\partial E_r}{\partial z}-\frac{\partial E_z}{\partial r}\right] \vec{e}_\varphi
+	+\frac{1}{r}\left[\frac{\partial}{\partial r}\left(r\cdot E_\varphi\right)-\frac{\partial E_r}{\partial \varphi}\right] \vec{e}_z&&&\\
+	&\text{\textbf{La-Place}}: \Delta\phi
+	= \frac{1}{r}\cdot\frac{\partial }{\partial r}\left(r\cdot\frac{\partial\phi}{\partial r}\right)
+	+ \frac{1}{r^2}\cdot\frac{\partial^2 \phi}{\partial \varphi^2}
+	+ \frac{\partial^2 \phi}{\partial z^2} \qquad                   
+	\Delta \vec{E} = \opgrad \opdiv \vec{E}-\operatorname{rot} \operatorname{rot} \vec{E} = \Delta E_r \vec{e}_r+\Delta E_\varphi \vec{e}_\varphi+\Delta E_z \vec{e}_z \\
+	& \Delta \vec{E} =  \left[\Delta E_r-\frac{2}{r^{2}} \frac{\partial E_\varphi}{\partial \varphi}-\frac{E_r}{r^{2}}\right] \vec{e}_r
+	+\left[\Delta E_\varphi+\frac{2}{r^{2}} \frac{\partial E_r}{\partial \varphi}-\frac{E_\varphi}{r^{2}}\right] \vec{e}_\varphi+\left[\Delta E_z\right] \vec{e}_z 
+	&&&\\
+\end{flalign*}
+%\begin{description}
+%      \item Skalarfeld:
+%            \[
+%                  \quad \phi = \phi(r;\varphi;z)
+%            \]
+%      \item Vektorfeld:
+%            \[
+%                  \quad \vec{F} = \vec{F}(r;\varphi;z) = F_r\vec{e}_r+F_\varphi\vec{e}_\varphi+F_z\vec{e}_z
+%            \]
+%      \item Linienelemente:
+%            \[
+%                  \quad d s=\sqrt{d r^{2}+r^{2} d \varphi^{2}+d z^{2}}
+%            \]
+%      \item Volumenelemente:
+%            \[
+%                  \quad d v=r d r d \varphi d z
+%            \]
+%      \item Gradient:
+%            \[
+%                  \quad \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial r} \vec{e}_r
+%                  +\frac{1}{r} \frac{\partial \phi}{\partial \varphi} \vec{e}_\varphi
+%                  +\frac{\partial \phi}{\partial z} \vec{e}_z
+%            \]
+%      \item Divergenz:
+%            \[
+%                  \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r}\cdot\frac{\partial}{\partial r}\left(r\cdot\vec{D}_{r}\right)
+%                  +\frac{1}{r}\cdot\frac{\partial \vec{D}_{\varphi}}{\partial \varphi}
+%                  +\frac{\partial \vec{D}_{z}}{\partial z}
+%            \]
+%      \item Rotation:
+%            \[
+%                  \quad \operatorname{rot} \vec{E} \equiv \nabla \times \vec{E}=
+%                  \left[\frac{1}{r}\cdot\frac{\partial E_z}{\partial \varphi}-\frac{\partial E_\varphi}{\partial z}\right] \vec{e}_r
+%                  +\left[\frac{\partial E_r}{\partial z}-\frac{\partial E_z}{\partial r}\right] \vec{e}_\varphi
+%                  +\frac{1}{r}\left[\frac{\partial}{\partial r}\left(r\cdot E_\varphi\right)-\frac{\partial E_r}{\partial \varphi}\right] \vec{e}_z
+%            \]
+%      \item Laplace Operator:
+%            \[
+%                  \quad \Delta\phi
+%                  = \frac{1}{r}\cdot\frac{\partial }{\partial r}\left(r\cdot\frac{\partial\phi}{\partial r}\right)
+%                  + \frac{1}{r^2}\cdot\frac{\partial^2 \phi}{\partial \varphi^2}
+%                  + \frac{\partial^2 \phi}{\partial z^2}
+%            \]
+%            \[
+%                  \vec{E} =  \left[\Delta E_r-\frac{2}{r^{2}} \frac{\partial E_\varphi}{\partial \varphi}-\frac{E_r}{r^{2}}\right] \vec{e}_r
+%                  +\left[\Delta E_\varphi+\frac{2}{r^{2}} \frac{\partial E_r}{\partial \varphi}-\frac{E_\varphi}{r^{2}}\right] \vec{e}_\varphi+\left[\Delta E_z\right] \vec{e}_z
+%            \]
+%\end{description}
 
-\subsection{Kugelkoordinaten}
-\begin{description}
-      \item Skalarfeld:
-            \[
-                  \quad \phi = \phi(r; \vartheta; \varphi)
-            \]
-      \item Vektorfeld:
-            \[
-                  \quad \vec{F} = \vec{F}(r;\vartheta;\varphi) = F_r\vec{e}_r+F_\vartheta\vec{e}_\vartheta+F_\varphi\vec{e}_\varphi
-            \]
-      \item Linienelement:
-            \[
-                  \quad d s=\sqrt{d r^{2}+r^{2} \sin ^{2} \vartheta d \varphi^{2}+r^{2} d \vartheta^{2}}
-            \]
-      \item Volumenelement:
-            \[
-                  \quad d v=r^{2} \sin \vartheta d r d \vartheta d \varphi
-            \]
-      \item Gradient:
-            \[
-                  \quad \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial r} \vec{e}_r+\frac{1}{r} \frac{\partial \phi}{\partial \vartheta} \vec{e}_\vartheta+\frac{1}{r \sin \vartheta} \frac{\partial \phi}{\partial \varphi} \vec{e}_\varphi
-            \]
-      \item Divergenz:
-            \[
-                  \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r^{2}} \frac{\partial\left(r^{2} D_{r}\right)}{\partial r}+\frac{1}{r \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot D_{\vartheta}\right)}{\partial \vartheta}+\frac{1}{r \sin \vartheta} \frac{\partial D_{\varphi}}{\partial \varphi}
-            \]
-      \item Rotation:
-            \[
-                  \operatorname{rot} \vec{E}  \equiv \nabla \times \vec{E}= \frac{1}{r \sin \vartheta}\left[\frac{\partial\left(\sin \vartheta \cdot E_\varphi\right)}{\partial \vartheta}-\frac{\partial E_\vartheta}{\partial \varphi}\right] \vec{e}_r                                                                                 \\
-                  +                           \frac{1}{r}\left[\frac{1}{\sin \vartheta} \frac{\partial E_r}{\partial \varphi}-\frac{\partial r E_\varphi}{\partial r}\right] \vec{e}_\vartheta+\frac{1}{r}\left[\frac{\partial\left(r E_\vartheta\right)}{\partial r}-\frac{\partial E_r}{\partial \vartheta}\right] \vec{e}_\varphi
-            \]
-      \item Laplace Operator:
-            \[
-                  \Delta\phi=\frac{1}{r^{2}}\left\{\frac{\partial}{\partial r}\left(r^2\cdot\frac{\partial\phi}{\partial r}\right)
-                  +\frac{1}{\sin\vartheta}\cdot\frac{\partial}{\partial\vartheta}\left(\sin\vartheta\cdot\frac{\partial\phi}{\partial\vartheta}\right)
-                  +\frac{1}{\sin^{2}\vartheta}\cdot\frac{\partial^{2}\phi}{\partial \varphi^{2}}\right\}
-            \]
-      \item Laplace Operator in Kugelkoordinaten, angewandt auf einen Vektor:
-            \begin{multline*}
-                  \Delta \vec{E}  =\left[\Delta E_r-\frac{2}{r^{2}} E_r-\frac{2}{r^{2} \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot E_\vartheta\right)}{\partial \vartheta}-\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_r        \\
-                  +\left[\Delta E_\vartheta-\frac{E_\vartheta}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2}} \frac{\partial E_r}{\partial \vartheta}-\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_\vartheta       \\
-                  +\left[\Delta E_\varphi-\frac{E_\varphi}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_r}{\partial \varphi}+\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\vartheta}{\partial \varphi}\right] \vec{e}_\varphi
-            \end{multline*}
-\end{description}
+\subsubsection{Kugelkoordinaten}
+\begin{flalign*}
+	&\text{Variablen:}\quad r,\vartheta,\varphi \qquad \qquad \text{Einheitsvektoren:}\quad \vec{e}_r, \vec{e}_\vartheta,\vec{e}_\varphi \qquad \qquad
+	\text{Rechtssystem:}\quad \vec{e}_r \times \vec{e}_\vartheta=\vec{e}_\varphi &&&\\
+	&\text{Linienelemente:} \quad  ds=\sqrt{d r^{2}+ \mathbf{r^2} \sin^2 \vartheta \, d \varphi^{2}+\mathbf{r^2} d \vartheta^{2}} \qquad\qquad \text{Volumenelemente:} \quad  dV = \mathbf{r^2} \, \sin \vartheta \, dr \, d\vartheta \, d\varphi &&&\\
+	&\text{Flächenelemente:} \quad  dA_{r\vartheta} = \mathbf{r}\, dr \, d\vartheta \, \vec{e}_\varphi \quad dA_{r\varphi} = \mathbf{r}\, \sin \, \vartheta \, dr \, d\varphi \, \vec{e}_\vartheta \quad dA_{\vartheta \varphi} = \mathbf{r^2} \, \sin \vartheta \, d\vartheta \, d\varphi \, \vec{e}_r
+	&&&\\
+	&\text{Skalarfeld:}\quad \phi = \phi(r;\vartheta;\varphi) \qquad \text{Vektorfeld:} \quad \boxed{\vec{F} = \vec{F}(r;\vartheta;\varphi) = F_r\vec{e}_r+F_\vartheta\vec{e}_\vartheta+F_\varphi\vec{e}_\varphi} &&&\\
+	&\text{\textbf{Gradient}:}\quad                   \quad \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial r} \vec{e}_r+\frac{1}{r} \frac{\partial \phi}{\partial \vartheta} \vec{e}_\vartheta+\frac{1}{r \sin \vartheta} \frac{\partial \phi}{\partial \varphi} \vec{e}_\varphi &&&\\
+	&\text{\textbf{Divergenz}:}
+	                  \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r^{2}} \frac{\partial\left(r^{2} D_{r}\right)}{\partial r}+\frac{1}{r \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot D_{\vartheta}\right)}{\partial \vartheta}+\frac{1}{r \sin \vartheta} \frac{\partial D_{\varphi}}{\partial \varphi}
+	&&&\\
+	&\text{\textbf{Rotation}:} \quad                \operatorname{rot} \vec{E} = \frac{1}{r \sin \vartheta}\left[\frac{\partial\left(\sin \vartheta \cdot E_\varphi\right)}{\partial \vartheta}-\frac{\partial E_\vartheta}{\partial \varphi}\right] \vec{e}_r                                                                           
+	+                           \frac{1}{r}\left[\frac{1}{\sin \vartheta} \frac{\partial E_r}{\partial \varphi}-\frac{\partial r E_\varphi}{\partial r}\right] \vec{e}_\vartheta+\frac{1}{r}\left[\frac{\partial\left(r E_\vartheta\right)}{\partial r}-\frac{\partial E_r}{\partial \vartheta}\right] \vec{e}_\varphi&&&\\
+	&\text{\textbf{La-Place}}:                   \Delta\phi=\frac{1}{r^{2}}\left\{\frac{\partial}{\partial r}\left(r^2\cdot\frac{\partial\phi}{\partial r}\right)
+	+\frac{1}{\sin\vartheta}\cdot\frac{\partial}{\partial\vartheta}\left(\sin\vartheta\cdot\frac{\partial\phi}{\partial\vartheta}\right)
+	+\frac{1}{\sin^{2}\vartheta}\cdot\frac{\partial^{2}\phi}{\partial \varphi^{2}}\right\}\\
+	=
+\end{flalign*}
+
+
+%
+%\begin{description}
+%      \item Skalarfeld:
+%            \[
+%                  \quad \phi = \phi(r; \vartheta; \varphi)
+%            \]
+%      \item Vektorfeld:
+%            \[
+%                  \quad \vec{F} = \vec{F}(r;\vartheta;\varphi) = F_r\vec{e}_r+F_\vartheta\vec{e}_\vartheta+F_\varphi\vec{e}_\varphi
+%            \]
+%      \item Linienelement:
+%            \[
+%                  \quad d s=\sqrt{d r^{2}+r^{2} \sin ^{2} \vartheta d \varphi^{2}+r^{2} d \vartheta^{2}}
+%            \]
+%      \item Volumenelement:
+%            \[
+%                  \quad d v=r^{2} \sin \vartheta d r d \vartheta d \varphi
+%            \]
+%      \item Gradient:
+%            \[
+%                  \quad \opgrad \phi \equiv \nabla \phi=\frac{\partial \phi}{\partial r} \vec{e}_r+\frac{1}{r} \frac{\partial \phi}{\partial \vartheta} \vec{e}_\vartheta+\frac{1}{r \sin \vartheta} \frac{\partial \phi}{\partial \varphi} \vec{e}_\varphi
+%            \]
+%      \item Divergenz:
+%            \[
+%                  \quad \opdiv \vec{D} \equiv \nabla \vec{D}=\frac{1}{r^{2}} \frac{\partial\left(r^{2} D_{r}\right)}{\partial r}+\frac{1}{r \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot D_{\vartheta}\right)}{\partial \vartheta}+\frac{1}{r \sin \vartheta} \frac{\partial D_{\varphi}}{\partial \varphi}
+%            \]
+%      \item Rotation:
+%            \[
+%                  \operatorname{rot} \vec{E}  \equiv \nabla \times \vec{E}= \frac{1}{r \sin \vartheta}\left[\frac{\partial\left(\sin \vartheta \cdot E_\varphi\right)}{\partial \vartheta}-\frac{\partial E_\vartheta}{\partial \varphi}\right] \vec{e}_r                                                                                 \\
+%                  +                           \frac{1}{r}\left[\frac{1}{\sin \vartheta} \frac{\partial E_r}{\partial \varphi}-\frac{\partial r E_\varphi}{\partial r}\right] \vec{e}_\vartheta+\frac{1}{r}\left[\frac{\partial\left(r E_\vartheta\right)}{\partial r}-\frac{\partial E_r}{\partial \vartheta}\right] \vec{e}_\varphi
+%            \]
+%      \item Laplace Operator:
+%            \[
+%                  \Delta\phi=\frac{1}{r^{2}}\left\{\frac{\partial}{\partial r}\left(r^2\cdot\frac{\partial\phi}{\partial r}\right)
+%                  +\frac{1}{\sin\vartheta}\cdot\frac{\partial}{\partial\vartheta}\left(\sin\vartheta\cdot\frac{\partial\phi}{\partial\vartheta}\right)
+%                  +\frac{1}{\sin^{2}\vartheta}\cdot\frac{\partial^{2}\phi}{\partial \varphi^{2}}\right\}
+%            \]
+%      \item Laplace Operator in Kugelkoordinaten, angewandt auf einen Vektor:
+%            \begin{multline*}
+%                  \Delta \vec{E}  =\left[\Delta E_r-\frac{2}{r^{2}} E_r-\frac{2}{r^{2} \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot E_\vartheta\right)}{\partial \vartheta}-\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_r        \\
+%                  +\left[\Delta E_\vartheta-\frac{E_\vartheta}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2}} \frac{\partial E_r}{\partial \vartheta}-\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_\vartheta       \\
+%                  +\left[\Delta E_\varphi-\frac{E_\varphi}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_r}{\partial \varphi}+\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\vartheta}{\partial \varphi}\right] \vec{e}_\varphi
+%            \end{multline*}
+%\end{description}
