@@ -173,9 +173,9 @@ materiefreier Raum: $ \mu_r = \varepsilon_r = 1 $
     \beta                      & = \dfrac{\omega}{c_0} \qquad 
     \lambda_0                   = \dfrac{c_0}{f} \\
     v_p                        & = c_0 &
-\underline{Z}_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}} = 120 \pi\Omega\approx377\Omega &
+Z_{F0} & = \sqrt{\dfrac{\mu_0}{\varepsilon_0}} = 120 \pi\Omega\approx377\Omega &
 \end{align*}
-\subsubsection{Im verlustlosen/idealen Dielektrikum}
+\subsubsection{Im verlustlosen Dielektrikum}
 verlustlos: $\kappa =0$, maximale Wirkleistung\\
 $Z_F$ rein reell $\rightarrow$ ebene Welle
 \begin{align*}
@@ -183,7 +183,7 @@ $Z_F$ rein reell $\rightarrow$ ebene Welle
     \beta                   & = \dfrac{\omega}{c_0}\sqrt{\mu_r\varepsilon_r}=\omega\sqrt{\mu\varepsilon}=\dfrac{2\pi}{\lambda} \\
     \lambda                 & = \dfrac{c_0}{f}\dfrac{1}{\sqrt{\mu_r\varepsilon_r}} &
     v_p                     & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}         \qquad
-    \boxed{\underline{Z}_F = \sqrt{\dfrac{\mu}{\varepsilon}}}
+    \boxed{Z_F = \sqrt{\dfrac{\mu}{\varepsilon}}=Z_{F0}\sqrt{\frac{\mu_r}{\varepsilon_r}}}
 \end{align*}
 
 \subsubsection{Im Dielektrika mit geringem Verlust}
@@ -273,36 +273,29 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
 %    \Delta \vec{H} & =\kappa \mu \frac{\partial \vec{H}}{\partial t}
 %\end{align*}
 
-\subsection{Polarisation}
-\begin{tabularx}{0.45\textwidth}{>{\hsize=.27\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.23\hsize}X}
-    Lineare      & wenn der Endpunkt des E–Vektors eine Linie beschreibt & $H$ oder $E$ \\
-    \hline
-    Elliptische  & Endpunkt des E-Vektors eine Ellipse beschreibt        & $E\neq H$    \\
-    \hline
-    Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt     & $E = H$      \\
-\end{tabularx}
+%\subsection{Polarisation}
+%\begin{tabularx}{0.45\textwidth}{>{\hsize=.27\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.23\hsize}X}
+%    Lineare      & wenn der Endpunkt des E–Vektors eine Linie beschreibt & $H$ oder $E$ \\
+%    \hline
+%    Elliptische  & Endpunkt des E-Vektors eine Ellipse beschreibt        & $E\neq H$    \\
+%    \hline
+%    Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt     & $E = H$      \\
+%\end{tabularx}
 
-\subsection{Verlustlose Polarisation}
+
+
+\subsubsection{Totalrefexion/Grenzwinkel}
+Grenzwinkel $ \theta_g $ gibt an, bis zu welchem Winkel eine Welle von höherem in kleineres Dielektrikum $ \varepsilon_1 > \varepsilon_2 $ eindringen kann.
 \begin{align*}
-    Z_F & = \sqrt{\frac{\mu}{\varepsilon}}                                                                                                                                             \\
-    r_s & = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i - \sqrt{\varepsilon_{r2}}\cdot\cos\theta_t}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_t + \sqrt{\varepsilon_{r1}}\cos\theta_i} \\
-    t_s & = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_t + \sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}                                 \\
-    r_p & = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\theta_t - \sqrt{\varepsilon_{r2}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_i + \sqrt{\varepsilon_{r1}}\cos\theta_t} \\
-    t_p & = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_i + \sqrt{\varepsilon_{r1}}\cdot\cos\theta_t}
+    \sin\theta_g & = \frac{n_2}{n_1} = \sqrt{\frac{\mu_{r2}\varepsilon_{r2}}{\mu_{r1}\varepsilon_{r1}}}
 \end{align*}
-
-\subsection{Totalrefexion}
-\begin{align*}
-    \sin\theta_g & = \frac{n_2}{n_1} = \frac{\sqrt{\varepsilon_{r2}\mu_{r2}}}{\varepsilon_{r1}\mu_{r1}}
-\end{align*}
-
-\subsection{Grenzwinkel}
 \begin{align*}
     \alpha_g & = \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)
 \end{align*}
-\subsection[Brewster-/Polarisationswinkel]{Brewster-/Polarisationswinkel, $r=0$}
+\subsubsection[Brewster-/Polarisationswinkel]{Brewster-/Polarisationswinkel}
+Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
 \begin{itemize}
-    \item Snelliusche Brechungsgesetz
+%    \item Snelliusche Brechungsgesetz
           %\item Grenzwinkel $\alpha_g$
           % \item[--] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
           %       \begin{itemize}
@@ -323,52 +316,69 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
               \tan\theta_b & = \sqrt{\frac{\mu_2}{\mu_1+\mu_2}}
           \end{align*}
 \end{itemize}
-
+\subsubsection{Brechungsgesetz}
 \begin{align*}
     \dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} = \dfrac{k_{h}}{k_{g}} & = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p, 2}}{v_{p, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}} \\
     % \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
     % \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 %\newpage
-\subsection[Senkrechter Einfall]{Senkrechter Einfall $ \theta_h = 0$ }
+%\subsection{Polarisation}
+\subsection[Senkrechter Einfall]{Senkrechter Einfall}
+Gilt bei Einfallswinkel $ \theta_h = 0 $.
 \input{Figures/Wellen_Senkrechter_Uebergang.tex}
-$ E_{t1}=E_{t2} \qquad H_{t1} = H_{t2}$
-\begin{align*}
-    t  = \frac{2 \cdot Z_{F2}}{Z_{F1} + Z_{F2}} \qquad r  = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} \\
-    %\qquad = \frac{\sqrt{\varepsilon_{r2}}-\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r2}}+\sqrt{\varepsilon_{r1}}}
-\end{align*}
-
-\begin{align*}
-    0<t<2 \qquad 0<|r|<1
-\end{align*}
-
-Elektrisches Feld:
-
-
-\begin{align*}
+%$ E_{t1}=E_{t2} \qquad H_{t1} = H_{t2}$
+\begin{equation*}
+\setlength{\jot}{10pt}
+\begin{aligned}[t]
+%
+	r_e &= \frac{Z_{F2}-Z_{F1}}{Z_{F2} + Z_{F1}}\\
+	r_m &= \frac{Z_{F1}-Z_{F2}}{Z_{F2} + Z_{F1}}\\
+	&=-r_e\\
+\end{aligned}
+\qquad \qquad
+\begin{aligned}[t]
+%	&0\leq t\leq2 &0\leq|r|\leq1&\\
+	t_e  &= \frac{2 \cdot Z_{F2}}{Z_{F1} + Z_{F2}}\\ 
+	t_m  &= \frac{2 \cdot Z_{F1}}{Z_{F1} + Z_{F2}} \\
+	&= t_e \cdot \frac{Z_{F1}}{Z_{F2}}\\
+\end{aligned}
+\end{equation*}
+%\begin{align*}
+%    %\qquad = \frac{\sqrt{\varepsilon_{r2}}-\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r2}}+\sqrt{\varepsilon_{r1}}}
+%\end{align*}
+\vspace{-0.2cm}
+%Elektrisches Feld:
+\begin{equation*}
+\setlength{\jot}{6pt}
+\begin{aligned}[t]
+	t_e & = 1+ r_e \\	
+	E_{t1} & =E_{t2}\\
     E_t & = t_e \cdot E_h \\
-    E_r & = r_e \cdot E_h
-\end{align*}
+	E_r & = r_e \cdot E_h \\
+	E_t & = E_h + E_r \\        
+	t_e\cdot E_{h} & = E_{h} + r_e\cdot  E_{h} \\
+\end{aligned}
+\qquad
+\begin{aligned}[t]
+	t_m & = 1+ r_m \\
+	H_{t1} &= H_{t2}\\
+	H_t & = t_e \cdot \tfrac{Z_{F1}}{Z_{F2}} \cdot H_h \\
+	-H_r & = r_e \cdot H_h \\
+	H_t & = H_h + H_r \\        
+	t_m\cdot H_{h} & = H_{h} + r_m\cdot  H_{h} \\
+\end{aligned}
+\end{equation*}
 
-\begin{align*}
-    %\vec{E_t}    & = \vec{E_h} + \vec{E_r} \\
-    E_t          & = E_h + E_r             \\
-    t\cdot E_{h} & = E_{h} + r\cdot  E_{h} \\
-    t            & = 1+ r
-\end{align*}
-
-Magnetisches Feld:
+%\begin{align*}
+%\end{align*}
+%
+%Magnetisches Feld:
 
 % \begin{align*}
 %     r_m & = r = r_e                                                    \\
 %     t_m & = \frac{2}{1+\sqrt{^{\varepsilon_{r1}}/_{\varepsilon_{r2}}}}
 % \end{align*}
-
-\begin{align*}
-    H_t & = t \cdot H_h \\
-    H_r & = r \cdot H_h
-\end{align*}
-
 \begin{align*}
     %\vec{H_t}                   & = \vec{H_h}-\vec{H_r}                                \\
     H_t                         & = H_h + H_r                                          \\
@@ -379,67 +389,105 @@ Magnetisches Feld:
 
 
 
-\subsubsection[Senkrechter Einfall ideales/verlustl. Dielekt.]{Senkrechter Einfall ideales/verlustl. Dielekt. $\sigma = 0$}
-
+\subsubsection[Senkrechter Einfall ideales/verlustl. Dielekt.]{Verlustloses Dielektikum allgemein}
+gilt für $ \kappa =0 $, keine Dämpfung.
 %\includegraphics[width=\columnwidth]{Figures/senkrechterEinfall.png}
-
+\vspace{-0.3cm}
+\[ \text{rein reell: }Z_F=  \sqrt{\frac{\mu}{\varepsilon}}  \qquad
+\text{rein imaginär: }\gamma  = j \omega\sqrt{\mu\varepsilon} \]
+\vspace{-0.5cm}
 \begin{align*}
-    \text{reel: }Z_F          & = \sqrt{\frac{\mu}{\varepsilon}} \\
-    \texttt{imaginär: }\gamma & = j \omega\sqrt{\mu\varepsilon}
+    r & = r_e =\frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} = \frac{\sqrt{\varepsilon_{r1}\mu_{r2}} - \sqrt{\varepsilon_{r2}\mu_{r1}} }{\sqrt{\varepsilon_{r1}\mu_{r2}}+{\sqrt{\varepsilon_{r2}\mu_{r1}}}} \\
+    t & = t_e = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}} = \frac{2\sqrt{\varepsilon_{r1}\mu_{r2}}}{\sqrt{\varepsilon_{r1}\mu_{r2}}+\sqrt{\varepsilon_{r2}\mu_{r1}}}
 \end{align*}
-
-\begin{align*}
-    r & = \frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} = \frac{\sqrt{\frac{\mu_2}{\varepsilon_2}} - \sqrt{\frac{\mu_1}{\varepsilon_1}}}{\sqrt{\frac{\mu_2}{\varepsilon_2}} + \sqrt{\frac{\mu_1}{\varepsilon_1}}} \\
-    t & = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}} = \frac{2\sqrt{\varepsilon_{r1}\mu_{r2}}}{\sqrt{\varepsilon_{r1}\mu_{r2}}+\sqrt{\varepsilon_{r2}\mu_{r1}}}
-\end{align*}
-
 % \begin{tabularx}{\columnwidth}{>{\hsize=.35\hsize}X|>{\hsize=.32\hsize}X>{\hsize=.18\hsize}X>{\hsize=.18\hsize}X}
 %     idealer Leiter    & $ Z_{F2} = 0 $                    & $ r = -1 $ & $t = 0$ \\
 %     \hline
 %     ideales Dielektr. & $\mu_{r1} = \varepsilon_{r1} = 1$ &            &         \\
 % \end{tabularx}
 
-\subsubsection{Medium 1: Luft}
-\begin{align*}
-    \Aboxed{ & \mu_{r1} = \varepsilon_{r1} = 1}                                                            \\
-    r        & = \frac{\sqrt{\mu_{r2}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}} \\
-    t        & = \frac{2\sqrt{\mu_{r2}}}{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}
-\end{align*}
+\subsubsection{Medium 1 oder 2: Luft}
+\begin{equation*}
+	\setlength{\jot}{6pt}
+	\begin{aligned}[t]
+   		\Aboxed{ & \mu_{r1} = \varepsilon_{r1} = 1}                                                            \\
+		r        & = \frac{\sqrt{\mu_{r2}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}} \\
+		t        & = \frac{2\sqrt{\mu_{r2}}}{\sqrt{\mu_{r2}}+\sqrt{\varepsilon_{r2}}}
+	\end{aligned}
+	\qquad
+	\begin{aligned}[t]
+  		\Aboxed{ & \mu_{r2} = \varepsilon_{r2} = 1}                                                            \\
+		r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\mu_{r1}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\mu_{r1}}}} \\
+		t        & = \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\mu_{r1}}+\sqrt{\varepsilon_{r1}}}
+	\end{aligned}
+\end{equation*}
 
-\subsubsection{Medium 2: Luft}
-\begin{align*}
-    \Aboxed{ & \mu_{r2} = \varepsilon_{r2} = 1}                                                            \\
-    r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\mu_{r1}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\mu_{r1}}}} \\
-    t        & = \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\mu_{r1}}+\sqrt{\varepsilon_{r1}}}
-\end{align*}
+%\begin{align*}
+%
+%\end{align*}
+
+%\subsubsection{Medium 2: Luft}
+%\begin{align*}
+%\end{align*}
 
 \subsubsection{beide Medien: nicht magnetisch}
+%\centering
+Gilt für $\mu_{r1} = \mu_{r2} = 1$
 \begin{align*}
-    \Aboxed{ & \mu_{r1} = \mu_{r2} = 1}                                                                                    \\
-    r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}} \\
-    t        & = \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}
+    r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}}&
+    t        & = \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}&
 \end{align*}
 
 \subsubsection{Medium 2: idealer Leiter}
+Keine $\vec{E}$-Felder im idealen Leiter.\\
+Bildung von \textbf{Stehenden} Wellen.
+\begin{equation*}
+	Z_{F2}       = 0 \qquad
+	r            = -1 \qquad
+	t            = 0 \qquad
+	\vec{S}_{\text{av}} = 0
+\end{equation*}
+%\vspace{-1.5cm}
+\begin{flalign*}
+    &\underline{E}_{1x}          = -2j\cdot E_{h1}\cdot \sin(\beta_1 z)\qquad
+    \underline{H}_{1y}          = 2\cdot \tfrac{E_{h1}}{Z_{F1}}\cdot \cos(\beta_1 z)\\
+    &E_{1x} (z,t)=2E_{h1} \cdot \sin(\beta_1z)\cdot \sin(\omega t)\\
+    &H_{1y}(z,t) = 2 \tfrac{E_{h1}}{Z_{F1}}\cdot \cos(\beta_1z)\cdot \cos(\omega t)
+\end{flalign*}
+\vspace{-0.5cm}
 \begin{align*}
-    Z_{F2}       & = 0                                 \\
-    r            & = -1                                \\
-    t            & = 0                                 \\
-    \overline{S} & = 0                                 \\
-    E_1          & = -2j\cdot E_h\cdot \sin(\beta_1 z) \\
-    H_1          & = 2\cdot H_h\cdot \cos(\beta_1 z)
-\end{align*}
-\begin{align*}
-     & \underline{Stehende Welle}                                              \\
-     & \rightarrow \text{$H_{max}$ und $E_{min}$ bei } n \cdot \lambda/_2      \\
-     & \rightarrow \text{$H_{min}$ und $E_{max}$ bei } (2n-1) \cdot \lambda/_4 \\
-     & \qquad \rightarrow 90^\circ Phasenverschiebung
+     &\text{$H_{\text{max}}$ und $E_{\text{min}}$ bei } n \cdot \lambda/_2&
+     &\text{$H_{min}$ und $E_{max}$ bei } (2n-1) \cdot \lambda/_4&
+%     & \qquad \rightarrow 90^\circ Phasenverschiebung
 \end{align*}
 
-\subsection{Stehwellenverhältnis}
+\subsubsection{Stehwellenverhältnis}
 \[
     \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
 \]
+
+\subsection{Schräger Einfall}
+\begin{align*}
+	Z_F & = \sqrt{\frac{\mu}{\varepsilon}} = Z_{F0} \sqrt{\frac{\mu_r}{\varepsilon_r}}
+%	r_s & = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i - \sqrt{\varepsilon_{r2}}\cdot\cos\theta_t}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_t + \sqrt{\varepsilon_{r1}}\cos\theta_i} \\
+%	t_s & = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_t + \sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}             \\
+%	r_p & = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\theta_t - \sqrt{\varepsilon_{r2}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_i + \sqrt{\varepsilon_{r1}}\cos\theta_t} \\
+%	t_p & = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_i + \sqrt{\varepsilon_{r1}}\cdot\cos\theta_t}
+\end{align*}
+\subsubsection{Brechungsgesetz}
+\begin{align*}
+	\dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} = \dfrac{k_{h}}{k_{g}} & = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p, 2}}{v_{p, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}} \\
+	% \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
+	% \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
+\end{align*}
+\subsubsection{Totalrefexion/Grenzwinkel}
+Grenzwinkel $ \theta_g $ gibt an, bis zu welchem Winkel eine Welle von höherem in kleineres Dielektrikum $ \varepsilon_1 > \varepsilon_2 $ eindringen kann.
+\begin{align*}
+	\sin\theta_g & = \frac{n_2}{n_1} = \sqrt{\frac{\mu_{r2}\varepsilon_{r2}}{\mu_{r1}\varepsilon_{r1}}}
+\end{align*}
+\begin{align*}
+	\alpha_g & = \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)
+\end{align*}
 
 \newpage
 \input{Schraeger_Uebergang}

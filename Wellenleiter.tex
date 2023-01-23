@@ -4,7 +4,7 @@
 
 \input{Figures/Wellenleiter_Koaxialleiter.tex}
 \begin{align*}
-    Z_L = \frac{60\Omega}{\sqrt{\varepsilon_r}}\cdot \ln{\frac{D}{d}}
+    Z_L = \frac{Z_{F0}}{2\pi}\sqrt{\frac{\mu_r}{\varepsilon_r}}\ln\left( \frac{r_a}{r_i} \right)  =\frac{60\Omega}{\sqrt{\varepsilon_r}}\cdot \ln{\frac{r_a}{r_i}}
 \end{align*}
 
 \subsubsection{Dämpfung}
@@ -99,6 +99,7 @@ Je größer $\dfrac{\mathrm{w}}{\mathrm{h}}$ desto mehr nähert sich $\varepsilo
               Dämpfung keine Rolle spielt.
           }
 \end{description}
+\newpage
 \subsection{Leitungsparameter}
 \subsubsection{Streifenleitung / Parallele Platten}
 Für Sinus-Anregung:
@@ -198,6 +199,7 @@ $ r_i $: Innenradius \quad $ r_a $: Außenradius
 
 
 \vspace{1ex}
+\subsubsection{Allgemein}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \[
 LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}

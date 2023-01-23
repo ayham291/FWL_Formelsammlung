@@ -94,7 +94,7 @@ Eingangswiderstand $ \underline{Z}_e $ am Leitungsende:
 
 \subsection{Verlustlose Leitung}
 \subsubsection{Kenngrößen}
-$ R', G' = 0 \rightarrow \alpha = 0 \qquad Z_L, v_p \neq f$
+$ R', G' = 0 \rightarrow \alpha = 0 \qquad Z_L, v_p \nsim f$
 \begin{align*}
 	Z_L  & =  \sqrt{\frac{L}{C}} \rightarrow \text{rein reell!}                                                                         \\
     \underline{\gamma}  & = j \beta  = j \omega \sqrt{LC} \qquad \beta = \omega \cdot \sqrt{LC} \\
@@ -103,7 +103,8 @@ $ R', G' = 0 \rightarrow \alpha = 0 \qquad Z_L, v_p \neq f$
 \end{align*}
 \subsubsection{verlustloser Reflexionsfaktor}
 %$ \underline{U}_r(l) = \underline{U}_r(l=0) \cdot e^{-j\beta l} \qquad \underline{U}_h(l) = \underline{U}_h(l=0) \cdot e^{j\beta l} $
-$ \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $
+
+$ \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $ $\Psi$ in \textbf{RAD}!
 \begin{align*}
 	\underline{r}(l)  &= \underline{r}_2 \cdot e^{-j2\beta l} = r \cdot e^{-j(\Psi_0+2\beta l)} =r\cdot e^{j\Psi} \\ &=\tfrac{\underline{Z}(l)-Z_L}{\underline{Z}(l)+Z_L}\\
 	\underline{r}_2 & = \tfrac{\underline{Z}_2-Z_L}{\underline{Z}_2+Z_L} = \tfrac{\underline{U}_2-\underline{I}_2Z_L}{\underline{U}_2 +\underline{I}_2 Z_L}\\
@@ -128,7 +129,7 @@ $ \underline{Z}_2 = 0 \qquad \underline{U}_2 = \underline{U}_{(l=0)} = 0 \righta
 	I(l)         & = \underline{I}_h \cdot 2 \cos(\beta l) =\underline{I}_2 \cdot \cos(\beta l) \qquad \underline{I}_2 =\frac{2\underline{U}_h}{Z_L} \\
 %	\hat{U}_E    & = \hat{U}_{generator}\cdot\frac{\underline{Z}_E}{\underline{Z}_{generator}+\underline{Z}_E} \\
 \end{align*}
-Bildung einer Stehen
+Bildung einer Stehenden Welle!
 \subsubsection{Leerlauf an Leitungsende}
 $ \underline{Z}_2 = \infty \qquad \underline{I}_2 = \underline{I}_{(l=0)} = 0 \rightarrow \underline{I}_h = - \underline{I}_r \qquad \underline{U}_h = \underline{U}_r $
 \begin{align*}
@@ -145,7 +146,7 @@ $\lambda / 4$ -Leitung mit Eingangswiderstand $ \underline{Z}_e = \underline{Z}(
 	\frac{\underline{Z}_e}{Z_L} & = \frac{Z_L}{\underline{Z}_2} = \frac{\underline{Y}_2}{Y_L} \rightarrow Z_e = \frac{Z^2_L}{\underline{Z}_2}
 \end{align*}
 Eine $ \lambda / 4 $ -Leitung transformiert:
-L $ \leftrightarrow $ C, Kurzschluss $ \leftrightarrow $ Leerlauf, \textbf{großes} R $ \leftrightarrow$ \textbf{kleines} R
+L $ \leftrightarrow $ C, \\Kurzschluss $ \leftrightarrow $ Leerlauf, \textbf{großes} R $ \leftrightarrow$ \textbf{kleines} R
 
 %\subsubsection{vernachlässigbarer Widerstandsbelag}
 %\includegraphics[width=\columnwidth]{Figures/vernachlaessigbarerWiderstandsbelag.png}
@@ -177,17 +178,16 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
 %\end{align*}
 
 \subsubsection{Stehwellenverhältnis}
-siehe auch Kap. \ref{sec:Smith_All}
+siehe Smith-Chart Kapitel \ref{sec:Smith_All}
 \begin{align*}
-    \mathrm{SWR}      & = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|} \\
-                      & = \dfrac{R_{max}}{Z_L}                                                                                                                \\
-    \mathrm{SWR}^{-1} & = \dfrac{R_{min}}{Z_L} \qquad |r_A| = \frac{SWR+1}{SWR-1}
+    &\mathrm{SWR}       = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}&                                                        \\
+    &m = \mathrm{SWR}^{-1} = \dfrac{R_{\text{min}}}{Z_L} \qquad |r_2| = \frac{\text{SWR}-1}{\text{SWR}+1} = \frac{1-m}{1+m} &
 \end{align*}
 
 \subsubsection{Leistung}
 \begin{align*}
-    P_{A}            & = P_{H}-P_{R}                                                                                                 \\
-                     & = \frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}}-\frac{1}{2} \cdot \frac{\hat{U}_{r}^{2}}{Re\{Z_{L}\}} \\
+    P_{A}            & = P_{H}-P_{R}                                                                                                
+                     \quad = \frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}}-\frac{1}{2} \cdot \frac{\hat{U}_{r}^{2}}{Re\{Z_{L}\}} \\
                      & =\frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}} \cdot\left(1-r^{2}\right)                              \\
                      & = P_{\max} \cdot\left(1-r^{2}\right)                                                                          \\
                      & = \underline{U}_A\cdot\underline{I}_A^*                                                                       \\
@@ -214,13 +214,14 @@ siehe auch Kap. \ref{sec:Smith_All}
 
 
 \subsubsection{Spezialfall: Angepasste Leitung}
+Eingangswiderstand $ Z_1\nsim$ Leitungslänge, rein reell!\\
+Nur hinlaufende Welle, reflexionsfrei!
 \begin{align*}
-    Z_A          & = Z_L = Z(z)                              \\
-    r_A          & = 0\qquad\rightarrow\text{reflexionsfrei} \\
+    Z_L          & = Z_1 = Z_2 = Z(l)
+    r_A          & =0
     \mathrm{SWR} & = 1                                       \\
-    U(z)         & = U_h\cdot e ^{j\beta z}                  \\
-    I(z)         & = I_h \cdot e^{j\beta z}                  \\
-                 & = \frac{U_h}{Z_L}\cdot e^{j\beta z}
+    U(z)         & = U_h\cdot e ^{j\beta z}  &               
+    I(z)         = I_h \cdot e^{j\beta z}                = \frac{U_h}{Z_L}\cdot e^{j\beta z}
 \end{align*}
 
 \subsubsection{Spezialfall: Ohm'sch abgeschlossene Leitung}
