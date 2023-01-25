@@ -8,14 +8,16 @@
 \end{align*}
 
 \subsubsection{Dämpfung}
-\underline{\textbf{Ohm'sche Verluste}} $R\ll\omega L$
+\underline{\textbf{Ohmsche Verluste}} $R\ll\omega L$
 \[
-    \alpha_0 = \frac{\sqrt{\dfrac{f\cdot\mu}{\pi\cdot\sigma}}}{120\Omega}\cdot\frac{\sqrt{\varepsilon_r}}{D}\cdot\dfrac{1+\dfrac{D}{d}}{\ln \dfrac{D}{d}}
+    \alpha_L = \frac{\sqrt{\dfrac{f\cdot\mu}{\pi\cdot\sigma}}}{120\Omega}\cdot\frac{\sqrt{\varepsilon_r}}{D}\cdot\dfrac{1+\dfrac{D}{d}}{\ln \dfrac{D}{d}}
 \]
+
+Dämpfungsminimum für $ \frac{1+\tfrac{D}{d}}{\ln \tfrac{D}{d}} = 1 $\\ bei vorgegebenen Außendurchmesser: $ \frac{D}{d} =3,59 $\\
 
 \underline{\textbf{Dielektrische Verluste}} $G\ll\omega C$,$\tan\delta= (^G/_{\omega C})$
 \[
-    \alpha_d = \pi\sqrt{\varepsilon_r}\cdot\tan\delta\cdot\frac{f}{c_0} \sim f
+    \alpha_d = \frac{\sqrt{\varepsilon_r}\pi f}{c_0}\cdot\tan\delta \sim f
 \]
 
 \subsection{Mikrostreifenleiter}
@@ -45,7 +47,7 @@ Je größer $\dfrac{\mathrm{w}}{\mathrm{h}}$ desto mehr nähert sich $\varepsilo
     f_c = \frac{c_0}{2a}
 \]
 
-\subsection{VSWR (Voltage Standing Wave Ratio) und Return Loss}
+\subsection{VSWR (Voltage Standing Wave Ratio) und Return Loss}\label{sec:VSWR}
 \underline{VSWR}
 \begin{align*}
     s   & = \mathrm{VSWR} = \frac{1+|r|}{1-|r|}\geq 1 \\
@@ -99,115 +101,125 @@ Je größer $\dfrac{\mathrm{w}}{\mathrm{h}}$ desto mehr nähert sich $\varepsilo
               Dämpfung keine Rolle spielt.
           }
 \end{description}
-\newpage
-\subsection{Leitungsparameter}
-\subsubsection{Streifenleitung / Parallele Platten}
-Für Sinus-Anregung:
-\begin{align*}
-	I(l) & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta l\cdot e^{j\omega t}}                         \\
-	U(l) & = \int \vec{E} d\vec{s} \stackrel{b\gg d}{=} E\cdot d \rightarrow  &E = \frac{U_0}{d}\cdot^{-j\beta l}\cdot\vec{e}_x \\
-	I(l) & = \oint \vec{H} d\vec{s} =  H\cdot b \rightarrow &H = \frac{I_0}{b}\cdot^{-j\beta l}\cdot\vec{e}_y                  % \\
-	% \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
-	%               & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
-\end{align*}
-$ \mathbf{b} $: Platten\textbf{breite} \qquad $ \mathbf{d} $: Abstand zwischen den Platten\\
-
-\begin{minipage}[t]{0.4\columnwidth}
-\input{Figures/Leitungen_Parallele_Platten.tex}
-\end{minipage}
-\begin{minipage}[b][1cm]{0.6\columnwidth}
-	\begin{flalign*}
-		&R'=\frac{2}{\delta\kappa b}\left[ \frac{\Omega}{m} \right] & &L'=\frac{\mu d}{b} \left[\frac{H}{m}\right]&\\
-		&G'=\frac{\kappa b}{d} \left[ \frac{S}{m} \right] &
-		&C'=\frac{b\varepsilon}{d} \left[\frac{F}{m}\right]
-	\end{flalign*}
-\end{minipage}
+%\newpage
+%\subsection{Leitungsparameter}
+%\subsubsection{Streifenleitung / Parallele Platten}
+%Für Sinus-Anregung:
+%\begin{align*}
+%	I(l) & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta l\cdot e^{j\omega t}}                         \\
+%	U(l) & = \int \vec{E} d\vec{s} \stackrel{b\gg d}{=} E\cdot d \rightarrow  &E = \frac{U_0}{d}\cdot^{-j\beta l}\cdot\vec{e}_x \\
+%	I(l) & = \oint \vec{H} d\vec{s} =  H\cdot b \rightarrow &H = \frac{I_0}{b}\cdot^{-j\beta l}\cdot\vec{e}_y                  % \\
+%	% \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
+%	%               & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+%\end{align*}
+%$ \mathbf{b} $: Platten\textbf{breite} \qquad $ \mathbf{d} $: Abstand zwischen den Platten\\
 %
+%\begin{minipage}[t]{0.4\columnwidth}
+%\input{Figures/Leitungen_Parallele_Platten.tex}
+%\end{minipage}
+%\begin{minipage}[b][1cm]{0.6\columnwidth}
+%	\begin{flalign*}
+%		&R'=\frac{2}{\delta\kappa b}\left[ \frac{\Omega}{m} \right] & &L'=\frac{\mu d}{b} \left[\frac{H}{m}\right]&\\
+%		&G'=\frac{\kappa b}{d} \left[ \frac{S}{m} \right] &
+%		&C'=\frac{b\varepsilon}{d} \left[\frac{F}{m}\right]
+%	\end{flalign*}
+%\end{minipage}
+%%
+%%
+%%{\renewcommand*{\arraystretch}{0.2}
+%%	\begin{tabularx}{0.5\columnwidth}{X}
+%%		\hline
+%%		\[R'=\frac{2}{\delta\kappa b}\] \\
+%%		\hline
+%%		\[L'=\frac{\mu d}{b}\]         \\
+%%		\hline
+%%		\[G'=\frac{\sigma b}{d}\]      \\
+%%		\hline
+%%		\[C'=\frac{b\varepsilon}{d}\]  \\
+%%		\hline
+%%	\end{tabularx}
+%%}
 %
-%{\renewcommand*{\arraystretch}{0.2}
-%	\begin{tabularx}{0.5\columnwidth}{X}
-%		\hline
-%		\[R'=\frac{2}{\delta\kappa b}\] \\
-%		\hline
-%		\[L'=\frac{\mu d}{b}\]         \\
-%		\hline
-%		\[G'=\frac{\sigma b}{d}\]      \\
-%		\hline
-%		\[C'=\frac{b\varepsilon}{d}\]  \\
-%		\hline
-%	\end{tabularx}
+%\subsubsection{Doppelleitung}
+%$ \kappa $: Leitwert des Dielektrikums \qquad $ \kappa_L $ Leitwert des Leiters\\
+%$ \mathbf{r} $: Leiterradius \qquad $ \mathbf{d} $: Abstand zw. Leitermitten
+%
+%\begin{minipage}[t]{0.4\columnwidth}
+%	\input{Figures/Leitungen_Doppelleitung.tex}
+%\end{minipage}
+%\begin{minipage}[b][4cm]{0.6\columnwidth}
+%	\begin{flalign*}
+%		&R'=\frac{1}{\pi a\delta\kappa_L} \left[ \frac{\Omega}{m} \right] &\\
+%		&L'= \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2r} \left[\frac{H}{m}\right]&\\
+%		&G'= \frac{\pi\kappa}{\cosh^{-1}(^d/_{2r})} \left[ \frac{S}{m} \right] &\\
+%		&C'=\frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2r})} \left[\frac{F}{m}\right]
+%	\end{flalign*}
+%\end{minipage}
+%
+%%{\small\[
+%%	\text{cosh am TR: MENU $\rightarrow$ 1; OPTN $\rightarrow$ 1 $\rightarrow$ 5}\\
+%%	\]}
+%%\input{Figures/Leitungen_Doppelleitung.tex}
+%%{\renewcommand*{\arraystretch}{0.2}
+%%	\begin{tabularx}{0.5\columnwidth}{|X|}
+%%		\hline
+%%		\[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
+%%		\hline
+%%		\[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
+%%		\hline
+%%		\[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
+%%		\hline
+%%		\[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
+%%		\hline
+%%\end{tabularx}}
+%
+%\subsubsection{Koaxialleitung}
+%%{\small\[
+%%	a = \text{innen Radius} \qquad b = \text{außen Radius} \\
+%%	\]}
+%$ r_i $: Innenradius \quad $ r_a $: Außenradius
+%\begin{align*}
+%	\vec{H}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                   \\
+%	\vec{E}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot Z_{F0}\cdot e^{-j\beta z} \cdot\vec{e}_r
+%	& = \frac{\hat{U}}{r \cdot\ln{(^{r_a}/_{r_i})}}\cdot e^{-j\beta z}\cdot\vec{e}_r        \\
+%	S_{av} & = \frac{1}{2}\cdot\left( \frac{\hat{I}}{2\pi r}\right)^2\cdot Z_{F0}
+%\end{align*}
+%\begin{minipage}[c][2cm]{0.4\columnwidth}
+%%	\input{Figures/Leitungen_Koaxialleitung.tex}
+%	\input{Figures/Wellenleiter_Koaxialleiter.tex}
+%\end{minipage}
+%\begin{minipage}[c][4cm]{0.6\columnwidth}
+%	\begin{flalign*}
+%		&R'=\frac{1}{2\pi\delta\kappa_L}\left(\frac{1}{r_a}+\frac{1}{r_i}\right) \left[ \frac{\Omega}{m} \right] &\\
+%		&L'=\frac{\mu_0\mu_r}{2\pi}\ln\frac{r_a}{r_i} \left[\frac{H}{m}\right]&\\
+%		&G'=\frac{2\pi\kappa}{\ln(r_a/r_i)} \left[ \frac{S}{m} \right] &\\
+%		&C'=\frac{2\pi\varepsilon_0 \varepsilon_r}{\ln(r_a/r_i)} \left[\frac{F}{m}\right]
+%	\end{flalign*}
+%\end{minipage}
+%%
+%%
+%%{\renewcommand*{\arraystretch}{0.2}
+%%	\begin{tabularx}{0.5\columnwidth}{|X|}
+%%		\hline
+%%		\[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
+%%		\hline
+%%		\[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
+%%		\hline
+%%		\[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
+%%		\hline
+%%		\[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
+%%		\hline
+%%\end{tabularx}}
+%\vspace{1ex}
+%\subsubsection{Allgemein}
+%Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
+%\[
+%LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}
+%\]
+%Innere Induktivität:
+%\[
+%L_i = \frac{R}{w}
+%\]
+%\textbf{\color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
+%	\color{red}{Länge verdoppeln!!!}
 %}
-
-\subsubsection{Doppelleitung}
-$ \kappa $: Leitwert des Dielektrikums \qquad $ \kappa_L $ Leitwert des Leiters\\
-$ \mathbf{r} $: Leiterradius \qquad $ \mathbf{d} $: Abstand zw. Leitermitte
-
-\begin{minipage}[t]{0.4\columnwidth}
-	\input{Figures/Leitungen_Doppelleitung.tex}
-\end{minipage}
-\begin{minipage}[b][4cm]{0.6\columnwidth}
-	\begin{flalign*}
-		&R'=\frac{1}{\pi a\delta\kappa_L} \left[ \frac{\Omega}{m} \right] &\\
-		&L'= \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2r} \left[\frac{H}{m}\right]&\\
-		&G'= \frac{\pi\kappa}{\cosh^{-1}(^d/_{2r})} \left[ \frac{S}{m} \right] &\\
-		&C'=\frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2r})} \left[\frac{F}{m}\right]
-	\end{flalign*}
-\end{minipage}
-
-%{\small\[
-%	\text{cosh am TR: MENU $\rightarrow$ 1; OPTN $\rightarrow$ 1 $\rightarrow$ 5}\\
-%	\]}
-%\input{Figures/Leitungen_Doppelleitung.tex}
-%{\renewcommand*{\arraystretch}{0.2}
-%	\begin{tabularx}{0.5\columnwidth}{|X|}
-%		\hline
-%		\[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
-%		\hline
-%		\[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
-%		\hline
-%		\[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
-%		\hline
-%		\[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
-%		\hline
-%\end{tabularx}}
-
-\subsubsection{Koaxialleitung}
-%{\small\[
-%	a = \text{innen Radius} \qquad b = \text{außen Radius} \\
-%	\]}
-$ r_i $: Innenradius \quad $ r_a $: Außenradius
-\begin{align*}
-	\vec{H}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                   \\
-	\vec{E}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot Z_{F0}\cdot e^{-j\beta z} \cdot\vec{e}_r
-	& = \frac{\hat{U}}{r \cdot\ln{(^{r_a}/_{r_i})}}\cdot e^{-j\beta z}\cdot\vec{e}_r        \\
-	S_{av} & = \frac{1}{2}\cdot\left( \frac{\hat{I}}{2\pi r}\right)^2\cdot Z_{F0}
-\end{align*}
-\input{Figures/Leitungen_Koaxialleitung.tex}
-{\renewcommand*{\arraystretch}{0.2}
-	\begin{tabularx}{0.5\columnwidth}{|X|}
-		\hline
-		\[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
-		\hline
-		\[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
-		\hline
-		\[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
-		\hline
-		\[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
-		\hline
-\end{tabularx}}
-
-
-
-\vspace{1ex}
-\subsubsection{Allgemein}
-Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
-\[
-LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}
-\]
-Innere Induktivität:
-\[
-L_i = \frac{R}{w}
-\]
-\textbf{\color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
-	\color{red}{Länge verdoppeln!!!}
-}

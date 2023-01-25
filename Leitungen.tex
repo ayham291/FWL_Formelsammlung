@@ -120,16 +120,16 @@ $\underline{U}_2 = \underline{U}_{(l=0)} =  \underline{U}_h  +\underline{U}_r \q
 	\underline{U}(l) & = \underline{U}_2 \cdot \left[ \cos(\beta l) + j \tfrac{Z_L}{\underline{Z}_2} \sin(\beta l) \right] \\
 	\underline{I}(l) & = \underline{I}_2 \cdot \left[ \cos(\beta l) + j \tfrac{\underline{Z}_2}{Z_L} \sin(\beta l) \right] 
 \end{align*}
-
+Für Beträge/Amplitudenwerte: \quad $\left| \frac{\underline{U}}{\underline{U}_2} \right| = \sqrt{\text{Re}^2+\text{Im}^2}  $.\\
+Bildung einer Stehenden Welle!
 \subsubsection{Kurzschluss an Leitungsende}
 $ \underline{Z}_2 = 0 \qquad \underline{U}_2 = \underline{U}_{(l=0)} = 0 \rightarrow \underline{U}_h = - \underline{U}_r \qquad \underline{I}_h = \underline{I}_r $
 \begin{align*}
 	\underline{Z}(l)         & = \frac{\underline{U}(l)}{\underline{I}(l)} =  Z_L\cdot j\tan(\beta l)        \qquad \rightarrow \text{rein imaginär!}                      \\
 	\underline{U}(l) & =  \underline{U}_h  \cdot 2j\sin(\beta l) = \underline{I}_2 Z_L \cdot j\sin(\beta l)\\
-	I(l)         & = \underline{I}_h \cdot 2 \cos(\beta l) =\underline{I}_2 \cdot \cos(\beta l) \qquad \underline{I}_2 =\frac{2\underline{U}_h}{Z_L} \\
+	I(l)         & = \underline{I}_h \cdot 2 \cos(\beta l) =\underline{I}_2 \cdot \cos(\beta l) \qquad \underline{I}_2 =\frac{2\underline{U}_h}{Z_L}
 %	\hat{U}_E    & = \hat{U}_{generator}\cdot\frac{\underline{Z}_E}{\underline{Z}_{generator}+\underline{Z}_E} \\
 \end{align*}
-Bildung einer Stehenden Welle!
 \subsubsection{Leerlauf an Leitungsende}
 $ \underline{Z}_2 = \infty \qquad \underline{I}_2 = \underline{I}_{(l=0)} = 0 \rightarrow \underline{I}_h = - \underline{I}_r \qquad \underline{U}_h = \underline{U}_r $
 \begin{align*}
@@ -155,6 +155,39 @@ L $ \leftrightarrow $ C, \\Kurzschluss $ \leftrightarrow $ Leerlauf, \textbf{gro
 %\subsubsection{vernachlässigbarer Leitwertbelag}
 %\includegraphics[width=\columnwidth]{Figures/vernachlaessigbarerLeiterwertbelag.png}
 
+\subsubsection{Angepasste (reflexionsfreie) Leitung}
+Eingangswiderstand $ Z_1\nsim$ Leitungslänge, rein reell!\\
+Nur hinlaufende Welle, \textbf{reflexionsfrei}!
+\begin{align*}
+	Z_L          & = Z_1 = Z_2 = Z(l) \qquad
+	r_A          =0 \qquad 
+	\mathrm{SWR} = 1  \\
+	U(z)         & = U_h\cdot e ^{j\beta z}  \qquad           
+	I(z)         = I_h \cdot e^{j\beta z} = \frac{U_h}{Z_L}\cdot e^{j\beta z}
+\end{align*}
+
+\subsubsection{Ohmscher Abschluss an Leitungsende}
+$ r_2 \rightarrow$ rein reell! 
+\begin{align*}
+	R_A > Z_L & \rightarrow\theta_r = 0 \rightarrow r_A \texttt{ ist negativ} \\
+	& \rightarrow z_\texttt{max}=\frac{\lambda}{2}\cdot n\\
+	R_A < Z_L& \rightarrow\theta_r = \pi                           \\
+	& \rightarrow z_\texttt{min}=\frac{\lambda}{2}\cdot n
+\end{align*}
+
+\subsubsection{Position von Extrema}
+bei beliebigen Abschlüssen/Lasten! $ \rightarrow $ stehende Welle!
+\begin{gather*}
+	\boxed{r_A = |r_A|\cdot e^{-j\Psi_r}}\rightarrow\Psi_r\text{ in rad}\\
+	f_\texttt{min}\rightarrow \text{Minimum(Knoten) der Spannungen}\\
+	f_\texttt{max}\rightarrow \text{Maximum(Bäuche) der Spannungen}
+\end{gather*}
+\begin{align*}
+	\lambda_\texttt{min/max} & = \frac{c_0}{f_\texttt{min/max}\sqrt{\mu_{r1}\varepsilon_{r1}}}                                                                                                 \\
+	z_\texttt{min}           & =\frac{-n\cdot\lambda_\texttt{min}}{2}                                        \qquad\rightarrow n = -\frac{2z}{\lambda_\texttt{min}}                            \\
+	z_\texttt{max}           & =\frac{-(2n+1)\lambda_\texttt{max}}{4}                                        \qquad\rightarrow n = -\frac{4z+\lambda_\texttt{max}}{2\cdot\lambda_\texttt{max}} \\
+	z                        & = \frac{\lambda_\texttt{min}\cdot\lambda_\texttt{max}}{4(\lambda_\texttt{min}-\lambda_\texttt{max})}
+\end{align*}
 
 \subsubsection{Vorgehen Eingangswiderstand}
 Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E}
@@ -177,10 +210,10 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
 %    \alpha & = -\frac{\ln(r_A)}{2l} [\si{Np/m}]                                    & \beta & = \dfrac{\phi_2 -\phi_1}{2l} [\si{rad/m}]
 %\end{align*}
 
-\subsubsection{Stehwellenverhältnis}
-siehe Smith-Chart Kapitel \ref{sec:Smith_All}
+\subsubsection{Stehwellenverhältnis (SWR)}
+Smith-Chart: Kap. \ref{sec:Smith_All} \qquad VSWR: Kap. \ref{sec:VSWR}
 \begin{align*}
-    &\mathrm{SWR}       = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}&                                                        \\
+    &s = \mathrm{SWR}       = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}&                                                        \\
     &m = \mathrm{SWR}^{-1} = \dfrac{R_{\text{min}}}{Z_L} \qquad |r_2| = \frac{\text{SWR}-1}{\text{SWR}+1} = \frac{1-m}{1+m} &
 \end{align*}
 
@@ -199,45 +232,19 @@ siehe Smith-Chart Kapitel \ref{sec:Smith_All}
     U_A & = U_q\cdot\frac{R_A}{R_i+R_A}
 \end{align*}
 
-\subsubsection{Position von Extrema}
-\begin{gather*}
-    \boxed{r_A = |r_A|\cdot e^{-j\theta_r}}\rightarrow\theta_r\text{ in rad}\\
-    f_\texttt{min}\rightarrow \text{Minimum(Knoten) der Spannungen}\\
-    f_\texttt{max}\rightarrow \text{Maximum(Bäuche) der Spannungen}
-\end{gather*}
-\begin{align*}
-    \lambda_\texttt{min/max} & = \frac{c_0}{f_\texttt{min/max}\sqrt{\mu_{r1}\varepsilon_{r1}}}                                                                                                 \\
-    z_\texttt{min}           & =\frac{-n\cdot\lambda_\texttt{min}}{2}                                        \qquad\rightarrow n = -\frac{2z}{\lambda_\texttt{min}}                            \\
-    z_\texttt{max}           & =\frac{-(2n+1)\lambda_\texttt{max}}{4}                                        \qquad\rightarrow n = -\frac{4z+\lambda_\texttt{max}}{2\cdot\lambda_\texttt{max}} \\
-    z                        & = \frac{\lambda_\texttt{min}\cdot\lambda_\texttt{max}}{4(\lambda_\texttt{min}-\lambda_\texttt{max})}
-\end{align*}
 
 
-\subsubsection{Spezialfall: Angepasste Leitung}
-Eingangswiderstand $ Z_1\nsim$ Leitungslänge, rein reell!\\
-Nur hinlaufende Welle, reflexionsfrei!
-\begin{align*}
-    Z_L          & = Z_1 = Z_2 = Z(l)
-    r_A          & =0
-    \mathrm{SWR} & = 1                                       \\
-    U(z)         & = U_h\cdot e ^{j\beta z}  &               
-    I(z)         = I_h \cdot e^{j\beta z}                = \frac{U_h}{Z_L}\cdot e^{j\beta z}
-\end{align*}
 
-\subsubsection{Spezialfall: Ohm'sch abgeschlossene Leitung}
-\[
-    r_A = \texttt{reell}
-\]
 
-\begin{align*}
-    \underline{R_A > Z_L} & \rightarrow\theta_r = 0 \rightarrow r_A \texttt{ ist negativ} \\
-                          & \rightarrow z_\texttt{max}=\frac{\lambda}{2}\cdot n
-\end{align*}
 
-\begin{align*}
-    \underline{R_A < Z_L} & \rightarrow\theta_r = \pi                           \\
-                          & \rightarrow z_\texttt{min}=\frac{\lambda}{2}\cdot n
-\end{align*}
+%\subsubsection{Ohmscher Abschluss an Leitungsende}
+%$ r_2 \rightarrow$ rein reell! 
+%\begin{align*}
+%    R_A > Z_L & \rightarrow\theta_r = 0 \rightarrow r_A \texttt{ ist negativ} \\
+%                          & \rightarrow z_\texttt{max}=\frac{\lambda}{2}\cdot n\\
+%    R_A < Z_L& \rightarrow\theta_r = \pi                           \\
+%                          & \rightarrow z_\texttt{min}=\frac{\lambda}{2}\cdot n
+%\end{align*}
 
 \subsection{Mehrfachreflexionen bei fehlender Anpassung}
 \input{Figures/Leitungen_Mehrfach_Refexion.tex}
@@ -256,11 +263,143 @@ Nur hinlaufende Welle, reflexionsfrei!
      & \text{Signallaufzeit: }                  & t_d             & = \frac{l}{c_0}\cdot\sqrt{\mu_r\varepsilon_r} \\
      &                                          &                 & = \frac{l}{v_p}
 \end{align*}
-\subsection{Kettenmatrix einer Leitung}
+%\subsection{Kettenmatrix einer Leitung}
+%\[
+%    A =
+%    \left[ {\begin{array}{cc}
+%                    \cosh(\gamma l)               & Z_L \sinh(\gamma l) \\
+%                    \frac{1}{Z_L} \sinh(\gamma l) & \cosh(\gamma l)     \\
+%                \end{array} } \right]
+%\]
+\subsection{Leitungsparameter}
+				\subsubsection{Allgemein}
+Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \[
-    A =
-    \left[ {\begin{array}{cc}
-                    \cosh(\gamma l)               & Z_L \sinh(\gamma l) \\
-                    \frac{1}{Z_L} \sinh(\gamma l) & \cosh(\gamma l)     \\
-                \end{array} } \right]
+\boxed{LC = \mu\varepsilon} \quad \text{und} \quad \boxed{\frac{G}{C} = \frac{\sigma}{\varepsilon}}
 \]
+Innere Induktivität:
+\[
+L_i = \frac{R}{w}
+\]
+\textbf{\color{red}{Leitungen gehen HIN und ZURÜCK!!!}\\
+	\color{red}{Länge verdoppeln!!!}
+}
+\subsubsection{Streifenleitung / Parallele Platten}
+Für Sinus-Anregung:
+\begin{align*}
+	I(l) & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta l\cdot e^{j\omega t}}                         \\
+	U(l) & = \int \vec{E} d\vec{s} \stackrel{b\gg d}{=} E\cdot d \rightarrow  &E = \frac{U_0}{d}\cdot^{-j\beta l}\cdot\vec{e}_x \\
+	I(l) & = \oint \vec{H} d\vec{s} =  H\cdot b \rightarrow &H = \frac{I_0}{b}\cdot^{-j\beta l}\cdot\vec{e}_y                  % \\
+	% \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
+	%               & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
+\end{align*}
+$ \mathbf{b} $: Platten\textbf{breite} \qquad $ \mathbf{d} $: Abstand zwischen den Platten\\
+
+\begin{minipage}[t]{0.4\columnwidth}
+	\input{Figures/Leitungen_Parallele_Platten.tex}
+\end{minipage}
+\begin{minipage}[b][1cm]{0.6\columnwidth}
+	\begin{flalign*}
+		&R'=\frac{2}{\delta\kappa b}\left[ \frac{\Omega}{m} \right] & &L'=\frac{\mu d}{b} \left[\frac{H}{m}\right]&\\
+		&G'=\frac{\kappa b}{d} \left[ \frac{S}{m} \right] &
+		&C'=\frac{b\varepsilon}{d} \left[\frac{F}{m}\right]
+	\end{flalign*}
+\end{minipage}
+%
+%
+%{\renewcommand*{\arraystretch}{0.2}
+	%	\begin{tabularx}{0.5\columnwidth}{X}
+		%		\hline
+		%		\[R'=\frac{2}{\delta\kappa b}\] \\
+		%		\hline
+		%		\[L'=\frac{\mu d}{b}\]         \\
+		%		\hline
+		%		\[G'=\frac{\sigma b}{d}\]      \\
+		%		\hline
+		%		\[C'=\frac{b\varepsilon}{d}\]  \\
+		%		\hline
+		%	\end{tabularx}
+	%}
+
+\subsubsection{Doppelleitung}
+$ \kappa $: Leitwert des Dielektrikums \qquad $ \kappa_L $ Leitwert des Leiters\\
+$ \mathbf{r} $: Leiterradius \qquad $ \mathbf{d} $: Abstand zw. Leitermitten
+
+\begin{minipage}[t]{0.4\columnwidth}
+	\input{Figures/Leitungen_Doppelleitung.tex}
+\end{minipage}
+\begin{minipage}[b][4cm]{0.6\columnwidth}
+	\begin{flalign*}
+		&R'=\frac{1}{\pi a\delta\kappa_L} \left[ \frac{\Omega}{m} \right] &\\
+		&L'= \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2r} \left[\frac{H}{m}\right]&\\
+		&G'= \frac{\pi\kappa}{\cosh^{-1}(^d/_{2r})} \left[ \frac{S}{m} \right] &\\
+		&C'=\frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2r})} \left[\frac{F}{m}\right]
+	\end{flalign*}
+\end{minipage}
+
+%{\small\[
+	%	\text{cosh am TR: MENU $\rightarrow$ 1; OPTN $\rightarrow$ 1 $\rightarrow$ 5}\\
+	%	\]}
+%\input{Figures/Leitungen_Doppelleitung.tex}
+%{\renewcommand*{\arraystretch}{0.2}
+	%	\begin{tabularx}{0.5\columnwidth}{|X|}
+		%		\hline
+		%		\[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
+		%		\hline
+		%		\[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
+		%		\hline
+		%		\[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
+		%		\hline
+		%		\[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
+		%		\hline
+		%\end{tabularx}}
+		
+		\subsubsection{Koaxialleitung}
+		%{\small\[
+			%	a = \text{innen Radius} \qquad b = \text{außen Radius} \\
+			%	\]}
+		$ r_i $: Innenradius \quad $ r_a $: Außenradius
+		\begin{align*}
+			\vec{H}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot e^{-j\beta z}\cdot\vec{e}_\varphi                   \\
+			\vec{E}(r, z)         & = \frac{\hat{I}}{2\pi r}\cdot Z_{F0}\cdot e^{-j\beta z} \cdot\vec{e}_r
+			= \frac{\hat{U}}{r \cdot\ln{(^{r_a}/_{r_i})}}\cdot e^{-j\beta z}\cdot\vec{e}_r        \\
+			S_{av} & = \frac{1}{2}\cdot\left( \frac{\hat{I}}{2\pi r}\right)^2\cdot Z_{F0}\\
+   			Z_L &= \frac{Z_{F0}}{2\pi}\sqrt{\frac{\mu_r}{\varepsilon_r}}\ln\left( \frac{r_a}{r_i} \right)  =\frac{60\Omega}{\sqrt{\varepsilon_r}}\cdot \ln{\frac{r_a}{r_i}}
+		\end{align*}
+		\begin{minipage}[c][2cm]{0.4\columnwidth}
+			%	\input{Figures/Leitungen_Koaxialleitung.tex}
+			\input{Figures/Wellenleiter_Koaxialleiter.tex}
+		\end{minipage}
+		\begin{minipage}[c][4cm]{0.6\columnwidth}
+			\begin{flalign*}
+				&R'=\frac{1}{2\pi\delta\kappa_L}\left(\frac{1}{r_a}+\frac{1}{r_i}\right) \left[ \frac{\Omega}{m} \right] &\\
+				&L'=\frac{\mu_0\mu_r}{2\pi}\ln\frac{r_a}{r_i} \left[\frac{H}{m}\right]&\\
+				&G'=\frac{2\pi\kappa}{\ln(r_a/r_i)} \left[ \frac{S}{m} \right] &\\
+				&C'=\frac{2\pi\varepsilon_0 \varepsilon_r}{\ln(r_a/r_i)} \left[\frac{F}{m}\right]\\
+			\end{flalign*}
+		\end{minipage}
+%	\vspace{5pt}
+\\
+\\
+	\textbf{Dielektrische Verluste}: für sehr hohe $ f $\\
+	$G\ll\omega C$, \quad $\tan\delta= (G/\omega C) <0,1$
+	\[
+	\alpha_d = \frac{\sqrt{\varepsilon_r}\pi f}{c_0}\cdot\tan\delta \sim f
+	\]
+	
+		%
+		%
+		%{\renewcommand*{\arraystretch}{0.2}
+			%	\begin{tabularx}{0.5\columnwidth}{|X|}
+				%		\hline
+				%		\[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
+				%		\hline
+				%		\[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
+				%		\hline
+				%		\[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
+				%		\hline
+				%		\[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
+				%		\hline
+				%\end{tabularx}}
+%				\vspace{1ex}
+
