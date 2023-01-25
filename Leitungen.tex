@@ -110,6 +110,10 @@ $ \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $ $\Ps
 	\underline{r}_2 & = \tfrac{\underline{Z}_2-Z_L}{\underline{Z}_2+Z_L} = \tfrac{\underline{U}_2-\underline{I}_2Z_L}{\underline{U}_2 +\underline{I}_2 Z_L}\\
 	\tfrac{\underline{Z}(l)}{Z_L} & = \tfrac{1+\underline{r}(l)}{1-\underline{r}(l)}
 \end{align*}
+\begin{align*}
+	&U_{\texttt{max}} = |U_h| \cdot (1+|r(l)|) & U_{\texttt{min}} = |U_h| \cdot (1-|r(l)|) &\\
+	&I_{\texttt{max}} = \left | \frac{U_h}{Z_L} \right | \cdot (1+|r(l)|) & I_{\texttt{min}} = \left| \frac{U_h}{Z_L} \right | \cdot (1-|r(l)|) &
+\end{align*}	
 \subsubsection{Beliebiger Abschluss (Last)} \label{beliebig_abschluss}
 $\underline{U}_2 = \underline{U}_{(l=0)} =  \underline{U}_h  +\underline{U}_r \qquad \underline{I}_2 = \underline{I}_{(l=0)} =  \underline{I}_h  +\underline{I}_r $	
 \begin{align*}
@@ -121,7 +125,7 @@ $\underline{U}_2 = \underline{U}_{(l=0)} =  \underline{U}_h  +\underline{U}_r \q
 	\underline{I}(l) & = \underline{I}_2 \cdot \left[ \cos(\beta l) + j \tfrac{\underline{Z}_2}{Z_L} \sin(\beta l) \right] 
 \end{align*}
 Für Beträge/Amplitudenwerte: \quad $\left| \frac{\underline{U}}{\underline{U}_2} \right| = \sqrt{\text{Re}^2+\text{Im}^2}  $.\\
-Bildung einer Stehenden Welle!
+Bildung von \textbf{stehenden} Wellen für alle Fälle außer bei Anpassung!
 \subsubsection{Kurzschluss an Leitungsende}
 $ \underline{Z}_2 = 0 \qquad \underline{U}_2 = \underline{U}_{(l=0)} = 0 \rightarrow \underline{U}_h = - \underline{U}_r \qquad \underline{I}_h = \underline{I}_r $
 \begin{align*}
@@ -167,18 +171,19 @@ Nur hinlaufende Welle, \textbf{reflexionsfrei}!
 \end{align*}
 
 \subsubsection{Ohmscher Abschluss an Leitungsende}
-$ r_2 \rightarrow$ rein reell! 
+Abstand \textbf{Spannung}smax. von der Last $ z_{\texttt{max}} $ :\\
+$ r_A \rightarrow$ rein reell! \qquad $ z_{\texttt{max}} = \frac{\lambda}{4\pi} (\theta_{\texttt{rad}}+2n\pi)$
 \begin{align*}
-	R_A > Z_L & \rightarrow\theta_r = 0 \rightarrow r_A \texttt{ ist negativ} \\
+	R_A > Z_L & \rightarrow\theta_{\texttt{rad}} = 0 \qquad r_A >0
 	& \rightarrow z_\texttt{max}=\frac{\lambda}{2}\cdot n\\
-	R_A < Z_L& \rightarrow\theta_r = \pi                           \\
-	& \rightarrow z_\texttt{min}=\frac{\lambda}{2}\cdot n
-\end{align*}
+	R_A < Z_L& \rightarrow\theta_{\texttt{rad}} = \pi \qquad r_A <0                          
+	& \rightarrow z_\texttt{max}=\frac{\lambda}{4}\cdot n
+	\end{align*}
 
 \subsubsection{Position von Extrema}
 bei beliebigen Abschlüssen/Lasten! $ \rightarrow $ stehende Welle!
 \begin{gather*}
-	\boxed{r_A = |r_A|\cdot e^{-j\Psi_r}}\rightarrow\Psi_r\text{ in rad}\\
+	\boxed{r_{l} = |r_A|\cdot e^{-j\Psi_r}}\rightarrow\Psi_r\text{ in rad}\\
 	f_\texttt{min}\rightarrow \text{Minimum(Knoten) der Spannungen}\\
 	f_\texttt{max}\rightarrow \text{Maximum(Bäuche) der Spannungen}
 \end{gather*}
@@ -187,6 +192,24 @@ bei beliebigen Abschlüssen/Lasten! $ \rightarrow $ stehende Welle!
 	z_\texttt{min}           & =\frac{-n\cdot\lambda_\texttt{min}}{2}                                        \qquad\rightarrow n = -\frac{2z}{\lambda_\texttt{min}}                            \\
 	z_\texttt{max}           & =\frac{-(2n+1)\lambda_\texttt{max}}{4}                                        \qquad\rightarrow n = -\frac{4z+\lambda_\texttt{max}}{2\cdot\lambda_\texttt{max}} \\
 	z                        & = \frac{\lambda_\texttt{min}\cdot\lambda_\texttt{max}}{4(\lambda_\texttt{min}-\lambda_\texttt{max})}
+\end{align*}
+
+\subsubsection{Stehwellenverhältnis (SWR)}
+Smith-Chart: Kap. \ref{sec:Smith_All} \qquad VSWR: Kap. \ref{sec:VSWR}
+\begin{align*}
+	&s = \mathrm{SWR}       = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}&                                                        \\
+	&m = \mathrm{SWR}^{-1} = \dfrac{R_{\text{min}}}{Z_L} \qquad |r_2| = \frac{\text{SWR}-1}{\text{SWR}+1} = \frac{1-m}{1+m} &
+\end{align*}
+
+\subsubsection{Leistung}
+\begin{align*}
+	P_{A}            & = P_{H}-P_{R}                                                                                                
+	\quad = \frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}}-\frac{1}{2} \cdot \frac{\hat{U}_{r}^{2}}{Re\{Z_{L}\}} \\
+	& =\frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}} \cdot\left(1-r^{2}\right)                              \\
+	& = P_{\max} \cdot\left(1-r^{2}\right)                                                                          \\
+	& = \underline{U}_A\cdot\underline{I}_A^*                                                                       \\
+	P_V              & = P_q -P_A                                                                                                    \\
+	\underline{I}(z) & = \hat{I}\cdot e^{-\alpha z}\angle \beta z
 \end{align*}
 
 \subsubsection{Vorgehen Eingangswiderstand}
@@ -210,23 +233,9 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
 %    \alpha & = -\frac{\ln(r_A)}{2l} [\si{Np/m}]                                    & \beta & = \dfrac{\phi_2 -\phi_1}{2l} [\si{rad/m}]
 %\end{align*}
 
-\subsubsection{Stehwellenverhältnis (SWR)}
-Smith-Chart: Kap. \ref{sec:Smith_All} \qquad VSWR: Kap. \ref{sec:VSWR}
-\begin{align*}
-    &s = \mathrm{SWR}       = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}&                                                        \\
-    &m = \mathrm{SWR}^{-1} = \dfrac{R_{\text{min}}}{Z_L} \qquad |r_2| = \frac{\text{SWR}-1}{\text{SWR}+1} = \frac{1-m}{1+m} &
-\end{align*}
 
-\subsubsection{Leistung}
-\begin{align*}
-    P_{A}            & = P_{H}-P_{R}                                                                                                
-                     \quad = \frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}}-\frac{1}{2} \cdot \frac{\hat{U}_{r}^{2}}{Re\{Z_{L}\}} \\
-                     & =\frac{1}{2} \cdot \frac{\hat{U}_{h}^{2}}{Re\{Z_{L}\}} \cdot\left(1-r^{2}\right)                              \\
-                     & = P_{\max} \cdot\left(1-r^{2}\right)                                                                          \\
-                     & = \underline{U}_A\cdot\underline{I}_A^*                                                                       \\
-    P_V              & = P_q -P_A                                                                                                    \\
-    \underline{I}(z) & = \hat{I}\cdot e^{-\alpha z}\angle \beta z
-	\end{align*}
+
+
 \subsubsection{Gleichspannungswert (=Endwert)}
 \begin{align*}
     U_A & = U_q\cdot\frac{R_A}{R_i+R_A}
@@ -288,8 +297,8 @@ L_i = \frac{R}{w}
 Für Sinus-Anregung:
 \begin{align*}
 	I(l) & = \frac{U}{Z_L} = \underbrace{\frac{U_0}{Z_L}}_{I_0}\cdot e^{-j\beta l\cdot e^{j\omega t}}                         \\
-	U(l) & = \int \vec{E} d\vec{s} \stackrel{b\gg d}{=} E\cdot d \rightarrow  &E = \frac{U_0}{d}\cdot^{-j\beta l}\cdot\vec{e}_x \\
-	I(l) & = \oint \vec{H} d\vec{s} =  H\cdot b \rightarrow &H = \frac{I_0}{b}\cdot^{-j\beta l}\cdot\vec{e}_y                  % \\
+	U(l) & = \int \vec{E} d\vec{s} \stackrel{b\gg d}{=} E\cdot d &\rightarrow  E = \frac{U_0}{d}\cdot^{-j\beta l}\cdot\vec{e}_x \\
+	I(l) & = \oint \vec{H} d\vec{s} =  H\cdot b &\rightarrow H = \frac{I_0}{b}\cdot^{-j\beta l}\cdot\vec{e}_y                  % \\
 	% \vec{E}(r, z) & = \frac{I}{2\pi r}\cdot Z_F\cdot e^{-j\beta z} \cdot\vec{e}_r                                                      \\
 	%               & = \frac{\hat{U}}{r \cdot\ln{(^{2b}/_{2a})}}\cdot e^{-j\beta z}\cdot\vec{e}_r
 \end{align*}

@@ -44,7 +44,7 @@ Werte von $ m \rightarrow$ Werte von $ \Re{\underline{z}_n}: 0 \leq m \leq1 $
     \underline{z}_n & = \frac{\underline{Z}_n}{Z_L}                                                                                                                   \\
     \underline{r}_n & = \frac{\underline{Z}_n-Z_L}{\underline{Z}_n+Z_L}= \frac{\underline{z}_n-1}{\underline{z}_n+1}    = \frac{1-\underline{y}_n}{1+\underline{y}_n} \\
     m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}                                                                                                   \\
-    s               & = \frac{1}{m}
+    s               & = \frac{1}{m} = \mathrm{SWR}       = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}
 \end{align*}
 
 \subsection{Impedanz/Admetanz umrechnen}
@@ -55,7 +55,21 @@ Spiegelung von $ \underline{z}_n $ um Mittelpunkt ergibt $ \underline{y}_n $.  (
 %     \includegraphics[width=.45\columnwidth]{Figures/Smithdiagramm_Zusammenschaltungen.png}
 % \end{center}
 
-\columnbreak
+%\columnbreak
+
+\subsection{Maxima und Minima bei stehender Welle}
+Bei \textbf{verlustloser} Leitung:
+\begin{align*}
+	&U_{\texttt{max}} = |U_h| \cdot (1+|r(l)|) & U_{\texttt{min}} = |U_h| \cdot (1-|r(l)|) &\\
+	&I_{\texttt{max}} = \left | \frac{U_h}{Z_L} \right | \cdot (1+|r(l)|) & I_{\texttt{min}} = \left| \frac{U_h}{Z_L} \right | \cdot (1-|r(l)|) &
+\end{align*}
+Für Spannungen: Abstand von der Last $ z $ 
+\begin{align*}
+	 &z_{\texttt{min}} = \frac{\lambda}{4\pi}(\theta_{rad}+(2n+1)\pi)&
+	 z_{\texttt{max}} = \frac{\lambda}{4\pi} \cdot (\theta_{rad}+2n\pi)&\\
+	 &\text{\textbf{Minima} alle}\: \frac{\lambda}{2} &
+	 \text{\textbf{Maxima} alle}\: \frac{\lambda}{4} &
+\end{align*}
 
 \subsection[Von Last zu Quelle]{Lastseite $\rightarrow$ Quelle}
 \begin{enumerate}
