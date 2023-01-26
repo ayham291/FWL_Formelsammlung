@@ -95,15 +95,18 @@ Stromverteilung auf linearen Antennen \textbf{nicht} konstant:
 \begin{align*}
     \vec{\underline{H}}      & = j\frac{I_0}{2\pi R}\cdot e^{-j\beta r}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\varphi         \\
     \vec{\underline{E}}      & = H\cdot Z_{F0}\cdot\vec{e}_\vartheta                          \\
-    I_0          & = \sqrt{\frac{2\cdot P_{s}}{R_{s}}} \qquad R_{s} \rightarrow \text{siehe Tabelle!}                                
+    I_0          & = \sqrt{\frac{2\cdot P_{s}}{R_{s}}} \qquad R_{s} \rightarrow \text{siehe Antennentabelle Kap. \ref{sec:Antennentabelle}}                                
 \end{align*}
-\textbf{Halbwellen}dipol: $ l=\frac{\lambda}{2} \qquad \underline{Z}_{s}=(73,13+j42,54)\Omega$\\
-
+\textbf{Halbwellen}dipol: $ l=\frac{\lambda}{2} \qquad \underline{Z}_{s}=(\overbrace{73,13}^{R_s}+j\overbrace{42,54}^{X_s})\Omega$\\
 \textbf{Ganzwellen}dipol: $ l=\lambda \qquad \underline{Z}_{s}=(199,09+j125,41)\Omega$
 
 \subsubsection{Eingangs-/Fußpunktimpedanz}
+Bei leerlaufender Leitung entstehen in Längsrichtung\\ stehende Wellen. Um max. Wirkleistung zu übertragen, muss die Eingangs-/Fußpunktimpedanz $ Z_A $ \textbf{reell} bzw. die Leitung in Resonanz sein.	
+\begin{equation*}
+	P_{max} \rightarrow n \cdot \frac{\lambda}{4}
+\end{equation*}
 \begin{align*}
-	\underline{Z}_A=\underline{Z}_s\frac{|I_0|^2}{|I_0(z'=0)|^2} = \frac{\underline{Z}_s}{\sin^2\left[ \beta \frac{l}{2} \right] }
+	\underline{Z}_A&=\underline{Z}_s\frac{|I_0|^2}{|I_0(z'=0)|^2} = \frac{\underline{Z}_s}{\sin^2\left[ \beta \frac{l}{2} \right] }
 \end{align*}
 
 Strom am Fußpunkt:
@@ -114,26 +117,28 @@ komplexe Strahlungsleistung:
 \begin{align*}
 	P_s +jQ_s = \underline{Z}_s\cdot \frac{|I_0|^2}{2} = \underline{Z}_A \cdot \frac{|I_0(z'=0)|^2}{2}
 \end{align*}
-
-\subsubsection{Strahlleistungsdichte}
+\subsubsection{Strahlungsdichte}
 \begin{align*}
-    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\vartheta}\right)^2\cdot\vec{e}_R                               \\
-    S_{av} & = S_{max} \cdot D(\vartheta, \varphi) = S_{max} \cdot C^2(\vartheta, \varphi)
+    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 r^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\vartheta}\right)^2\cdot\vec{e}_r                               \\
+    S_{av} & = S_{max} \cdot D_{max} = S_{max} \cdot D_{max} \cdot C^2(\vartheta, \varphi)
 \end{align*}
-\subsubsection{Strahlungsleistung}
+\subsubsection{abgestrahlte Wirkleistung}
 \begin{align*}
-    P_{rad}          & = \frac{Z_{F0}I_0^2}{4\pi}\int^{\theta=\pi}_{\theta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\theta}\cdot\vec{e}_\theta \\
-                 & = \int_A S_{AV}\cdot d\vec{a}                                                                                                                                                              \\
-                 & = \int^{2\pi}_{\Phi = 0}\int^{\pi}_{\Theta = 0} S_{AV} R^2 \sin\Theta \cdot d\Theta \cdot d\Phi
+                P_{s} & = \int_A S_{av}\cdot d\vec{a}                                                                                                                                                              \\
+                 & = \int^{2\pi}_{\varphi = 0}\int^{\pi}_{\vartheta = 0} S_{av}\cdot r^2 \sin\vartheta \, d\vartheta \, d\varphi\\
+ P_{s}          & = \frac{Z_{F}I_0^2}{4\pi}\cdot\int^{\pi}_{\vartheta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\vartheta}d\vartheta\\
+ &= \frac{Z_{F}I_0^2}{4\pi}\cdot x
 \end{align*}
-
+Numerische Lösung des Integrals ergibt Faktor $ x $:\\
+bei \textbf{Halbwellen}dipol: $ x=1,2188 $\\
+bei \textbf{Ganzwellen}dipol: $ x=3,3181$
 \subsection{Antennenkenngrößen}
 
 \input{Figures/Antennen_Antennenkenngroessen_circuit.tex}
 
 \subsubsection{Abgestrahlte Leistung}
 \begin{align*}
-    P_s = P_{rad} & = \frac{1}{2}\cdot I_A^2 \cdot R_S
+    P_s = P_{rad} & = \frac{1}{2}\cdot I_A^2 \cdot R_s
 \end{align*}
 \subsubsection{Verlustleistung}
 \begin{align*}
@@ -141,7 +146,7 @@ komplexe Strahlungsleistung:
 \end{align*}
 \subsubsection{Wirkungsgrad}
 \begin{align*}
-    \eta & = \frac{P_S}{P_S + P_V} = \frac{R_S}{R_S + R_V}
+    \eta & = \frac{P_s}{P_s + P_V} = \frac{R_s}{R_s + R_V}
 \end{align*}
 
 \subsubsection{Richtcharakteristik}
@@ -156,14 +161,15 @@ $C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 \subsubsection{Richtfunktion/-faktor}
 %In $[\si{dB}]$ angeben!
 \begin{align*}
-    D(\vartheta, \varphi) & = \frac{S(\vartheta, \varphi)}{S_{i}} = C^\mathbf{2}_i(\vartheta, \varphi) = D \cdot C^{2}(\vartheta, \varphi) &\\
-    D & = \max \{D(\vartheta, \varphi)\} = \frac{S_{\max}}{S_{i}}&
+    D(\vartheta, \varphi) & = \frac{S(\vartheta, \varphi)}{S_{i}} = C^\mathbf{2}_i(\vartheta, \varphi) = D \cdot C^\mathbf{2}(\vartheta, \varphi) &\\
+    D_{max} & = \max \{D(\vartheta, \varphi)\} = \frac{S_{\max}}{S_{i}}&
 \end{align*}
+\vspace{-0.5cm}
 \begin{align*}
-	&\text{Halbwellendipol} &D(\vartheta, \varphi) &= 
-	\left(\frac{\cos\left(\frac{\pi}{2}\cos\vartheta\right)}{\sin\vartheta}\right)^\mathbf{2}& = C^2(\vartheta, \varphi)\\
-	&\text{Ganzwellendipol} &D(\vartheta, \varphi) &= 
-	\left(\frac{\cos\left(\pi\cos\vartheta\right)+1}{\sin\vartheta}\right)^\mathbf{2}& =C^2(\vartheta, \varphi)
+	&\text{\textbf{Halbwellen}dipol}\quad l=\frac{\lambda}{2} &D(\vartheta, \varphi) &= 1,64 \cdot  
+	\left(\frac{\cos\left(\frac{\pi}{2}\cos\vartheta\right)}{\sin\vartheta}\right)^\mathbf{2}&\\
+	&\text{\textbf{Ganzwellen}dipol}\quad l=\lambda &D(\vartheta, \varphi) &= 2,41 \cdot
+	\left(\frac{\cos\left(\pi\cos\vartheta\right)+1}{2\sin\vartheta}\right)^\mathbf{2}&
 \end{align*}
 
 \subsubsection{Gewinn/Gain}
@@ -175,41 +181,17 @@ Verlustlose Antenne, wenn $ \eta = 1 $
 
 \subsubsection{Wirksame Antennenfläche}
 \begin{align*}
-	P_e &= \frac{1}{2}\cdot R_L \cdot I^2 = \frac{U_0^2}{8P_{rad}} & S_s &= \frac{1}{2} \, E \, H = \frac{1}{2}\, H^2 \, Z_{F0} = \frac{1}{2} \, \frac{E_0^2}{Z_{F0}}  \\
-	A_\texttt{eff} & = \frac{P_e}{S_s} = \frac{U_0^2}{8P_{rad}}\frac{2Z_F}{E_0^2} &
+	P_e &= \frac{1}{2}\cdot R_L \cdot I^2 = \frac{U_0^2}{8P_{s}} & S_s &= \frac{1}{2}\, H_0^2 \, Z_{F0} = \frac{1}{2} \, \frac{E_0^2}{Z_{F0}}  \\
+	A_\texttt{eff} & = \frac{P_e}{S_s} = \frac{U_0^2}{8P_{s}}\frac{2Z_F}{E_0^2} &
     A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2&
 \end{align*}
 Beim Hertzschen Dipol:
 \begin{align*}
-	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot\frac{3}{2}\sin\theta &
+	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot\frac{3}{2}\sin^2\vartheta &
 	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2 &
 \end{align*}
-
-\subsection{Bezugsantennen}
-\[
-    \boxed{g = 10 \cdot log(G) \si{dB}}
-\]
-
-mit $P_0$ : Eingangsleistung der Antenne
-
-\begin{description}
-    \item \textbf{\underline{G$\rightarrow$Bezugsantenne:}}
-
-          Elementardipol  zu Kugelstrahler \[D = 1,50 \rightarrow g = 1,76\si{dBi}\]
-          Halbwellendipol zu Kugelstrahler \[D = 1,64 \rightarrow g = 2,15\si{dBi}\]
-
-    \item \textbf{\underline{EIRP}: Eqivalent \underline{Isoropic} Radiated Power}
-          \[
-              \text{EIRP} = P_0 \cdot G_i [\si{dBi}]
-          \]
-
-    \item \textbf{\underline{ERP}: Eqivalent Radiated Power (verlustloser Halbwellendipol)}
-          \[
-              \text{ERP} = P_0 \cdot G_d [\si{dBd}]
-          \]
-\end{description}
-
 \subsection{Senden und Empfangen}
+Reziprozität: Sende- und Empfangscharakteristik sind identisch!
 \input{Figures/Antennen_Empfangsersatzschaltbild_circuit.tex}
 
 \begin{description}
@@ -218,21 +200,46 @@ mit $P_0$ : Eingangsleistung der Antenne
 \end{description}
 
 \begin{align*}
-    \frac{P_{RX}}{P_{TX}}          & = A_{\texttt{eff},RX}\cdot A_{\texttt{eff},TX}\cdot\frac{1}{\lambda^2r^2}                          \\
+    \frac{P_{e}}{P_{s}}          & = A_{\texttt{eff},RX}\cdot A_{\texttt{eff},TX}\cdot\frac{1}{\lambda^2r^2}                          \\
                                    & = D_{i,RX}\cdot\eta_{RX}\cdot D_{i,TX}\cdot\eta_{TX}\cdot\left(\frac{\lambda}{4\pi r}\right)^2     \\
     \Aboxed{A_\texttt{eff}(\theta) & = G_{RX}\cdot\frac{\lambda^2}{4\pi}\overbrace{\cdot\frac{3}{2}\cdot\sin^2\theta}^{{D_{i,\theta}}}} \\
     P_{RX}                         & = S_{RX}\cdot A_\texttt{eff}                                                                       \\
                                    & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
 \end{align*}
 
-\subsubsection{Freiraumdämpfung/Freiraumdämpfungsmaß}
+\subsubsection{Freiraumdämpfung}
+d: Abstand zur Antenne
 \begin{align*}
-    F = \dfrac{P_{TX}}{P_{RX}} \cdot \left(\dfrac{4 \pi d}{\lambda}\right)^2                         & \qquad [1]       \\
-    a_{0} = 20 \lg \left(\frac{4 \pi d}{\lambda}\right) =20 \lg \left(\frac{4 \pi d f}{c_{0}}\right) & \qquad [\si{dB}]
+    F = \dfrac{P_{s}}{P_{e}} \cdot \left(\dfrac{4 \pi d}{\lambda}\right)^2                         & \qquad [1]       \\
+    a_{0} = 20 \log \left(\frac{4 \pi d}{\lambda}\right) =20 \log \left(\frac{4 \pi d f}{c_{0}}\right) & \qquad [\si{dB}]
 \end{align*}
-
+Freiraumdämpfung wird durch räumliche Verteilung der Strahlung verursacht, \textbf{nicht} durch Wirkverluste des Ausbreitungsmediums.
 \subsubsection{Leistungspegel/Freiraumpegel}
 \begin{align*}
     L      & = 10 \lg \left(\frac{P}{1 \si{mW}}\right) \qquad [\si{dBm}] \\
-    L_{RX} & = L_{TX}+g_{TX}+g_{RX}-a_{0} \qquad [\si{dB}]
+    L_{e} & = L_{s}+g_{s}+g_{s}-a_{0} \qquad [\si{dB}]
 \end{align*}
+
+\subsection{Bezugsantennen}
+\[
+\boxed{g = 10 \cdot log(G) \si{dB}}
+\]
+
+mit $P_0$ : Eingangsleistung der Antenne
+
+\begin{description}
+	\item \textbf{\underline{G$\rightarrow$Bezugsantenne:}}
+	
+	Elementardipol  zu Kugelstrahler \[D = 1,50 \rightarrow g = 1,76\si{dBi}\]
+	Halbwellendipol zu Kugelstrahler \[D = 1,64 \rightarrow g = 2,15\si{dBi}\]
+	
+	\item \textbf{\underline{EIRP}: Eqivalent \underline{Isoropic} Radiated Power}
+	\[
+	\text{EIRP} = P_0 \cdot G_i [\si{dBi}]
+	\]
+	
+	\item \textbf{\underline{ERP}: Eqivalent Radiated Power (verlustloser Halbwellendipol)}
+	\[
+	\text{ERP} = P_0 \cdot G_d [\si{dBd}]
+	\]
+\end{description} 
