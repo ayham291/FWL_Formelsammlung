@@ -1,5 +1,5 @@
 \section{Antennen}
-\subsection{Herz'scher Dipol}
+\subsection{Herz'scher Dipol (HDp)}
 \boxed{\vec{p} = Q\cdot\vec{d}}
 \subsubsection{Allgemein}
 
@@ -31,7 +31,7 @@ mit $\eta = Z_{F0}$
     E & \approx  j\frac{\beta Z_F I_0 \Delta l'}{4\pi R}\cdot e^{-j\beta R}\cdot\sin\theta\cdot \vec{e}_\theta
 \end{empheq}
 
-\subsubsection{Abgestrahlte Leistung im Fernfeld}
+\subsubsection{Abgestrahlte Leistung im Fernfeld HDp}
 \begin{align*}
     P_\texttt{rad} & = \frac{Z_{F0} {I_0}^2 \beta^2 (\Delta l')^2}{12\pi}                             \\
                    & = \frac{I_0^2 Z_F\pi}{3}\cdot \dfrac{\Delta l'^2}{\lambda^2}                     \\
@@ -39,12 +39,12 @@ mit $\eta = Z_{F0}$
     S_{av}         & = \frac{Z_FI_0^2\beta^2(\Delta l')^2}{32\pi^2R^2}\cdot\sin^2\theta\cdot\vec{e}_R \\
                    & = \frac{1}{2}\Re\left\{\vec{E}\times\vec{H}^*\right\}
 \end{align*}
-\subsubsection{Strahlungswiderstand}
+\subsubsection{Strahlungswiderstand HDp}
 \begin{align*}
     R_{S} & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2
     = 80\pi^2\Omega\left(\frac{\Delta l'}{\lambda}\right)^2
 \end{align*}
-\subsubsection{Verlustwiderstand}
+\subsubsection{Verlustwiderstand HDp}
 \begin{align*}
     R_{v} & = \frac{l}{\sigma\cdot A_\delta}
 \end{align*}
@@ -84,22 +84,45 @@ mit $\eta = Z_{F0}$
     E & \approx -\frac{jm\omega\mu}{4\pi R^2}\sin\theta\cdot\vec{e}\phi \\
     H & \approx \frac{m}{4\pi R^3}(2\cos\theta\cdot\vec{e}_R+\sin\theta\cdot\vec{e}_\theta)
 \end{empheq}
-
+\newpage
 \subsection{Lineare Antenne}
+Stromverteilung auf linearen Antennen \textbf{nicht} konstant:
 \begin{align*}
     I(z') & = I_0\cdot\sin\left[\beta\left(\frac{L}{2}-|z'|\right)\right]
 \end{align*}
 
-\subsubsection{Dipolantenne}
+\subsubsection{Dipolantenne allgemein}
 \begin{align*}
-    \vec{H}      & = j\cdot\frac{I_0}{2\pi R}\cdot e^{-j\beta R}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\phi         \\
-    \vec{E}      & = H\cdot Z_F\cdot\vec{e}_\theta                                                                                                                                                            \\
-    I_0          & = \sqrt{\frac{2\cdot P_{Send}}{R_S}}                                                                                                                                                       \\
-                 & \text{Die mittlere Strahlungsleistungsdichte}                                                                                                                                              \\
-    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\right)^2\cdot\vec{e}_R                               \\
-    \vec{S}_{av} & = S_{max} \cdot D(\vartheta, \varphi) = S_{max} \cdot C(\vartheta, \varphi)^2 
-                 & \text{Die gesamte Strahlungsleistung}                                                                                                                                                      \\
-    P_S          & = \frac{Z_{F0}I_0^2}{4\pi}\int^{\theta=\pi}_{\theta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\theta}\cdot\vec{e}_\theta \\
+    \vec{\underline{H}}      & = j\frac{I_0}{2\pi R}\cdot e^{-j\beta r}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\varphi         \\
+    \vec{\underline{E}}      & = H\cdot Z_{F0}\cdot\vec{e}_\vartheta                          \\
+    I_0          & = \sqrt{\frac{2\cdot P_{s}}{R_{s}}} \qquad R_{s} \rightarrow \text{siehe Tabelle!}                                
+\end{align*}
+\textbf{Halbwellen}dipol: $ l=\frac{\lambda}{2} \qquad \underline{Z}_{s}=(73,13+j42,54)\Omega$\\
+
+\textbf{Ganzwellen}dipol: $ l=\lambda \qquad \underline{Z}_{s}=(199,09+j125,41)\Omega$
+
+\subsubsection{Eingangs-/Fußpunktimpedanz}
+\begin{align*}
+	\underline{Z}_A=\underline{Z}_s\frac{|I_0|^2}{|I_0(z'=0)|^2} = \frac{\underline{Z}_s}{\sin^2\left[ \beta \frac{l}{2} \right] }
+\end{align*}
+
+Strom am Fußpunkt:
+\begin{align*}
+	I(z'=0) & = I_0\cdot\sin\left[\beta\left(\frac{L}{2}\right)\right]
+\end{align*}
+komplexe Strahlungsleistung:
+\begin{align*}
+	P_s +jQ_s = \underline{Z}_s\cdot \frac{|I_0|^2}{2} = \underline{Z}_A \cdot \frac{|I_0(z'=0)|^2}{2}
+\end{align*}
+
+\subsubsection{Strahlleistungsdichte}
+\begin{align*}
+    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 R^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\vartheta}\right)^2\cdot\vec{e}_R                               \\
+    S_{av} & = S_{max} \cdot D(\vartheta, \varphi) = S_{max} \cdot C^2(\vartheta, \varphi)
+\end{align*}
+\subsubsection{Strahlungsleistung}
+\begin{align*}
+    P_{rad}          & = \frac{Z_{F0}I_0^2}{4\pi}\int^{\theta=\pi}_{\theta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\theta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\theta}\cdot\vec{e}_\theta \\
                  & = \int_A S_{AV}\cdot d\vec{a}                                                                                                                                                              \\
                  & = \int^{2\pi}_{\Phi = 0}\int^{\pi}_{\Theta = 0} S_{AV} R^2 \sin\Theta \cdot d\Theta \cdot d\Phi
 \end{align*}
@@ -110,14 +133,12 @@ mit $\eta = Z_{F0}$
 
 \subsubsection{Abgestrahlte Leistung}
 \begin{align*}
-    P_S & = \frac{1}{2}\cdot I_A^2 \cdot R_S
+    P_S = P_{rad} & = \frac{1}{2}\cdot I_A^2 \cdot R_S
 \end{align*}
-
 \subsubsection{Verlustleistung}
 \begin{align*}
     P_V & = \frac{1}{2}\cdot I_A^2\cdot R_V
 \end{align*}
-
 \subsubsection{Wirkungsgrad}
 \begin{align*}
     \eta & = \frac{P_S}{P_S + P_V} = \frac{R_S}{R_S + R_V}
@@ -126,26 +147,41 @@ mit $\eta = Z_{F0}$
 \subsubsection{Richtcharakteristik}
 $C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 \begin{align*}
+ 	C_{i}(\vartheta, \varphi) & = \frac{E(\vartheta, \varphi)}{E_{i}}=\frac{H(\vartheta, \varphi)}{H_{i}}                                               & C_{i}>1\\
     C(\vartheta, \varphi)     & = \frac{E(\vartheta, \varphi)}{E_{\max}}=\frac{H(\vartheta, \varphi)}{H_{\max}} = \frac{U(\varphi,\vartheta)}{U_{\max}} & 0 \leq C(\vartheta, \varphi) \leq 1 \\
-    C_{i}(\vartheta, \varphi) & = \frac{E(\vartheta, \varphi)}{E_{i}}=\frac{H(\vartheta, \varphi)}{H_{i}}                                               & C_{i}>1
+    C(\vartheta, \varphi) &= 
+    \left|\frac{\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\vartheta}\right|
 \end{align*}
 
-\subsubsection{Richtfunktion/Richtfaktor}
-In $[\si{dB}]$ angeben!
+\subsubsection{Richtfunktion/-faktor}
+%In $[\si{dB}]$ angeben!
 \begin{align*}
-    D(\vartheta, \varphi) & = \frac{S(\vartheta, \varphi)}{S_{i}}                               \\
-    D(\vartheta, \varphi) & = C_{i}^{2}(\vartheta, \varphi) = D \cdot C^{2}(\vartheta, \varphi) \\
-    D                     & = \max \{D(\vartheta, \varphi)\} = \frac{S_{\max}}{S_{i}}
+    D(\vartheta, \varphi) & = \frac{S(\vartheta, \varphi)}{S_{i}} = C^\mathbf{2}_i(\vartheta, \varphi) = D \cdot C^{2}(\vartheta, \varphi) &\\
+    D & = \max \{D(\vartheta, \varphi)\} = \frac{S_{\max}}{S_{i}}&
+\end{align*}
+\begin{align*}
+	&\text{Halbwellendipol} &D(\vartheta, \varphi) &= 
+	\left(\frac{\cos\left(\frac{\pi}{2}\cos\vartheta\right)}{\sin\vartheta}\right)^\mathbf{2}& = C^2(\vartheta, \varphi)\\
+	&\text{Ganzwellendipol} &D(\vartheta, \varphi) &= 
+	\left(\frac{\cos\left(\pi\cos\vartheta\right)+1}{\sin\vartheta}\right)^\mathbf{2}& =C^2(\vartheta, \varphi)
 \end{align*}
 
 \subsubsection{Gewinn}
 \begin{align*}
-    G & = \eta \cdot D \qquad [\si{dB}] \\
+    G & = \eta \cdot D \rightarrow \text{bei} \eta=1 \qquad G=D
+%    \qquad [\si{dB}]
 \end{align*}
 
 \subsubsection{Wirksame Antennenfläche}
 \begin{align*}
-    A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2
+	P_e &= \frac{1}{2}\cdot R_L \cdot I^2 = \frac{U_0^2}{8P_{rad}} & S_s &= \frac{1}{2} \, E \, H = \frac{1}{2}\, H^2 \, Z_{F0} = \frac{1}{2} \, \frac{E_0^2}{Z_{F0}}  \\
+	A_\texttt{eff} & = \frac{P_e}{S_s} = \frac{U_0^2}{8P_{rad}}\frac{2Z_F}{E_0^2} &
+    A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2&
+\end{align*}
+Beim Hertzschen Dipol:
+\begin{align*}
+	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot\frac{3}{2}\sin\theta &
+	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2 &
 \end{align*}
 
 \subsection{Bezugsantennen}

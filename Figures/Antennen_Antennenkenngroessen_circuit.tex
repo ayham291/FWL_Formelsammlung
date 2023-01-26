@@ -4,7 +4,7 @@
             \begin{circuitikz}
                 \draw(0,3.5) node[below]{$l$}
                 to[R=$R_V$](3,3.5)
-                to[R=$R_S$](3,1.5)
+                to[R=$R_{rad}$](3,1.5)
                 to[L=$jX_A$](3,0)
                 to[short](0,0) node[above]{$l'$}
                 to[open, o-o](0,3.5);
@@ -12,7 +12,7 @@
             \end{circuitikz}
         }
     \end{minipage}
-    \begin{minipage}[b]{0.25\columnwidth}
+    \begin{minipage}[b]{0.18\columnwidth}
         \begin{tikzpicture}
             \node[]{};
         \end{tikzpicture}
