@@ -9,7 +9,7 @@
         & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta
     \end{empheq}}%
 
-\subsubsection[Nahfeld]{Nahfeld(Fresnel-Zone):\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$}
+\subsubsection[Nahfeld]{Nahfeld (Fresnel-Zone):\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$}
 
 Überwiegend \textbf{Blindleistungsfeld}, da $E$ zu $H$ $90^\circ$
 phasenverschoben
@@ -19,7 +19,7 @@ phasenverschoben
     & +       \frac{I_0 \Delta l'}{4\pi j \omega\varepsilon R^3}\sin\theta\cdot\vec{e}_\theta
 \end{empheq}
 
-\subsubsection[Fernfeld]{Fernfeld(Fraunhofer-Zone):\\ $\frac{\lambda}{2\pi R}\ll 1$ oder $\beta R\gg 1$}
+\subsubsection[Fernfeld]{Fernfeld (Fraunhofer-Zone):\\ $\frac{\lambda}{2\pi R}\ll 1$ oder $\beta R\gg 1$}
 
 Überwiegend \textbf{Wirkleistungsfeld}, $\vec{S}$ nach außen somit Kugelwelle
 
@@ -33,7 +33,7 @@ mit $\eta = Z_{F0}$
 
 \subsubsection{Abgestrahlte Leistung im Fernfeld HDp}
 \begin{align*}
-    P_\texttt{rad} & = \frac{Z_{F0} {I_0}^2 \beta^2 (\Delta l')^2}{12\pi}                             \\
+    P_\texttt{rad} = P_s & = \frac{Z_{F0} {I_0}^2 \beta^2 (\Delta l')^2}{12\pi}                             \\
                    & = \frac{I_0^2 Z_F\pi}{3}\cdot \dfrac{\Delta l'^2}{\lambda^2}                     \\
                    & = 40\pi^2\Omega\cdot\left(\frac{I_0\Delta l'}{\lambda}\right)^2                  \\
     S_{av}         & = \frac{Z_FI_0^2\beta^2(\Delta l')^2}{32\pi^2R^2}\cdot\sin^2\theta\cdot\vec{e}_R \\
@@ -41,7 +41,7 @@ mit $\eta = Z_{F0}$
 \end{align*}
 \subsubsection{Strahlungswiderstand HDp}
 \begin{align*}
-    R_{S} & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2
+    R_s & = \frac{2}{3}\pi Z_F\left(\frac{\Delta l'}{\lambda}\right)^2
     = 80\pi^2\Omega\left(\frac{\Delta l'}{\lambda}\right)^2
 \end{align*}
 \subsubsection{Verlustwiderstand HDp}
@@ -81,8 +81,8 @@ mit $\eta = Z_{F0}$
 
 \subsubsection{Nahfeld}
 \begin{empheq}[box=\fbox]{align*}
-    E & \approx -\frac{jm\omega\mu}{4\pi R^2}\sin\theta\cdot\vec{e}\phi \\
-    H & \approx \frac{m}{4\pi R^3}(2\cos\theta\cdot\vec{e}_R+\sin\theta\cdot\vec{e}_\theta)
+    E & \approx -\frac{jm\omega\mu}{4\pi R^2}\sin\vartheta\cdot\vec{e}\varphi \\
+    H & \approx \frac{m}{4\pi R^3}(2\cos\theta\cdot\vec{e}_R+\sin\vartheta\cdot\vec{e}_\vartheta)
 \end{empheq}
 \newpage
 \subsection{Lineare Antenne}
@@ -133,7 +133,7 @@ komplexe Strahlungsleistung:
 
 \subsubsection{Abgestrahlte Leistung}
 \begin{align*}
-    P_S = P_{rad} & = \frac{1}{2}\cdot I_A^2 \cdot R_S
+    P_s = P_{rad} & = \frac{1}{2}\cdot I_A^2 \cdot R_S
 \end{align*}
 \subsubsection{Verlustleistung}
 \begin{align*}
@@ -148,7 +148,7 @@ komplexe Strahlungsleistung:
 $C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 \begin{align*}
  	C_{i}(\vartheta, \varphi) & = \frac{E(\vartheta, \varphi)}{E_{i}}=\frac{H(\vartheta, \varphi)}{H_{i}}                                               & C_{i}>1\\
-    C(\vartheta, \varphi)     & = \frac{E(\vartheta, \varphi)}{E_{\max}}=\frac{H(\vartheta, \varphi)}{H_{\max}} = \frac{U(\varphi,\vartheta)}{U_{\max}} & 0 \leq C(\vartheta, \varphi) \leq 1 \\
+    C(\vartheta, \varphi)     & = \frac{E(\vartheta, \varphi)}{E_{\max}}=\frac{H(\vartheta, \varphi)}{H_{\max}} = \frac{U(\vartheta,\varphi)}{U_{\max}} & 0 \leq C(\vartheta, \varphi) \leq 1 \\
     C(\vartheta, \varphi) &= 
     \left|\frac{\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\vartheta}\right|
 \end{align*}
@@ -166,9 +166,10 @@ $C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 	\left(\frac{\cos\left(\pi\cos\vartheta\right)+1}{\sin\vartheta}\right)^\mathbf{2}& =C^2(\vartheta, \varphi)
 \end{align*}
 
-\subsubsection{Gewinn}
+\subsubsection{Gewinn/Gain}
+Verlustlose Antenne, wenn $ \eta = 1 $
 \begin{align*}
-    G & = \eta \cdot D \rightarrow \text{bei} \eta=1 \qquad G=D
+    G & = \eta \cdot D \qquad \text{bei}\;  \eta=1 \rightarrow  G=D
 %    \qquad [\si{dB}]
 \end{align*}
 
