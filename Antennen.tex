@@ -120,7 +120,7 @@ komplexe Strahlungsleistung:
 \subsubsection{Strahlungsdichte}
 \begin{align*}
     \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 r^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\vartheta}\right)^2\cdot\vec{e}_r                               \\
-    S_{av} & = S_{max} \cdot D_{max} = S_{max} \cdot D_{max} \cdot C^2(\vartheta, \varphi)
+    S_{av} & = S_{iso} \cdot D_{max} = S_{iso} \cdot D_{max} \cdot C^2(\vartheta, \varphi)
 \end{align*}
 \subsubsection{abgestrahlte Wirkleistung}
 \begin{align*}
@@ -179,34 +179,47 @@ Verlustlose Antenne, wenn $ \eta = 1 $
 %    \qquad [\si{dB}]
 \end{align*}
 
-\subsubsection{Wirksame Antennenfläche}
+
+\subsection{Senden und Empfangen}
+Bei Anpassung: $R_e = R_s \rightarrow$ max. Wirkleistung wird übertragen!
+\input{Figures/Antennen_Empfangsersatzschaltbild_circuit.tex}
+
+$ R_s $: Strahlungswiderstand \quad $ s $: Sender \qquad $ e $: Empfänger\\
+$ r $: \textbf{Abstand} von der Antenne
+%\begin{description}
+%    \item Senden = transmit = TX
+%    \item Empfangen = receive = RX
+%\end{description}
 \begin{align*}
-	P_e &= \frac{1}{2}\cdot R_L \cdot I^2 = \frac{U_0^2}{8P_{s}} & S_s &= \frac{1}{2}\, H_0^2 \, Z_{F0} = \frac{1}{2} \, \frac{E_0^2}{Z_{F0}}  \\
-	A_\texttt{eff} & = \frac{P_e}{S_s} = \frac{U_0^2}{8P_{s}}\frac{2Z_F}{E_0^2} &
-    A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2&
+	P_e &= \frac{1}{2}\cdot R_s \cdot I^2 = \frac{U_0^2}{8R_{s}} \qquad S_s = \frac{1}{2}\, H_0^2 \, Z_{F0} = \frac{1}{2} \, \frac{E_0^2}{Z_{F0}}  \\
+	&= \frac{E_0^2\cdot l^2_{\mathtt{eff}}}{8R_{s}}
+\end{align*}
+\subsubsection{Wirksame/Effektive Antennenfläche}
+\begin{align*}
+	A_\texttt{eff} & = \frac{P_e}{S_s} = \frac{U_0^2}{8R_{s}}\frac{2Z_{F0}}{E_0^2} &
+	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2&
 \end{align*}
 Beim Hertzschen Dipol:
 \begin{align*}
-	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot\frac{3}{2}\sin^2\vartheta &
-	A_\texttt{eff} & = \frac{\lambda^2}{4\pi}\cdot G = \dfrac{Z_{F0}}{4 R_S} \cdot l_\texttt{eff}^2 &
+	A_\texttt{eff} & =  \frac{\lambda^2}{4\pi}\cdot\frac{3}{2}\sin^2\vartheta &
 \end{align*}
-\subsection{Senden und Empfangen}
-Reziprozität: Sende- und Empfangscharakteristik sind identisch!
-\input{Figures/Antennen_Empfangsersatzschaltbild_circuit.tex}
-
-\begin{description}
-    \item Senden = transmit = TX
-    \item Empfangen = receive = RX
-\end{description}
-
+\subsubsection{Friis-Übertragungsgleichung}
 \begin{align*}
-    \frac{P_{e}}{P_{s}}          & = A_{\texttt{eff},RX}\cdot A_{\texttt{eff},TX}\cdot\frac{1}{\lambda^2r^2}                          \\
-                                   & = D_{i,RX}\cdot\eta_{RX}\cdot D_{i,TX}\cdot\eta_{TX}\cdot\left(\frac{\lambda}{4\pi r}\right)^2     \\
-    \Aboxed{A_\texttt{eff}(\theta) & = G_{RX}\cdot\frac{\lambda^2}{4\pi}\overbrace{\cdot\frac{3}{2}\cdot\sin^2\theta}^{{D_{i,\theta}}}} \\
-    P_{RX}                         & = S_{RX}\cdot A_\texttt{eff}                                                                       \\
-                                   & = P_{TX}\cdot G_{TX}\cdot G_{RX}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+	&S_{iso} = \frac{P_s}{4\pi r^2} & S_s = S_{iso} \cdot D_s\\
+	&A_{\mathtt{eff,n}} = \frac{\lambda^2}{4\pi}\cdot D_n(\vartheta, \varphi)\cdot \eta_n & A_{\mathtt{eff,n}}\Big|_{\mathtt{max}} = \frac{\lambda^2}{4\pi}\cdot G_n
 \end{align*}
-
+\begin{align*}
+	P_e & = S_s \cdot A_{\mathtt{eff,e}}\\
+	 &=  S_s\cdot \frac{\lambda^2}{4\pi}\cdot D_e(\vartheta, \varphi)\cdot \eta_e\\
+    \frac{P_{e}}{P_{s}}          & = A_{\texttt{eff},e}\cdot A_{\texttt{eff},s}\cdot\frac{1}{\lambda^2r^2}                          \\
+       & = D_e(\vartheta, \varphi)\cdot\eta_{e}\cdot D_s(\vartheta, \varphi)\cdot\eta_{s}\cdot\left(\frac{\lambda}{4\pi r}\right)^2\\
+       \frac{P_{e}}{P_{s}}\Big|_{\mathtt{max}} & = G_{s}\cdot G_{e}\cdot \left(\frac{\lambda}{4\pi r}\right)^2
+\end{align*}
+%\begin{align*}
+%    \Aboxed{A_\texttt{eff}(\theta) & = G_{RX}\cdot\frac{\lambda^2}{4\pi}\overbrace{\cdot\frac{3}{2}\cdot\sin^2\theta}^{{D_{i,\theta}}}} \\
+%    P_{RX}                         & = S_{RX}\cdot A_\texttt{eff}                                 \\                                   
+%\end{align*}
+Reziprozität: Sende- und Empfangscharakteristik sind identisch! 
 \subsubsection{Freiraumdämpfung}
 d: Abstand zur Antenne
 \begin{align*}
@@ -243,3 +256,6 @@ mit $P_0$ : Eingangsleistung der Antenne
 	\text{ERP} = P_0 \cdot G_d [\si{dBd}]
 	\]
 \end{description} 
+
+\subsection{Monopolantenne}
+Verhält sich wie ein Dipol, der nur in die obere Hälfte abstrahlt. 	Strahlungswiderstand halbiert sich und Richtfaktor verdoppelt sich gegenüber der Dipolantenne.
