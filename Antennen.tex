@@ -4,39 +4,47 @@
 \subsubsection{Allgemein}
 
 {\footnotesize\begin{empheq}[box=\fbox]{align*}
-        {\vec{H}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi                                 \\
-        {\vec{E}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                           \\
-        & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta
+        {\vec{H}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\vartheta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\varphi                                 \\
+        {\vec{E}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta R}\cdot\cos\vartheta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_r                           \\
+        & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\vartheta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\vartheta
     \end{empheq}}%
 
-\subsubsection[Nahfeld]{Nahfeld (Fresnel-Zone):\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$}
+Im Zeitbereich:
+
+{\footnotesize\begin{align*}
+E_r (t) &= \frac{Z_F I_0 l}{2\pi r^3 \beta}\cos \vartheta \left[ \sin (\omega t- \beta r) + \beta r \cos (\omega t - \beta r) \right]\\
+E_\vartheta (t) &= \frac{Z_F I_0 l}{4\pi r^3 \beta}\sin \vartheta \left[ \sin (\omega t- \beta r) + \beta r \cos (\omega t - \beta r) - (\beta r)^2 \sin(\omega t - \beta r) \right]\\
+H_\varphi (t) &= \frac{I_0 l}{4\pi r^2 }\sin \vartheta \left[ \cos (\omega t- \beta r) + \beta r \sin (\omega t - \beta r) \right]
+\end{align*}}
+
+\subsubsection[Nahfeld]{Nahfeld (Fresnel-Zone):\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$ oder $ r \ll \lambda $}
 
 Überwiegend \textbf{Blindleistungsfeld}, da $E$ zu $H$ $90^\circ$
-phasenverschoben
+phasenverschoben. Lösung entspricht dem quasistatischem Dipolfeld. $\rightarrow$ \textbf{keine} Wellenausbreitung!
 \begin{empheq}[box=\fbox]{align*}
-    \vec{H} & \approx \frac{I_0 \Delta l'}{4\pi R^2}\cdot\sin\theta\cdot\vec{e}_\phi                                            \\
-    \vec{E} & \approx \frac{I_0 \Delta l'}{2\pi j \omega\varepsilon R^3}\cos\theta\cdot\vec{e}_R\\
-    & +       \frac{I_0 \Delta l'}{4\pi j \omega\varepsilon R^3}\sin\theta\cdot\vec{e}_\theta
+    \vec{\underline{H}} & \approx \frac{I_0 \Delta l'}{4\pi r^2}\cdot\sin\vartheta\cdot\vec{e}_\varphi                                            \\
+    \vec{\underline{E}} & \approx \frac{I_0 \Delta l'}{2\pi j \omega\varepsilon r^3}\cos\vartheta\cdot\vec{e}_r
+    +       \frac{I_0 \Delta l'}{4\pi j \omega\varepsilon r^3}\sin\vartheta\cdot\vec{e}_\vartheta
 \end{empheq}
 
 \subsubsection[Fernfeld]{Fernfeld (Fraunhofer-Zone):\\ $\frac{\lambda}{2\pi R}\ll 1$ oder $\beta R\gg 1$}
 
-Überwiegend \textbf{Wirkleistungsfeld}, $\vec{S}$ nach außen somit Kugelwelle
+Überwiegend \textbf{Wirkleistungsfeld}, $\vec{S}$ in Richtung $\vec{e}_r$\\ $ \rightarrow $ Kugelwelle, $\vec{E}$ und $\vec{H}$ in Phase, fallen mit $ \frac{1}{r} $ ab.
 
 \vspace{1ex}
 mit $\eta = Z_{F0}$
 
 \begin{empheq}[box=\fbox] {align*}
-    H & \approx  j\frac{\beta I_0 \Delta l'}{4\pi R}\cdot e^{-j\beta R}\cdot\sin\theta\cdot\vec{e}_\phi                           \\
-    E & \approx  j\frac{\beta Z_F I_0 \Delta l'}{4\pi R}\cdot e^{-j\beta R}\cdot\sin\theta\cdot \vec{e}_\theta
+    \vec{H} & \approx  j\frac{\beta I_0 \Delta l'}{4\pi r}\cdot e^{-j\beta r}\cdot\sin\vartheta\cdot\vec{e}_\varphi                           \\
+    \vec{E} & \approx  j\frac{\beta Z_F I_0 \Delta l'}{4\pi r}\cdot e^{-j\beta r}\cdot\sin\vartheta\cdot \vec{e}_\vartheta
 \end{empheq}
 
 \subsubsection{Abgestrahlte Leistung im Fernfeld HDp}
 \begin{align*}
-    P_\texttt{rad} = P_s & = \frac{Z_{F0} {I_0}^2 \beta^2 (\Delta l')^2}{12\pi}                             \\
-                   & = \frac{I_0^2 Z_F\pi}{3}\cdot \dfrac{\Delta l'^2}{\lambda^2}                     \\
+    P_\texttt{rad} = P_s & = \frac{Z_{F0} {I_0}^2 \beta^2 (\Delta l')^2}{12\pi}
+                   = \frac{I_0^2 Z_F\pi}{3}\cdot \dfrac{\Delta l'^2}{\lambda^2}                     \\
                    & = 40\pi^2\Omega\cdot\left(\frac{I_0\Delta l'}{\lambda}\right)^2                  \\
-    S_{av}         & = \frac{Z_FI_0^2\beta^2(\Delta l')^2}{32\pi^2R^2}\cdot\sin^2\theta\cdot\vec{e}_R \\
+    \vec{S}_{av}         & = \frac{Z_FI_0^2\beta^2(\Delta l')^2}{32\pi^2r^2}\cdot\sin^2\vartheta\cdot\vec{e}_r \\
                    & = \frac{1}{2}\Re\left\{\vec{E}\times\vec{H}^*\right\}
 \end{align*}
 \subsubsection{Strahlungswiderstand HDp}
@@ -73,8 +81,8 @@ mit $\eta = Z_{F0}$
 \end{empheq}
 \subsubsection{Abgestrahlte Leistung im Fernfeld}
 \begin{align*}
-    P_\texttt{rad} & = \frac{Z_F\beta^4m^2}{12\pi}                                     \\
-                   & = \frac{m^2\mu\omega^4}{12\pi v_p^3}                              \\
+    P_\texttt{rad} = P_s & = \frac{Z_F\beta^4m^2}{12\pi}                                  
+                   = \frac{m^2\mu\omega^4}{12\pi v_p^3}                              \\
     S_{av}         & = \frac{Z_F\beta^4m^2}{32\pi^2R^2}\cdot\sin^2\theta\cdot\vec{e}_R \\
                    & = \frac{1}{2}\Re\left\{\vec{E}\times\vec{H}^*\right\}
 \end{align*}
