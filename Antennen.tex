@@ -56,22 +56,26 @@ phasenverschoben. Lösung entspricht dem quasistatischem Dipolfeld. $\rightarrow
     R_{v} & = \frac{l}{\sigma\cdot A_\delta}
 \end{align*}
 \subsection{Magnetischer Dipol}
-\boxed{\vec{m} = \vec{I}\pi\vec{a}^2\vec{e}_z}
+Dipolmoment: \boxed{\vec{m} = \vec{I}\pi\vec{a}^2\vec{e}_z}
 \boxed{m = I\cdot A}
 \begin{center}
     \input{Figures/Antennen_Magnetischer_Dipol.tex}
 \end{center}
 
-\begin{align*}
-    \vec{A}  & = \frac{\mu m}{4\pi R^2}(1+j\beta r) e^{-j\beta r}\sin\vartheta\cdot\vec{e}_\varphi \\
-    \Delta l & \rightarrow \beta\pi\ a^2
-\end{align*}
-
 {\footnotesize\begin{empheq}[box=\fbox]{align*}
-    {\vec{\underline{H}}}   & = -\frac{j\omega\mu\beta^2m}{2\pi Z_{F0}}e^{-j\beta r}\cdot\cos\vartheta\left(\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_r                             \\
-    & = -\frac{j\omega\mu\beta^2m}{4\pi Z_{F0}}e^{-j\beta r}\cdot\sin\vartheta\left(\frac{1}{(j\beta r)}+\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_\vartheta   \\
-    {\vec{\underline{E}}}   & =  \frac{j\omega\mu\beta^2m}{4\pi}e^{-j\beta r}\sin\vartheta\left(\frac{1}{j\beta r}+\frac{1}{(j\beta r)^2}\right)\vec{e}_\varphi
+		{\vec{\underline{H}}}   & = -\frac{j\omega\mu\beta^2m}{2\pi Z_{F0}}e^{-j\beta r}\cdot\cos\vartheta\left(\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_r                             \\
+		&	 -\frac{j\omega\mu\beta^2m}{4\pi Z_{F0}}e^{-j\beta r}\cdot\sin\vartheta\left(\frac{1}{(j\beta r)}+\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_\vartheta   \\
+		{\vec{\underline{E}}}   & =  \frac{j\omega\mu\beta^2m}{4\pi}e^{-j\beta r}\sin\vartheta\left(\frac{1}{j\beta r}+\frac{1}{(j\beta r)^2}\right)\vec{e}_\varphi
 \end{empheq}}%
+
+mag. Vektorpotenzial $ \vec{A} $:
+\begin{flalign*}
+    \vec{A}  & = \frac{\mu m}{4\pi r^2}(1+j\beta r) e^{-j\beta r}\sin\vartheta\cdot\vec{e}_\varphi
+\end{flalign*}
+$ P_{rad} $: elek. Dipol der Länge l $\widehat{=}$ mag. Dipol der Fläche A
+\begin{align*}
+	\Delta l & = \beta \cdot A_{\texttt{Kreis}} = \beta \cdot \pi\ a^2 & \frac{m}{v_p}=p&
+\end{align*}
 
 \subsubsection{Fernfeld}
 \begin{empheq}[box=\fbox]{align*}
@@ -82,14 +86,14 @@ phasenverschoben. Lösung entspricht dem quasistatischem Dipolfeld. $\rightarrow
 \begin{align*}
     P_\texttt{rad} = P_s & = \frac{Z_F\beta^4m^2}{12\pi}                                  
                    = \frac{m^2\mu\omega^4}{12\pi v_p^3}                              \\
-    S_{av}         & = \frac{Z_F\beta^4m^2}{32\pi^2r^r}\cdot\sin^2\theta\cdot\vec{e}_r \\
+    S_{av}         & = \frac{Z_F\beta^4m^2}{32\pi^2r^2}\cdot\sin^2\vartheta\cdot\vec{e}_r \\
                    & = \frac{1}{2}\Re\left\{\vec{E}\times\vec{H}^*\right\}
 \end{align*}
 
 \subsubsection{Nahfeld}
 \begin{empheq}[box=\fbox]{align*}
     E & \approx -\frac{jm\omega\mu}{4\pi r^2}\sin\vartheta\cdot\vec{e}\varphi \\
-    H & \approx \frac{m}{4\pi r^3}(2\cos\theta\cdot\vec{e}_r+\sin\vartheta\cdot\vec{e}_\vartheta)
+    H & \approx \frac{m}{4\pi r^3}(2\cos\vartheta\cdot\vec{e}_r+\sin\vartheta\cdot\vec{e}_\vartheta)
 \end{empheq}
 \newpage
 \subsection{Lineare Antenne}
