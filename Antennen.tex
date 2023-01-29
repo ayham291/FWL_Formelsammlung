@@ -1,25 +1,24 @@
 \section{Antennen}
 \subsection{Herz'scher Dipol (HDp)}
-\boxed{\vec{p} = Q\cdot\vec{d}}
+%\boxed{\vec{p} = Q\cdot\vec{d}}
 \subsubsection{Allgemein}
-
+$ r $: Antennen\textbf{abstand}
 {\footnotesize\begin{empheq}[box=\fbox]{align*}
-        {\vec{H}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\vartheta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\varphi                                 \\
-        {\vec{E}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta R}\cdot\cos\vartheta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_r                           \\
-        & = -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta R}\cdot\sin\vartheta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\vartheta
+        {\vec{\underline{H}}} & =-\frac{I_0\Delta l'\beta^2}{4\pi}e^{-j\beta r}\cdot\sin\vartheta\left(\frac{1}{j\beta r}+\frac{1}{(j\beta r)^2}\right)\vec{e}_\varphi                                 \\
+        {\vec{\underline{E}}} & = -\frac{Z_F I_0\Delta l'\beta^2}{2\pi}e^{-j\beta r}\cdot\cos\vartheta\left(\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_r                           \\
+        & -\frac{Z_F I_0\Delta l'\beta^2}{4\pi}e^{-j\beta r}\cdot\sin\vartheta\left(\frac{1}{(j\beta r)}+\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_\vartheta
     \end{empheq}}%
 
 Im Zeitbereich:
-
 {\footnotesize\begin{align*}
 E_r (t) &= \frac{Z_F I_0 l}{2\pi r^3 \beta}\cos \vartheta \left[ \sin (\omega t- \beta r) + \beta r \cos (\omega t - \beta r) \right]\\
 E_\vartheta (t) &= \frac{Z_F I_0 l}{4\pi r^3 \beta}\sin \vartheta \left[ \sin (\omega t- \beta r) + \beta r \cos (\omega t - \beta r) - (\beta r)^2 \sin(\omega t - \beta r) \right]\\
 H_\varphi (t) &= \frac{I_0 l}{4\pi r^2 }\sin \vartheta \left[ \cos (\omega t- \beta r) + \beta r \sin (\omega t - \beta r) \right]
 \end{align*}}
 
-\subsubsection[Nahfeld]{Nahfeld (Fresnel-Zone):\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$ oder $ r \ll \lambda $}
+\subsubsection[Nahfeld]{Nahfeld (Fresnel-Zone)\\ $\frac{\lambda}{2\pi R}\gg 1$ oder $\beta R \ll 1$ oder $ r \ll \lambda $}
 
-Überwiegend \textbf{Blindleistungsfeld}, da $E$ zu $H$ $90^\circ$
+Überwiegend \textbf{Blindleistungsfeld}, da $\vec{E}$ zu $\vec{H}$ $90^\circ$
 phasenverschoben. Lösung entspricht dem quasistatischem Dipolfeld. $\rightarrow$ \textbf{keine} Wellenausbreitung!
 \begin{empheq}[box=\fbox]{align*}
     \vec{\underline{H}} & \approx \frac{I_0 \Delta l'}{4\pi r^2}\cdot\sin\vartheta\cdot\vec{e}_\varphi                                            \\
@@ -27,16 +26,16 @@ phasenverschoben. Lösung entspricht dem quasistatischem Dipolfeld. $\rightarrow
     +       \frac{I_0 \Delta l'}{4\pi j \omega\varepsilon r^3}\sin\vartheta\cdot\vec{e}_\vartheta
 \end{empheq}
 
-\subsubsection[Fernfeld]{Fernfeld (Fraunhofer-Zone):\\ $\frac{\lambda}{2\pi R}\ll 1$ oder $\beta R\gg 1$}
+\subsubsection[Fernfeld]{Fernfeld (Fraunhofer-Zone)\\ $\frac{\lambda}{2\pi R}\ll 1$ oder $\beta R\gg 1$ oder $ r \gg \lambda $}
 
 Überwiegend \textbf{Wirkleistungsfeld}, $\vec{S}$ in Richtung $\vec{e}_r$\\ $ \rightarrow $ Kugelwelle, $\vec{E}$ und $\vec{H}$ in Phase, fallen mit $ \frac{1}{r} $ ab.
 
 \vspace{1ex}
-mit $\eta = Z_{F0}$
+%mit $\eta = Z_{F0}$
 
 \begin{empheq}[box=\fbox] {align*}
-    \vec{H} & \approx  j\frac{\beta I_0 \Delta l'}{4\pi r}\cdot e^{-j\beta r}\cdot\sin\vartheta\cdot\vec{e}_\varphi                           \\
-    \vec{E} & \approx  j\frac{\beta Z_F I_0 \Delta l'}{4\pi r}\cdot e^{-j\beta r}\cdot\sin\vartheta\cdot \vec{e}_\vartheta
+    \vec{\underline{H}} & \approx  j\frac{\beta I_0 \Delta l'}{4\pi r}\cdot e^{-j\beta r}\cdot\sin\vartheta\cdot\vec{e}_\varphi                           \\
+    \vec{\underline{E}} & \approx  j\frac{\beta Z_F I_0 \Delta l'}{4\pi r}\cdot e^{-j\beta r}\cdot\sin\vartheta\cdot \vec{e}_\vartheta
 \end{empheq}
 
 \subsubsection{Abgestrahlte Leistung im Fernfeld HDp}
@@ -64,44 +63,45 @@ mit $\eta = Z_{F0}$
 \end{center}
 
 \begin{align*}
-    \vec{A}  & = \frac{\mu m}{4\pi R^2}(1+j\beta R) e^{-j\beta R}\sin\theta\cdot\vec{e}_\phi \\
+    \vec{A}  & = \frac{\mu m}{4\pi R^2}(1+j\beta r) e^{-j\beta r}\sin\vartheta\cdot\vec{e}_\varphi \\
     \Delta l & \rightarrow \beta\pi\ a^2
 \end{align*}
 
 {\footnotesize\begin{empheq}[box=\fbox]{align*}
-    {\vec{H}}   & = -\frac{j\omega\mu\beta^2m}{2\pi Z_{F0}}e^{-j\beta R}\cdot\cos\theta\left(\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_R                             \\
-    & = -\frac{j\omega\mu\beta^2m}{4\pi Z_{F0}}e^{-j\beta R}\cdot\sin\theta\left(\frac{1}{(j\beta R)}+\frac{1}{(j\beta R)^2}+\frac{1}{(j\beta R)^3}\right)\vec{e}_\theta   \\
-    {\vec{E}}   & =  \frac{j\omega\mu\beta^2m}{4\pi}e^{-j\beta R}\sin\theta\left(\frac{1}{j\beta R}+\frac{1}{(j\beta R)^2}\right)\vec{e}_\phi
+    {\vec{\underline{H}}}   & = -\frac{j\omega\mu\beta^2m}{2\pi Z_{F0}}e^{-j\beta r}\cdot\cos\vartheta\left(\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_r                             \\
+    & = -\frac{j\omega\mu\beta^2m}{4\pi Z_{F0}}e^{-j\beta r}\cdot\sin\vartheta\left(\frac{1}{(j\beta r)}+\frac{1}{(j\beta r)^2}+\frac{1}{(j\beta r)^3}\right)\vec{e}_\vartheta   \\
+    {\vec{\underline{E}}}   & =  \frac{j\omega\mu\beta^2m}{4\pi}e^{-j\beta r}\sin\vartheta\left(\frac{1}{j\beta r}+\frac{1}{(j\beta r)^2}\right)\vec{e}_\varphi
 \end{empheq}}%
 
 \subsubsection{Fernfeld}
 \begin{empheq}[box=\fbox]{align*}
-    E & \approx -\frac{\beta m\omega\mu}{4\pi R}e^{-j\beta R}\sin\theta\cdot\vec{e}_\phi \\
-    H & \approx -\frac{\beta m\omega\mu}{4\pi R Z_{F0}}e^{-j\beta R}\sin\theta\cdot\vec{e}_\theta
+    E & \approx -\frac{\beta m\omega\mu}{4\pi r}e^{-j\beta r}\sin\vartheta\cdot\vec{e}_\varphi \\
+    H & \approx -\frac{\beta m\omega\mu}{4\pi r Z_{F0}}e^{-j\beta r}\sin\vartheta\cdot\vec{e}_\vartheta
 \end{empheq}
 \subsubsection{Abgestrahlte Leistung im Fernfeld}
 \begin{align*}
     P_\texttt{rad} = P_s & = \frac{Z_F\beta^4m^2}{12\pi}                                  
                    = \frac{m^2\mu\omega^4}{12\pi v_p^3}                              \\
-    S_{av}         & = \frac{Z_F\beta^4m^2}{32\pi^2R^2}\cdot\sin^2\theta\cdot\vec{e}_R \\
+    S_{av}         & = \frac{Z_F\beta^4m^2}{32\pi^2r^r}\cdot\sin^2\theta\cdot\vec{e}_r \\
                    & = \frac{1}{2}\Re\left\{\vec{E}\times\vec{H}^*\right\}
 \end{align*}
 
 \subsubsection{Nahfeld}
 \begin{empheq}[box=\fbox]{align*}
-    E & \approx -\frac{jm\omega\mu}{4\pi R^2}\sin\vartheta\cdot\vec{e}\varphi \\
-    H & \approx \frac{m}{4\pi R^3}(2\cos\theta\cdot\vec{e}_R+\sin\vartheta\cdot\vec{e}_\vartheta)
+    E & \approx -\frac{jm\omega\mu}{4\pi r^2}\sin\vartheta\cdot\vec{e}\varphi \\
+    H & \approx \frac{m}{4\pi r^3}(2\cos\theta\cdot\vec{e}_r+\sin\vartheta\cdot\vec{e}_\vartheta)
 \end{empheq}
 \newpage
 \subsection{Lineare Antenne}
 Stromverteilung auf linearen Antennen \textbf{nicht} konstant:
 \begin{align*}
-    I(z') & = I_0\cdot\sin\left[\beta\left(\frac{L}{2}-|z'|\right)\right]
+    I(z') & = I_0\cdot\sin\left[\beta\left(\frac{l}{2}-|z'|\right)\right]
 \end{align*}
 
 \subsubsection{Dipolantenne allgemein}
+$ l $: Antennen\textbf{länge} \qquad $ r $: Antennen\textbf{abstand}
 \begin{align*}
-    \vec{\underline{H}}      & = j\frac{I_0}{2\pi R}\cdot e^{-j\beta r}\cdot\frac{\cos\left[\left(\frac{\beta L}{2}\right)\cos\theta\right]-\cos\left(\frac{\beta L}{2}\right)}{\sin\theta}\cdot\vec{e}_\varphi         \\
+    \vec{\underline{H}}      & = j\frac{I_0}{2\pi r}\cdot e^{-j\beta r}\cdot\frac{\cos\left[\left(\frac{\beta l}{2}\right)\cos\vartheta\right]-\cos\left(\frac{\beta l}{2}\right)}{\sin\vartheta}\cdot\vec{e}_\varphi         \\
     \vec{\underline{E}}      & = H\cdot Z_{F0}\cdot\vec{e}_\vartheta                          \\
     I_0          & = \sqrt{\frac{2\cdot P_{s}}{R_{s}}} \qquad R_{s} \rightarrow \text{siehe Antennentabelle Kap. \ref{sec:Antennentabelle}}                                
 \end{align*}
@@ -119,7 +119,7 @@ Bei leerlaufender Leitung entstehen in Längsrichtung\\ stehende Wellen. Um max.
 
 Strom am Fußpunkt:
 \begin{align*}
-	I(z'=0) & = I_0\cdot\sin\left[\beta\left(\frac{L}{2}\right)\right]
+	I(z'=0) & = I_0\cdot\sin\left[\beta\left(\frac{l}{2}\right)\right]
 \end{align*}
 komplexe Strahlungsleistung:
 \begin{align*}
@@ -127,14 +127,14 @@ komplexe Strahlungsleistung:
 \end{align*}
 \subsubsection{Strahlungsdichte}
 \begin{align*}
-    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 r^2}\left(\frac{\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)}{\sin\vartheta}\right)^2\cdot\vec{e}_r                               \\
+    \vec{S}_{av} & = \frac{Z_FI_0^2}{8\pi^2 r^2}\left(\frac{\cos\left(\frac{\beta }{2}\cos\vartheta\right)-\cos\left(\frac{\beta l}{2}\right)}{\sin\vartheta}\right)^2\cdot\vec{e}_r                               \\
     S_{av} & = S_{iso} \cdot D_{max} = S_{iso} \cdot D_{max} \cdot C^2(\vartheta, \varphi)
 \end{align*}
 \subsubsection{abgestrahlte Wirkleistung}
 \begin{align*}
                 P_{s} & = \int_A S_{av}\cdot d\vec{a}                                                                                                                                                              \\
                  & = \int^{2\pi}_{\varphi = 0}\int^{\pi}_{\vartheta = 0} S_{av}\cdot r^2 \sin\vartheta \, d\vartheta \, d\varphi\\
- P_{s}          & = \frac{Z_{F}I_0^2}{4\pi}\cdot\int^{\pi}_{\vartheta=0}\frac{\left(\cos\left(\frac{\beta L}{2}\cos\vartheta\right)-\cos\left(\frac{\beta L}{2}\right)\right)^2}{\sin\vartheta}d\vartheta\\
+ P_{s}          & = \frac{Z_{F}I_0^2}{4\pi}\cdot\int^{\pi}_{\vartheta=0}\frac{\left(\cos\left(\frac{\beta l}{2}\cos\vartheta\right)-\cos\left(\frac{\beta l}{2}\right)\right)^2}{\sin\vartheta}d\vartheta\\
  &= \frac{Z_{F}I_0^2}{4\pi}\cdot x
 \end{align*}
 Numerische Lösung des Integrals ergibt Faktor $ x $:\\
