@@ -148,6 +148,7 @@ bei \textbf{Ganzwellen}dipol: $ x=3,3181$
 
 \input{Figures/Antennen_Antennenkenngroessen_circuit.tex}
 
+$ X_A $ wird kompensiert $ \rightarrow $ max. Wirkleistungsübertragung
 \subsubsection{Abgestrahlte Leistung}
 \begin{align*}
     P_s = P_{rad} & = \frac{1}{2}\cdot I_A^2 \cdot R_s
@@ -157,8 +158,16 @@ bei \textbf{Ganzwellen}dipol: $ x=3,3181$
     P_V & = \frac{1}{2}\cdot I_A^2\cdot R_V
 \end{align*}
 \subsubsection{Wirkungsgrad}
+wenn $ R_V $ vorhanden $\rightarrow$ wirkt sich auf $ G $ aus!
 \begin{align*}
     \eta & = \frac{P_s}{P_s + P_V} = \frac{R_s}{R_s + R_V}
+\end{align*}
+
+\subsubsection{Gewinn/Gain}
+Verlustlose Antenne, wenn $ \eta = 1 $
+\begin{align*}
+	G & = \eta \cdot D \qquad \text{bei}\;  \eta=1 \rightarrow  G=D
+	%    \qquad [\si{dB}]
 \end{align*}
 
 \subsubsection{Richtcharakteristik}
@@ -183,14 +192,6 @@ $C_{i} \ent$ isotroper Kugelstrahler als Bezugsgröße in Hauptabstrahlrichtung
 	&\text{\textbf{Ganzwellen}dipol}\quad l=\lambda &D(\vartheta, \varphi) &= 2,41 \cdot
 	\left(\frac{\cos\left(\pi\cos\vartheta\right)+1}{2\sin\vartheta}\right)^\mathbf{2}&
 \end{align*}
-
-\subsubsection{Gewinn/Gain}
-Verlustlose Antenne, wenn $ \eta = 1 $
-\begin{align*}
-    G & = \eta \cdot D \qquad \text{bei}\;  \eta=1 \rightarrow  G=D
-%    \qquad [\si{dB}]
-\end{align*}
-
 
 \subsection{Senden und Empfangen}
 Bei Anpassung: $R_e = R_s \rightarrow$ max. Wirkleistung wird übertragen!
@@ -271,3 +272,5 @@ mit $P_0$ : Eingangsleistung der Antenne
 
 \subsection{Monopolantenne}
 Verhält sich wie ein Dipol, der nur in die obere Hälfte abstrahlt. 	Strahlungswiderstand halbiert sich und Richtfaktor verdoppelt sich gegenüber der Dipolantenne.
+
+Geometrisch zu kurze Antennen können durch breiteren Drahtdurchmesser, Fußpunktinduktivität oder Dachkapazität elektrisch verlängert werden.
