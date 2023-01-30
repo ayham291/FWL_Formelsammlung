@@ -1,8 +1,10 @@
 \subsubsection{Kartesische Koordinaten}
+\footnotesize{
 \begin{flalign*}
 	&\text{Variablen:}\quad x,y,z \qquad \qquad \text{Einheitsvektoren:}\quad \vec{e}_x, \vec{e}_y,\vec{e}_z \qquad \qquad
 	\text{Rechtssystem:}\quad \vec{e}_x \times \vec{e}_y=\vec{e}_z &&&\\
-	&\text{Linienelemente:} \quad  ds=\sqrt{d x^{2}+d y^{2}+d z^{2}} \qquad\qquad \text{Volumenelemente:} \quad  dV = dx \, dy \, dz &&&\\
+	&\text{Linienelemente:} \quad  ds=\sqrt{d x^{2}+d y^{2}+d z^{2}} = dx \cdot \vec{e}_x + dy \cdot \vec{e}_y + dz \cdot \vec{e}_z \\
+	&\text{Volumenelemente:} \quad  dV = dx \, dy \, dz &&&\\
 	&\text{Flächenelemente:} \quad  dA_{xy}= dx \, dy \, \vec{e}_z \quad dA_{yz} = dy \, dz \, \vec{e}_x \quad dA_{xz} = dx \, dz \, \vec{e}_y
 	&&&\\
 	&\text{Skalarfeld:}\quad \phi = \phi(x;y;z) \qquad \text{Vektorfeld:} \quad \boxed{\vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z} &&&\\
@@ -16,7 +18,7 @@
 	\Delta \vec{E} = \opgrad \opdiv \vec{E}-\operatorname{rot} \operatorname{rot} \vec{E} = \Delta E_x \vec{e}_x+\Delta E_y \vec{e}_y+\Delta E_z \vec{e}_z \\
 	&\Delta \vec{E} = \left[\frac{\partial^{2} E_x}{\partial x^{2}}+\frac{\partial^{2} E_x}{\partial y^{2}}+\frac{\partial^{2} E_x}{\partial z^{2}}\right] \vec{e}_x+\left[\frac{\partial^{2} E_y}{\partial x^{2}}+\frac{\partial^{2} E_y}{\partial y^{2}}+\frac{\partial^{2} E_y}{\partial z^{2}}\right] \vec{e}_y+ \left[\frac{\partial^{2} E_z}{\partial x^{2}}+\frac{\partial^{2} E_z}{\partial y^{2}}+\frac{\partial^{2} E_z}{\partial z^{2}}\right] \vec{e}_z     
 	&&&\\
-\end{flalign*}
+\end{flalign*}}
 %\begin{description}
 %      \item Skalarfeld:
 %            \[
@@ -62,7 +64,7 @@ Polarkoordinaten siehe S.386, Papula S.387,
 \begin{flalign*}
 	&\text{Variablen:}\quad r,\varphi,z \qquad \qquad \text{Einheitsvektoren:}\quad \vec{e}_r, \vec{e}_\varphi,\vec{e}_z \qquad \qquad
 	\text{Rechtssystem:}\quad \vec{e}_r \times \vec{e}_\varphi=\vec{e}_z &&&\\
-	&\text{Linienelemente:} \quad  ds=\sqrt{d r^{2}+\mathbf{r} d \varphi^{2}+d z^{2}} \qquad\qquad \text{Volumenelemente:} \quad  dV = \mathbf{r} \, dr \, d\varphi \, dz &&&\\
+	&\text{Linienelemente:} \quad  ds=\sqrt{d r^{2}+\mathbf{r} d \varphi^{2}+d z^{2}} = dr \cdot \vec{e}_r + \mathbf{r} \, d\varphi \cdot \vec{e}_\varphi + dz \cdot \vec{e}_z\\ &\text{Volumenelemente:} \quad  dV = \mathbf{r} \, dr \, d\varphi \, dz &&&\\
 	&\text{Flächenelemente:} \quad  dA_{r\varphi} = \mathbf{r} \, dr \, d\varphi \, \vec{e}_z \quad dA_{rz} = dr \, dz \, \vec{e}_\varphi \quad dA_{\varphi z} = \mathbf{r} \, d\varphi \, dz \, \vec{e}_r
 	&&&\\
 	&\text{Skalarfeld:}\quad \phi = \phi(x;\varphi;z) \qquad \text{Vektorfeld:} \quad \boxed{\vec{F} = \vec{F}(r;\varphi;z) = F_r\vec{e}_r+F_\varphi\vec{e}_\varphi+F_z\vec{e}_z} &&&\\
@@ -140,7 +142,8 @@ Polarkoordinaten siehe S.386, Papula S.387,
 \begin{flalign*}
 	&\text{Variablen:}\quad r,\vartheta,\varphi \qquad \qquad \text{Einheitsvektoren:}\quad \vec{e}_r, \vec{e}_\vartheta,\vec{e}_\varphi \qquad \qquad
 	\text{Rechtssystem:}\quad \vec{e}_r \times \vec{e}_\vartheta=\vec{e}_\varphi &&&\\
-	&\text{Linienelemente:} \quad  ds=\sqrt{d r^{2}+ \mathbf{r^2} \sin^2 \vartheta \, d \varphi^{2}+\mathbf{r^2} d \vartheta^{2}} \qquad\qquad \text{Volumenelemente:} \quad  dV = \mathbf{r^2} \, \sin \vartheta \, dr \, d\vartheta \, d\varphi &&&\\
+	&\text{Linienelemente:} \quad  ds=\sqrt{d r^{2}+ \mathbf{r^2} \sin^2 \vartheta \, d \varphi^{2}+\mathbf{r^2} d \vartheta^{2}} = dr \cdot \vec{e}_r + r \, d\vartheta \cdot \vec{e}_\vartheta + r \, \sin \varphi \,  d\varphi \cdot \vec{e}_\varphi \\
+	&\text{Volumenelemente:} \quad  dV = \mathbf{r^2} \, \sin \vartheta \, dr \, d\vartheta \, d\varphi &&&\\
 	&\text{Flächenelemente:} \quad  dA_{r\vartheta} = \mathbf{r}\, dr \, d\vartheta \, \vec{e}_\varphi \quad dA_{r\varphi} = \mathbf{r}\, \sin \, \vartheta \, dr \, d\varphi \, \vec{e}_\vartheta \quad dA_{\vartheta \varphi} = \mathbf{r^2} \, \sin \vartheta \, d\vartheta \, d\varphi \, \vec{e}_r
 	&&&\\
 	&\text{Skalarfeld:}\quad \phi = \phi(r;\vartheta;\varphi) \qquad \text{Vektorfeld:} \quad \boxed{\vec{F} = \vec{F}(r;\vartheta;\varphi) = F_r\vec{e}_r+F_\vartheta\vec{e}_\vartheta+F_\varphi\vec{e}_\varphi} &&&\\
@@ -193,10 +196,12 @@ Polarkoordinaten siehe S.386, Papula S.387,
 %                  +\frac{1}{\sin\vartheta}\cdot\frac{\partial}{\partial\vartheta}\left(\sin\vartheta\cdot\frac{\partial\phi}{\partial\vartheta}\right)
 %                  +\frac{1}{\sin^{2}\vartheta}\cdot\frac{\partial^{2}\phi}{\partial \varphi^{2}}\right\}
 %            \]
-%      \item Laplace Operator in Kugelkoordinaten, angewandt auf einen Vektor:
-%            \begin{multline*}
-%                  \Delta \vec{E}  =\left[\Delta E_r-\frac{2}{r^{2}} E_r-\frac{2}{r^{2} \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot E_\vartheta\right)}{\partial \vartheta}-\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_r        \\
-%                  +\left[\Delta E_\vartheta-\frac{E_\vartheta}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2}} \frac{\partial E_r}{\partial \vartheta}-\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_\vartheta       \\
-%                  +\left[\Delta E_\varphi-\frac{E_\varphi}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_r}{\partial \varphi}+\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\vartheta}{\partial \varphi}\right] \vec{e}_\varphi
-%            \end{multline*}
+Laplace Operator in Kugelkoordinaten, angewandt auf einen Vektor:
+\footnotesize{
+            \begin{multline*}
+                  \Delta \vec{E}  =\left[\Delta E_r-\frac{2}{r^{2}} E_r-\frac{2}{r^{2} \sin \vartheta} \frac{\partial\left(\sin \vartheta \cdot E_\vartheta\right)}{\partial \vartheta}-\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_r        \\
+                  +\left[\Delta E_\vartheta-\frac{E_\vartheta}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2}} \frac{\partial E_r}{\partial \vartheta}-\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\varphi}{\partial \varphi}\right] \vec{e}_\vartheta       \\
+                  +\left[\Delta E_\varphi-\frac{E_\varphi}{r^{2} \sin ^{2} \vartheta}+\frac{2}{r^{2} \sin \vartheta} \frac{\partial E_r}{\partial \varphi}+\frac{2 \cot \vartheta}{r^{2} \sin \vartheta} \frac{\partial E_\vartheta}{\partial \varphi}\right] \vec{e}_\varphi
+            \end{multline*}
+        }
 %\end{description}
