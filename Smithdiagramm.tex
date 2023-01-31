@@ -20,14 +20,14 @@ gilt nur für \textbf{verlustlose} Leitung!
 
 allgemeine Gleichung \textbf{mit Verlusten} (siehe auch Kap. \ref{sec:Leitungen_allg_Gleichungen}.)\\
 Ersetze: \quad $\tan \rightarrow \tanh$ und $\beta l \rightarrow \underline{\gamma} l$
-\subsubsection{Reflexionsfaktor}
+\subsubsection{verlustloser Reflexionsfaktor}
 %$ \underline{U}_r(l) = \underline{U}_r(l=0) \cdot e^{-j\beta l} \qquad \underline{U}_h(l) = \underline{U}_h(l=0) \cdot e^{j\beta l} $
-$ \underline{r}(l) = \underline{r} \qquad \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $
-Immer gültig, auch ohne Quelle!
+Immer gültig, auch ohne Quelle!\\
+$ \underline{r}(l) = \underline{r} \qquad \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi \, [\ang{360}] $
 \begin{flalign*}
-	\Aboxed{\underline{r} &= \underline{r}_2 \cdot e^{-j2\beta l}	
-	= r_2 \cdot e^{-j4\pi \frac{l}{\lambda}}}\\
-	 &= r \cdot e^{-j(\Psi_0+2\beta l)} =r\cdot e^{j\Psi}\\
+	\Aboxed{\underline{r}_n &= \underline{r}_2 \cdot e^{-j2\beta L_n}	
+	= r_2 \cdot e^{-j4\pi \frac{L_n}{\lambda}}}\\
+	 &= |\underline{r}_2| \cdot e^{j(\Psi_0+2\beta L_n)} =r\cdot e^{j\Psi}\\
 	 &=\frac{\underline{z}_n-1}{\underline{z}_n+1} \\
 	\underline{r}_2 & = \frac{\underline{Z}_2-Z_L}{\underline{Z}_2+Z_L} = \frac{\underline{U}_2-\underline{I}_2Z_L}{\underline{U}_2 +\underline{I}_2 Z_L}
 %\\
