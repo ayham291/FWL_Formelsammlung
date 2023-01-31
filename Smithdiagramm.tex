@@ -25,9 +25,13 @@ Ersetze: \quad $\tan \rightarrow \tanh$ und $\beta l \rightarrow \underline{\gam
 $ \underline{r}(l) = \underline{r} \qquad \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $
 Immer gültig, auch ohne Quelle!
 \begin{flalign*}
-	\underline{r} &= \underline{r}_2 \cdot e^{-j2\beta l} = r \cdot e^{-j(\Psi_0+2\beta l)} =r\cdot e^{j\Psi} \\ &=\frac{\underline{z}_n-1}{\underline{z}_n+1}\\
-	\underline{r}_2 & = \frac{\underline{Z}_2-Z_L}{\underline{Z}_2+Z_L} = \frac{\underline{U}_2-\underline{I}_2Z_L}{\underline{U}_2 +\underline{I}_2 Z_L}\\
-	 \underline{z}_n & = \frac{1+\underline{r}}{1-\underline{r}}
+	\Aboxed{\underline{r} &= \underline{r}_2 \cdot e^{-j2\beta l}	
+	= r_2 \cdot e^{-j4\pi \frac{l}{\lambda}}}\\
+	 &= r \cdot e^{-j(\Psi_0+2\beta l)} =r\cdot e^{j\Psi}\\
+	 &=\frac{\underline{z}_n-1}{\underline{z}_n+1} \\
+	\underline{r}_2 & = \frac{\underline{Z}_2-Z_L}{\underline{Z}_2+Z_L} = \frac{\underline{U}_2-\underline{I}_2Z_L}{\underline{U}_2 +\underline{I}_2 Z_L}
+%\\
+%\underline{z}_n & = \frac{1+\underline{r}}{1-\underline{r}}
 \end{flalign*}
 %    \begin{align*}
 %        \Aboxed{ \underline{z}'(l) = \frac{Z(l)}{Z_L} = \frac{Z_2+jZ_L\cdot\tan(\beta l)}{Z_L+jZ_2\cdot\tan(\beta l)}} \\
@@ -44,7 +48,8 @@ Werte von $ m \rightarrow$ Werte von $ \Re{\underline{z}_n}: 0 \leq m \leq1 $
     \input{Figures/Smithdiagramm_Smithchart.tex}
 \end{center}
 \begin{align*}
-    \underline{z}_n & = \frac{\underline{Z}_n}{Z_L}                                                                                                                   \\
+    \underline{z}_n & = \frac{\underline{Z}_n}{Z_L} = \frac{1+\underline{r}(l)}{1-\underline{r}(l)} \qquad \qquad |\underline{r}(l)|=\frac{\si{SWR}-1}{\si{SWR}+1} = \frac{1-m}{1+m}
+    \\
     \underline{r}_n & = \frac{\underline{Z}_n-Z_L}{\underline{Z}_n+Z_L}= \frac{\underline{z}_n-1}{\underline{z}_n+1}    = \frac{1-\underline{y}_n}{1+\underline{y}_n} \\
     m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}                                                                                                   \\
     \mathrm{SWR}               & = \frac{1}{m} = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}
