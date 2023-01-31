@@ -13,7 +13,8 @@
 
 \subsubsection{Normierte Impedanz}
 \begin{align*}
-	\underline{z}_n= \frac{Z(l)}{Z_L} = \frac{Z_2+jZ_L\cdot\tan(\beta l)}{Z_L+jZ_2\cdot\tan(\beta l)}
+	\underline{z}_n= \frac{\underline{Z}(l)}{Z_L} &= \frac{\underline{Z}_2+jZ_L\cdot\tan(\beta l)}{Z_L+j\underline{Z}_2\cdot\tan(\beta l)}\\
+	& = \frac{\frac{\underline{Z}_2}{Z_L}+j \tan(\beta l)}{1+j\frac{\underline{Z}_2}{Z_L}\cdot\tan(\beta l)}
 \end{align*}
 
 
@@ -113,7 +114,8 @@ $ \rightarrow $ Schnittpunkte mit der reellen Achse!
 \input{Figures/Smithdiagramm_Zusammenschaltungen.tex}
 
 \subsection{Vorgehen mit geg. Eingangswiderstand}
-Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E}
+Wenn mit dem Smith-Diagramm gearbeitet
+wird, liefert dies die Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E}
 \begin{enumerate}
 	\item Lastimpedanz
 	\[ \underline{Z}_A = \dfrac{1}{\frac{1}{R_A} + j \omega C_A} \]
