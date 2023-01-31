@@ -228,10 +228,10 @@ Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang
           \[ \underline{Z}_E = \dfrac{1}{\frac{1}{\underline{Z}_E} + j \omega C_E}\]
 \end{enumerate}
 
-\subsubsection{Reflexionsfaktor entlang einer Leitung}
+\subsubsection{Reflexionsfaktor mit Verlusten}
 $ r_e $: am \textbf{Eingang} \qquad $ r_a $: am Abschluss/an der Last
 \begin{align*}
-    r_e    & = r_a  ^{-2\underline{\gamma} l} = r_a \cdot  e^{-2\alpha l} \cdot e^{-j2\beta l}                                                     \\
+    r_e    & = r_a  ^{-2\underline{\gamma} l} =  \overbracket{r_a \cdot e^{-2\alpha l}}^ \texttt{gedämpfter Betrag}   \cdot e^{-j2\beta l}                                                     \\
     \Aboxed{\alpha & = -\frac{\ln(r_a)}{2 \cdot l} \, \left[ \frac{\si{Np}}{\si{m}} \right]  }& \Aboxed{\beta & = \dfrac{\varphi_2 -\varphi_1}{2\cdot l} \left[ \frac{\si{rad}}{\si{m}} \right] }
 \end{align*}
 
