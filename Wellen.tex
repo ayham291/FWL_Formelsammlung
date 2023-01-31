@@ -72,7 +72,7 @@ Vereinfachung: harmonische Zeitabhängigkeit, keine Raumladungen $ \rho = 0 $, k
 %%%%%%%%%%%%%%%%%
 
 \subsubsection*{ebene Wellengleichung}
-Tatsächlicher Zeitverlauf (Realteil von $\underline{\vec{E}}(z,t)$)
+Tatsächlicher Zeitverlauf (\textbf{Realteil} von $\underline{\vec{E}}(z,t)$)
 \begin{empheq}[]{align*}
 	\boxed{\vec{E}(z,t)
 		= \underbrace{E_0}_{\mathclap{\text{Amplitude}}}
@@ -88,9 +88,9 @@ Tatsächlicher Zeitverlauf (Realteil von $\underline{\vec{E}}(z,t)$)
 	}
 \end{empheq}
 \subsubsection*{Fortpflanzungskonstante}
-\[\boxed{\underline{\gamma}=\alpha+j\beta} \quad \left[ \frac{1}{m} \right] \]
-Dämpfungskonstante $ \alpha $: $\frac{\mathtt{Np}}{m}$\\
+Dämpfungskonstante $ \alpha $: $\frac{\mathtt{Np}}{m}$ \qquad \quad
 Phasenkonstante $ \beta $: $ \frac{\mathtt{rad}}{m} $
+\[\underline{\gamma}=\alpha+j\beta \quad \left[ \frac{1}{m} \right] \]
 %\newcolumn
 \subsection{Kenngrößen}
 \subsubsection{Wellenzahl}
@@ -130,8 +130,10 @@ v_g = \dfrac{d \omega}{d k} \widehat{=} \dfrac{\textnormal{Wegstück der Welleng
 %\end{align*}
 
 \subsubsection{Feldwellenwiderstand}
+$ Z_{F0} $: im \textbf{materiefreien} Raum/Vakuum!\\
+Falls keine Verluste (ideal) $ \rightarrow Z_F $ reell!
 \begin{align*}
-	\underline{Z}_F &= \frac{\underline{E}}{\underline{H}} = \frac{\underline{E}_h}{\underline{H}_h} = -\frac{\underline{E}_r}{\underline{H}_r} = \frac{\omega \mu}{\underline{k}} = \sqrt{\frac{j\omega\mu}{\kappa+j \omega \varepsilon}}\\
+	\underline{Z}_F &= \frac{\underline{E}_{\texttt{transversal}}}{\underline{H}_{\texttt{transversal}}} = \frac{\underline{E}_h}{\underline{H}_h} = -\frac{\underline{E}_r}{\underline{H}_r} = \frac{\omega \mu}{\underline{k}} = \sqrt{\frac{j\omega\mu}{\kappa+j \omega \varepsilon}}\\
 	Z_{F0} &= \sqrt{\frac{\mu_0}{\varepsilon_0}} = 120\pi \Omega \qquad  Z_F = Z_{F0} \cdot \sqrt{\frac{\mu_r}{\varepsilon_r}} &
 \end{align*}
 \subsubsection{Poynting-Vektor}
@@ -155,7 +157,7 @@ gibt Leistungsfluss einer EM-Welle und Richtung der Energieströmung an.\\
 	=  \frac{P}{A_\texttt{Fläche}}\\
 	P &= \iint\vec{S}_{\text{av}}\, d\vec{a}                
 	= Re\left\{\underline{U}\cdot\underline{I}^*\right\}\\
-	P_1 & = P_0 \cdot e^{-2\alpha z} \qquad P_{\texttt{Leitung}} = \dfrac{\hat{U}^2}{2\cdot Z_L}
+	P_1 & = P_0 \cdot e^{-2\alpha z} \qquad P_{\texttt{Leitung}} = \dfrac{1}{2} \dfrac{\hat{U}^2}{\cdot \Re{Z_L}}
 %	w_{e} & = \frac{1}{2}\cdot\mu\cdot H^2              
 %	&w_{e} & = \frac{1}{2}\cdot\varepsilon\cdot E^2&
 \end{align*}
@@ -329,7 +331,7 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
 \end{align*}
 
 \subsubsection{Leistungsbilianz an Grenzflächen}
-Index n: Normalkomponente.
+Index n: Normalkomponente. Wichtig: Beträge beachten!
 \begin{align*}
 	S_{tn} &= S_{hn} - S_{rn}\\ 
 	S_{t0} &= S_{h0}\cdot \frac{\cos\vartheta_{1}}{\cos\vartheta_{2}}(1-r^2)
@@ -410,7 +412,7 @@ Gilt bei Einfallswinkel $ \theta_h = 0 $.
 gilt für $ \kappa =0 $, keine Dämpfung.
 %\includegraphics[width=\columnwidth]{Figures/senkrechterEinfall.png}
 %\vspace{-0.3cm}
-\[ \text{rein reell: }Z_F=  \sqrt{\frac{\mu}{\varepsilon}}  \qquad
+\[ \text{rein reell: }Z_F=  \sqrt{\frac{\mu_0\mu_r}{\varepsilon_0\varepsilon_r}}  \qquad
 \text{rein imaginär: }\gamma  = j \omega\sqrt{\mu\varepsilon} \]
 %\vspace{-0.5cm}
 \begin{align*}
@@ -456,7 +458,7 @@ Gilt für $\mu_{r1} = \mu_{r2} = 1$
 \end{align*}
 
 \subsubsection{Medium 2: idealer Leiter}
-$\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!
+$\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!, vollständige Reflexion.
 \begin{equation*}
 	Z_{F2}       = 0 \qquad
 	r            = -1 \qquad
@@ -506,6 +508,9 @@ Grenzwinkel $ \theta_g $ gibt an, bis zu welchem Winkel eine Welle von höherem 
 (1): bei \textit{senkrechter} transmittierter Welle $ \theta_t = \sin \ang{90}$\\
 (2): bei \textit{senkrechter} einfallender Welle $ \theta_h = \sin \ang{90}$
 
+Anmerkung zu (2):\\
+\includegraphics[width=\columnwidth]{Figures/Grenzwinkel_Bild.png}
+
 \subsubsection[Brewster-/Polarisationswinkel]{Brewster-/Polarisationswinkel}
 Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
 \begin{itemize}
@@ -533,6 +538,7 @@ Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
 	Brewster-Winkel existiert nur bei $ \mu_{r1} \neq \mu_{r2} $.\\
 	Bei $ \mu_{r1}=\mu_{r2} \rightarrow r \neq 0$ keine Reflexionsfreiheit!
 \end{itemize}
+
 \newpage
 \input{Schraeger_Uebergang}
 \input{Schraeger_Ubergang_allgemein}
