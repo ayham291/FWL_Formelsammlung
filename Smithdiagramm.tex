@@ -110,4 +110,19 @@ $ \rightarrow $ Schnittpunkte mit der reellen Achse!
     \item Eingangsimpedanz ablesen
           \[\underline{Z}_E = \underline{z}_e \cdot Z_L\]
 \end{enumerate}
-\input{Figures/Smithdiagramm_Zusammenschaltungen.tex}  
+\input{Figures/Smithdiagramm_Zusammenschaltungen.tex}
+
+\subsection{Vorgehen mit geg. Eingangswiderstand}
+Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E}
+\begin{enumerate}
+	\item Lastimpedanz
+	\[ \underline{Z}_A = \dfrac{1}{\frac{1}{R_A} + j \omega C_A} \]
+	\item Reflexion am Leitungsende
+	\[ \underline{r}_A = \underline{r}(z=0) = \dfrac{Z_A - \underline{Z}_L}{Z_A + \underline{Z}_L} \]
+	\item Reflexion am Leitungsanfang \label{Ref L_anfang}
+	\[ \underline{r}_E = \underline{r}(z=d) =  \underline{r}_A \cdot e^{-j 2 \beta d}\]
+	\item Bestimmung der Impedanz \label{Bestimmen Z_E}
+	\[ \underline{Z}_E = \underline{Z}_L \cdot \dfrac{1 + \underline{r}_E}{1 - \underline{r}_E}\]
+	\item Eingangswiderstand
+	\[ \underline{Z}_E = \dfrac{1}{\frac{1}{\underline{Z}_E} + j \omega C_E}\]
+\end{enumerate}

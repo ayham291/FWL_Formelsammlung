@@ -213,21 +213,6 @@ Smith-Chart: Kap. \ref{sec:Smith_All} \qquad VSWR: Kap. \ref{sec:VSWR}
 	\underline{I}(z) & = \hat{I}\cdot e^{-\alpha z}\angle \beta z
 \end{align*}
 
-\subsubsection{Vorgehen Eingangswiderstand}
-Wenn mit Smithdiagramm gearbeitet wird liefert dieses Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E}
-\begin{enumerate}
-    \item Lastimpedanz
-          \[ \underline{Z}_A = \dfrac{1}{\frac{1}{R_A} + j \omega C_A} \]
-    \item Reflexion am Leitungsende
-          \[ \underline{r}_A = \underline{r}(z=0) = \dfrac{Z_A - \underline{Z}_L}{Z_A + \underline{Z}_L} \]
-    \item Reflexion am Leitungsanfang \label{Ref L_anfang}
-          \[ \underline{r}_E = \underline{r}(z=d) =  \underline{r}_A \cdot e^{-j 2 \beta d}\]
-    \item Bestimmung der Impedanz \label{Bestimmen Z_E}
-          \[ \underline{Z}_E = \underline{Z}_L \cdot \dfrac{1 + \underline{r}_E}{1 - \underline{r}_E}\]
-    \item Eingangswiderstand
-          \[ \underline{Z}_E = \dfrac{1}{\frac{1}{\underline{Z}_E} + j \omega C_E}\]
-\end{enumerate}
-
 \subsubsection{Reflexionsfaktor mit Verlusten}
 $ r_e $: am \textbf{Eingang} \qquad $ r_a $: am Abschluss/an der Last
 \begin{align*}
@@ -279,6 +264,7 @@ $ r_e $: am \textbf{Eingang} \qquad $ r_a $: am Abschluss/an der Last
 %                    \frac{1}{Z_L} \sinh(\gamma l) & \cosh(\gamma l)     \\
 %                \end{array} } \right]
 %\]
+\newpage
 \subsection{Leitungsparameter}
 				\subsubsection{Allgemein}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
