@@ -12,12 +12,14 @@
 %$1$             : Anpassungspunkt
 
 \subsubsection{Normierte Impedanz}
+gilt nur für \textbf{verlustlose} Leitung!
 \begin{align*}
-	\underline{z}_n= \frac{\underline{Z}(l)}{Z_L} &= \frac{\underline{Z}_2+jZ_L\cdot\tan(\beta l)}{Z_L+j\underline{Z}_2\cdot\tan(\beta l)}\\
-	& = \frac{\frac{\underline{Z}_2}{Z_L}+j \tan(\beta l)}{1+j\frac{\underline{Z}_2}{Z_L}\cdot\tan(\beta l)}
+	\underline{z}_n= \frac{\underline{Z}(l)}{Z_L} &= \frac{\underline{Z}_2+jZ_L\cdot\tan(\beta l)}{Z_L+j\underline{Z}_2\cdot\tan(\beta l)}
+	&= \frac{\frac{\underline{Z}_2}{Z_L}+j \tan(\beta l)}{1+j\frac{\underline{Z}_2}{Z_L}\cdot\tan(\beta l)}&
 \end{align*}
 
-
+allgemeine Gleichung \textbf{mit Verlusten} (siehe auch Kap. \ref{sec:Leitungen_allg_Gleichungen}.)\\
+Ersetze: \quad $\tan \rightarrow \tanh$ und $\beta l \rightarrow \underline{\gamma} l$
 \subsubsection{Reflexionsfaktor}
 %$ \underline{U}_r(l) = \underline{U}_r(l=0) \cdot e^{-j\beta l} \qquad \underline{U}_h(l) = \underline{U}_h(l=0) \cdot e^{j\beta l} $
 $ \underline{r}(l) = \underline{r} \qquad \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $
