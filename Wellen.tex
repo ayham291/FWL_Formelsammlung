@@ -358,7 +358,7 @@ Die Polarisation (Ausrichtung) bezieht sich \textbf{immer} auf das $\vec{E}$-Fel
 
 
 %\subsection{Polarisation}
-
+\
 \subsection[Senkrechter Einfall]{Senkrechter Einfall}
 Gilt bei Einfallswinkel $ \theta_h = 0 $.
 \input{Figures/Wellen_Senkrechter_Uebergang.tex}
@@ -499,7 +499,7 @@ $\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!, vollständ
 \[
     \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
 \]
-
+%\newcolumn
 \subsection{Schräger Einfall (allgemein)}
 \begin{align*}
 	Z_F & = \sqrt{\frac{\mu}{\varepsilon}} = Z_{F0} \sqrt{\frac{\mu_r}{\varepsilon_r}}
@@ -514,6 +514,8 @@ $\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!, vollständ
 	% \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
 	% \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
+
+\newcolumn
 \subsubsection{Totalrefexion/Grenzwinkel}
 Grenzwinkel $ \theta_g $ gibt an, bis zu welchem Winkel eine Welle von höherem in kleineres Dielektrikum $ \varepsilon_1 > \varepsilon_2 $ eindringen kann. $ \rightarrow $ Brechungsgesetz beachten!
 \begin{align*}
@@ -555,8 +557,11 @@ Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
 	Bei $ \mu_{r1}=\mu_{r2} \rightarrow r \neq 0$ keine Reflexionsfreiheit!
 \end{itemize}
 
-\subsubsection{Verlauf beim Grenzübergang}
+\subsubsection{Verlauf von r und t beim Grenzübergang}
 \includegraphics[width=\columnwidth]{Figures/Totalreflexion_Diagramm.png}
+
+\subsubsection{Verlauf der Reflexionsfaktoren}
+\includegraphics[width=\columnwidth]{Figures/Verlauf_Reflexionsfaktoren.png}
 
 \newpage
 \input{Schraeger_Uebergang}
