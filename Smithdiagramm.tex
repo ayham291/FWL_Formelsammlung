@@ -120,6 +120,8 @@ $ \rightarrow $ Schnittpunkte mit der reellen Achse!
 \end{enumerate}
 \input{Figures/Smithdiagramm_Zusammenschaltungen.tex}
 
+Positive/negative Blindwerte bewegen sich im/gegen den Uhrzeigersinn. Wirkwiderstände bewegen sich immer zum Leerlaufpunkt.
+
 \subsection{Vorgehen mit geg. Eingangswiderstand}
 Wenn mit dem Smith-Diagramm gearbeitet
 wird, liefert dies die Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E}
@@ -135,3 +137,11 @@ wird, liefert dies die Schritte \ref{Ref L_anfang} und \ref{Bestimmen Z_E}
 	\item Eingangswiderstand
 	\[ \underline{Z}_E = \dfrac{1}{\frac{1}{\underline{Z}_E} + j \omega C_E}\]
 \end{enumerate}
+
+\subsection{Reihen- und Parallelschaltung}
+Leitung transformiert den Abschluss
+\[ \underline{Z}_2 = R_2 + jX_2 \quad \text{bzw.} \quad \underline{Y}=G_2 + jB_2\]
+mit \[ \underline{Y}_2=\frac{1}{Z_2}  \]
+
+\subsubsection{ESB Serienschaltung}
+\[ P = \frac{\hat{I}^2_2 \cdot R_2}{2} \Rightarrow \hat{I}(l) = I^2_2 \cdot \sqrt{\frac{R_2}{R(l)}} \]

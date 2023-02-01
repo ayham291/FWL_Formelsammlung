@@ -124,8 +124,23 @@ $\underline{U}_2 = \underline{U}_{(l=0)} =  \underline{U}_h  +\underline{U}_r \q
 	\underline{U}(l) & = \underline{U}_2 \cdot \left[ \cos(\beta l) + j \tfrac{Z_L}{\underline{Z}_2} \sin(\beta l) \right] \\
 	\underline{I}(l) & = \underline{I}_2 \cdot \left[ \cos(\beta l) + j \tfrac{\underline{Z}_2}{Z_L} \sin(\beta l) \right] 
 \end{align*}
-Für Beträge/Amplitudenwerte: \quad $\left| \frac{\underline{U}}{\underline{U}_2} \right| = \sqrt{\text{Re}^2+\text{Im}^2}  $.\\
+Für \textbf{Beträge}/Amplitudenwerte: \quad 
+\boxed{\left| \frac{\underline{U}}{\underline{U}_2} \right| = \sqrt{\text{Re}^2+\text{Im}^2}}
+\\$ \rightarrow $ j weglassen.\\
+
 Bildung von \textbf{stehenden} Wellen für alle Fälle \textit{außer} bei Anpassung!
+
+\subsubsection{Angepasste (reflexionsfreie) Leitung}
+Eingangswiderstand $ Z_1\nsim$ Leitungslänge, rein reell!\\
+Nur hinlaufende Welle, \textbf{reflexionsfrei}!
+\begin{align*}
+	Z_L          & = Z_1 = Z_2 = Z(l) \qquad
+	r_A          =0 \qquad 
+	\mathrm{SWR} = 1  \\
+	U(z)         & = U_h\cdot e ^{j\beta z}  \qquad           
+	I(z)         = I_h \cdot e^{j\beta z} = \frac{U_h}{Z_L}\cdot e^{j\beta z}
+\end{align*}
+
 \subsubsection{Kurzschluss an Leitungsende}
 $ \underline{Z}_2 = 0 \qquad \underline{U}_2 = \underline{U}_{(l=0)} = 0 \rightarrow \underline{U}_h = - \underline{U}_r \qquad \underline{I}_h = \underline{I}_r \qquad r_2 = +1$
 \begin{align*}
@@ -134,7 +149,15 @@ $ \underline{Z}_2 = 0 \qquad \underline{U}_2 = \underline{U}_{(l=0)} = 0 \righta
 	I(l)         & = \underline{I}_h \cdot 2 \cos(\beta l) =\underline{I}_2 \cdot \cos(\beta l) \qquad \underline{I}_2 =\frac{2\underline{U}_h}{Z_L}
 %	\hat{U}_E    & = \hat{U}_{generator}\cdot\frac{\underline{Z}_E}{\underline{Z}_{generator}+\underline{Z}_E} \\
 \end{align*}
+Um $ \beta l $ über Formel zu berechnen $ \rightarrow $ \textbf{Betrag} bilden!\\
+
 $ l=\frac{\lambda}{4} $: Parallelresonanz (LL) \quad $ l=\frac{\lambda}{2} $: Serienresonanz (KS)
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\columnwidth]{Figures/Kurzgeschlossene_Leitung_diagramm.png}
+\end{figure}
+
+
 \subsubsection{Leerlauf an Leitungsende}
 $ \underline{Z}_2 = \infty \qquad \underline{I}_2 = \underline{I}_{(l=0)} = 0 \rightarrow \underline{I}_h = - \underline{I}_r \qquad \underline{U}_h = \underline{U}_r  \qquad r_2 = -1$
 \begin{align*}
@@ -144,7 +167,15 @@ $ \underline{Z}_2 = \infty \qquad \underline{I}_2 = \underline{I}_{(l=0)} = 0 \r
 %	r_A          & = 1                                                                              \\
 %	\mathrm{SWR} & = \infty                                                                         \\
 \end{align*}
+Um $ \beta l $ über Formel zu berechnen $ \rightarrow $ \textbf{Betrag} bilden!\\
+
 $ l=\frac{\lambda}{4} $: Serienresonanz (KS) \quad $ l=\frac{\lambda}{2} $: Parallelresonanz (LL)
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\columnwidth]{Figures/Leerlaufende_Leitung.png}
+\end{figure}
+
 \subsubsection{Leitung als Impedanz-Transformator}
 $\lambda / 4$ -Leitung mit Eingangswiderstand $ \underline{Z}_e = \underline{Z}(l) $ aus  \ref{beliebig_abschluss}:
 \begin{align*}
@@ -160,19 +191,8 @@ L $ \leftrightarrow $ C, \\Kurzschluss $ \leftrightarrow $ Leerlauf, \textbf{gro
 %\subsubsection{vernachlässigbarer Leitwertbelag}
 %\includegraphics[width=\columnwidth]{Figures/vernachlaessigbarerLeiterwertbelag.png}
 
-\subsubsection{Angepasste (reflexionsfreie) Leitung}
-Eingangswiderstand $ Z_1\nsim$ Leitungslänge, rein reell!\\
-Nur hinlaufende Welle, \textbf{reflexionsfrei}!
-\begin{align*}
-	Z_L          & = Z_1 = Z_2 = Z(l) \qquad
-	r_A          =0 \qquad 
-	\mathrm{SWR} = 1  \\
-	U(z)         & = U_h\cdot e ^{j\beta z}  \qquad           
-	I(z)         = I_h \cdot e^{j\beta z} = \frac{U_h}{Z_L}\cdot e^{j\beta z}
-\end{align*}
-
 \subsubsection{Ohmscher Abschluss an Leitungsende}
-Abstand \textbf{Spannung}smax. von der Last $ z_{\texttt{max}} $ :\\
+Abstand \textbf{Spannung}smax. von der Last (also bei z=0) $ z_{\texttt{max}} $ :\\
 $ r_A \rightarrow$ rein reell! \qquad $ z_{\texttt{max}} = \frac{\lambda}{4\pi} (\theta_{\texttt{rad}}+2n\pi)$
 \begin{align*}
 	R_A > Z_L & \rightarrow\theta_{\texttt{rad}} = 0 \qquad r_A >0
@@ -180,6 +200,9 @@ $ r_A \rightarrow$ rein reell! \qquad $ z_{\texttt{max}} = \frac{\lambda}{4\pi} 
 	R_A < Z_L& \rightarrow\theta_{\texttt{rad}} = \pi \qquad r_A <0                          
 	& \rightarrow z_\texttt{max}=\frac{\lambda}{4}\cdot n
 	\end{align*}
+
+$ R_A > Z_L $: Erstes $ U_{max}$/$ I_{min} $ entsteht an der Last.\\
+$ R_A < Z_L $: Erstes $ U_{min}$/$ I_{max} $ entsteht an der Last.
 
 \subsubsection{Position von Extrema}
 bei beliebigen Abschlüssen/Lasten! $ \rightarrow $ stehende Welle!
@@ -264,7 +287,7 @@ $ r_e $: am \textbf{Eingang} \qquad $ r_a $: am Abschluss/an der Last
 %                    \frac{1}{Z_L} \sinh(\gamma l) & \cosh(\gamma l)     \\
 %                \end{array} } \right]
 %\]
-\newpage
+%\newpage
 \subsection{Leitungsparameter}
 				\subsubsection{Allgemein}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
