@@ -42,7 +42,7 @@ komplexer $\underline{\gamma}$ nicht im TR berechenbar:\\
   Für Winkel $\alpha l$ bzw. $ \beta l$ auf \textbf{RAD} in TR!
 \subsubsection{Kenngrößen} 
 \begin{itemize}
-\item Leitungswellenwiderstand:
+\item \textbf{Leitungswellenwiderstand}:
 \begin{equation*}
     \underline{Z}_L = \sqrt{ \frac{R + j \omega L}{G + j \omega C}} = \frac{\underline{U}_h}{\underline{I}_h} =- \frac{\underline{U}_r}{\underline{I}_r}
 \end{equation*}
@@ -51,19 +51,19 @@ komplexer $\underline{Z}_L$ nicht in TR berechenbar:\\
 \textbf{Phase}: $0.5 \cdot \arg(\underline{Z}_L^2)$ \quad
 $\rightarrow$  $\underline{\gamma}$ analog vorgehen.
 
-\item Fortpflanzungskonstante:
+\item \textbf{Fortpflanzungskonstante}:
 \begin{align*}
 	\underline{\gamma} & = \sqrt{(R+j\omega L)\cdot(G+j\omega C)} = \alpha + j \beta \, \left[ \frac{1}{m} \right]  \\
 	& = j \omega \sqrt{LC} \cdot \sqrt{ \frac{RG}{j^2 \omega^2 LC} + \frac{G}{j \omega C} + \frac{R}{j \omega L} + 1}
 \end{align*}
-\item Reflexionsfaktor: \qquad
-$ r(l) \, \widehat{=} \, r_1 $: Leitungs\textit{anfang} 
+\item \textbf{Reflexionsfaktor}: \qquad
+$ r(l) \, \widehat{=} \, r_1 $: Leitungs\textit{eingang} 
 \begin{align*}
 	\underline{r}(l) &= \underline{r}_2 \cdot e^{-2\underline{\gamma}l} = \underline{r}_2\cdot e^{-2\alpha l}\cdot e^{-2j\beta l}\\
 	 &= 	\frac{\underline{U}_r(l)}{\underline{U}_h(l)} = -\frac{\underline{I}_r(l)}{\underline{I}_h(l)}
 	=\frac{\underline{Z}(l)-\underline{Z}_L}{\underline{Z}(l)+\underline{Z}_L} = \frac{\tfrac{Z(l)}{Z_L}-1}{\tfrac{Z(l)}{Z_L}+1}
 \end{align*}
-\item weitere Parameter: \qquad meistens $ \mu_r = 1 $
+\item weitere \textbf{Parameter}: \qquad meistens $ \mu_r = 1 $
 \begin{align*}
     \lambda_0  = \frac{c_0}{f} \qquad \lambda & = \frac{2\pi}{\beta} = \frac{c_0}{f\sqrt{\varepsilon_{r,\texttt{eff}}\cdot \mu_{r,\texttt{eff}}}} \\
     l_{\texttt{elek.}} = \beta \cdot l \qquad v_p & = \frac{\omega}{\beta} = \frac{c_0}{\sqrt{\varepsilon_{r,\texttt{eff}}\cdot \mu_{r,\texttt{eff}}}}
@@ -104,7 +104,7 @@ $ R', G' = 0 \rightarrow \alpha = 0 \qquad Z_L, v_p \nsim f$
 \subsubsection{verlustloser Reflexionsfaktor}
 %$ \underline{U}_r(l) = \underline{U}_r(l=0) \cdot e^{-j\beta l} \qquad \underline{U}_h(l) = \underline{U}_h(l=0) \cdot e^{j\beta l} $
 
-$ \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $ $\Psi$ in \textbf{RAD}!
+$ \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi $ \quad  $\Psi$ in \textbf{RAD}!
 \begin{align*}
 	\underline{r}(l)  &= \underline{r}_2 \cdot e^{-j2\beta l} = r \cdot e^{-j(\Psi_0+2\beta l)} =r\cdot e^{j\Psi} \\ &=\tfrac{\underline{Z}(l)-Z_L}{\underline{Z}(l)+Z_L}\\
 	\underline{r}_2 & = \tfrac{\underline{Z}_2-Z_L}{\underline{Z}_2+Z_L} = \tfrac{\underline{U}_2-\underline{I}_2Z_L}{\underline{U}_2 +\underline{I}_2 Z_L}\\
