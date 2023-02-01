@@ -123,13 +123,25 @@ n = \frac{c_0}{v_p} = \sqrt{\mu_r \varepsilon_r} \approx \sqrt{\varepsilon_r} \g
 \[
 v_g = \dfrac{d \omega}{d k} \widehat{=} \dfrac{\textnormal{Wegstück der Wellengruppe}}{\textnormal{Laufzeit der Wellengruppe}}
 \]
-%\begin{align*}
-%	E_1(z,t)   & = E\cos((\omega_0-\Delta\omega)t-(\beta_0-\Delta\beta)z)                                                                                                                                     \\
-%	E_2(z,t)   & = E\cos((\omega_0+\Delta\omega)t-(\beta_0+\Delta\beta)z)                                                                                                                                                                                                                                                                                                                             \\
-%	\Rightarrow E(z,t)     & = 2E\cdot\underbrace{\cos(\omega_0t-\beta_0z)}_{\mathclap{\text{Grundfrequenz $\omega$}}}\cdot\underbrace{\cos(\Delta\omega t-\Delta\beta z)}_{\mathclap{\text{Einhüllende $\Delta\omega$}}} \\
-%	v_p        & = \frac{\omega_0}{\beta_0}          \qquad                                                                                                                                                         
-%	v_g        = \frac{\Delta\omega}{\Delta\beta}
-%\end{align*}
+\\
+2 Wellen mit geringem Unterschied $ \Delta \omega $ und $ \beta =\omega \sqrt{\mu \varepsilon} $:
+\begin{align*}
+	E_1(z,t)   & = E\cos((\omega_0-\Delta\omega)t-(\beta_0-\Delta\beta)z)     \\
+	E_2(z,t)   & = E\cos((\omega_0+\Delta\omega)t-(\beta_0+\Delta\beta)z)     \\
+	\Rightarrow E(z,t)     & = 2E\cdot\underbrace{\cos(\omega_0t-\beta_0z)}_{\mathclap{\text{Grundfrequenz $\omega$}}}\cdot\underbrace{\cos(\Delta\omega t-\Delta\beta z)}_{\mathclap{\text{Einhüllende $\Delta\omega$}}} \\
+	v_p        & = \frac{\omega_0}{\beta_0}          \qquad                                                                                                                                                         
+	v_g        = \frac{\Delta\omega}{\Delta\beta} \qquad \texttt{Grenzwert:} \quad v_g =  \frac{1}{d\beta/d\omega}
+\end{align*}
+
+\subsubsection{Zusammenhang Gruppen- und Phasengeschwindigkeit}
+$\quad v_{p h}=\frac{\omega}{k} \Rightarrow k=\frac{\omega}{v_{p h}}$
+$$
+v_g\left(\omega, v_{p h}\right)=\frac{1}{\frac{\mathrm{d} k}{\mathrm{~d} \omega}}=\frac{1}{\frac{\mathrm{d}}{\mathrm{d} \omega}\left[\frac{\omega}{v_{p h}}\right]}=\frac{1}{\frac{v_{p h}-\omega \frac{\mathrm{d} v_{p h}}{\mathrm{~d} \omega}}{v_{p h}^2}}=\frac{v_{p h}}{1-\frac{\omega}{v_{p h}} \frac{\mathrm{d} v_{p h}}{\mathrm{~d} \omega}}
+$$
+mit $\quad v_{p h}=\frac{\omega}{k} \Rightarrow \omega=k v_{p h}$
+$$
+v_g\left(k, v_{p h}\right)=\frac{\mathrm{d} \omega}{\mathrm{d} k}=\frac{\mathrm{d}}{\mathrm{d} k}\left[k v_{p h}\right]=v_{p h}+k \frac{\mathrm{d} v_{p h}}{\mathrm{~d} k}
+$$
 
 \subsubsection{Feldwellenwiderstand}
 $ Z_{F0} $: im \textbf{materiefreien} Raum/Vakuum!\\
@@ -558,6 +570,7 @@ Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
 \end{itemize}
 
 \subsubsection{Verlauf von r und t beim Grenzübergang}
+Achtung: nach Sattler: Definition von $ r_p $ und $ t_p $ beachten!
 \includegraphics[width=\columnwidth]{Figures/Totalreflexion_Diagramm.png}
 
 \subsubsection{Verlauf der Reflexionsfaktoren}
