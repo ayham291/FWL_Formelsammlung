@@ -165,10 +165,11 @@ $\oprot \vec{H} = 0$, wenn $ \vec{J}=0$.
 %\end{align*}
 \subsubsection{Vektorpotential}
 Reine Hilfsgröße, in Analogie zum elek. Skalarpotential $ \varphi $.\\
-\textbf{Coulomb-Eichung}, wenn $ \opdiv \vec{A} = 0 $, gilt nur für zeitunabhängige Felder.
+\textbf{Coulomb-Eichung}, wenn $ \opdiv \vec{A} = 0 $, gilt \textbf{nur} für zeitunabhängige Felder.
 \begin{align*}
     \Delta \vec{A} & = - \mu \vec{J} &
     \vec{B}        & = \oprot \vec{A} &
+    \left[\vec{A} \right] = \frac{Wb}{m} = \frac{Vs}{m}
 \end{align*}
 
 \subsubsection{Vektorpotential in Abhängigkeit von der Stromdichte}
@@ -191,11 +192,11 @@ mit $\opgrad \frac{1}{\left|\vec{r}-\vec{r}^{\,\prime}\right|}=-\frac{\vec{r}-\v
 
 \subsubsection{Magnetischer Dipol}
 \input{Figures/Felder_Magnetischer_Dipol_1.tex}\\
-I entlang eines Leiters:
-\begin{align*} 
-    A(r)                            & = \frac{\mu_0 \cdot I}{4 \pi} \int \frac{d \vec{s}}{| \vec{r} - \vec{s}|} = \frac{ \mu_0}{4 \pi} \frac{\vec{m} \times \vec{r}}{r^3} \\
+Strom $I$ entlang eines Leiters: $\left[\vec{A}\right] = \frac{Vs}{m}$
+\begin{flalign*} 
+    \vec{A}(r)                            & = \frac{\mu_0 \cdot I}{4 \pi} \int \frac{d \vec{R}}{| \vec{r} - \vec{R}|} = \frac{ \mu_0}{4 \pi} \frac{\vec{m} \times \vec{r}}{r^3} \\
     \vec{B} = \nabla \times \vec{A} & = \frac{\mu_0}{4 \pi} \left(\frac{3(\vec{m} \cdot \vec{r})\vec{r}}{r^5} - \frac{\vec{m}}{r^3}\right)
-\end{align*}
+\end{flalign*}
 
 \subsection{Quasistätionäre Felder (Wechselstrom)}
 Homogenes, Isotropes Medium: $ \varepsilon, \mu, \kappa = \mathtt{kost.} $\\
@@ -224,14 +225,14 @@ Leiter ist quasineutral: $ \rho = 0 $.
 	\underline{J}&=\underline{J}_x \cdot \vec{e}_x + \underline{J}_y \cdot \vec{e}_y + \underline{J}_z \cdot \vec{e}_z
 \end{align*}
 
-\subsection{Skineffekt}
+\subsection{Skineffekt}\label{sec:skineffekt}
 
 \input{Figures/Felder_Skineffekt.tex}
 
 \begin{description}
     \item \textbf{Eindringtiefe}/Äquivalente Leiterschichtdicke\\ (Abfall der Amplitude: $A_0 \cdot \frac{1}{e}$):
 \begin{align*}
-  \Aboxed{\delta &= \frac{1}{\alpha} =  \frac{1}{\sqrt{\pi\mu\kappa f}} = \sqrt{\frac{2}{\omega\mu\kappa}} }\quad \left[ m \right]
+  \Aboxed{\delta &= \frac{1}{\alpha} =  \frac{1}{\sqrt{\pi\mu\kappa f}} = \sqrt{\frac{2}{\omega\mu\kappa}} }\quad \left[ \delta \right] = m
 \end{align*}
 
 
@@ -249,7 +250,7 @@ Leiter ist quasineutral: $ \rho = 0 $.
                   \[
                       H\left( x,t\right) = H_{0}\cdot e^{^{-x}/_\delta}\cdot \cos \left( \omega t-\frac{x}{\delta}\right) = H_0 \cdot e^{\alpha x}\cdot \cos(wt-\beta x)
                   \]
-                  \footnotesize analog für $E$-Feld
+                  \footnotesize $\rightarrow$ gilt \textit{analog} für $E$-Feld.
 %              \end{minipage}
 %          }
   	\item \textbf{Amplitude} und \textbf{Phase} bezogen auf $\delta$:
@@ -272,7 +273,7 @@ Leiter ist quasineutral: $ \rho = 0 $.
 \end{description}
 Wenn die Länge nicht gegeben ist oder nach Wieviel \% der Widerstand bei einer bestimmten Frequenz abnimmt, kann dies mit der folgenden Formel berechnet werden:
 \subsubsection{Näherungen für Skineffekt}
-\textbf{Rundleiter}: $ R_{DC} = \dfrac{l}{\kappa \pi r_0^2}$
+\textbf{nur} für \textbf{Rundleiter}: $ R_{DC} = \dfrac{l}{\kappa \pi r_0^2}$
 \begin{description}
 	\item \textbf{Geometrische} Beschreibung (Fehler $ < 6\% $)
 	  	\begin{align*}
@@ -300,7 +301,7 @@ Wenn die Länge nicht gegeben ist oder nach Wieviel \% der Widerstand bei einer 
               \boxed{x=\frac{r_0}{2\delta}} \qquad r_0 \, \hat{=} \textnormal{ Außenradius} \qquad X_{AC} = wL_i
           \]
           
-  	\item \textbf{Empirische} Beschreibung (Fehler $ < 10\% $)
+  	\item \textbf{Empirische} Beschreibung (Fehler $ < 10\% $):
   	\begin{align*}
   	\frac{R_{AC}}{R_{DC}} & =
   		\begin{dcases}
