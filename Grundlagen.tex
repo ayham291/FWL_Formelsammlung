@@ -1,5 +1,6 @@
 \section{Grundlagen}
 \subsection{Einheiten}
+weitere Einheiten siehe Kapitel \ref{sec:Einheiten}.
 \begin{table}[H]
 	\renewcommand{\arraystretch}{2.15}
 \begin{tabularx}{0.9\columnwidth}{lXl}
@@ -278,13 +279,33 @@ quellen- und wirbelfreies Vektorfeld $\vec{F}$:
 %     $\rho$ & Raumladungsdichte &              \\
 % \end{tabularx}
 
-\subsubsection{Rechnen mit Pegeln}
+\subsubsection{Rechnen mit Pegeln / Logarithmen}
 Rechenregeln für Logarithmen (10er-Basis): \quad $ x,y,a > 0 $
 \begin{flalign*}
 	\log (x\cdot y) &= \log (x) - \log (y) & \log (\tfrac{x}{y}) & = \log (x) - \log (y) &\\
 	\log (x^a) &= a\cdot \log(x)  & \log \sqrt[a]{x} & = \frac{1}{a} \cdot \log (x) &\\
    \mathtt{Pegel} &= 10 \cdot \log(\mathtt{Faktor}) & \mathtt{Faktor}& = 10 ^{\tfrac{\mathtt{Pegel}}{10}}
 \end{flalign*}
+
+\subsection{Rechnen mit Wurzeln}
+$a$: Radikant \qquad $n$: Wurzelexponent\\
+Merke: $\sqrt[n]{a \pm b} \neq \sqrt[n]{a} \pm \sqrt[n]{b}$ \qquad $ x = \sqrt[n]{a} = a^{\frac{1}{n}} $
+\begin{flalign*}
+&\sqrt[n]{a^m}=\left(a^m\right)^{\frac{1}{n}}=\left(a^{\frac{1}{n}}\right)^m=a^{\frac{m}{n}}=(\sqrt[n]{a})^m\\
+&\sqrt[m]{\sqrt[n]{a}}=\sqrt[m]{a^{\frac{1}{n}}}=\left(a^{\frac{1}{n}}\right)^{\frac{1}{m}}=a^{\frac{1}{m \cdot n}}=\sqrt[m \cdot n]{a}\\
+&\sqrt[n]{a} \cdot \sqrt[n]{b}=\left(a^{\frac{1}{n}}\right) \cdot\left(b^{\frac{1}{n}}\right)=(a b)^{\frac{1}{n}}=\sqrt[n]{a b}\\
+&\frac{\sqrt[n]{a}}{\sqrt[n]{b}}=\frac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}}=\left(\frac{a}{b}\right)^{\frac{1}{n}}=\sqrt[n]{\frac{a}{b}} \quad(b>0)
+\end{flalign*}
+
+\subsection{Rechnen mit Potenzen}
+$a$: Basis \qquad $m,n$: Exponent
+\begin{flalign*}
+	&a^m \cdot a^n=a^{m+n} & \frac{a^m}{a^n}&=a^{m-n} \quad(a \neq 0)&\\
+	&\left(a^m\right)^n=\left(a^n\right)^m=a^{m \cdot n}& a^n \cdot b^n&=(a \cdot b)^n&\\
+	& \frac{a^n}{b^n}=\left(\frac{a}{b}\right)^n \quad(b \neq 0)& a^b &= e^{b \cdot \ln a}&\\
+	&a^0 =1 & a^{-n} &= \frac{1}{a^n}&
+\end{flalign*}
+
 
 \subsection{Koordinatensysteme}
 
