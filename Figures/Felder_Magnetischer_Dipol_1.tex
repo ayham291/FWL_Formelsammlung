@@ -7,11 +7,11 @@
         minimum width = 3cm,
         minimum height = 1cm] (e) at (0,0) {};
     %Koordinaten Achsen
-    \draw[-latex](0,0)--(3.2,0) node[right]{X};
+    \draw[-latex](0,0)--(3.2,0) node[right]{x};
     \draw[-latex](0,0)--(0,1.7) node[left]{Z};
     %Pfeile
     \draw[-latex, blue](0,0)--(3,1.5) node[above, midway]{r};
-    \draw[-latex, blue](0.9,-0.4)--(3,1.5) node[below, midway]{r-R};
+    \draw[-latex, blue](0.9,-0.4)--(3,1.5) node[below, midway, xshift = 5pt]{r-R};
     \draw[-latex, blue](0,0) -- (0.9,-0.4) node[midway, below, yshift=3pt, xshift=-5pt]{\small{R}};
     \draw[-latex, red](0.9,-0.4)--(1.2,-0.3) node[midway, below]{dR};
     \draw[-latex, red](-0.9,-0.4)--(-0.7,-0.5) node[midway, below]{I};
