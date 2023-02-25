@@ -208,7 +208,7 @@ $Z_F$ rein reell $\rightarrow$ ebene Welle
 \end{align*}
 
 \subsubsection{Im Dielektrika mit geringem Verlust}
-geringer Verlust: $0 < \kappa \ll\omega\varepsilon$
+geringer Verlust: $0 < \sigma \ll\omega\varepsilon$
 \begin{align*}
     \alpha                  & \approx\dfrac{\sigma}{2}\cdot\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{\sigma}{2}\cdot Z_{F0}\sqrt{\frac{\mu_r}{\varepsilon_r}}  \quad 
     \beta \approx\omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\cdot\dfrac{\sigma^2}{\omega^2\varepsilon^2}\right)                                                  \\
@@ -218,13 +218,20 @@ geringer Verlust: $0 < \kappa \ll\omega\varepsilon$
 \end{align*}
 
 \subsubsection{Im guten Leiter}
-geringer Verlust: $\sigma \gg\omega\varepsilon$
+geringer Verlust: $\sigma \gg\omega\varepsilon$ \quad $\mu = \mu_0 \cdot \mu_r$
 \begin{align*}
     \alpha                  & \approx \beta \approx\sqrt{\frac{\omega\mu\sigma}{2}}=\dfrac{1}{\delta}\sim\sqrt{f} \qquad
     \lambda                 = 2\pi \sqrt{\dfrac{2}{\omega\mu\sigma}}=2\pi\delta                                 \\
     v_p                     & = \frac{2\pi}{\beta} = \omega\delta        \qquad                                        
-    \boxed{\underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma}} \approx \dfrac{1+j}{\sigma\cdot\delta} = \sqrt{\frac{\omega \mu}{\kappa}}e^{\mathrm{j}\frac{\pi}{4}}   }
+    \boxed{\underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma}} \approx \dfrac{1+j}{\sigma\cdot\delta} = \sqrt{\frac{\omega \mu}{\kappa}}e^{\mathrm{j}\frac{\pi}{4}} = \sqrt{\frac{\omega \mu}{2 \kappa}}(1+j)   }
 \end{align*}
+
+\textbf{Feldstärken} im Leiter: \qquad Winkel $\varphi = - \dfrac{z}{\delta}$ in \textbf{DEGREE}
+\begin{align*}
+	E(z,t) &= E_0 \cdot e^{- z/_\delta}\cdot cos(\omega t-\frac{z}{\delta})\\
+	H(z,t) &= H_0 \cdot e^{- z/_\delta}\cdot cos(\omega t- \frac{z}{\delta}+\frac{\pi}{4})
+\end{align*}
+siehe Analogie in Kapitel \ref{sec:skineffekt} (Skineffekt).
 %\newpage
 \subsection{Ebene Wellen an Grenzflächen}
 \subsubsection{Zwischen Dielektrika mit geringem Verlust}
@@ -344,21 +351,21 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$
     % \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 
-\subsection{Polarisation einer Welle}
-Die Polarisation (Ausrichtung) bezieht sich \textbf{immer} auf das $\vec{E}$-Feld.
-\begin{itemize}
-	\item \textbf{Lineare} Polarisation\\
-	Endpunkt des $\vec{E}$-Vektors beschreibt bei fortschreitender Welle eine Gerade (Linie).
-		\begin{itemize}
-			\item horizontale Polarisation: E-Feld parallel zum Erdboden.
-			\item vertikale Polarisation E-Feld senkrecht zum Erdboden.
-		\end{itemize}
-	\item \textbf{Elliptische} Polarisation\\
-	Endpunkt des $\vec{E}$-Vektors beschreibt bei fortschreitender Welle eine Ellipse.
-		\begin{itemize}
-			\item Zirkulare Polarisation: $|\vec{E}_x| = |\vec{E}_y|$ bei $ \vec{E}_x \perp \vec{E}_y $ ($ \ang{90}$ Phasenverschiebung)
-		\end{itemize}
-\end{itemize}
+%\subsection{Polarisation einer Welle}
+%Die Polarisation (Ausrichtung) bezieht sich \textbf{immer} auf das $\vec{E}$-Feld.
+%\begin{itemize}
+%	\item \textbf{Lineare} Polarisation\\
+%	Endpunkt des $\vec{E}$-Vektors beschreibt bei fortschreitender Welle eine Gerade (Linie).
+%		\begin{itemize}
+%			\item horizontale Polarisation: E-Feld parallel zum Erdboden.
+%			\item vertikale Polarisation E-Feld senkrecht zum Erdboden.
+%		\end{itemize}
+%	\item \textbf{Elliptische} Polarisation\\
+%	Endpunkt des $\vec{E}$-Vektors beschreibt bei fortschreitender Welle eine Ellipse.
+%		\begin{itemize}
+%			\item Zirkulare Polarisation: $|\vec{E}_x| = |\vec{E}_y|$ bei $ \vec{E}_x \perp \vec{E}_y $ ($ \ang{90}$ Phasenverschiebung)
+%		\end{itemize}
+%\end{itemize}
 
 
 
@@ -440,6 +447,8 @@ gilt für $ \kappa =0 $, keine Dämpfung.
     r & = r_e =\frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} = \frac{\sqrt{\varepsilon_{r1}\mu_{r2}} - \sqrt{\varepsilon_{r2}\mu_{r1}} }{\sqrt{\varepsilon_{r1}\mu_{r2}}+{\sqrt{\varepsilon_{r2}\mu_{r1}}}} \\
     t & = t_e = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}} = \frac{2\sqrt{\varepsilon_{r1}\mu_{r2}}}{\sqrt{\varepsilon_{r1}\mu_{r2}}+\sqrt{\varepsilon_{r2}\mu_{r1}}}
 \end{align*}
+
+
 % \begin{tabularx}{\columnwidth}{>{\hsize=.35\hsize}X|>{\hsize=.32\hsize}X>{\hsize=.18\hsize}X>{\hsize=.18\hsize}X}
 %     idealer Leiter    & $ Z_{F2} = 0 $                    & $ r = -1 $ & $t = 0$ \\
 %     \hline
