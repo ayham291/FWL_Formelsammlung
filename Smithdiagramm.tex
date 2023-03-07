@@ -42,25 +42,24 @@ $L_n$: reale Leitungslänge von Last zu Eingang.
 %        \text{auch ohne Quelle gültig!}
 %    \end{align*}
 
-\subsubsection{Anpassungsfaktor}
-Werte von $ m \rightarrow$ Werte von $ \Re{\underline{z}_n}: 0 \leq m \leq1 $
-\begin{align*}
-	m = \frac{U_{min}}{U_{max}} = \frac{I_{min}}{I_{max}}=\frac{1-|\underline{r}|}{1+|\underline{r}|} \qquad  |\underline{r}| = \frac{1-m}{1+m} \qquad s=\frac{1}{m}
-\end{align*}
+\subsubsection{Schema und Kenngrößen}
 \begin{center}
-    \input{Figures/Smithdiagramm_Smithchart.tex}
+	\input{Figures/Smithdiagramm_Smithchart.tex}
 \end{center}
+Werte von Anpassungsfaktor $ m \rightarrow$ Werte von $ \Re{\underline{z}_n}: 0 \leq m \leq1 $
+\begin{align*}
+	m =\frac{1-|\underline{r}|}{1+|\underline{r}|} = \frac{U_{min}}{U_{max}} = \frac{I_{min}}{I_{max}} \qquad  |\underline{r}| = \frac{1-m}{1+m} \qquad \text{SWR}=\frac{1}{m}
+\end{align*}
 \begin{align*}
     \underline{z}_n & = \frac{\underline{Z}_n}{Z_L} = \frac{1+\underline{r}(l)}{1-\underline{r}(l)} \qquad \qquad |\underline{r}(l)|=\frac{\si{SWR}-1}{\si{SWR}+1} = \frac{1-m}{1+m}
     \\
     \underline{r}_n & = \frac{\underline{Z}_n-Z_L}{\underline{Z}_n+Z_L}= \frac{\underline{z}_n-1}{\underline{z}_n+1}    = \frac{1-\underline{y}_n}{1+\underline{y}_n} \\
-    m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}                                                                                                   \\
+%    m               & = \frac{1-|\underline{r}|}{1+|\underline{r}|}          \\
     \mathrm{SWR}               & = \frac{1}{m} = \frac{U_\text{max}}{U_\text{min}} = \frac{I_\text{max}}{I_\text{min}} = \frac{1+|r(l)|}{1-|r(l)|} = \frac{|U_h|+|U_r|}{|U_h|-|U_r|}= \dfrac{R_{\text{max}}}{Z_L}
 \end{align*}
 
 
-\subsection{Impedanz/Admittanz umrechnen}
-Spiegelung von $ \underline{z}_n $ um Mittelpunkt ergibt $ \underline{y}_n $.  (Phase $\pm 180^{\circ}$/$\pm \pi$)
+
 
 %\subsection{Zusammenschaltungen}
 % \begin{center}
@@ -69,7 +68,7 @@ Spiegelung von $ \underline{z}_n $ um Mittelpunkt ergibt $ \underline{y}_n $.  (
 
 %\columnbreak
 
-\subsection{Maxima und Minima bei stehender Welle}\label{sec:max_min_stehende_welle}
+\subsection{Maxima/Minima bei stehender Welle}\label{sec:max_min_stehende_welle}
 Bei \textbf{verlustloser} Leitung:
 \begin{align*}
 	&U_{\texttt{max}} = |U_h| \cdot (1+|r(l)|) & U_{\texttt{min}} = |U_h| \cdot (1-|r(l)|) &\\
@@ -82,7 +81,12 @@ Für \textbf{Spannungen}: Abstand von der Last $ z $: \quad $ n=0,1,2,3... $
 	 \Aboxed{&\text{\textbf{Minima} alle}\: \frac{\lambda}{2} \rightarrow \frac{l}{\lambda}=0.5} \Aboxed{&
 	 	\text{\textbf{Maxima} alle}\: \frac{\lambda}{4} \rightarrow \frac{l}{\lambda}=0.25} &
 \end{align*}
-$ \rightarrow $ Schnittpunkte mit der reellen Achse!
+$ \rightarrow $ Schnittpunkte mit der reellen Achse!\\
+Strommaxima sind an Spannungsminima und umgekehrt.
+
+\subsection{Impedanz/Admittanz umrechnen}
+Spiegelung von $ \underline{z}_n $ um Mittelpunkt ergibt $ \underline{y}_n $.  (Phase $\pm 180^{\circ}$/$\pm \pi$)
+
 \subsection[Von Last zu Quelle]{Lastseite $\rightarrow$ Quelle}
 \begin{enumerate}
     \item $Z_L = Z_B$ ins Diagramm einzeichnen
