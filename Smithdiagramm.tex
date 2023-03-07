@@ -23,10 +23,12 @@ Ersetze: \quad $\tan \rightarrow \tanh$ und $\beta l \rightarrow \underline{\gam
 \subsubsection{verlustloser Reflexionsfaktor}
 %$ \underline{U}_r(l) = \underline{U}_r(l=0) \cdot e^{-j\beta l} \qquad \underline{U}_h(l) = \underline{U}_h(l=0) \cdot e^{j\beta l} $
 Immer gültig, auch ohne Quelle!\\
-$ \underline{r}(l) = \underline{r} \qquad \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi \, [\ang{360}] $
+$ \underline{r}(l) = \underline{r} \qquad \underline{r}_{(l=0)} = \underline{r}_2 \qquad 0<r<1 \qquad 0<\Psi<2\pi \, [\ang{360}] $\\
+
+$L_n$: reale Leitungslänge von Last zu Eingang.
 \begin{flalign*}
 	\Aboxed{\underline{r}_n &= \underline{r}_2 \cdot e^{-j2\beta L_n}	
-	= r_2 \cdot e^{-j4\pi \frac{L_n}{\lambda}}}\\
+	= \underline{r}_2 \cdot e^{-j4\pi \frac{L_n}{\lambda}}}\\
 %	 &= |\underline{r}_2| \cdot e^{-j\Psi_0} \cdot e^{-j(\beta L_n)} 
 	 &= |\underline{r}_2| \cdot e^{j(\Psi_0-2\beta L_n)} & \Psi_0 (r_2) := \text{Startwinkel in \textbf{Radiant}}&\\
 	 &=\frac{\underline{z}_n-1}{\underline{z}_n+1} \\
@@ -67,13 +69,13 @@ Spiegelung von $ \underline{z}_n $ um Mittelpunkt ergibt $ \underline{y}_n $.  (
 
 %\columnbreak
 
-\subsection{Maxima und Minima bei stehender Welle}
+\subsection{Maxima und Minima bei stehender Welle}\label{sec:max_min_stehende_welle}
 Bei \textbf{verlustloser} Leitung:
 \begin{align*}
 	&U_{\texttt{max}} = |U_h| \cdot (1+|r(l)|) & U_{\texttt{min}} = |U_h| \cdot (1-|r(l)|) &\\
 	&I_{\texttt{max}} = \left | \frac{U_h}{Z_L} \right | \cdot (1+|r(l)|) & I_{\texttt{min}} = \left| \frac{U_h}{Z_L} \right | \cdot (1-|r(l)|) &
 \end{align*}
-Für \textbf{Spannungen}: Abstand von der Last $ z $ 
+Für \textbf{Spannungen}: Abstand von der Last $ z $: \quad $ n=0,1,2,3... $
 \begin{align*}
 	 &z_{\texttt{min}} = \frac{\lambda}{4\pi}(\theta_{rad}+(2n+1)\pi)&
 	 z_{\texttt{max}} = \frac{\lambda}{4\pi} \cdot (\theta_{rad}+2n\pi)&\\
