@@ -104,9 +104,9 @@ Im Vakuum: $k_{0}=\dfrac{\omega}{c_{0}}$ \quad $ \underline{k}=\beta - \si{j}\al
 
 \subsubsection{Wellenlänge}
 Periodenlänge entlang der Ausbreitungsrichtung.\\
-Freiraumwellenlänge: im materiefreien Raum $ \lambda_0 $
+Freiraumwellenlänge: im materiefreien Raum $ \lambda_0 $. \qquad $[\lambda] = \texttt{m}$
 \begin{align*}
-	\lambda_0 & = \dfrac{c_0}{f} = \dfrac{2\pi}{k_0} \quad [\texttt{m}]\\
+	\lambda_0 & = \dfrac{c_0}{f} = \dfrac{2\pi}{k_0}\\
 	\lambda   & = \dfrac{\lambda_0}{\sqrt{\mu_r \cdot \varepsilon_r}} = \dfrac{2 \pi}{k} = \dfrac{v_p}{f} = \dfrac{\lambda_0}{n} = \dfrac{2 \pi}{n \cdot k_0}
 \end{align*}
 
@@ -207,7 +207,7 @@ $Z_F$ rein reell $\rightarrow$ ebene Welle
     \boxed{Z_F = \sqrt{\dfrac{\mu}{\varepsilon}}=Z_{F0}\sqrt{\frac{\mu_r}{\varepsilon_r}}}
 \end{align*}
 
-\subsubsection{Im Dielektrika mit geringem Verlust}
+\subsubsection{Im Dielektrikum mit geringen Verlusten}
 geringer Verlust: $0 < \sigma \ll\omega\varepsilon$
 \begin{align*}
     \alpha                  & \approx\dfrac{\sigma}{2}\cdot\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{\sigma}{2}\cdot Z_{F0}\sqrt{\frac{\mu_r}{\varepsilon_r}}  \quad 
@@ -217,7 +217,7 @@ geringer Verlust: $0 < \sigma \ll\omega\varepsilon$
     \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{\mu}{\varepsilon}}\left(1-\frac{j\sigma}{\omega\varepsilon}\right)^{-^1/2} \approx Z_{F0}\left(1+\frac{j\sigma}{2\omega\varepsilon}\right)}
 \end{align*}
 
-\subsubsection{Im guten Leiter}
+\subsubsection{Im guten Leiter}\label{sec:Ausbreitug_guter_Leiter}
 geringer Verlust: $\sigma \gg\omega\varepsilon$ \quad $\mu = \mu_0 \cdot \mu_r$
 \begin{align*}
     \alpha                  & \approx \beta \approx\sqrt{\frac{\omega\mu\sigma}{2}}=\dfrac{1}{\delta}\sim\sqrt{f} \qquad
@@ -226,10 +226,12 @@ geringer Verlust: $\sigma \gg\omega\varepsilon$ \quad $\mu = \mu_0 \cdot \mu_r$
     \boxed{\underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma}} \approx \dfrac{1+j}{\sigma\cdot\delta} = \sqrt{\frac{\omega \mu}{\kappa}}e^{\mathrm{j}\frac{\pi}{4}} = \sqrt{\frac{\omega \mu}{2 \kappa}}(1+j)   }
 \end{align*}
 
-\textbf{Feldstärken} im Leiter: \qquad Winkel $\varphi = - \dfrac{z}{\delta}$ in \textbf{DEGREE}
+\textbf{Feldstärken} im Leiter: \qquad Winkel $\varphi = - \dfrac{z}{\delta}$ in \textbf{DEGREE}\\
+$E_0, H_0$: Beträge/Amplituden!
 \begin{align*}
+	H_0 &= \sqrt{\frac{\sigma}{\omega \mu}}\cdot E_0\\
 	E(z,t) &= E_0 \cdot e^{- z/_\delta}\cdot cos(\omega t-\frac{z}{\delta})\\
-	H(z,t) &= H_0 \cdot e^{- z/_\delta}\cdot cos(\omega t- \frac{z}{\delta}+\frac{\pi}{4})
+	H(z,t) &= H_0 \cdot e^{- z/_\delta}\cdot cos(\omega t- \frac{z}{\delta}-\frac{\pi}{4})
 \end{align*}
 siehe Analogie in Kapitel \ref{sec:skineffekt} (Skineffekt).
 %\newpage
@@ -380,21 +382,21 @@ Gilt bei Einfallswinkel $ \theta_h = 0 $.
 \begin{aligned}[t]
 %
 	r_e &= \frac{Z_{F2}-Z_{F1}}{Z_{F2} + Z_{F1}}\\
-	r_m &= \frac{Z_{F1}-Z_{F2}}{Z_{F2} + Z_{F1}}\\
-	&=-r_e\\
+	r_m &= \frac{Z_{F1}-Z_{F2}}{Z_{F2} + Z_{F1}}
+	=-r_e\\
 \end{aligned}
 \qquad \qquad
 \begin{aligned}[t]
 %	&0\leq t\leq2 &0\leq|r|\leq1&\\
 	t_e  &= \frac{2 \cdot Z_{F2}}{Z_{F1} + Z_{F2}}\\ 
-	t_m  &= \frac{2 \cdot Z_{F1}}{Z_{F1} + Z_{F2}} \\
-	&= t_e \cdot \frac{Z_{F1}}{Z_{F2}}\\
+	t_m  &= \frac{2 \cdot Z_{F1}}{Z_{F1} + Z_{F2}}
+	= t_e \cdot \frac{Z_{F1}}{Z_{F2}}\\
 \end{aligned}
 \end{equation*}
 %\begin{align*}
 %    %\qquad = \frac{\sqrt{\varepsilon_{r2}}-\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r2}}+\sqrt{\varepsilon_{r1}}}
 %\end{align*}
-\vspace{-0.2cm}
+\vspace{0.2cm}
 %Elektrisches Feld:
 \begin{equation*}
 \setlength{\jot}{6pt}
@@ -405,13 +407,15 @@ Gilt bei Einfallswinkel $ \theta_h = 0 $.
 	E_r & = r_e \cdot E_h \\
 	E_t & = E_h + E_r \\        
 	t_e\cdot E_{h} & = E_{h} + r_e\cdot  E_{h} \\
+	E_t &= E_h \cdot \frac{2 \cdot Z_{F2}}{Z_{F2} + Z_{F1}}\\
+	E_r &= E_h \cdot \frac{Z_{F2}-Z_{F1}}{Z_{F2}+Z_{F1}}
 \end{aligned}
 \qquad
 \begin{aligned}[t]
 	t_m & = 1+ r_m \\
 	H_{t1} &= H_{t2}\\
-	H_t & = t_e \cdot \tfrac{Z_{F1}}{Z_{F2}} \cdot H_h \\
-	-H_r & = r_e \cdot H_h \\
+	H_t & = t_m \cdot H_h  = t_e \cdot \tfrac{Z_{F1}}{Z_{F2}} \cdot H_h \\
+	H_r & = r_m \cdot H_h \\
 	H_t & = H_h + H_r \\        
 	t_m\cdot H_{h} & = H_{h} + r_m\cdot  H_{h} \\
 \end{aligned}
@@ -484,10 +488,11 @@ gilt für $ \kappa =0 $, keine Dämpfung.
 Gilt für $\mu_{r1} = \mu_{r2} = 1$
 \begin{align*}
     r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}}&
-    t        & = \frac{2\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}&
+    t        & = \frac{2}{1+\sqrt{\frac{\varepsilon_{r2}}{\varepsilon_{r1}}}}&
 \end{align*}
 
 \subsubsection{Medium 2: idealer Leiter}
+Für Leiter mit (geringen) Verlusten siehe Kapitel \ref{sec:Ausbreitug_guter_Leiter}.\\
 $\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!, vollständige Reflexion.
 \begin{equation*}
 	Z_{F2}       = 0 \qquad
@@ -496,20 +501,23 @@ $\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!, vollständ
 	\vec{S}_{\text{av}} = 0
 \end{equation*}
 %\vspace{-0.8cm}
+$E$ und $H$: zeitlich sowie örtlich zueinander um \ang{90} phasenverschoben.
 \begin{flalign*}
     &\underline{E}_{1x}          = -2j\cdot E_{h1}\cdot \sin(\beta_1 z)\qquad
     \underline{H}_{1y}          = 2\cdot \tfrac{E_{h1}}{Z_{F1}}\cdot \cos(\beta_1 z)\\
     &E_{1x} (z,t)=2E_{h1} \cdot \sin(\beta_1z)\cdot \sin(\omega t)\\
     &H_{1y}(z,t) = 2 \tfrac{E_{h1}}{Z_{F1}}\cdot \cos(\beta_1z)\cdot \cos(\omega t)
 \end{flalign*}
-\vspace{-0.5cm}
+%\vspace{-0.5cm}
+Annahme: Grenzfläche bei $z=0$.
 \begin{align*}
-     \Aboxed{&\text{$H_{\text{max}}$ und $E_{\text{min}}$ bei } n \cdot \lambda/_2}&
-     \Aboxed{&\text{$H_{min}$ und $E_{max}$ bei } (2n-1) \cdot \lambda/_4}&
+     \Aboxed{&\text{$H_{\text{max}}$, $E_{\text{min}}$ bei } z = - n \cdot \lambda/_2}&\\
+     \Aboxed{&\text{$H_{min}$, $E_{max}$ bei } z=- (2n-1) \cdot \lambda/_4}&
 %     & \qquad \rightarrow 90^\circ Phasenverschiebung
 \end{align*}
 
 \subsubsection{Stehwellenverhältnis (SWR)}
+siehe auch Kapitel \ref{sec:VSWR}.
 \[
     \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
 \]
@@ -533,9 +541,10 @@ $\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!, vollständ
 Index n: Normalkomponente. \quad Index 0: Amplitude/Betrag\\
 Index h: hinlaufende Welle \quad Index r: rücklaufende Welle\\
 Index t: transmittierte Welle\\ 
+$r_e$: Reflexionsfaktor 
 \begin{align*}
 	S_{tn} &= S_{hn} - S_{rn}\\ 
-	S_{t0} &= S_{h0}\cdot \frac{\cos\vartheta_{1}}{\cos\vartheta_{2}}(1-r^2)
+	S_{t0} &= S_{h0}\cdot \frac{\cos\vartheta_{1}}{\cos\vartheta_{2}}(1-r_e^2)
 \end{align*}
 
 \newcolumn
@@ -553,7 +562,7 @@ Anmerkung zu (2):\\
 \includegraphics[width=\columnwidth]{Figures/Grenzwinkel_Bild.png}
 
 \subsubsection[Brewster-/Polarisationswinkel]{Brewster-/Polarisationswinkel}
-Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
+Brewster-Winkel $ \theta_b $ $\rightarrow$ KEINE Reflexion $r=0$.
 \begin{itemize}
 	%    \item Snelliusche Brechungsgesetz
 	%\item Grenzwinkel $\alpha_g$
@@ -569,15 +578,15 @@ Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
 		\sin\theta_b & = \sqrt{\frac{\varepsilon_2(\mu_2\varepsilon_1 - \mu_1\varepsilon_2)}{\mu_1(\varepsilon_1^2-\varepsilon_2^2)}} &
 		\Aboxed{\tan\theta_b & = \sqrt{\frac{\varepsilon_2}{\varepsilon_1}} = \frac{n_2}{n_1}}&
 	\end{align*}
-		Brewster-Winkel existiert nur bei $ \varepsilon_{r1} \neq \varepsilon_{r2} $.
+		Brewster-Winkel existiert nur, wenn $ \varepsilon_{r1} \neq \varepsilon_{r2} $.
     \item \textbf{Senkrechte} Polarisation:  \quad rechts: $ \varepsilon_{r1} = \varepsilon_{r2} $
 	\begin{align*}
 %		\Aboxed{\varepsilon_{r1}=\varepsilon_{r2}}         \\
 		\sin\theta_b & = \sqrt{\frac{\mu_2(\mu_2\varepsilon_1 - \mu_1\varepsilon_2)}{\varepsilon_1(\mu_2^2-\mu_1^2)}}&
 		\tan\theta_b & = \sqrt{\frac{\mu_2}{\mu_1+\mu_2}}&
 	\end{align*}
-	Brewster-Winkel existiert nur bei $ \mu_{r1} \neq \mu_{r2} $.\\
-	Bei $ \mu_{r1}=\mu_{r2} \rightarrow r \neq 0$ keine Reflexionsfreiheit!
+	Brewster-Winkel existiert nur, wenn $ \mu_{r1} \neq \mu_{r2} $.\\
+	Bei $ \mu_{r1}=\mu_{r2} \rightarrow r \neq 0$ \qquad kein Brewster-Winkel $\theta_b \rightarrow \infty$!
 \end{itemize}
 
 \subsubsection{Verlauf von r und t beim Grenzübergang}
