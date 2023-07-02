@@ -1,4 +1,4 @@
-%\documentclass[10pt]{article}
+%\documentclass[a4paper]{article}
 \documentclass[oneside]{article}
 \input{preamble.sty}
 
@@ -8,13 +8,14 @@
 \title{\FS \\ \Fach}
 % \subtitle{Felder, Wellen und Leitungen}
 \date{\today}
-\def\Semester{Wintersemester 22/23}
+\def\Semester{Sommersemester 23}
 \IfFileExists{info.tex}
 {
     \input{info.tex}
 }
 {
     \author{Tony Pham}
+    \def\MatName{NAME}
     \def\MatNr{MATNR}
 }
 
@@ -42,8 +43,8 @@
         {\renewcommand{\arraystretch}{1.5}
         \Large
             \begin{tabular}{l l}
-                Name:            & \hspace{4cm} \\
-                % Matrikelnummer:  & \hspace{4cm}\MatNr    \\
+                Name:            & \hspace{4cm}\MatName \\
+                Matrikelnummer:  & \hspace{4cm}\MatNr    \\
                 Letzte Änderung: & \hspace{4cm}\MyDate   \\
                 Lizenz:          & \hspace{4cm}GPLv3
             \end{tabular}
