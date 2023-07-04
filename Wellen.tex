@@ -52,13 +52,13 @@ Im elektrisch guten Leiter $\rho = 0,\, \kappa \gg \omega \epsilon$
 \end{align*}
 %\textbf{Zeitabhängigkeit harmonisch:}
 %\begin{align*}
-%	\Delta \vec{H}   & = (j \omega \mu \sigma - \omega^2 \varepsilon \mu ) \vec{H}                                  \\
-%	\Delta \vec{E} i & = (j \omega \mu \sigma - \omega^2 \varepsilon \mu ) \vec{E} + grad \frac{ \rho}{\varepsilon}
+%	\Delta \vec{H}   & = (j \omega \mu \kappa - \omega^2 \varepsilon \mu ) \vec{H}                                  \\
+%	\Delta \vec{E} i & = (j \omega \mu \kappa - \omega^2 \varepsilon \mu ) \vec{E} + grad \frac{ \rho}{\varepsilon}
 %\end{align*}
 
 %\textbf{keine Raumladung $ \rho = 0$}
 %\begin{align*}
-%	\Delta \vec{E} & = (j \omega \mu \sigma - \omega^2 \varepsilon \mu ) \vec{E}
+%	\Delta \vec{E} & = (j \omega \mu \kappa - \omega^2 \varepsilon \mu ) \vec{E}
 %\end{align*}
 
 \subsection{Ebene Wellen}
@@ -177,14 +177,14 @@ gibt Leistungsfluss einer EM-Welle und Richtung der Energieströmung an.\\
 \end{align*}
 \newcolumn
 \subsection{Ausbreitung im Medium}
-$ \kappa, \sigma $ = Leitfähigkeit
+$ \kappa $ = Leitfähigkeit
 \subsubsection{Allgemein (mit Verlusten)}
 \begin{align*}
     \lambda                 & = \dfrac{2\pi}{\beta} \qquad E_2 = E_1 e^{-\alpha z}         \qquad                                                                            
     v_p                      = \lambda\cdot f = \dfrac{\omega}{\beta}                                                                                                    \\
-    \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
-    \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\sigma^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
-    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}}{\underline{H}} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\varepsilon}}}\quad\text{komplex, wenn } \alpha \neq 0
+    \alpha                  & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\kappa^2}{\omega^2\cdot\varepsilon^2}}{\color{red}{-}}1\right)}   \\
+    \beta                   & = \omega \cdot \sqrt{\dfrac{\mu \varepsilon}{2}\cdot \left(\sqrt{1+\dfrac{\kappa^2}{\omega^2\cdot\varepsilon^2}}{\color{green}{+}}1\right)} \\
+    \Aboxed{\underline{Z}_F & = \dfrac{\underline{E}}{\underline{H}} = \sqrt{\dfrac{j\omega\mu}{\kappa+j\omega\varepsilon}}}\quad\text{komplex, wenn } \alpha \neq 0
 \end{align*}
 
 \subsubsection{Im leeren Raum (Vakuum)}
@@ -208,28 +208,28 @@ $Z_F$ rein reell $\rightarrow$ ebene Welle
 \end{align*}
 
 \subsubsection{Im Dielektrikum mit geringen Verlusten}
-geringer Verlust: $0 < \sigma \ll\omega\varepsilon$
+geringer Verlust: $0 < \kappa \ll\omega\varepsilon$
 \begin{align*}
-    \alpha                  & \approx\dfrac{\sigma}{2}\cdot\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{\sigma}{2}\cdot Z_{F0}\sqrt{\frac{\mu_r}{\varepsilon_r}}  \quad 
-    \beta \approx\omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\cdot\dfrac{\sigma^2}{\omega^2\varepsilon^2}\right)                                                  \\
-    \lambda                 & = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}\cdot\frac{1}{1+\frac{1}{8}\left(\frac{\sigma}{\omega\varepsilon}\right)^2}                       \\
-    v_p                     & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}\cdot\frac{1}{1+\frac{1}{8}\left(\frac{\sigma}{\omega\varepsilon}\right)^2}                                        \\
-    \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{\mu}{\varepsilon}}\left(1-\frac{j\sigma}{\omega\varepsilon}\right)^{-^1/2} \approx Z_{F0}\left(1+\frac{j\sigma}{2\omega\varepsilon}\right)}
+    \alpha                  & \approx\dfrac{\kappa}{2}\cdot\sqrt{\dfrac{\mu}{\varepsilon}} = \frac{\kappa}{2}\cdot Z_{F0}\sqrt{\frac{\mu_r}{\varepsilon_r}}  \quad 
+    \beta \approx\omega\sqrt{\mu\varepsilon}\left(1+\dfrac{1}{8}\cdot\dfrac{\kappa^2}{\omega^2\varepsilon^2}\right)                                                  \\
+    \lambda                 & = \dfrac{c_0}{f}\cdot\dfrac{1}{\sqrt{\mu_r\varepsilon_r}}\cdot\frac{1}{1+\frac{1}{8}\left(\frac{\kappa}{\omega\varepsilon}\right)^2}                       \\
+    v_p                     & = \dfrac{c_0}{\sqrt{\mu_r\varepsilon_r}}\cdot\frac{1}{1+\frac{1}{8}\left(\frac{\kappa}{\omega\varepsilon}\right)^2}                                        \\
+    \Aboxed{\underline{Z}_F & = \sqrt{\dfrac{\mu}{\varepsilon}}\left(1-\frac{j\kappa}{\omega\varepsilon}\right)^{-^1/2} \approx Z_{F0}\left(1+\frac{j\kappa}{2\omega\varepsilon}\right)}
 \end{align*}
 
 \subsubsection{Im guten Leiter}\label{sec:Ausbreitug_guter_Leiter}
-geringer Verlust: $\sigma \gg\omega\varepsilon$ \quad $\mu = \mu_0 \cdot \mu_r$
+geringer Verlust: $\kappa \gg\omega\varepsilon$ \quad $\mu = \mu_0 \cdot \mu_r$
 \begin{align*}
-    \alpha                  & \approx \beta \approx\sqrt{\frac{\omega\mu\sigma}{2}}=\dfrac{1}{\delta}\sim\sqrt{f} \qquad
-    \lambda                 = 2\pi \sqrt{\dfrac{2}{\omega\mu\sigma}}=2\pi\delta                                 \\
+    \alpha                  & \approx \beta \approx\sqrt{\frac{\omega\mu\kappa}{2}}=\dfrac{1}{\delta}\sim\sqrt{f} \qquad
+    \lambda                 = 2\pi \sqrt{\dfrac{2}{\omega\mu\kappa}}=2\pi\delta                                 \\
     v_p                     & = \frac{2\pi}{\beta} = \omega\delta        \qquad                                        
-    \boxed{\underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\sigma}} \approx \dfrac{1+j}{\sigma\cdot\delta} = \sqrt{\frac{\omega \mu}{\kappa}}e^{\mathrm{j}\frac{\pi}{4}} = \sqrt{\frac{\omega \mu}{2 \kappa}}(1+j)   }
+    \boxed{\underline{Z}_F = \sqrt{\dfrac{j\omega\mu}{\kappa}} \approx \dfrac{1+j}{\kappa\cdot\delta} = \sqrt{\frac{\omega \mu}{\kappa}}e^{\mathrm{j}\frac{\pi}{4}} = \sqrt{\frac{\omega \mu}{2 \kappa}}(1+j)   }
 \end{align*}
 
 \textbf{Feldstärken} im Leiter: \qquad Winkel $\varphi = - \dfrac{z}{\delta}$ in \textbf{DEGREE}\\
 $E_0, H_0$: Beträge/Amplituden!
 \begin{align*}
-	H_0 &= \sqrt{\frac{\sigma}{\omega \mu}}\cdot E_0\\
+	H_0 &= \sqrt{\frac{\kappa}{\omega \mu}}\cdot E_0\\
 	E(z,t) &= E_0 \cdot e^{- z/_\delta}\cdot cos(\omega t-\frac{z}{\delta})\\
 	H(z,t) &= H_0 \cdot e^{- z/_\delta}\cdot cos(\omega t- \frac{z}{\delta}-\frac{\pi}{4})
 \end{align*}

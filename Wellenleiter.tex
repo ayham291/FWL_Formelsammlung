@@ -11,7 +11,7 @@
 Hin- und Rückleiter!\\
 \underline{\textbf{Ohmsche Verluste}} $R\ll\omega L$
 \[
-    \alpha_L = \frac{\sqrt{\dfrac{f\cdot\mu}{\pi\cdot\sigma}}}{120\Omega}\cdot\frac{\sqrt{\varepsilon_r}}{D}\cdot\dfrac{1+\dfrac{D}{d}}{\ln \dfrac{D}{d}}
+    \alpha_L = \frac{\sqrt{\dfrac{f\cdot\mu}{\pi\cdot\kappa}}}{120\Omega}\cdot\frac{\sqrt{\varepsilon_r}}{D}\cdot\dfrac{1+\dfrac{D}{d}}{\ln \dfrac{D}{d}}
 \]
 
 Dämpfungsminimum für $ \frac{1+\tfrac{D}{d}}{\ln \tfrac{D}{d}} = 1 $\\ bei vorgegebenen Außendurchmesser: $ \frac{D}{d} =3,59 $\\
@@ -139,7 +139,7 @@ $ \mathbf{b} $: Platten\textbf{breite} \qquad $ \mathbf{d} $: Abstand zwischen d
 %		\hline
 %		\[L'=\frac{\mu d}{b}\]         \\
 %		\hline
-%		\[G'=\frac{\sigma b}{d}\]      \\
+%		\[G'=\frac{\kappa b}{d}\]      \\
 %		\hline
 %		\[C'=\frac{b\varepsilon}{d}\]  \\
 %		\hline
@@ -169,11 +169,11 @@ $ \mathbf{r} $: Leiterradius \qquad $ \mathbf{d} $: Abstand zw. Leitermitten
 %{\renewcommand*{\arraystretch}{0.2}
 %	\begin{tabularx}{0.5\columnwidth}{|X|}
 %		\hline
-%		\[R  = \frac{1}{\pi a\delta\sigma_c}\]              \\
+%		\[R  = \frac{1}{\pi a\delta\kappa}\]              \\
 %		\hline
 %		\[L = \frac{\mu}{\pi} \cosh^{-1}\frac{d}{2a}\]      \\
 %		\hline
-%		\[G = \frac{\pi\sigma}{\cosh^{-1}(^d/_{2a})}\]      \\
+%		\[G = \frac{\pi\kappa}{\cosh^{-1}(^d/_{2a})}\]      \\
 %		\hline
 %		\[C = \frac{\pi\varepsilon}{\cosh^{-1}(^d/_{2a})}\] \\
 %		\hline
@@ -207,11 +207,11 @@ $ r_i $: Innenradius \quad $ r_a $: Außenradius
 %{\renewcommand*{\arraystretch}{0.2}
 %	\begin{tabularx}{0.5\columnwidth}{|X|}
 %		\hline
-%		\[R=\frac{1}{2\pi\delta\sigma_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
+%		\[R=\frac{1}{2\pi\delta\kappa_c}\left[\frac{1}{a}+\frac{1}{b}\right]\] \\
 %		\hline
 %		\[L=\frac{\mu}{2\pi}\ln\frac{b}{a}\]                                   \\
 %		\hline
-%		\[G=\frac{2\pi\sigma}{\ln(^b/_a)}\]                                    \\
+%		\[G=\frac{2\pi\kappa}{\ln(^b/_a)}\]                                    \\
 %		\hline
 %		\[C=\frac{2\pi\varepsilon}{\ln(^b/_a)}\]                               \\
 %		\hline
@@ -220,7 +220,7 @@ $ r_i $: Innenradius \quad $ r_a $: Außenradius
 \subsubsection{Allgemein}
 Für beliebige Leitergeometrie gelten folgende Zusammenhänge:
 \[
-LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\sigma}{\varepsilon}
+LC = \mu\varepsilon \quad \text{und} \quad \frac{G}{C} = \frac{\kappa}{\varepsilon}
 \]
 Innere Induktivität:
 \[
