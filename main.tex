@@ -43,7 +43,7 @@
         {\renewcommand{\arraystretch}{1.5}
         \Large
             \begin{tabular}{l l}
-                Name:            & \hspace{4cm}\MatName \\
+%                Name:            & \hspace{4cm}\MatName \\
 %                Matrikelnummer:  & \hspace{4cm}\MatNr    \\
                 Letzte Änderung: & \hspace{4cm}\MyDate   \\
                 Lizenz:          & \hspace{4cm}GPLv3
@@ -51,15 +51,15 @@
         }
         \vspace*{\stretch{1}}
         \vspace*{\stretch{2}}
-       \let\thefootnote\relax\footnotetext{Für Verbesserungsvorschläge, Wünsche, Fragen oder Anregungen: E-Mail an \href{mailto:tonyhawkz117@gmail.com}{mich} oder besuche die \href{https://github.com/Vibeskanzler/FWL_Formelsammlung}{Repository}.}
+%       \let\thefootnote\relax\footnotetext{Für Verbesserungsvorschläge, Wünsche, Fragen oder Anregungen: E-Mail an \href{mailto:tonyhawkz117@gmail.com}{mich} oder besuche die \href{https://github.com/Vibeskanzler/FWL_Formelsammlung}{Repository}.}
         
 
     \end{center}
 \end{titlepage}
 
 \newpage
-
-\tableofcontents\clearpage
+\tableofcontents
+\clearpage
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -76,10 +76,8 @@
 % \setlength{\columnsep}{1pt}
 \raggedcolumns
 
-
 \begin{multicols*}{2}
     \input{Grundlagen}
-%    \include{KoordinatenSysteme}
 \end{multicols*}
 
 % newpage
@@ -88,7 +86,6 @@
 
 
 \begin{multicols*}{2}
-    % \include{Maxwell}
     \include{Felder}
     \include{Wellen}
     \include{Leitungen}
@@ -98,11 +95,6 @@
 \end{multicols*}
 \include{Antennentabelle}
 \include{Einheiten}
-%für Leitungsparameter Grafik von Sattler füllt eine Seite
-% \include{Leitungen}
-% \begin{multicols*}{2}
-%     \include{Antennen}
-% \end{multicols*}
 
 
 \end{document}
