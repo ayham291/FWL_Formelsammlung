@@ -1,25 +1,4 @@
 \section{Wellen}
-%\begin{itemize}
-%    \setlength\itemsep{1pt}
-%    \item Ausbreitungsphänomen von E und H
-%    \item Ausbreitungsgeschw. kleiner $c_0$
-%    \item raumzeitlicher Vorgang $cos(\omega t- \beta z)$
-%    \item Energie- ohne Materietransport
-%    \item Poyntingvektor $\vec{S}=\vec{E}\times\vec{H}$ Einheit[S]$= \dfrac{W}{m^2}$\\
-%          {\footnotesize Falls $\vec{E}\perp\vec{H}$ und $\vec{S}\perp\vec{E}$ und $\vec{S}\perp\vec{H}$}
-%\end{itemize}
-
-%
-%$\alpha$ : Dämpfungskonstante [Np/m]
-%
-%$\beta$ : Phasenkonstante [rad/m]
-%
-%$v_p$ : Phasengeschwindigkeit [m/s]
-%
-%$v_g$ : Gruppengeschwindigkeit [m/s]
-%
-%$\lambda$ : Wellen [m]
-
 \subsection{Wellengleichungen allgemein}
 \subsubsection{Zeitbereich}
 auch d'Alembertsche Gleichungen genannt:
@@ -28,8 +7,10 @@ auch d'Alembertsche Gleichungen genannt:
 	\Delta \vec{H} -\kappa \mu \cdot \frac{\partial \vec{H}}{\partial t}-\varepsilon \mu \cdot \frac{\partial^2 \vec{H}}{\partial^2 t}& = 0
 \end{align*}
 \subsubsection{Frequenzbereich}
-auch Helmholtz-Gleichungen genannt:\\
-mit harmonischer Zeitabhängigkeit: $ \frac{\partial }{\partial t} \rightarrow \mathrm{j}\omega $
+auch Helmholtz-Gleichungen genannt:
+
+mit harmonischer Zeitabhängigkeit:
+$ \frac{\partial }{\partial t} \rightarrow \mathrm{j}\omega $
 \begin{align*}
 	\Delta \underline{\vec{E}}-\left(\kappa \mu \cdot \mathrm{j} \omega-\varepsilon \mu \cdot \omega^{2}\right) \cdot \underline{\vec{E}} & = \operatorname{grad} \frac{\rho}{\varepsilon} \\
 	\Delta \underline{\vec{H}}-\left(\kappa \mu \cdot \mathrm{j} \omega-\varepsilon \mu \cdot \omega^{2}\right) \cdot \underline{\vec{H}} & = 0
@@ -50,26 +31,18 @@ Im elektrisch guten Leiter $\rho = 0,\, \kappa \gg \omega \epsilon$
 	\Delta \underline{\vec{E}}-\kappa \mu \cdot j \omega \cdot \underline{\vec{E}} & =0 &
 	\Delta \underline{\vec{H}}-\kappa \mu \cdot j \omega \cdot \underline{\vec{H}} & =0 &
 \end{align*}
-%\textbf{Zeitabhängigkeit harmonisch:}
-%\begin{align*}
-%	\Delta \vec{H}   & = (j \omega \mu \kappa - \omega^2 \varepsilon \mu ) \vec{H}                                  \\
-%	\Delta \vec{E} i & = (j \omega \mu \kappa - \omega^2 \varepsilon \mu ) \vec{E} + grad \frac{ \rho}{\varepsilon}
-%\end{align*}
-
-%\textbf{keine Raumladung $ \rho = 0$}
-%\begin{align*}
-%	\Delta \vec{E} & = (j \omega \mu \kappa - \omega^2 \varepsilon \mu ) \vec{E}
-%\end{align*}
 
 \subsection{Ebene Wellen}
-Vereinfachung: harmonische Zeitabhängigkeit, keine Raumladungen $ \rho = 0 $, keine Feldstärkekomponenten in Ausbreitungsrichtung $ \frac{\partial^2 }{\partial^2 x} = \frac{\partial^2 }{\partial^2 y} = 0 $
+Vereinfachung: harmonische Zeitabhängigkeit, keine Raumladungen $ \rho = 0 $,
+keine Feldstärkekomponenten in Ausbreitungsrichtung 
+$ \frac{\partial^2 }{\partial^2 x} = \frac{\partial^2 }{\partial^2 y} = 0 $
 \begin{align*}
 	\Delta \vec{E} & = \frac{ \partial \vec{E}}{ \partial z^2} = j \omega \mu ( \kappa + j \omega \varepsilon) \vec{E} \\
 	\Delta \vec{H} & = \frac{ \partial \vec{H}}{ \partial z^2} = j \omega \mu ( \kappa + j \omega \varepsilon) \vec{H}
 \end{align*}
 
-\textbf{TEM}-Welle: $\vec{E}$ und $ \vec{H} $ besitzen nur transversale (= \textit{senkrecht zur Ausbreitungsrichtung} stehende) Komponenten.
-%%%%%%%%%%%%%%%%%
+\textbf{TEM}-Welle: $\vec{E}$ und $ \vec{H} $ besitzen nur transversale (=
+\textit{senkrecht zur Ausbreitungsrichtung} stehende) Komponenten.
 
 \subsubsection{Gleichung Ebene Welle}
 Tatsächlicher Zeitverlauf (\textbf{Realteil} von $\underline{\vec{E}}(z,t)$)
@@ -82,7 +55,8 @@ Tatsächlicher Zeitverlauf (\textbf{Realteil} von $\underline{\vec{E}}(z,t)$)
 \end{empheq}
 
 \subsubsection{komplexer Amplitudendrehzeiger}
-Achtung: \textbf{mit} $ e^{jwt} $ ! , wenn \textbf{ohne}: komplexer Amplituden\textit{vektor}.
+\textcolor{red}{Achtung:} der komplexe Amplituden\textbf{vektor} ist ohne
+$e^{-j\omega t}$!
 \begin{empheq}[]{align*}
 	\boxed{\underline{\vec{E}}(z,t)
 		= E_0\cdot e^{-\alpha z}\cdot e^{j(\omega t-\beta z)}\cdot\vec{e}_z
@@ -93,7 +67,7 @@ Achtung: \textbf{mit} $ e^{jwt} $ ! , wenn \textbf{ohne}: komplexer Amplituden\t
 Dämpfungskonstante $ [\alpha] $= $\frac{\mathtt{Np}}{m}$ \qquad \quad
 Phasenkonstante $ [\beta] $= $ \frac{\mathtt{rad}}{m} $
 \[\underline{\gamma}=\alpha+j\beta = j\underline{k} = \sqrt{j\omega \mu (\kappa + \si{j}\omega \varepsilon)} \quad \left[ \frac{1}{m} \right] \]
-%\newcolumn
+
 \subsection{Kenngrößen}
 \subsubsection{Wellenzahl}
 Im Vakuum: $k_{0}=\dfrac{\omega}{c_{0}}$ \quad $ \underline{k}=\beta - \si{j}\alpha $
@@ -163,8 +137,6 @@ gibt Leistungsfluss einer EM-Welle und Richtung der Energieströmung an.\\
 	\hline
 \end{tabular}
 \begin{align*}
-%	\vec{S}             & =  \vec{E}\times\vec{H} \qquad \si{\left[\frac{W}{m^2}\right]} \\
-%	\vec{S}_{\text{av}} & =  \frac{1}{2} \cdot Re\{\vec{E}\times\vec{H}^*\}              \\
 	S_{av}              & =  \frac{1}{2} \cdot E \cdot H 
 	=  \frac{1}{2} \cdot \dfrac{E^2}{Z_{F0}}            
 	=  \frac{1}{2} \cdot H^2 \cdot Z_{F0} 
@@ -172,12 +144,10 @@ gibt Leistungsfluss einer EM-Welle und Richtung der Energieströmung an.\\
 	P &= \iint\vec{S}_{\text{av}}\, d\vec{a}                
 	= Re\left\{\underline{U}\cdot\underline{I}^*\right\}\\
 	P_1 & = P_0 \cdot e^{-2\alpha z} \qquad P_{\texttt{Leitung}} = \dfrac{1}{2} \dfrac{\hat{U}^2}{\cdot \Re{Z_L}}
-%	w_{e} & = \frac{1}{2}\cdot\mu\cdot H^2              
-%	&w_{e} & = \frac{1}{2}\cdot\varepsilon\cdot E^2&
 \end{align*}
 \newcolumn
 \subsection{Ausbreitung im Medium}
-$ \kappa $ = Leitfähigkeit
+$ \kappa, \sigma $ = Leitfähigkeit
 \subsubsection{Allgemein (mit Verlusten)}
 \begin{align*}
     \lambda                 & = \dfrac{2\pi}{\beta} \qquad E_2 = E_1 e^{-\alpha z}         \qquad                                                                            
@@ -234,12 +204,10 @@ $E_0, H_0$: Beträge/Amplituden!
 	H(z,t) &= H_0 \cdot e^{- z/_\delta}\cdot cos(\omega t- \frac{z}{\delta}-\frac{\pi}{4})
 \end{align*}
 siehe Analogie in Kapitel \ref{sec:skineffekt} (Skineffekt).
-%\newpage
 \subsection{Ebene Wellen an Grenzflächen}
 \subsubsection{Zwischen Dielektrika mit geringem Verlust}
 
 \input{Figures/Wellen_Uebergang_mit_geringem_Verlust.tex}
-% \includegraphics[width=\columnwidth]{Figures/UebergangzweiDielektrika.png}
 \begin{align*}
     \quad \qquad \lambda_1 & = \dfrac{\lambda_0}{\sqrt{\mu_{r1}\varepsilon_{r1}}}          & \lambda_2 & = \dfrac{\lambda_0}{\sqrt{\mu_{r2}\varepsilon_{r2}}}                                     \\
     \quad \qquad           &                                                               &           & = \dfrac{\lambda_1\cdot\sqrt{\mu_{r1}\varepsilon_{r1}}}{\sqrt{\mu_{r2}\varepsilon_{r2}}} \\
@@ -247,157 +215,31 @@ siehe Analogie in Kapitel \ref{sec:skineffekt} (Skineffekt).
     \quad \qquad Z_{F1}    & = \dfrac{Z_{F0}}{\sqrt{\mu_{r1}\varepsilon_{r1}}}             & Z_{F2}    & = \dfrac{Z_{F0}}{\sqrt{\mu_{r2}\varepsilon_{r2}}}
 \end{align*}
 
-%\subsection{Poyntingvektor}
-%gibt Leistungsfluss einer EM-Welle und Richtung der Energieströmung an.\\
-%
-%\begin{tabular}{|l|l|}
-%\hline
-%Zeitbereich & Frequenzbereich\\
-%\hline
-%$\vec{S} = \vec{E} \times \vec{H}$ & $\vec{\underline{S}} = \frac{1}{2} (\underline{\vec{E}} \times \underline{\vec{H}}^*)$ \\
-%$\vec{S}_{av} = \overline{\vec{S}(t)} = \frac{1}{T} \int_{0}^{T} \vec{S}(t) \,dt $ & $\vec{S}_{av} = \frac{1}{2} \Re{\underline{\vec{E}} \times \underline{\vec{H}}^*}$\\
-%\hline
-%\multicolumn{2}{|c|}{Leistungsflussdichte $\quad S_{av} = |\vec{S}_{av}|$}\\
-%\hline
-%\end{tabular}
-
-%\begin{align*}
-%    \vec{S}             & =  \vec{E}\times\vec{H} \qquad \si{\left[\frac{W}{m^2}\right]} \\
-%    \vec{S}_{\text{av}} & =  \frac{1}{2} \cdot Re\{\vec{E}\times\vec{H}^*\}              \\
-%    S_{AV}              & =  \frac{1}{2} \cdot E \cdot H =                               \\
-%                        & =  \frac{1}{2} \cdot \dfrac{E^2}{Z_{F0}} =                     \\
-%                        & =  \frac{1}{2} \cdot H^2 \cdot Z_{F0}                          \\
-%                        & =  \dfrac{P}{A_\texttt{Fläche}}                                \\
-%\end{align*}
-
-%\subsubsection{Leistung}
-%
-%\begin{align*}
-%    P     & = \iint\vec{S}_{\text{av}}d\vec{a}                   \\
-%          & = Re\left\{\underline{U}\cdot\underline{I}^*\right\} \\
-%    w_{e} & = 1/_2\cdot\mu\cdot H^2                              \\
-%    w_{e} & = 1/_2\cdot\varepsilon\cdot E^2
-%\end{align*}
-
-%\subsubsection{Leistung vom Kabel transportiert}
-%
-%\begin{align*}
-%    P & = \dfrac{\hat{U}^2}{2\cdot Z_L}
-%\end{align*}
-
-%\subsection{dÀlembertsche Gleichung (allg.)}
-%\begin{align*}
-%    \Delta \vec{E}-\kappa \mu \frac{\partial \vec{E}}{\partial t}-\varepsilon \mu \frac{\partial^{2} \vec{E}}{\partial t^{2}} & = \operatorname{grad} \frac{\rho}{\varepsilon} \\
-%    \Delta \vec{H}-\kappa \mu \frac{\partial \vec{H}}{\partial t}-\varepsilon \mu \frac{\partial^{2} \vec{H}}{\partial t^{2}} & = 0
-%\end{align*}
-%
-%Isolator, ideales Dielektrikum, Nichtleiter $\kappa = 0$
-%\begin{align*}
-%    \Delta \vec{E} & =\varepsilon \mu \frac{\partial^{2} \vec{E}}{\partial t^{2}}+\operatorname{grad} \frac{\rho}{\varepsilon} \\
-%    \Delta \vec{H} & =\varepsilon \mu \frac{\partial^{2} \vec{H}}{\partial t^{2}}
-%\end{align*}
-
-%sehr gute Leiter
-%\begin{align*}
-%    \Delta \vec{E} & =\kappa \mu \frac{\partial \vec{E}}{\partial t}+\operatorname{grad} \frac{\rho}{\varepsilon} \\
-%    \Delta \vec{H} & =\kappa \mu \frac{\partial \vec{H}}{\partial t}
-%\end{align*}
-
-%\subsection{Polarisation}
-%\begin{tabularx}{0.45\textwidth}{>{\hsize=.27\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.23\hsize}X}
-%    Lineare      & wenn der Endpunkt des E–Vektors eine Linie beschreibt & $H$ oder $E$ \\
-%    \hline
-%    Elliptische  & Endpunkt des E-Vektors eine Ellipse beschreibt        & $E\neq H$    \\
-%    \hline
-%    Kreisförmige & der Endpunkt des E-Vektors einen Kreis beschreibt     & $E = H$      \\
-%\end{tabularx}
-
-
-
-%\subsubsection{Totalrefexion/Grenzwinkel}
-%Grenzwinkel $ \theta_g $ gibt an, bis zu welchem Winkel eine Welle von höherem in kleineres Dielektrikum $ \varepsilon_1 > \varepsilon_2 $ eindringen kann.
-%\begin{align*}
-%    \sin\theta_g & = \frac{n_2}{n_1} = \sqrt{\frac{\mu_{r2}\varepsilon_{r2}}{\mu_{r1}\varepsilon_{r1}}}
-%\end{align*}
-%\begin{align*}
-%    \alpha_g & = \sin^{-1} \left( \sqrt{ \dfrac{\mu_{r1} \varepsilon_{r1}}{\mu_{r2} \varepsilon_{r2}}} \right)
-%\end{align*}
-%\subsubsection[Brewster-/Polarisationswinkel]{Brewster-/Polarisationswinkel}
-%Bei Brewster-Winkel $ \theta_b $ wird Reflexionsfaktor $r=0$.
-%\begin{itemize}
-%%    \item Snelliusche Brechungsgesetz
-%          %\item Grenzwinkel $\alpha_g$
-%          % \item[--] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
-%          %       \begin{itemize}
-%          %           \item[\textbullet] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
-%          %           \item[\textbullet] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
-%          %       \end{itemize}
-%    \item Paralleler Reflexionskoeffizient:
-%          \begin{align*}
-%              \Aboxed{\mu_{r1}=\mu_{r2}}                                                                                                    \\
-%              \sin\theta_b & = \sqrt{\frac{\varepsilon_2(\mu_2\varepsilon_1 - \mu_1\varepsilon_2)}{\mu_1(\varepsilon_1^2-\varepsilon_2^2)}} \\
-%              \tan\theta_b & = \sqrt{\frac{\varepsilon_2}{\varepsilon_1}} = \frac{n_2}{n_1}
-%          \end{align*}
-%
-%    \item Senkrechter Reflexionskoeffizient:
-%          \begin{align*}
-%              \Aboxed{\varepsilon_{r1}=\varepsilon_{r2}}                                                                    \\
-%              \sin\theta_b & = \sqrt{\frac{\mu_2(\mu_2\varepsilon_1 - \mu_1\varepsilon_2)}{\varepsilon_1(\mu_2^2-\mu_1^2)}} \\
-%              \tan\theta_b & = \sqrt{\frac{\mu_2}{\mu_1+\mu_2}}
-%          \end{align*}
-%\end{itemize}
 \subsubsection{Brechungsgesetz allgemein}
 \begin{align*}
     \dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} = \dfrac{k_{h}}{k_{g}} & = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p, 2}}{v_{p, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}} \\
-    % \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
-    % \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 
-%\subsection{Polarisation einer Welle}
-%Die Polarisation (Ausrichtung) bezieht sich \textbf{immer} auf das $\vec{E}$-Feld.
-%\begin{itemize}
-%	\item \textbf{Lineare} Polarisation\\
-%	Endpunkt des $\vec{E}$-Vektors beschreibt bei fortschreitender Welle eine Gerade (Linie).
-%		\begin{itemize}
-%			\item horizontale Polarisation: E-Feld parallel zum Erdboden.
-%			\item vertikale Polarisation E-Feld senkrecht zum Erdboden.
-%		\end{itemize}
-%	\item \textbf{Elliptische} Polarisation\\
-%	Endpunkt des $\vec{E}$-Vektors beschreibt bei fortschreitender Welle eine Ellipse.
-%		\begin{itemize}
-%			\item Zirkulare Polarisation: $|\vec{E}_x| = |\vec{E}_y|$ bei $ \vec{E}_x \perp \vec{E}_y $ ($ \ang{90}$ Phasenverschiebung)
-%		\end{itemize}
-%\end{itemize}
-
-
-
-%\subsection{Polarisation}
-\
 \subsection[Senkrechter Einfall]{Senkrechter Einfall}
 Gilt bei Einfallswinkel $ \theta_h = 0 $.
 \input{Figures/Wellen_Senkrechter_Uebergang.tex}
-%$ E_{t1}=E_{t2} \qquad H_{t1} = H_{t2}$
+
 \begin{equation*}
 \setlength{\jot}{10pt}
 \begin{aligned}[t]
-%
 	r_e &= \frac{Z_{F2}-Z_{F1}}{Z_{F2} + Z_{F1}}\\
 	r_m &= \frac{Z_{F1}-Z_{F2}}{Z_{F2} + Z_{F1}}
 	=-r_e\\
 \end{aligned}
 \qquad \qquad
 \begin{aligned}[t]
-%	&0\leq t\leq2 &0\leq|r|\leq1&\\
 	t_e  &= \frac{2 \cdot Z_{F2}}{Z_{F1} + Z_{F2}}\\ 
 	t_m  &= \frac{2 \cdot Z_{F1}}{Z_{F1} + Z_{F2}}
 	= t_e \cdot \frac{Z_{F1}}{Z_{F2}}\\
 \end{aligned}
 \end{equation*}
-%\begin{align*}
-%    %\qquad = \frac{\sqrt{\varepsilon_{r2}}-\sqrt{\varepsilon_{r1}}}{\sqrt{\varepsilon_{r2}}+\sqrt{\varepsilon_{r1}}}
-%\end{align*}
+
 \vspace{0.2cm}
-%Elektrisches Feld:
 \begin{equation*}
 \setlength{\jot}{6pt}
 \begin{aligned}[t]
@@ -421,43 +263,20 @@ Gilt bei Einfallswinkel $ \theta_h = 0 $.
 \end{aligned}
 \end{equation*}
 
-%\begin{align*}
-%\end{align*}
-%
-%Magnetisches Feld:
-
-% \begin{align*}
-%     r_m & = r = r_e                                                    \\
-%     t_m & = \frac{2}{1+\sqrt{^{\varepsilon_{r1}}/_{\varepsilon_{r2}}}}
-% \end{align*}
 \begin{align*}
-    %\vec{H_t}                   & = \vec{H_h}-\vec{H_r}                                \\
     H_t                         & = H_h + H_r                                          \\
     \frac{t\cdot E_{h}}{Z_{F2}} & = \frac{E_{h}}{Z_{F1}} - \frac{r\cdot E_{h}}{Z_{F1}} \\
     \frac{t}{Z_{F2}}            & = \frac{1}{Z_{F1}} - \frac{r}{Z_{F1}}
 \end{align*}
 
-
-
-
 \subsubsection[Senkrechter Einfall ideales/verlustl. Dielekt.]{Verlustloses Dielektikum allgemein}
 gilt für $ \kappa =0 $, keine Dämpfung.
-%\includegraphics[width=\columnwidth]{Figures/senkrechterEinfall.png}
-%\vspace{-0.3cm}
 \[ \text{rein reell: }Z_F=  \sqrt{\frac{\mu_0\mu_r}{\varepsilon_0\varepsilon_r}}  \qquad
 \text{rein imaginär: }\gamma  = j \omega\sqrt{\mu\varepsilon} \]
-%\vspace{-0.5cm}
 \begin{align*}
     r & = r_e =\frac{Z_{F2} - Z_{F1}}{Z_{F1} + Z_{F2}} = \frac{\sqrt{\varepsilon_{r1}\mu_{r2}} - \sqrt{\varepsilon_{r2}\mu_{r1}} }{\sqrt{\varepsilon_{r1}\mu_{r2}}+{\sqrt{\varepsilon_{r2}\mu_{r1}}}} \\
     t & = t_e = \frac{2 Z_{F2}}{Z_{F1} + Z_{F2}} = \frac{2\sqrt{\varepsilon_{r1}\mu_{r2}}}{\sqrt{\varepsilon_{r1}\mu_{r2}}+\sqrt{\varepsilon_{r2}\mu_{r1}}}
 \end{align*}
-
-
-% \begin{tabularx}{\columnwidth}{>{\hsize=.35\hsize}X|>{\hsize=.32\hsize}X>{\hsize=.18\hsize}X>{\hsize=.18\hsize}X}
-%     idealer Leiter    & $ Z_{F2} = 0 $                    & $ r = -1 $ & $t = 0$ \\
-%     \hline
-%     ideales Dielektr. & $\mu_{r1} = \varepsilon_{r1} = 1$ &            &         \\
-% \end{tabularx}
 
 \subsubsection{Medium 1 oder 2: Luft}
 \begin{equation*}
@@ -475,16 +294,7 @@ gilt für $ \kappa =0 $, keine Dämpfung.
 	\end{aligned}
 \end{equation*}
 
-%\begin{align*}
-%
-%\end{align*}
-
-%\subsubsection{Medium 2: Luft}
-%\begin{align*}
-%\end{align*}
-
 \subsubsection{beide Medien: nicht magnetisch}
-%\centering
 Gilt für $\mu_{r1} = \mu_{r2} = 1$
 \begin{align*}
     r        & = \frac{\sqrt{\varepsilon_{r1}}-\sqrt{\varepsilon_{r2}}}{{\sqrt{\varepsilon_{r1}}+\sqrt{\varepsilon_{r2}}}}&
@@ -500,7 +310,7 @@ $\vec{E}=0$ im idealen Leiter $\rightarrow$ \textbf{Stehende} Welle!, vollständ
 	t            = 0 \qquad
 	\vec{S}_{\text{av}} = 0
 \end{equation*}
-%\vspace{-0.8cm}
+
 $E$ und $H$: zeitlich sowie örtlich zueinander um \ang{90} phasenverschoben.
 \begin{flalign*}
     &\underline{E}_{1x}          = -2j\cdot E_{h1}\cdot \sin(\beta_1 z)\qquad
@@ -508,12 +318,11 @@ $E$ und $H$: zeitlich sowie örtlich zueinander um \ang{90} phasenverschoben.
     &E_{1x} (z,t)=2E_{h1} \cdot \sin(\beta_1z)\cdot \sin(\omega t)\\
     &H_{1y}(z,t) = 2 \tfrac{E_{h1}}{Z_{F1}}\cdot \cos(\beta_1z)\cdot \cos(\omega t)
 \end{flalign*}
-%\vspace{-0.5cm}
+
 Annahme: Grenzfläche bei $z=0$.
 \begin{align*}
      \Aboxed{&\text{$H_{\text{max}}$, $E_{\text{min}}$ bei } z = - n \cdot \lambda/_2}&\\
      \Aboxed{&\text{$H_{min}$, $E_{max}$ bei } z=- (2n-1) \cdot \lambda/_4}&
-%     & \qquad \rightarrow 90^\circ Phasenverschiebung
 \end{align*}
 
 \subsubsection{Stehwellenverhältnis (SWR)}
@@ -521,20 +330,14 @@ siehe auch Kapitel \ref{sec:VSWR}.
 \[
     \mathrm{SWR} = \frac{E_{\max}}{E_{\min}}=\frac{H_{\max}}{H_{\min}}=\frac{E_{h}+E_{r}}{E_{h}-E_{r}} = \frac{1+|r|}{1-|r|} \quad 1<s<\infty
 \]
-%\newcolumn
+
 \subsection{Schräger Einfall (allgemein)}
 \begin{align*}
 	Z_F & = \sqrt{\frac{\mu}{\varepsilon}} = Z_{F0} \sqrt{\frac{\mu_r}{\varepsilon_r}}
-%	r_s & = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i - \sqrt{\varepsilon_{r2}}\cdot\cos\theta_t}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_t + \sqrt{\varepsilon_{r1}}\cos\theta_i} \\
-%	t_s & = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_t + \sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}             \\
-%	r_p & = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\theta_t - \sqrt{\varepsilon_{r2}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_i + \sqrt{\varepsilon_{r1}}\cos\theta_t} \\
-%	t_p & = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\theta_i}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_i + \sqrt{\varepsilon_{r1}}\cdot\cos\theta_t}
 \end{align*}
 \subsubsection{Brechungsgesetz}
 \begin{align*}
 	\dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} = \dfrac{k_{h}}{k_{t}} & = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p, 2}}{v_{p, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}}
-	% \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
-	% \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
 \end{align*}
 
 \subsubsection{Leistungsbilianz an Grenzflächen}
@@ -564,24 +367,15 @@ Anmerkung zu (2):\\
 \subsubsection[Brewster-/Polarisationswinkel]{Brewster-/Polarisationswinkel}
 Brewster-Winkel $ \theta_b $ $\rightarrow$ KEINE Reflexion $r=0$.
 \begin{itemize}
-	%    \item Snelliusche Brechungsgesetz
-	%\item Grenzwinkel $\alpha_g$
-	% \item[--] Brewsterwinkel $\alpha_B$ (Welle transmittiert reflexionsfrei)
-	%       \begin{itemize}
-		%           \item[\textbullet] Parallele Polarisation (Nur wenn $\mu_{r1} = \mu_{r2}$)
-		%           \item[\textbullet] Senkrechte Polarisation (Nur wenn $\varepsilon_{r1} = \varepsilon_{r2}$)
-		%       \end{itemize}
 	\item \textbf{Parallele} Polarisation: \quad rechts:
 	$ \mu_{r1}=\mu_{r2} $
 	\begin{align*}
-%		\Aboxed{\mu_{r1}=\mu_{r2}}\\
 		\sin\theta_b & = \sqrt{\frac{\varepsilon_2(\mu_2\varepsilon_1 - \mu_1\varepsilon_2)}{\mu_1(\varepsilon_1^2-\varepsilon_2^2)}} &
 		\Aboxed{\tan\theta_b & = \sqrt{\frac{\varepsilon_2}{\varepsilon_1}} = \frac{n_2}{n_1}}&
 	\end{align*}
 		Brewster-Winkel existiert nur, wenn $ \varepsilon_{r1} \neq \varepsilon_{r2} $.
     \item \textbf{Senkrechte} Polarisation:  \quad rechts: $ \varepsilon_{r1} = \varepsilon_{r2} $
 	\begin{align*}
-%		\Aboxed{\varepsilon_{r1}=\varepsilon_{r2}}         \\
 		\sin\theta_b & = \sqrt{\frac{\mu_2(\mu_2\varepsilon_1 - \mu_1\varepsilon_2)}{\varepsilon_1(\mu_2^2-\mu_1^2)}}&
 		\tan\theta_b & = \sqrt{\frac{\mu_2}{\mu_1}}&
 	\end{align*}
@@ -590,8 +384,6 @@ Brewster-Winkel $ \theta_b $ $\rightarrow$ KEINE Reflexion $r=0$.
 \end{itemize}
 
 \subsubsection{Verlauf von r und t beim Grenzübergang}
-%Achtung: nach Sattler: Definition von $ r_p $ und $ t_p $ beachten!
-
 \includegraphics[width=\columnwidth]{Figures/Totalreflexion_Diagramm.png}
 
 \subsubsection{Verlauf der Reflexionsfaktoren}
