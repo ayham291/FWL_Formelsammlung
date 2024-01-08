@@ -3,101 +3,61 @@
 weitere Einheiten siehe Kapitel \ref{sec:Einheiten}.
 \begin{table}[H]
 	\renewcommand{\arraystretch}{2.15}
-\begin{tabularx}{0.9\columnwidth}{lXl}
-	Größe & Symbol & Einheit\\
-	\hline
-	Permiabilitätskonstante & $\mu_0$ &  $\dfrac{\texttt{Vs}}{\texttt{Am}}$\\
-	\hline
-	Dilelektrizitätskonstante & $\varepsilon_0$ &  $\dfrac{\texttt{As}}{\texttt{Vm}}$\\
+	\begin{tabularx}{0.9\columnwidth}{lXl}
+		Größe                     & Symbol          & Einheit                                                              \\
 		\hline
-	elek. Ladung/Fluss & $ Q, q $ & $ C=As $\\
-	\hline
-	elek. Feldstärke & $ \vec{E} $ & $\dfrac{\texttt{V}}{\texttt{m}}$\\
-	\hline
-	elek. Flussdichte & $ \vec{D} $ & $\dfrac{\texttt{As}}{\texttt{m}^2}=\dfrac{\texttt{C}}{\texttt{m}^2}$\\
-	\hline
-	Kapazität & $C$ &  $F= \dfrac{\texttt{As}}{\texttt{V}}$\\
+		Permiabilitätskonstante   & $\mu_0$         & $\dfrac{\texttt{Vs}}{\texttt{Am}}$                                   \\
 		\hline
-	mag. Fluss& $\phi, \Phi$ &  $Wb = Vs$\\
+		Dilelektrizitätskonstante & $\varepsilon_0$ & $\dfrac{\texttt{As}}{\texttt{Vm}}$                                   \\
 		\hline
-	mag. Feldstärke & $\vec{H}$ &  $\dfrac{A}{m}$\\
+		elek. Ladung/Fluss        & $ Q, q $        & $ C=As $                                                             \\
 		\hline
-	mag. Flussdichte & $\vec{B}$ &  $T = \dfrac{\texttt{Vs}}{\texttt{m}^2}$\\
-	\hline
-	Induktivität & $L$ &  $H = \dfrac{\texttt{Vs}}{\texttt{A}}$\\
+		elek. Feldstärke          & $ \vec{E} $     & $\dfrac{\texttt{V}}{\texttt{m}}$                                     \\
 		\hline
-	Strahlungsdichte & $S_{av}, I$ &  $\dfrac{\texttt{W}}{\texttt{m}^2}$\\
-				
-%	A, W & Arbeit, Energie & J = VAs = Ws\\
-%	$\vec{A}$ & mag. Vektorpotenzial & $\dfrac{Vs}{m} = \dfrac{T}{m}$ ($\vec{B}$ = $\nabla \times \vec{A}$)\\
-%	$\vec{B}$ & mag. Flussdichte & $T = \dfrac{Vs}{m^2}$\\
-%	C & Kapazität & $F = \dfrac{As}{V}$\\
-%	$\vec{D}$ & dielek. Verschiebung/Erregung & $\dfrac{As}{m^2}$\\
-%	e, q, Q & (Elementar-)ladung & C = As\\
-%	$\vec{E}$ & elek. Feldstärke & $\dfrac{V}{m}$ \\
-%	$\vec{H}$ & mag. Feldstärke/Erregung & $\dfrac{A}{m}$\\
-%	$\vec{J}$ & Stromdichte & $\dfrac{A}{m^2}$\\
-%	$\vec{J}_F$ & Flächenstromdichte & $\dfrac{A}{m}$\\
-%	$\vec{M}$ & Drehmoment & J = Nm = VAs\\
-%	F & Kraft & $\dfrac{kgm}{s} = N$\\
-%	$R_{mag}$ & mag. Widerstand & $\dfrac{S}{s} = \dfrac{A}{Vs}$\\
-%	$\vec{S}$ & Poynting-Vektor & $\dfrac{W}{m^2}$\\
-%	Z & Wellenwiderstand & $\Omega$\\
-%	$\delta_s$ & Eindringtiefe & m \\
-%	$\varepsilon$ & Dielektrizitätskonstante & $\dfrac{As}{Vm}$\\
-%	$\varphi$ & elek. Skalarpotenzial & V \\
-%	$\varphi_m$ & mag. Skalarpotenzial & A \\
-%	$\rho$ & Raumladungsdichte & $\dfrac{As}{m^3}$\\
-%	$\rho$ & spez. Widerstand & $\dfrac{\Omega}{m} = \dfrac{VA}{m}$\\
-%	$\kappa, \sigma$ & elek. Leitfähigkeit & $\dfrac{S}{m} = \dfrac{A}{Vm}$\\
-%	$\lambda$ & Wellenlänge & m\\
-%	$\Phi_e$ & elek. Fluss & C = As\\
-%	$\Phi_m$ & mag. Fluss & $Wb = \dfrac{T}{m^2}$\\
-%	\hline
-\end{tabularx}
+		elek. Flussdichte         & $ \vec{D} $     & $\dfrac{\texttt{As}}{\texttt{m}^2}=\dfrac{\texttt{C}}{\texttt{m}^2}$ \\
+		\hline
+		Kapazität                 & $C$             & $F= \dfrac{\texttt{As}}{\texttt{V}}$                                 \\
+		\hline
+		mag. Fluss                & $\phi, \Phi$    & $Wb = Vs$                                                            \\
+		\hline
+		mag. Feldstärke           & $\vec{H}$       & $\dfrac{A}{m}$                                                       \\
+		\hline
+		mag. Flussdichte          & $\vec{B}$       & $T = \dfrac{\texttt{Vs}}{\texttt{m}^2}$                              \\
+		\hline
+		Induktivität              & $L$             & $H = \dfrac{\texttt{Vs}}{\texttt{A}}$                                \\
+		\hline
+		Strahlungsdichte          & $S_{av}, I$     & $\dfrac{\texttt{W}}{\texttt{m}^2}$                                   \\
+	\end{tabularx}
 \end{table}
 
-\subsection{Kugel}
-\begin{equation*}
-	V= \tfrac{4}{3}\pi r^3 \quad \quad A= 4\pi r^{2}
-\end{equation*}
-
-
-%\begin{align*}
-%	\oprot \vec{E} & = -\frac{\partial \vec{B}}{\partial t} = -\mu \frac{\partial \vec{H}}{\partial t} & \opdiv \vec{E} & = 0 & \vec{D}  &= \varepsilon\vec{E} & \\
-%	\oprot \vec{H} & = \vec{J} = \kappa \vec{E} & \opdiv \vec{B} & = 0 &\vec{B}  &= \mu\vec{H}&\\
-%	\opdiv \vec{J} & = -\frac{\partial \rho}{\partial t}& \opdiv \vec{H} &= 0 & \vec{J} &= \kappa \vec{E}&
-%\end{align*}
-
-
-%\subsection{Vektorrechnung}
-%\subsubsection{Betrag, Richtungswinkel, Normierung}
-%\textbf{Betrag}
-%\begin{align*}
-%	\vert \vec{r}  \vert & = r = \sqrt{r^2_x + r^2_y + r^2_z}
-%\end{align*}
-%\textbf{Richtungswinkel}
-%\begin{align*}
-%	\cos(\alpha) = \dfrac{a_x}{\vert \vec{a} \vert} \qquad \cos(\beta) = \dfrac{a_y}{\vert \vec{a} \vert} \qquad
-%	\cos(\gamma) = \dfrac{a_z}{\vert \vec{a} \vert}
-%\end{align*}
-%\textbf{Normierung, Einheitsvektor}
-%\begin{align*}
-%	\vec{e}_a =  \dfrac{\vec{a}}{\vert \vec{a} \vert}, \quad \vert \vec{e}_a \vert = 1
-%\end{align*}
-
-\subsection{Skalarprodukt}
+\subsection{Vektorrechnung}
+\subsubsection{Betrag, Richtungswinkel, Normierung}
+\textbf{Betrag}
 \begin{align*}
-	\vec{a} \cdot \vec{b} & = |\vec{a}| \cdot |\vec{b}| \cdot cos(\varphi) \qquad \vec{a} \cdot \vec{b}  = 0\\
-	cos(\varphi)          &  = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|} = \dfrac{a_x \cdot b_x + a_y \cdot b_y + a_z \cdot b_z}{|\vec{a}| \cdot |\vec{b}|}
+	\vert \vec{r}  \vert & = r = \sqrt{r^2_x + r^2_y + r^2_z}
+\end{align*}
+\textbf{Richtungswinkel}
+\begin{align*}
+	\cos(\alpha) = \dfrac{a_x}{\vert \vec{a} \vert} \qquad \cos(\beta) = \dfrac{a_y}{\vert \vec{a} \vert} \qquad
+	\cos(\gamma) = \dfrac{a_z}{\vert \vec{a} \vert}
+\end{align*}
+\textbf{Normierung, Einheitsvektor}
+\begin{align*}
+	\vec{e}_a =  \dfrac{\vec{a}}{\vert \vec{a} \vert}, \quad \vert \vec{e}_a \vert = 1
 \end{align*}
 
-\subsection{Kreuzprodukt}
+\subsubsection{Skalarprodukt}
+\begin{align*}
+	\vec{a} \cdot \vec{b} & = |\vec{a}| \cdot |\vec{b}| \cdot cos(\varphi) \qquad \vec{a} \cdot \vec{b}  = 0                                                              \\
+	cos(\varphi)          & = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|} = \dfrac{a_x \cdot b_x + a_y \cdot b_y + a_z \cdot b_z}{|\vec{a}| \cdot |\vec{b}|}
+\end{align*}
+
+\subsubsection{Kreuzprodukt}
 
 \begingroup
 \renewcommand*{\arraystretch}{.95}
 \begin{align*}
-	A_{Para} & = \vert \vec{c} \vert = \vert \vec{a} \times \vec{b} \vert = \vert \vec{a} \vert \cdot \vert \vec{b} \vert \cdot \sin(\varphi)\\
+	A_{Para}             & = \vert \vec{c} \vert = \vert \vec{a} \times \vec{b} \vert = \vert \vec{a} \vert \cdot \vert \vec{b} \vert \cdot \sin(\varphi) \\
 	\vec{a}\times\vec{b} & =
 	\begin{pmatrix}
 		a_x \\
@@ -122,202 +82,146 @@ Trick: Regel von Sarrus anwenden!
 \subsection{Differentialoperatoren}
 \textbf{Nabla-Operator}
 \begin{align*}
-    \nabla & = \vec{\nabla} = 
-    \begin{psmallmatrix}
-        \partial  / \partial x \\
-        \partial  / \partial y \\
-        \partial  / \partial z
-    \end{psmallmatrix}
+	\nabla & = \vec{\nabla} =
+	\begin{psmallmatrix}
+		\partial  / \partial x \\
+		\partial  / \partial y \\
+		\partial  / \partial z
+	\end{psmallmatrix}
 \end{align*}
 
 \textbf{Laplace-Operator}
 \begin{align*}
-    \varDelta  & = \vec{\nabla} \cdot \vec{\nabla} = \textrm{div (grad)} = 
-    \dfrac{\partial ^2}{\partial x^2}+\dfrac{\partial ^2}{\partial y^2}+\dfrac{\partial ^2}{\partial z^2}
+	\varDelta & = \vec{\nabla} \cdot \vec{\nabla} = \textrm{div (grad)} =
+	\dfrac{\partial ^2}{\partial x^2}+\dfrac{\partial ^2}{\partial y^2}+\dfrac{\partial ^2}{\partial z^2}
 \end{align*}
 
 \textbf{Divergenz} $\opdiv$: Vektorfeld $\rightarrow$ Skalar \qquad S.382\\
 \small{Quelldichte, gibt für jeden Punkt im Raum an, ob Feldlinien entstehen oder verschwinden.}
 \begin{align*}
-    \boxed{\opdiv \vec{F} = \nabla \cdot \vec{F}}   =  \dfrac{\partial F_x}{\partial x} 
-    + \dfrac{\partial F_y}{\partial y} + \dfrac{\partial F_z}{\partial z}\\ 
-                                 \begin{cases}
-    > 0 \quad\Rightarrow \textnormal{Quelle}  \\
-    < 0 \quad\Rightarrow \textnormal{Senke} \\
-    = 0 \quad\Rightarrow \textnormal{quellenfrei} 
-\end{cases}                                      
+	\boxed{\opdiv \vec{F} = \nabla \cdot \vec{F}}   =  \dfrac{\partial F_x}{\partial x}
+	+ \dfrac{\partial F_y}{\partial y} + \dfrac{\partial F_z}{\partial z} \\
+	\begin{cases}
+		> 0 \quad\Rightarrow \textnormal{Quelle} \\
+		< 0 \quad\Rightarrow \textnormal{Senke}  \\
+		= 0 \quad\Rightarrow \textnormal{quellenfrei}
+	\end{cases}
 \end{align*}
-% Bsp: $\opdiv \vec{B} = 0$, da mag. Felder in sich geschlossen.\\
 
-\textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld \qquad S.382\\ 
+\textbf{Rotation} $\oprot$: Vektorfeld $\rightarrow$ Vektorfeld \qquad S.382\\
 \small{Wirbeldichte, gibt für jeden Punkt im Raum Betrag und Richtung der Rotationsgeschwindigkeit an.}
 \begin{align*}
-\boxed{\oprot \vec{F} = \nabla \times \vec{F} } = 
-\begin{pmatrix}
-    \dfrac{\partial F_z}{\partial y} - \dfrac{\partial F_y}{\partial z} \\
-    \dfrac{\partial F_x}{\partial z} - \dfrac{\partial F_z}{\partial x} \\
-    \dfrac{\partial F_y}{\partial x} - \dfrac{\partial F_x}{\partial y}
-\end{pmatrix} =
-\begin{vmatrix}
-    \vec{e}_x & \vec{e}_y & \vec{e}_z \\
-    \dfrac{\partial}{\partial x} & \dfrac{\partial }{\partial x} & \dfrac{\partial }{\partial z} \\
-    \vec{F}_x & \vec{F}_y & \vec{F}_z
-\end{vmatrix}
+	\boxed{\oprot \vec{F} = \nabla \times \vec{F} } =
+	\begin{pmatrix}
+		\dfrac{\partial F_z}{\partial y} - \dfrac{\partial F_y}{\partial z} \\
+		\dfrac{\partial F_x}{\partial z} - \dfrac{\partial F_z}{\partial x} \\
+		\dfrac{\partial F_y}{\partial x} - \dfrac{\partial F_x}{\partial y}
+	\end{pmatrix} =
+	\begin{vmatrix}
+		\vec{e}_x                    & \vec{e}_y                     & \vec{e}_z                     \\
+		\dfrac{\partial}{\partial x} & \dfrac{\partial }{\partial x} & \dfrac{\partial }{\partial z} \\
+		\vec{F}_x                    & \vec{F}_y                     & \vec{F}_z
+	\end{vmatrix}
 \end{align*}\\
 Vektorfeld skalar annotiert: $\vec{F} = \vec{F}(x;y;z) = F_x\vec{e}_x+F_y\vec{e}_y+F_z\vec{e}_z$\\
-% Bsp: energieerhaltende (konservatives) Felder $ \rightarrow \oprot = 0$\\
 
-\textbf{Gradient} $\opgrad$: Skalarfeld $\rightarrow$ Vektor/Gradientenfeld\\ 
+\textbf{Gradient} $\opgrad$: Skalarfeld $\rightarrow$ Vektor/Gradientenfeld\\
 \small{zeigt in Richtung steilster Anstieg von $\phi$}
-\begin{align*}                                                                                          
-    \boxed{\opgrad \phi = \nabla \phi }=  
-    % \hspace{4.5ex}
-    \begin{psmallmatrix}
-        \partial \phi / \partial x \\
-        \partial \phi / \partial y \\
-        \partial \phi / \partial z
-        % \dfrac{\partial G}{\partial x}\\
-        % \dfrac{\partial G}{\partial y}\\
-        % \dfrac{\partial G}{\partial z}
-    \end{psmallmatrix}
-    = \dfrac{\partial \phi}{\partial x} \vec{e}_x + \dfrac{\partial \phi}{\partial y} \vec{e}_y + 
-    \dfrac{\partial \phi}{\partial z} \vec{e}_z  
+\begin{align*}
+	\boxed{\opgrad \phi = \nabla \phi }=
+	\begin{psmallmatrix}
+		\partial \phi / \partial x \\
+		\partial \phi / \partial y \\
+		\partial \phi / \partial z
+	\end{psmallmatrix}
+	= \dfrac{\partial \phi}{\partial x} \vec{e}_x + \dfrac{\partial \phi}{\partial y} \vec{e}_y +
+	\dfrac{\partial \phi}{\partial z} \vec{e}_z
 \end{align*}
 
 \subsubsection{Rechenregeln}
 $\phi, \psi$: Skalarfelder \qquad $\vec{A}, \vec{B}$: Vektorfelder
 \begin{align*}
-     & \nabla \cdot (\vec{A} \times \vec{B}) & = & \qquad (\nabla \times \vec{A})\cdot\vec{B} - (\nabla\times\vec{B})\cdot\vec{A} \\
-     & \nabla \cdot (\phi \cdot \psi)        & = & \qquad \phi (\nabla \psi) + \psi( \nabla \phi)                                  \\
-     & \nabla \cdot (\phi \cdot \vec{A})           & = & \qquad \phi (\nabla \vec{A}) + \vec{A}(\nabla \phi)                             \\
-     & \nabla \times (\phi \cdot \vec{A})          & = & \qquad \nabla \phi \times \vec{A} + \phi (\nabla \times \vec{A})                        
-    %  & \oprot \opgrad f                      & = & \qquad 0 \Rightarrow\textnormal{Gradientenfeld Quellenfrei}                    \\
-    %  & \opdiv \oprot \vec{f}                 & = & \qquad 0 \Rightarrow\textnormal{Wirbelfeld Quellenfrei}
+	 & \nabla \cdot (\vec{A} \times \vec{B}) & = & \qquad (\nabla \times \vec{A})\cdot\vec{B} - (\nabla\times\vec{B})\cdot\vec{A} \\
+	 & \nabla \cdot (\phi \cdot \psi)        & = & \qquad \phi (\nabla \psi) + \psi( \nabla \phi)                                 \\
+	 & \nabla \cdot (\phi \cdot \vec{A})     & = & \qquad \phi (\nabla \vec{A}) + \vec{A}(\nabla \phi)                            \\
+	 & \nabla \times (\phi \cdot \vec{A})    & = & \qquad \nabla \phi \times \vec{A} + \phi (\nabla \times \vec{A})
 \end{align*}
 
 \subsubsection{Spezielle Vektorfelder}
 quellenfreies Vektorfeld $\vec{F}$ $\rightarrow$ Vektorpotential $\vec{E}$
 \begin{align*}
-\opdiv \vec{F} = \boxed{\opdiv (\oprot \vec{E}) = 0} \quad \Leftrightarrow \quad  \vec{F} = \oprot \vec{E}
+	\opdiv \vec{F} = \boxed{\opdiv (\oprot \vec{E}) = 0} \quad \Leftrightarrow \quad  \vec{F} = \oprot \vec{E}
 \end{align*}
 wirbelfreies Vektorfeld $\vec{F}$ $\rightarrow$ Skalarpotential $\phi$
 \begin{align*}
-    \oprot \vec{F} = \boxed{\oprot (\opgrad \phi) = 0} \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
+	\oprot \vec{F} = \boxed{\oprot (\opgrad \phi) = 0} \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi
 \end{align*}
 quellen- und wirbelfreies Vektorfeld $\vec{F}$:
 \begin{align*}
-    &\oprot \vec{F}  = 0 \quad \opdiv \vec{F} = 0\\
-    &\opdiv (\opgrad \phi) = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi\\
-    &\oprot (\oprot \vec{F})  = \opgrad (\opdiv \vec{F}) - \varDelta \vec{F} 
+	 & \oprot \vec{F}  = 0 \quad \opdiv \vec{F} = 0                                                   \\
+	 & \opdiv (\opgrad \phi) = \varDelta \phi = 0 \quad \Leftrightarrow \quad  \vec{F} = \opgrad \phi \\
+	 & \oprot (\oprot \vec{F})  = \opgrad (\opdiv \vec{F}) - \varDelta \vec{F}
 \end{align*}
 
-% Feldänderung bei Bewegung
-% \begin{align*}
-%     \Delta G & = \dfrac{\partial G}{\partial x} \Delta x + \dfrac{\partial G}{\partial y} \Delta y + \dfrac{\partial G}{\partial z} \Delta z \\
-%              & = dG = \opgrad G \cdot d \vec{s}
-% \end{align*}
-
-% \columnbreak
-
-
-    \subsection{Logarithmische Maße/Pegel}
-    \textbf{Feld}größe $F_n$: Spannung, Strom, $\vec{E}$-, $\vec{H}$-Feld, Schalldruck \\
-    \textbf{Leistungs}größe $P_n$: Energie, \underline{Intensität}, Leistung\\
-	Wichtig: Feldgrößen sind \textbf{Effektivwerte}!
-        \begin{itemize} 
-            \item \textbf{Dämpfungsmaß} $ a $ in Dezibel [dB] und Neper [Np]
-            \begin{flalign*}
-                1 \, \si{dB} & =  0,1151 \, \si{Np} & 1 \, \si{Np} & = 8,686 \, \si{dB} & \\  
-                a \,[\si{dB}]  & = 20 \cdot \log_{} \dfrac{F_1}{F_2} & a \,[\si{dB}]  & = 10 \cdot \log_{}  \frac{P_1}{P_2}& \\
-                \frac{F_1}{F_2} & =  10^{\frac{a[\si{dB}]}{20\si{dB}}} & \frac{P_1}{P_2}   & =   10^{\frac{a[\si{dB}]}{10\si{dB}}} &\\
-                a \,[\si{Np}]  & = \ln \dfrac{F_1}{F_2} & a \,[\si{Np}]  & = \dfrac{1}{2} \cdot \ln \dfrac{P_1}{P_2} & \\
-                \frac{F_1}{F_2} & =  e^{a[\si{Np}]}                   & \frac{P_1}{P_2}   & = e^{2a[\si{Np}]} &
-	            \end{flalign*}
-        	\item \textbf{absolute Pegel} $ L $ mit Bezugsgrößen $ P_0, F_0 $
-			\begin{flalign*}
-				L \,[\si{dB}]  & = 20 \cdot \log_{} \dfrac{F_1}{F_0} & L \,[\si{dB}]  & = 10 \cdot \log_{}  \frac{P_1}{P_0}& \\
-				\frac{F_1}{F_0} & =  10^{\frac{L[\si{dB}]}{20\si{dB}}} & \frac{P_1}{P_0}   & =   10^{\frac{L[\si{dB}]}{10\si{dB}}} &
-			\end{flalign*}
-            \renewcommand\arraystretch{1.4}
-			\begin{tabularx}{0.8\columnwidth}{l|X|X}
-			\hline
-			Einheit & Bezugswert & Formelzeichen\\
-			\hline
-			dBm, dB(mW) & $ P_0 = 1mW $ & $ L_{\texttt{P/mW}}$ \\
-			dBW, dB(W) & $ P_0 = 1W $ & $ L_{\texttt{P/W}}$ \\
-%			\hline
-%			dBV, dB(V) & $ F_0 = 1V $ & $ L_{\texttt{U/V}}$ \\
-%			dB$\mu$V, dB($\mu$V) & $ F_0 = 1\mu V $ & $ L_{\texttt{U/$\mu$V}}$ \\
-%			dB$\mu$A, dB($\mu$A) & $ F_0 = 1\mu A $ & $ L_{\texttt{I/$ \mu $A}}$ \\
-%			dB($ \mu $V/m) & $ F_0 = 1 \tfrac{\mu V}{m} $ & $ L_{\texttt{E/($ \mu $V/m)}}$\\
-%			dB($ \mu $A/m) & $ F_0 = 1 \tfrac{\mu A}{m} $ & $ L_{\texttt{H/($ \mu $A/m)}}$\\
-			\hline
-			\end{tabularx}
-			
-%            \item \textbf{Umrechnung} (Annäherungswerte)
-%            \renewcommand\arraystretch{1.2}
-%            \begin{table}[H]
-%	            \begin{tabularx}{1\columnwidth}{l|X|X}
-%	            	\hline
-%            		Faktor $ \tfrac{F_1}{F_0} \, \text{bzw.} \, \tfrac{P_1}{P_0}$ & Energiegröße $P_n$ & Feldgröße $F_n$\\
-%            		\hline
-%            		1 & 0 & 0 \\
-%            		100 & 20 \si{dB} & 40 \si{dB} \\
-%            		1000 & 30 \si{dB} & 60  \si{dB} \\
-%            		0,1 & -10 \si{dB} & -20 \si{dB} \\
-%            		0,01 & -20 \si{dB} & -40 \si{dB} \\
-%            		0,001 & -30 \si{dB} & -60 \si{dB} \\
-%            		2 & 3 \si{dB} & 6 \si{dB} \\
-%            		4 & 6 \si{dB} & 12 \si{dB} \\
-%            		8 & 9 \si{dB} & 18 \si{dB} \\
-%            		0,5 & -3,01 \si{dB} & -6,02 \si{dB} \\
-%            		1,25 & 0,97 \si{dB} & 1,94 \si{dB} \\
-%            		0,8 & -0,97 \si{dB} & -1,94 \si{dB} \\
-%            		\hline
-%            	\end{tabularx}    
-%            \end{table}
-        \item \textbf{relativer Pegel / Maß}\\
-        Maß = Differenz zweier (Leistungs)pegel bei\\ gleichem Bezugswert $ P_0 $
-        \begin{equation*}
-        	\Delta L = L_2 - L_1 = 10 \cdot \log \left( \frac{P_2}{P_1}\right)  \si{dB}
-        \end{equation*}
-        \end{itemize}
-%\textit{Pegel}: feste Bezugsgröße $ P_0 $\\
-%\textit{Maß}: beliebige Bezugsgröße $ P_2 $ bzw. Differenz zweier Pegel\\
-
-
-% \subsection{Begriffe}
-% \begin{tabularx}{0.45\textwidth}{>{\hsize=.1\hsize}X|>{\hsize=.5\hsize}X|>{\hsize=.4\hsize}X}
-%            & Begriff           & Beschreibung \\
-%     \hline
-%     $\rho$ & Raumladungsdichte &              \\
-% \end{tabularx}
+\subsection{Logarithmische Maße/Pegel}
+\textbf{Feld}größe $F_n$: Spannung, Strom, $\vec{E}$-, $\vec{H}$-Feld, Schalldruck \\
+\textbf{Leistungs}größe $P_n$: Energie, \underline{Intensität}, Leistung\\
+Wichtig: Feldgrößen sind \textbf{Effektivwerte}!
+\begin{itemize}
+	\item \textbf{Dämpfungsmaß} $ a $ in Dezibel [dB] und Neper [Np]
+	      \begin{flalign*}
+		      1 \, \si{dB}    & =  0,1151 \, \si{Np}                 & 1 \, \si{Np}    & = 8,686 \, \si{dB}                        & \\
+		      a \,[\si{dB}]   & = 20 \cdot \log_{} \dfrac{F_1}{F_2}  & a \,[\si{dB}]   & = 10 \cdot \log_{}  \frac{P_1}{P_2}       & \\
+		      \frac{F_1}{F_2} & =  10^{\frac{a[\si{dB}]}{20\si{dB}}} & \frac{P_1}{P_2} & =   10^{\frac{a[\si{dB}]}{10\si{dB}}}     & \\
+		      a \,[\si{Np}]   & = \ln \dfrac{F_1}{F_2}               & a \,[\si{Np}]   & = \dfrac{1}{2} \cdot \ln \dfrac{P_1}{P_2} & \\
+		      \frac{F_1}{F_2} & =  e^{a[\si{Np}]}                    & \frac{P_1}{P_2} & = e^{2a[\si{Np}]}                         &
+	      \end{flalign*}
+	\item \textbf{absolute Pegel} $ L $ mit Bezugsgrößen $ P_0, F_0 $
+	      \begin{flalign*}
+		      L \,[\si{dB}]   & = 20 \cdot \log_{} \dfrac{F_1}{F_0}  & L \,[\si{dB}]   & = 10 \cdot \log_{}  \frac{P_1}{P_0}   & \\
+		      \frac{F_1}{F_0} & =  10^{\frac{L[\si{dB}]}{20\si{dB}}} & \frac{P_1}{P_0} & =   10^{\frac{L[\si{dB}]}{10\si{dB}}} &
+	      \end{flalign*}
+	      \renewcommand\arraystretch{1.4}
+	      \begin{tabularx}{0.8\columnwidth}{l|X|X}
+		      \hline
+		      Einheit     & Bezugswert    & Formelzeichen        \\
+		      \hline
+		      dBm, dB(mW) & $ P_0 = 1mW $ & $ L_{\texttt{P/mW}}$ \\
+		      dBW, dB(W)  & $ P_0 = 1W $  & $ L_{\texttt{P/W}}$  \\
+		      \hline
+	      \end{tabularx}
+	\item \textbf{relativer Pegel / Maß}\\
+	      Maß = Differenz zweier (Leistungs)pegel bei\\ gleichem Bezugswert $ P_0 $
+	      \begin{equation*}
+		      \Delta L = L_2 - L_1 = 10 \cdot \log \left( \frac{P_2}{P_1}\right)  \si{dB}
+	      \end{equation*}
+\end{itemize}
 
 \subsubsection{Rechnen mit Pegeln / Logarithmen}
 Rechenregeln für Logarithmen (10er-Basis): \quad $ x,y,a > 0 $
 \begin{flalign*}
-	\log (x\cdot y) &= \log (x) - \log (y) & \log (\tfrac{x}{y}) & = \log (x) - \log (y) &\\
-	\log (x^a) &= a\cdot \log(x)  & \log \sqrt[a]{x} & = \frac{1}{a} \cdot \log (x) &\\
-   \mathtt{Pegel} &= 10 \cdot \log(\mathtt{Faktor}) & \mathtt{Faktor}& = 10 ^{\tfrac{\mathtt{Pegel}}{10}}
+	\log (x\cdot y) & = \log (x) - \log (y)            & \log (\tfrac{x}{y}) & = \log (x) - \log (y)              & \\
+	\log (x^a)      & = a\cdot \log(x)                 & \log \sqrt[a]{x}    & = \frac{1}{a} \cdot \log (x)       & \\
+	\mathtt{Pegel}  & = 10 \cdot \log(\mathtt{Faktor}) & \mathtt{Faktor}     & = 10 ^{\tfrac{\mathtt{Pegel}}{10}}
 \end{flalign*}
 
 \subsection{Rechnen mit Wurzeln}
 $a$: Radikant \qquad $n$: Wurzelexponent\\
 Merke: $\sqrt[n]{a \pm b} \neq \sqrt[n]{a} \pm \sqrt[n]{b}$ \qquad $ x = \sqrt[n]{a} = a^{\frac{1}{n}} $
 \begin{flalign*}
-&\sqrt[n]{a^m}=\left(a^m\right)^{\frac{1}{n}}=\left(a^{\frac{1}{n}}\right)^m=a^{\frac{m}{n}}=(\sqrt[n]{a})^m\\
-&\sqrt[m]{\sqrt[n]{a}}=\sqrt[m]{a^{\frac{1}{n}}}=\left(a^{\frac{1}{n}}\right)^{\frac{1}{m}}=a^{\frac{1}{m \cdot n}}=\sqrt[m \cdot n]{a}\\
-&\sqrt[n]{a} \cdot \sqrt[n]{b}=\left(a^{\frac{1}{n}}\right) \cdot\left(b^{\frac{1}{n}}\right)=(a b)^{\frac{1}{n}}=\sqrt[n]{a b}\\
-&\frac{\sqrt[n]{a}}{\sqrt[n]{b}}=\frac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}}=\left(\frac{a}{b}\right)^{\frac{1}{n}}=\sqrt[n]{\frac{a}{b}} \quad(b>0)
+	 & \sqrt[n]{a^m}=\left(a^m\right)^{\frac{1}{n}}=\left(a^{\frac{1}{n}}\right)^m=a^{\frac{m}{n}}=(\sqrt[n]{a})^m                                     \\
+	 & \sqrt[m]{\sqrt[n]{a}}=\sqrt[m]{a^{\frac{1}{n}}}=\left(a^{\frac{1}{n}}\right)^{\frac{1}{m}}=a^{\frac{1}{m \cdot n}}=\sqrt[m \cdot n]{a}          \\
+	 & \sqrt[n]{a} \cdot \sqrt[n]{b}=\left(a^{\frac{1}{n}}\right) \cdot\left(b^{\frac{1}{n}}\right)=(a b)^{\frac{1}{n}}=\sqrt[n]{a b}                  \\
+	 & \frac{\sqrt[n]{a}}{\sqrt[n]{b}}=\frac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}}=\left(\frac{a}{b}\right)^{\frac{1}{n}}=\sqrt[n]{\frac{a}{b}} \quad(b>0)
 \end{flalign*}
 
 \subsection{Rechnen mit Potenzen}
 $a$: Basis \qquad $m,n$: Exponent
 \begin{flalign*}
-	&a^m \cdot a^n=a^{m+n} & \frac{a^m}{a^n}&=a^{m-n} \quad(a \neq 0)&\\
-	&\left(a^m\right)^n=\left(a^n\right)^m=a^{m \cdot n}& a^n \cdot b^n&=(a \cdot b)^n&\\
-	& \frac{a^n}{b^n}=\left(\frac{a}{b}\right)^n \quad(b \neq 0)& a^b &= e^{b \cdot \ln a}&\\
-	&a^0 =1 & a^{-n} &= \frac{1}{a^n}&
+	 & a^m \cdot a^n=a^{m+n}                                      & \frac{a^m}{a^n} & =a^{m-n} \quad(a \neq 0) & \\
+	 & \left(a^m\right)^n=\left(a^n\right)^m=a^{m \cdot n}        & a^n \cdot b^n   & =(a \cdot b)^n           & \\
+	 & \frac{a^n}{b^n}=\left(\frac{a}{b}\right)^n \quad(b \neq 0) & a^b             & = e^{b \cdot \ln a}      & \\
+	 & a^0 =1                                                     & a^{-n}          & = \frac{1}{a^n}          &
 \end{flalign*}
 
 
@@ -326,37 +230,37 @@ $a$: Basis \qquad $m,n$: Exponent
 
 \subsubsection{Umrechnungstabelle}
 \begin{tabularx}{0.45\textwidth}{>{\hsize=.46\hsize}X|>{\hsize=.27\hsize}X|>{\hsize=.27\hsize}X}
-    Kart.                                                                                & Zyl.             & Kug.                            \\
-    \specialrule{1.5pt}{0pt}{0pt}
-    $x$                                                                                  & $r \cos \varphi$ & $r \sin \vartheta \cos \varphi$ \\
-    \hline
-    $y$                                                                                  & $r \sin \varphi$ & $r \sin \vartheta \sin \varphi$ \\
-    \hline
-    $z$                                                                                  & $z$              & $r \cos \vartheta$              \\
-    \specialrule{1.5pt}{0pt}{0pt}
-    $\sqrt{x^{2}+y^{2}}$                                                                 & $r$              &                                 \\
-    \hline
-    $\arctan \frac{y}{x}$                                                                & $\varphi$        &                                 \\
-    \hline
-    $z$                                                                                  & $z$              &                                 \\
-    \hline
-    $d x \cos \varphi+d y \sin \varphi$                                                  & $dr$             &                                 \\
-    \hline
-    $d y \cos \varphi-d x \sin \varphi$                                                  & $r d\varphi$     &                                 \\
-    \hline
-    $dz$                                                                                 & $dz$             &                                 \\
-    \specialrule{1.5pt}{0pt}{0pt}
-    $\sqrt{x^{2}+y^{2}+z^{2}}$                                                           &                  & $r$                             \\
-    \hline
-    $\arctan \frac{y}{x}$                                                                &                  & $\varphi$                       \\
-    \hline
-    $\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                               &                  & $\vartheta$                     \\
-    \hline
-    $d x \sin \vartheta \cos \varphi+d y \sin \vartheta \sin \varphi+d z \cos \vartheta$ &                  & $dr$                            \\
-    \hline
-    $d y \cos \varphi-d x \sin \varphi$                                                  &                  & $r \sin \vartheta d \varphi$    \\
-    \hline
-    $d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                  & $r d \vartheta$                 \\
+	Kart.                                                                                & Zyl.             & Kug.                            \\
+	\specialrule{1.5pt}{0pt}{0pt}
+	$x$                                                                                  & $r \cos \varphi$ & $r \sin \vartheta \cos \varphi$ \\
+	\hline
+	$y$                                                                                  & $r \sin \varphi$ & $r \sin \vartheta \sin \varphi$ \\
+	\hline
+	$z$                                                                                  & $z$              & $r \cos \vartheta$              \\
+	\specialrule{1.5pt}{0pt}{0pt}
+	$\sqrt{x^{2}+y^{2}}$                                                                 & $r$              &                                 \\
+	\hline
+	$\arctan \frac{y}{x}$                                                                & $\varphi$        &                                 \\
+	\hline
+	$z$                                                                                  & $z$              &                                 \\
+	\hline
+	$d x \cos \varphi+d y \sin \varphi$                                                  & $dr$             &                                 \\
+	\hline
+	$d y \cos \varphi-d x \sin \varphi$                                                  & $r d\varphi$     &                                 \\
+	\hline
+	$dz$                                                                                 & $dz$             &                                 \\
+	\specialrule{1.5pt}{0pt}{0pt}
+	$\sqrt{x^{2}+y^{2}+z^{2}}$                                                           &                  & $r$                             \\
+	\hline
+	$\arctan \frac{y}{x}$                                                                &                  & $\varphi$                       \\
+	\hline
+	$\arctan \frac{\sqrt{x^{2}+y^{2}}}{z}$                                               &                  & $\vartheta$                     \\
+	\hline
+	$d x \sin \vartheta \cos \varphi+d y \sin \vartheta \sin \varphi+d z \cos \vartheta$ &                  & $dr$                            \\
+	\hline
+	$d y \cos \varphi-d x \sin \varphi$                                                  &                  & $r \sin \vartheta d \varphi$    \\
+	\hline
+	$d x \cos \vartheta \cos \varphi+d y \cos \vartheta \sin \varphi-d z \sin \vartheta$ &                  & $r d \vartheta$                 \\
 \end{tabularx}
 
 \subsubsection{Schema KOS Kugel/Zylinder}
