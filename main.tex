@@ -1,60 +1,57 @@
-%\documentclass[a4paper]{article}
-\documentclass[oneside]{article}
-\input{preamble.sty}
+\documentclass[10pt]{article}
+\usepackage{preamble}
 
 \def\FS{Formelsammlung}
-\def\Fach{FWL}
-\def\fachlong{Felder, Wellen und Leitungen}
+\def\Fach{Felder, Wellen und Leitungen}
 \title{\FS \\ \Fach}
-% \subtitle{Felder, Wellen und Leitungen}
 \date{\today}
-\def\Semester{Sommersemester 23}
+\def\Semester{Wintersemester 23/24}
 \IfFileExists{info.tex}
 {
-    \input{info.tex}
+   \input{info.tex}
 }
 {
-    \author{Tony Pham}
-    \def\MatName{NAME}
-%    \def\MatNr{MATNR}
+   \author{\href{https://www.youtube.com/watch?v=yMR45cZbvDw}{Die Prinzen - Alles nur geklaut}}
+   \def\MatNr{MATNR}
 }
 
 \begin{document}
 
 \pagenumbering{gobble}
 \begin{titlepage}
-    \thispagestyle{empty}
+	\thispagestyle{empty}
 
-    \begin{center}
-        \includegraphics[width=0.7\textwidth]{OTHR_OTHR_Logo}\\
-        \vspace*{\stretch{1}}
-        \Huge
-        \textsc{\MyTitle}\\
-        \vspace*{\stretch{0.25}}
-        \Large
-        \textbf{\Semester}\\
-%        \small
-        nach Vorlesung von Prof. Stücke und Prof. Sattler\\
-      	\vspace*{\stretch{0.5}}
-      	Erstellt von\\ \href{https://github.com/Vibeskanzler}{Tony Pham}, Max Forstner und \href{https://ayhamcloud.de/}{Ayham Alhulaibi}\\
-      
-      	
-        \vspace*{\stretch{2}}
-        {\renewcommand{\arraystretch}{1.5}
-        \Large
-            \begin{tabular}{l l}
-%                Name:            & \hspace{4cm}\MatName \\
-%                Matrikelnummer:  & \hspace{4cm}\MatNr    \\
-                Letzte Änderung: & \hspace{4cm}\MyDate   \\
-                Lizenz:          & \hspace{4cm}GPLv3
-            \end{tabular}
-        }
-        \vspace*{\stretch{1}}
-        \vspace*{\stretch{2}}
-%       \let\thefootnote\relax\footnotetext{Für Verbesserungsvorschläge, Wünsche, Fragen oder Anregungen: E-Mail an \href{mailto:tonyhawkz117@gmail.com}{mich} oder besuche die \href{https://github.com/Vibeskanzler/FWL_Formelsammlung}{Repository}.}
-        
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{OTHR_OTHR_Logo}\\
+		\vspace*{\stretch{1}}
+		\Huge
+		\textsc{\MyTitle}\\
+		\vspace*{\stretch{0.25}}
+		\large
+		\textbf{\Semester}\\
+		{\small
+		nach Vorlesung von Prof. Stücke und Prof. Sattler}
 
-    \end{center}
+		\vspace*{\stretch{0.5}}
+    Erstellt von\\ Max Forstner, \href{https://ayhamcloud.de/}{Ayham
+    Alhulaibi}, \href{https://github.com/Vibeskanzler}{Tony Pham}  und Johannes
+    Rothe\\
+
+
+		\vspace*{\stretch{2}}
+		{\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{l l}
+				Name:            & \hspace{4cm}\MyAuthor \\
+				Matrikelnummer:  & \hspace{4cm}\MatNr    \\
+				Letzte Änderung: & \hspace{4cm}\MyDate   \\
+				Lizenz:          & \hspace{4cm}GPLv3
+			\end{tabular}
+		}
+		\vspace*{\stretch{1}}
+		\vspace*{\stretch{2}}
+
+
+	\end{center}
 \end{titlepage}
 
 \newpage
@@ -62,22 +59,15 @@
 \clearpage
 
 \pagestyle{fancy}
-\fancyhf{}
-%\rhead{\rightmark}
-%\fancyhead[R]{\leftmark}
-\lhead{FWL}
-%\rhead{\leftmark}
-%\rhead{FWL}
+\lhead{\MyAuthor}
+\rhead{\Semester}
+\cfoot{\vspace{-20pt}\thepage}
 \pagenumbering{arabic}
-%\cfoot{\vspace{-20pt}Seite \thepage \quad von \pageref{LastPage}}
-\cfoot{\thepage \, von \pageref{LastPage}}
-\lfoot{Tony Pham}
-%\fancyhead[L]{\leftmark}
 % \setlength{\columnsep}{1pt}
 \raggedcolumns
 
 \begin{multicols*}{2}
-    \input{Grundlagen}
+	\input{Grundlagen}
 \end{multicols*}
 
 % newpage
@@ -86,12 +76,12 @@
 
 
 \begin{multicols*}{2}
-    \include{Felder}
-    \include{Wellen}
-    \include{Leitungen}
-    \include{Wellenleiter}
-    \include{Smithdiagramm}
-    \include{Antennen}
+	\include{Felder}
+	\include{Wellen}
+	\include{Leitungen}
+	\include{Wellenleiter}
+	\include{Smithdiagramm}
+	\include{Antennen}
 \end{multicols*}
 \include{Antennentabelle}
 \include{Einheiten}
