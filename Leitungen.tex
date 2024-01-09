@@ -143,7 +143,7 @@ Nur hinlaufende Welle, \textbf{reflexionsfrei}!
 \begin{align*}
 	Z_L  & = Z_1 = Z_2 = Z(l) \qquad
 	r_A          =0 \qquad
-	\mathrm{SWR} = 1                        \\
+	\mathrm{SWR} = 1                         \\
 	U(z) & = U_h\cdot e ^{-j\beta z}  \qquad
 	I(z)         = I_h \cdot e^{-j\beta z} = \frac{U_h}{Z_L}\cdot e^{-j\beta z}
 \end{align*}
@@ -249,9 +249,11 @@ Smith-Chart: Kap. \ref{sec:Smith_All} \qquad VSWR: Kap. \ref{sec:VSWR}
 
 \subsubsection{Reflexionsfaktor mit Verlusten}
 $ r_e $: am \textbf{Eingang} \qquad $ r_a $: am Abschluss/an der Last
+\[
+	r_e = r_a  ^{-2\underline{\gamma} l} =  \overbracket{r_a \cdot e^{-2\alpha l}}^ \texttt{gedämpfter Betrag} \cdot e^{-j2\beta l}
+\]
 \begin{align*}
-	r_e            & = r_a  ^{-2\underline{\gamma} l} =  \overbracket{r_a \cdot e^{-2\alpha l}}^ \texttt{gedämpfter Betrag}   \cdot e^{-j2\beta l}                                                                                                     \\
-	\Aboxed{\alpha & = -\frac{\ln(\frac{r_e}{r_a})}{2 \cdot l} \, \left[ \frac{\si{Np}}{\si{m}} \right]  }                                         & \Aboxed{\beta & = \dfrac{\varphi_2 -\varphi_1}{2\cdot l} \left[ \frac{\si{rad}}{\si{m}} \right] }
+	\Aboxed{\alpha & = -\frac{\ln(\frac{r_e}{r_a})}{2 \cdot l} \, \left[ \frac{\si{Np}}{\si{m}} \right]  } & \Aboxed{\beta & = \dfrac{\varphi_2 -\varphi_1}{2\cdot l} \left[ \frac{\si{rad}}{\si{m}} \right] }
 \end{align*}
 
 \subsubsection{Gleichspannungswert (=Endwert)}
