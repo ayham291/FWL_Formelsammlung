@@ -1,77 +1,183 @@
-\subsection{Senkrechte (E-Feld) Polarisation (H-Feld parallel)}
+\subsubsection{Senkrechte Polarisation ohne $ \mu_r $}
 \input{Figures/SchraegerUebergang_senk_Polarisation.tex}
+$\vec{E}$-Feld senkrecht, $ \vec{H}$-Feld parallel. \qquad $ \mu_{r1} = \mu_{r2} =1$
+%\[ \boxed{\texttt{mit } Z_{F0} = 120\pi \approx 377\si{\ohm}} \]
+\begin{flalign*}
+	Z_{F0} &= 120\pi \,\si{\ohm} &
+    Z_{F(n)}                & = Z_{F0}\cdot\frac{1}{\sqrt{\varepsilon_{r(n)}}}&
+    \frac{Z_{F1}}{Z_{F2}} & = \frac{\sqrt{\varepsilon_{r2}}}{\sqrt{\varepsilon_{r1}}}&
+\end{flalign*}
+%\[ n: \texttt{Brechungsindex} \quad ; \quad \theta_h = \theta_r\]
+\textbf{Brechungsgesetz}: \qquad  mit $ \theta_h = \theta_r\ $
+\begin{flalign*}
+    \Aboxed{\frac{\sin\theta_t}{\sin\theta_h} & = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}} = \frac{\lambda_2}{\lambda_1}= \frac{\beta_1}{\beta_2}= \frac{n_1}{n_2} &
+    \sin\theta_t                      & = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}\cdot \sin\theta_h 
+\end{flalign*}
+%\begin{align*}
+%	\dfrac{\sin \vartheta_{2}}{\sin \vartheta_{1}} = \dfrac{k_{h}}{k_{g}} & = \sqrt{\dfrac{\mu_{r 1} \varepsilon_{r 1}}{\mu_{r 2} \varepsilon_{r 2}}} = \dfrac{n_{1}}{n_{2}} = \dfrac{v_{p, 2}}{v_{p, 1}} = \dfrac{\lambda_{2}}{\lambda_{1}} \\
+%	% \alpha_{Bp}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\varepsilon_{r1}}{\varepsilon_{r2}}} \right)                                                                                        \\
+%	% \alpha_{Bs}                                                           & = \tan^{-1} \left( \sqrt{ \dfrac{\mu_{r1}}{\mu_{r2}}} \right)
+%\end{align*}
 
-\[ \boxed{\texttt{mit } Z_{F0} = 120\pi \approx 377\si{\ohm}} \]
-\begin{align*}
-    Z_{Fn}                & = Z_{F0}\cdot\frac{1}{\sqrt{\varepsilon_{rn}}}            \\
-    \frac{Z_{F1}}{Z_{F2}} & = \frac{\sqrt{\varepsilon_{r2}}}{\sqrt{\varepsilon_{r1}}}
-\end{align*}
-\[ n: \texttt{Brechungsindex} \quad ; \quad \theta_h = \theta_r\]
-\begin{align*}
-    \frac{\sin\theta_t}{\sin\theta_h} & = \frac{\lambda_2}{\lambda_1}= \frac{\beta_1}{\beta_2}= \frac{n_1}{n_2} \\
-    \sin\theta_t                      & = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}\cdot \sin\theta_h
-\end{align*}
 
-\begin{itemize}
-    \item magnetischer/elektrischer Reflexionsfaktor $[1]$
-    \item magnetischer Transmissionsfaktor $[1]$
-    \item elektrischer Transmissionsfaktor $[1]$
-\end{itemize}
-\begin{align*}
-    r_s    & =  r_{es} = r_{ms} =                                                                                                                                            \\
-           & = \frac{Z_{F2} \cdot \cos \theta_h-Z_{F1} \cdot \cos \theta_t}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                           \\
-           & = \frac{\cos\theta_h-\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}}{\cos\theta_h+\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}} \\
-    t_{ms} & = Z_{F1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                                              \\
-           & = (1 - r_s) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                          \\
-           & = \frac{Z_{F1}}{Z_{F2}}\cdot t_{es}                                                                                                                             \\
-    t_{es} & = Z_{F2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                                              \\
-           & = 1+r_s
-\end{align*}
+%\begin{itemize}
+%    \item magnetischer/elektrischer Reflexionsfaktor $[1]$
+%    \item magnetischer Transmissionsfaktor $[1]$
+%    \item elektrischer Transmissionsfaktor $[1]$
+%\end{itemize}
+\textbf{Fresnelsche Formeln}: \qquad $ \theta_h = \vartheta_{1} $ \quad $ \theta_t = \vartheta_{2} $
+%\begin{equation*}
+%	\begin{aligned}
+\begin{spreadlines}{2ex}
+\begin{flalign*}
+		    r_s    & =  r_{es} = r_{ms} =                                                                                                                                            \\
+		& = \frac{Z_{F2} \cdot \cos \vartheta_1-Z_{F1} \cdot \cos \vartheta_2}{Z_{F2} \cdot \cos \vartheta_1+Z_{F1} \cdot \cos \vartheta_2}                                           
+%		& = \frac{\cos\vartheta_1-\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\vartheta_1}}{\cos\vartheta_1+\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\vartheta_1}} \\
+		= \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\vartheta_1 - \sqrt{\varepsilon_{r2}}\cdot\cos\vartheta_2}{\sqrt{\varepsilon_{r2}}\cdot\cos\vartheta_2 + \sqrt{\varepsilon_{r1}}\cos\vartheta_1} \\
+		& = \frac{\cos \vartheta_1-\sqrt{\frac{\varepsilon_{r 2}}{\varepsilon_{r 1}}-\sin ^2 \vartheta_1}}{\cos \vartheta_1+\sqrt{\frac{\varepsilon_{r 2}}{\varepsilon_{r 1}}-\sin ^2 \vartheta_1}}
+		\\
+		t_{es} & =\frac{2 \cdot	 Z_{F2} \cdot \cos \vartheta_1}{Z_{F2} \cdot \cos \vartheta_1+Z_{F1} \cdot \cos \theta_2}                                                               = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\vartheta_1}{\sqrt{\varepsilon_{r2}}\cdot\cos\vartheta_2 + \sqrt{\varepsilon_{r1}}\cdot\cos\vartheta_h}
+		\\
+		& = \frac{2 \cos \vartheta_1}{\cos \vartheta_1+\sqrt{\frac{\varepsilon_{r 2}}{\varepsilon_{r 1}}-\sin ^2 \vartheta_1}} 
+		\\
+		& = 1+r_s
+		\\
+		t_{ms} & = \frac{2 Z_{F1} \cdot \cos \vartheta_1}{Z_{F2} \cdot \cos \vartheta_1+Z_{F1} \cdot \cos \vartheta_2}                                                              \\
+		&= \frac{2 \sqrt{\frac{\varepsilon_{r 2}}{\varepsilon_{r 1}} \cos \vartheta_1}}{\cos \vartheta_1+\sqrt{\frac{\varepsilon_{r 2}}{\varepsilon_{r 1}}-\sin ^2 \vartheta_1}}
+		\\
+%		& = (1 - r_s) \cdot \dfrac{\cos \vartheta_1}{\cos \vartheta_2}                                                                                                          \\
+		& = \frac{Z_{F1}}{Z_{F2}}\cdot t_{es} = \sqrt{\frac{\varepsilon_{r2}}{\varepsilon_{r1}}}\cdot t_{es}
+\end{flalign*} 
+\end{spreadlines}
+%	\end{aligned}
+%\end{equation*}
 
-\begin{align*}
-    E_r & = r_s \cdot E_h    \\
-    E_t & = t_{es} \cdot E_h \\
-    H_r & = r_s \cdot H_h    \\
-    H_t & = t_{ms} \cdot H_h \\
-    E_t & = H_t\cdot Z_{F2}  \\
-    E_h & = H_h\cdot Z_{F1}
-\end{align*}
 
-\subsection{Parallel (E-Feld) Polarisation (H-Feld senkrecht)}
-\input{Figures/SchraegerUebergang_para_Polaristion.tex}
-
-\[ \boxed{\texttt{mit } Z_{F0} = 120\pi \approx 377\si{\ohm}} \]
-\begin{align*}
-    Z_{Fn}                & = Z_{F0}\cdot\frac{1}{\sqrt{\varepsilon_{rn}}}            \\
-    \frac{Z_{F1}}{Z_{F2}} & = \frac{\sqrt{\varepsilon_{r2}}}{\sqrt{\varepsilon_{r1}}}
-\end{align*}
-\[ n: \texttt{Brechungsindex} \quad ; \quad \theta_h = \theta_r\]
-\begin{align*}
-    \frac{\sin\theta_t}{\sin\theta_h} & = \frac{\lambda_2}{\lambda_1}= \frac{\beta_1}{\beta_2}= \frac{n_1}{n_2} \\
-    \sin\theta_t                      & = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}\cdot\sin\theta_h
-\end{align*}
-
-\begin{itemize}
-    \item magnetischer/elektrischer Reflexionsfaktor $[1]$
-    \item magnetischer Transmissionsfaktor $[1]$
-    \item elektrischer Transmissionsfaktor $[1]$
-\end{itemize}
-\begin{align*}
-    r_p    & =  r_{ep} = r_{mp} =                                                                                                                                                                                                        \\
-           & = \frac{Z_{F2} \cdot \cos \theta_t-Z_{F1} \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_t+Z_{F1} \cdot \cos \theta_h} =                                                                                                     \\
-           & = \frac{\varepsilon_{r2}\cos\theta_h-\sqrt{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}{\varepsilon_{r2}\cos\theta_h+\sqrt{{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}} \\
-    t_{mp} & = Z_{F1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F1} \cdot \cos \theta_h+Z_{F2} \cdot \cos \theta_t}                                                                                                                          \\
-           & = 1+r_p                                                                                                                                                                                                                     \\
-    t_{ep} & = Z_{F2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F1} \cdot \cos \theta_h+Z_{F2} \cdot \cos \theta_t}                                                                                                                          \\
-           & = (1-r_p) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                                                                                        \\
-           & = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp}
-\end{align*}
-
-\begin{align*}
+%\begin{align*}
+%    r_s    & =  r_{es} = r_{ms} =                                                                                                                                            \\
+%           & = \frac{Z_{F2} \cdot \cos \theta_h-Z_{F1} \cdot \cos \theta_t}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                           \\
+%           & = \frac{\cos\theta_h-\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}}{\cos\theta_h+\sqrt{^{\varepsilon_{r2}}/_{\varepsilon_{r1}}-\sin^2\theta_h}} \\
+%           & = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\theta_h - \sqrt{\varepsilon_{r2}}\cdot\cos\theta_t}{\sqrt{\varepsilon_{r2}}\cdot\cos\theta_t + \sqrt{\varepsilon_{r1}}\cos\theta_h} \\
+%    t_{ms} & = Z_{F1} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                                              \\
+%           & = (1 - r_s) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                          \\
+%           & = \frac{Z_{F1}}{Z_{F2}}\cdot t_{es}                                                                                                                             \\
+%    t_{es} & = Z_{F2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_h+Z_{F1} \cdot \cos \theta_t}                                                              \\
+%           & = 1+r_s
+%\end{align*}
+%\subsubsection*{Beziehungen Polarisation}
+\textbf{Beziehungen Polarisation}
+\begin{equation*}
+\begin{aligned}
+	E_r & = r_s \cdot E_h    \\
+	E_t & = t_{es} \cdot E_h \\
+	H_r & = r_s \cdot H_h    \\
+	H_t & = t_{ms} \cdot H_h \\
+	E_t & = H_t\cdot Z_{F2}  \\
+	E_h & = H_h\cdot Z_{F1}
+\end{aligned}
+\qquad
+\begin{aligned}
     E_r & = r_p\cdot E_h    \\
     E_t & = t_{ep}\cdot E_h \\
     H_r & = r_p\cdot H_h    \\
     H_t & = t_{mp}\cdot H_h \\
     E_t & = H_t\cdot Z_{F2} \\
-    E_h & = H_h\cdot Z_{F1}
-\end{align*}
+    E_h & = H_h\cdot Z_{F1} 
+\end{aligned}
+\end{equation*}
+
+\textbf{Richtungssinn Felder (Hand-Regel)}
+\begin{equation*}
+	\begin{aligned}
+	& \text{\textbf{Linke Hand}}\\
+	& \text{Daumen:}\quad \vec{E}\\
+	& \text{Zeigef.:}\quad \vec{S}_{av}\\
+	& \text{Mittelf.:}\quad \vec{H} 
+	\end{aligned}
+	\qquad
+	\begin{aligned}
+	& \text{\textbf{Rechte Hand}}\\
+	& \text{Daumen:}\quad \vec{E}\\
+	& \text{Zeigef.:}\quad \vec{H}\\
+	& \text{Mittelf.:}\quad \vec{S}_{av}
+	\end{aligned}
+\end{equation*}
+\newcolumn
+\subsubsection{Parallele Polarisation ohne $ \mu_r $}
+\begin{center}
+\input{Figures/SchraegerUebergang_para_Polaristion.tex}
+\end{center}
+$\vec{E}$-Feld parallel, $ \vec{H}$-Feld senkrecht. \qquad $ \mu_{r1} = \mu_{r2} =1 $\\
+
+Stücke: $\vec{H}_h$ und $ \vec{H}_r$ zeigen in die selbe Richtung!\\
+Sattler: $\vec{H}_h$ und $ \vec{H}_r$ zeigen in \textbf{entgegengesetzter} Richtung!\\
+%\[ \boxed{\texttt{mit } Z_{F0} = 120\pi \approx 377\si{\ohm}} \]
+%\begin{align*}
+%    Z_{Fn}                & = Z_{F0}\cdot\frac{1}{\sqrt{\varepsilon_{rn}}}            \\
+%    \frac{Z_{F1}}{Z_{F2}} & = \frac{\sqrt{\varepsilon_{r2}}}{\sqrt{\varepsilon_{r1}}}
+%\end{align*}
+%\[ n: \texttt{Brechungsindex} \quad ; \quad \theta_h = \theta_r\]
+%\begin{align*}
+%    \frac{\sin\theta_t}{\sin\theta_h} & = \frac{\lambda_2}{\lambda_1}= \frac{\beta_1}{\beta_2}= \frac{n_1}{n_2} \\
+%    \sin\theta_t                      & = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}\cdot\sin\theta_h
+%\end{align*}
+
+%\begin{itemize}
+%    \item magnetischer/elektrischer Reflexionsfaktor $[1]$
+%    \item magnetischer Transmissionsfaktor $[1]$
+%    \item elektrischer Transmissionsfaktor $[1]$
+%\end{itemize}
+\textbf{Fresnelsche Formeln (Stücke)}: \qquad $ \theta_h = \vartheta_{1} $ \quad $ \theta_t = \vartheta_{2} $
+\begin{equation*}
+		\setlength{\jot}{10pt}
+	\begin{aligned}
+		r_{ep}    & =  r_{mp} = r_{p}  \qquad \qquad =-r_{p,[\texttt{Sattler}]}
+		\\
+		& = \frac{Z_{F1} \cdot \cos \vartheta_1-Z_{F2} \cdot \cos \vartheta_2}{Z_{F1} \cdot \cos \vartheta_1+Z_{F2} \cdot \cos \vartheta_2}
+		\\
+%		& = - \left( \frac{\varepsilon_{r2}\cos\vartheta_1-\sqrt{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\vartheta_1}}{\varepsilon_{r2}\cos\vartheta_1+\sqrt{{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\vartheta_1}}} \right)  
+%		\\
+		& =\frac{\cos \vartheta_1-\sqrt{\frac{\varepsilon_{r 1}}{\varepsilon_{r 2}}-\frac{\varepsilon_{r 1}{ }^2}{\varepsilon_{r 2}{ }^2} \sin ^2 \vartheta_1}}{\cos \vartheta_1+\sqrt{\frac{\varepsilon_{r 1}}{\varepsilon_{r 2}}-\frac{\varepsilon_{r 1}{ }^2}{\varepsilon_{r 2}{ }^2} \sin ^2 \vartheta_1}} \\
+		t_{ep} & =  \frac{2 \cdot Z_{F2}   \cdot  \cos \vartheta_1}{Z_{F1} \cdot \cos \vartheta_1+Z_{F2} \cdot \cos \vartheta_2}                                                                                                                           = (1-r_p) \cdot \dfrac{\cos \vartheta_1}{\cos \vartheta_2}                                                                                                                                                                        \\
+		& = \frac{2 \sqrt{\frac{\varepsilon_{r 1}}{\varepsilon_{r 2}}} \cos \vartheta_1}{\cos \vartheta_1+\sqrt{\frac{\varepsilon_{r 1}}{\varepsilon_{r 2}}-\frac{\varepsilon_{r 1}^2}{\varepsilon_{r 2}{ }^2} \sin ^2 \vartheta_1}} \\
+		& = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp} = \sqrt{\frac{\varepsilon_{r1}}{\varepsilon_{r2}}}\cdot t_{mp} \\
+		t_{mp} & = \frac{2 \cdot  Z_{F1}\cdot \cos \vartheta_1}{Z_{F1} \cdot \cos \vartheta_1+Z_{F2} \cdot \cos \vartheta_2}                                                                                                                          
+		= 1+r_p                                                                                                                                                                                                                
+	\end{aligned}
+\end{equation*}
+%\begin{align*}
+%    r_p    & =  r_{ep} = r_{mp} =                                                                                                                                                                                                        \\
+%           & = \frac{Z_{F1} \cdot \cos \theta_t-Z_{F2} \cdot \cos \theta_h}{Z_{F2} \cdot \cos \theta_t+Z_{F1} \cdot \cos \theta_h} =                                                                                                     \\
+%           & = \frac{\varepsilon_{r2}\cos\theta_h-\sqrt{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}{\varepsilon_{r2}\cos\theta_h+\sqrt{{\varepsilon_{r2}\varepsilon_{r1}-{\varepsilon_{r1}}^2\sin^2\theta_h}}} \\
+%               t_{ep} & = Z_{F2} \cdot \frac{2 \cdot \cos \theta_h}{Z_{F1} \cdot \cos \theta_h+Z_{F2} \cdot \cos \theta_t}                                                                                                                          \\
+%           & = (1-r_p) \cdot \dfrac{\cos \theta_h}{\cos \theta_t}                                                                                                                                                                        \\
+%           & = \frac{Z_{F2}}{Z_{F1}}\cdot t_{mp}\\
+%    t_{mp} & = \frac{2 Z_{F1}\cdot \cos \theta_h}{Z_{F1} \cdot \cos \theta_h+Z_{F2} \cdot \cos \theta_t}                                                                                                                          \\
+%           & = 1+r_p                                                                                                                                                                                                                
+%\end{align*}
+\textbf{Fresnelsche Formeln (Sattler)}:
+\begin{equation*}
+			\setlength{\jot}{10pt}
+\begin{aligned}
+	r_p    & =  r_{ep} = r_{mp} \qquad \qquad =-r_{p,[\texttt{Stücke}]}                                                                                                                                                                                                        \\
+	& = \frac{Z_{F2} \cdot \cos \vartheta_2-Z_{F1} \cdot \cos \vartheta_1}{Z_{F2} \cdot \cos \vartheta_2+Z_{F1} \cdot \cos \vartheta_1}                                                                                               \\
+	& = \frac{\sqrt{\varepsilon_{r1}}\cdot\cos\vartheta_2 - \sqrt{\varepsilon_{r2}}\cdot\cos\vartheta_1}{\sqrt{\varepsilon_{r2}}\cdot\cos\vartheta_1 + \sqrt{\varepsilon_{r1}}\cos\vartheta_2} \\
+	t_{ep} & =  \frac{2 Z_{F2} \cdot \cos \vartheta_1}{Z_{F1} \cdot \cos \vartheta_1+Z_{F2} \cdot \cos \vartheta_2}                                                                                                                          \\
+		 & = \frac{2\cdot\sqrt{\varepsilon_{r1}}\cdot\cos\vartheta_1}{\sqrt{\varepsilon_{r2}}\cdot\cos\vartheta_1 + \sqrt{\varepsilon_{r1}}\cdot\cos\vartheta_2}\\
+	& = (1+r_p) \cdot \dfrac{\cos \vartheta_1}{\cos \vartheta_2}\\
+	t_{mp} 
+%	& 
+%	= \frac{2 Z_{F1}\cdot \cos \vartheta_h}{Z_{F1} \cdot \cos \vartheta_h+Z_{F2} \cdot \cos \vartheta_t}                                                                                                                          \\
+	& = 1-r_p                                                                                                                                                                                                                                                                                                                                                                                        = \frac{Z_{F1}}{Z_{F2}}\cdot t_{ep}
+\end{aligned}
+\end{equation*}
+
+
+%\begin{align*}
+%    E_r & = r_p\cdot E_h    \\
+%    E_t & = t_{ep}\cdot E_h \\
+%    H_r & = r_p\cdot H_h    \\
+%    H_t & = t_{mp}\cdot H_h \\
+%    E_t & = H_t\cdot Z_{F2} \\
+%    E_h & = H_h\cdot Z_{F1}
+%\end{align*}

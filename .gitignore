@@ -6,6 +6,6 @@ tags
 *.fdb*
 *.fls
 *.synctex.gz
-*.pdf
+# *.pdf
 
 info.tex

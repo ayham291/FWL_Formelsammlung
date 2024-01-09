@@ -5,49 +5,58 @@
 \def\Fach{Felder, Wellen und Leitungen}
 \title{\FS \\ \Fach}
 \date{\today}
-\def\Semester{Sommersemester 22}
+\def\Semester{Wintersemester 23/24}
 \IfFileExists{info.tex}
 {
-    \input{info.tex}
+   \input{info.tex}
 }
 {
-    \author{\href{https://www.youtube.com/watch?v=yMR45cZbvDw}{Die Prinzen - Alles nur geklaut}}
-    \def\MatNr{MATNR}
+   \author{\href{https://www.youtube.com/watch?v=yMR45cZbvDw}{Die Prinzen - Alles nur geklaut}}
+   \def\MatNr{MATNR}
 }
 
 \begin{document}
 
 \pagenumbering{gobble}
 \begin{titlepage}
-    \thispagestyle{empty}
+	\thispagestyle{empty}
 
-    \begin{center}
-        \includegraphics[width=0.7\textwidth]{OTHR_OTHR_Logo}\\
-        \vspace*{\stretch{1}}
-        \Huge
-        \textsc{\MyTitle}\\
-        \vspace*{\stretch{0.25}}
-        \normalsize
-        \Semester
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{OTHR_OTHR_Logo}\\
+		\vspace*{\stretch{1}}
+		\Huge
+		\textsc{\MyTitle}\\
+		\vspace*{\stretch{0.25}}
+		\large
+		\textbf{\Semester}\\
+		{\small
+		nach Vorlesung von Prof. Stücke und Prof. Sattler}
 
-        \vspace*{\stretch{2}}
-        {\renewcommand{\arraystretch}{1.5}
-            \begin{tabular}{l l}
-                Name:            & \hspace{4cm}\MyAuthor \\
-                Matrikelnummer:  & \hspace{4cm}\MatNr    \\
-                Letzte Änderung: & \hspace{4cm}\MyDate   \\
-                Lizenz:          & \hspace{4cm}GPLv3
-            \end{tabular}
-        }
-        \vspace*{\stretch{1}}
+		\vspace*{\stretch{0.5}}
+    Erstellt von\\ Max Forstner, \href{https://ayhamcloud.de/}{Ayham
+    Alhulaibi}, \href{https://github.com/Vibeskanzler}{Tony Pham}  und Johannes
+    Rothe\\
 
-    \end{center}
+
+		\vspace*{\stretch{2}}
+		{\renewcommand{\arraystretch}{1.5}
+			\begin{tabular}{l l}
+				Name:            & \hspace{4cm}\MyAuthor \\
+				Matrikelnummer:  & \hspace{4cm}\MatNr    \\
+				Letzte Änderung: & \hspace{4cm}\MyDate   \\
+				Lizenz:          & \hspace{4cm}GPLv3
+			\end{tabular}
+		}
+		\vspace*{\stretch{1}}
+		\vspace*{\stretch{2}}
+
+
+	\end{center}
 \end{titlepage}
 
 \newpage
-
-
-\tableofcontents\clearpage
+\tableofcontents
+\clearpage
 
 \pagestyle{fancy}
 \lhead{\MyAuthor}
@@ -57,9 +66,8 @@
 % \setlength{\columnsep}{1pt}
 \raggedcolumns
 
-
 \begin{multicols*}{2}
-    \input{Grundlagen}
+	\input{Grundlagen}
 \end{multicols*}
 
 % newpage
@@ -68,21 +76,15 @@
 
 
 \begin{multicols*}{2}
-    % \include{Maxwell}
-    \include{Felder}
-    \include{Wellen}
-    \include{Leitungen}
-    \include{Smithdiagramm}
-    \include{Wellenleiter}
-    \include{Antennen}
+	\include{Felder}
+	\include{Wellen}
+	\include{Leitungen}
+	\include{Wellenleiter}
+	\include{Smithdiagramm}
+	\include{Antennen}
 \end{multicols*}
 \include{Antennentabelle}
-
-%für Leitungsparameter Grafik von Sattler füllt eine Seite
-% \include{Leitungen}
-% \begin{multicols*}{2}
-%     \include{Antennen}
-% \end{multicols*}
+\include{Einheiten}
 
 
 \end{document}

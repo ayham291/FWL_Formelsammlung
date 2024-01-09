@@ -1,40 +1,92 @@
-\section{Maxwell’schen Gleichungen}
+\section{Maxwell-Gleichungen}
 
-\includegraphics[width=\columnwidth]{Figures/Integralsatz.png}
+\includegraphics[width=0.7\columnwidth]{Figures/Integralsatz.png}
 
-\textbf{Durchflutungssatz:}
+\textbf{Amperesches- /Durchflutungsgesetz:}
 
 \begin{tabularx}{\textwidth}{>{\hsize=.5\hsize}X>{\hsize=.5\hsize}X}
-    Elektrischer Strom ist Ursache für magnetische Wirbelfeld & $\boxed{\int_c \vec{H} d \vec{s} = \Theta = I = \iint_A \vec{J} d \vec{A} = \frac{d\Phi_e}{dt}}$ \\
+	Elek. Strom ist Ursache für ein magn. Wirbelfeld. & $\boxed{\oint_s \vec{H} \cdot d \vec{s} = \Theta = I = \iint_A \vec{J} \cdot d \vec{A} = \frac{d\Phi_e}{dt}}$ \\
 \end{tabularx}
 
 \textbf{Induktionsgesetz:}
 
 \begin{tabularx}{\textwidth}{>{\hsize=.5\hsize}X>{\hsize=.5\hsize}X}
-    Ein sich zeitlich änderndes Magnetfeld erzeugt ein Elektrisches Wirbelfeld & $\boxed{\oint{\vec{E}d\vec{s}} = u_{ind} = -\frac{d}{dt}\iint{\vec{B}d\vec{A}} = -\frac{d\Phi_m}{dt}}$                          \\
-                                                                               & $\boxed{rot{\vec{E}} = -\frac{\partial\vec{B}}{\partial t} = -\mu\cdot\frac{\partial\vec{H}}{\partial t} = -j\omega\mu\vec{H}}$
+	Ein sich zeitlich änderndes Magnetfeld erzeugt ein elek. Wirbelfeld. & $\boxed{\oint_s{\vec{E} \cdot d\vec{s}} = u_{ind} = -\frac{d}{dt}\iint_A{\vec{B} \cdot d\vec{A}} = -\frac{d\Phi_m}{dt}}$        \\
+	                                                                     & $\boxed{rot{\vec{E}} = -\frac{\partial\vec{B}}{\partial t} = -\mu\cdot\frac{\partial\vec{H}}{\partial t} = -j\omega\mu\vec{H}}$
 \end{tabularx}
 
-\textbf{Differentielle ohmsche Gesetz:}
+\textbf{Differentielles ohmsches Gesetz:}
 
 \begin{tabularx}{\textwidth}{>{\hsize=.5\hsize}X>{\hsize=.5\hsize}X}
-    Bewegte elektrische Ladung erzeugt Magnetfeld & $\boxed{ rot \vec{H} = \vec{J} = \sigma \cdot \vec{E}} $
+	Bewegte elektrische Ladung erzeugt Magnetfeld & $\boxed{ rot \vec{H} = \vec{J} = \kappa \cdot \vec{E}} $
 \end{tabularx}
 
 Bei isotropen Stoffen sind $\varepsilon$ u. $\mu$ Skalare:
 \[
-    \varepsilon = \varepsilon_0 \cdot \varepsilon_r \qquad \mu = \mu_0 \cdot \mu_r
+	\varepsilon = \varepsilon_0 \cdot \varepsilon_r \qquad \mu = \mu_0 \cdot \mu_r
 \]
+
+Zeitbereich: $ \dfrac{\partial}{\partial t} $ \qquad \qquad
+Harmonischer Frequenzbereich (komplexe Berechnung): $ jw $
+
+\subsection{Feldstärkekomponenten einer ebenen Welle}
+Bei Ausbreitung in $z$-Richtung gibt es keine Amplitudenabhängigkeit von $x, y$
+d.h. $\frac{\partial \ldots}{\partial x}=\frac{\partial \ldots}{\partial y}=0$
+
+damit ergibt sich aus den Maxwell'schen Gleichungen:
+{\footnotesize
+$$
+	\begin{gathered}
+		\boxed{\operatorname{rot} \underline{\vec{E}}=-\mathrm{j} \omega \mu \underline{\vec{H}}} \qquad \boxed{\operatorname{rot} \underline{\vec{H}}=\mathrm{j} \omega \varepsilon \underline{\vec{E}}} \\
+		\operatorname{rot} \underline{\vec{E}}=\left|\begin{array}{ccc}
+			\vec{e}_x                   & \vec{e}_y                   & \vec{e}_z                   \\
+			\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+			\underline{E}_x             & \underline{E}_y             & \underline{E}_z
+		\end{array}\right|=\left(\begin{array}{c}
+				\frac{\partial \underline{E}_z}{\partial y}-\frac{\partial \underline{E}_y}{\partial z} \\
+				\frac{\partial \underline{E}_x}{\partial z}-\frac{\partial \underline{E}_z}{\partial x} \\
+				\frac{\partial \underline{E}_y}{\partial x}-\frac{\partial \underline{E}_x}{\partial y}
+			\end{array}\right)=\left(\begin{array}{l}
+				0-\frac{\partial \underline{E}_y}{\partial z} \\
+				\frac{\partial \underline{E}_x}{\partial z}-0 \\
+				0-0
+			\end{array}\right)=-\mathrm{j} \omega \mu\left(\begin{array}{l}
+				\underline{H}_x \\
+				\underline{H}_y \\
+				\underline{H}_z
+			\end{array}\right) \\
+		\operatorname{rot} \underline{\vec{H}}=\left|\begin{array}{ccc}
+			\vec{e}_x                   & \vec{e}_y                   & \vec{e}_z                   \\
+			\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+			\underline{H}_x             & \underline{H}_y             & \underline{H}_z
+		\end{array}\right|=\left(\begin{array}{c}
+				\frac{\partial \underline{H_z}}{\partial y}-\frac{\partial \underline{H}_y}{\partial z} \\
+				\frac{\partial \underline{H}_x}{\partial z}-\frac{\partial \underline{H}_z}{\partial x} \\
+				\frac{\partial \underline{H}_y}{\partial x}-\frac{\partial \underline{H}_x}{\partial y}
+			\end{array}\right)=\left(\begin{array}{c}
+				0-\frac{\partial \underline{H}_y}{\partial z} \\
+				\frac{\partial \underline{H}_x}{\partial z}-0 \\
+				0-0
+			\end{array}\right)=\mathrm{j} \omega \varepsilon\left(\begin{array}{l}
+				\underline{E}_x \\
+				\underline{E}_y \\
+				\underline{E}_z
+			\end{array}\right)
+	\end{gathered}
+$$
+}
 
 \subsection{Integralsätze}
 \begin{description}
-    \setlength{\itemsep}{1pt}
-    \item Fundamentalsatz der Analysis
-    \item Gauß: Vektorfeld das aus Oberfläche von Volumen strömt muss aus Quelle in Volumen
-    \item Stokes: innere Wirbel kompensieren $\rightarrow$ Rand betrachten
+	\setlength{\itemsep}{1pt}
+	\item Fundamentalsatz der Analysis
+	\item Gauß: Vektorfeld das aus Oberfläche von Volumen strömt muss aus Quelle in Volumen
+	\item Stokes: innere Wirbel kompensieren sich $\rightarrow$ nur den Rand betrachten.
 \end{description}
 \begin{align*}
-    \int_{a}^b \opgrad F \cdot d \vec{s}     & = F(b) - F(a)                                  \\
-    \iiint_V \opdiv \vec{A} \cdot dV         & = \oiint_{ \partial V} \vec{A} \cdot d \vec{a} \\
-    \iint_{A} \oprot \vec{A} \cdot d \vec{a} & = \oint_{ \partial A} \vec{A} \cdot d \vec{r}
+	\int_{a}^b \opgrad F \cdot d \vec{s}     & = F(b) - F(a)                                  \\
+	\iiint_V \opdiv \vec{A} \cdot dV         & = \oiint_{ \partial V} \vec{A} \cdot d \vec{a} \\
+	\iint_{A} \oprot \vec{A} \cdot d \vec{a} & = \oint_{ \partial A} \vec{A} \cdot d \vec{r}
 \end{align*}
+
+

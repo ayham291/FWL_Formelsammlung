@@ -5,8 +5,8 @@
     \begin{tikzpicture}
         %Kreuz
         \draw[dotted] (-3,0) -- (3,0);
-        \draw[-] (0,-2.5) -- (0,2.5)                        node[below left] {Material(1)} 
-                                                            node[below right] {Material(2)}
+        \draw[-] (0,-2.5) -- (0,2.5)                        node[below left] {Medium 1} 
+                                                            node[below right] {Medium 2}
                                                             node at (0,-2.5)[above left] {$\varepsilon_1, \mu_1, \sigma_1$}
                                                             node at (0,-2.5)[above right] {$\varepsilon_2, \mu_2, \sigma_2$};
         %Rücklaufende
@@ -28,5 +28,15 @@
         \draw[-latex] (2,0) -- (2,1)                        node[below right] {$E_t$};
         \draw[-] (2,0) circle (0.15)                        node[below right] {$H_t$};
         \draw[-,fill=black!100] (2,0) circle (0.05);
+        
+%       Koordinatensystem!
+		\draw[-latex] (2,-1.5) -- (2.5,-1.5)                node[right] {$z$};
+      	\draw[-latex] (2,-1.5) -- (2,-1)                node[above] {$x$};
+       	\draw[-] (2,-1.5) circle (0.15)                    node[below left] {$y$};
+        \draw[-,fill=black!100] (2,-1.5) circle (0.05);
+%		\draw[-latex] (-2,-1.5) -- (-2,-0.5)                node[above] {$E_h$};
+%		\draw[-] (-2,-1.5) circle (0.15)                    node[below right] {$H_h$};
+%		\draw[-,fill=black!100] (-2,-1.5) circle (0.05);
+
     \end{tikzpicture}
 \end{center}
