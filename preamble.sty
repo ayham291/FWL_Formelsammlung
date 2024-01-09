@@ -22,7 +22,7 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{enumerate}
-\usepackage{mhchem}
+\usepackage[version=4]{mhchem}
 \usepackage{multicol}
 \usepackage{mathtools}
 \usepackage{graphicx}
@@ -48,16 +48,15 @@
 \usepackage{authoraftertitle}
 \usepackage{hyperref}
 \usepackage{nicematrix}
-\usepackage{xfrac}
 \hypersetup{
-    pdftitle=FWL Formelsammlung,
-    pdfsubject=FWL,
-    pdfauthor={M. Forstner, A. Alhulaibi, J. Rothe, T. Pham},
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
+	pdftitle=FWL Formelsammlung,
+	pdfsubject=FWL,
+	pdfauthor={M. Forstner, A. Alhulaibi, J. Rothe, T. Pham},
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
 }
 
 \ctikzset{nodes width=.06}
@@ -67,14 +66,14 @@
 \geometry{bindingoffset=2cm}
 
 \newcommand{\bulletpt}{
-\begin{tikzpicture}
-    \filldraw[fill=black] circle (2pt);
-\end{tikzpicture}
+	\begin{tikzpicture}
+		\filldraw[fill=black] circle (2pt);
+	\end{tikzpicture}
 }
 \newcommand{\bulletptR}{
-\begin{tikzpicture}
-    \filldraw[fill=black] (0,0) rectangle (3pt,3pt);
-\end{tikzpicture}
+	\begin{tikzpicture}
+		\filldraw[fill=black] (0,0) rectangle (3pt,3pt);
+	\end{tikzpicture}
 }
 
 
@@ -85,7 +84,7 @@
 \DeclareSIUnit\clight{c}
 
 \mdfdefinestyle{exercise}{backgroundcolor=black!10,roundcorner=8pt,
-hidealllines=true, nobreak=true, frametitlerule=true, skipabove=3pt, skipbelow=0pt}
+	hidealllines=true, nobreak=true, frametitlerule=true, skipabove=3pt, skipbelow=0pt}
 
 % \RN für Römischezahl
 \newcommand*{\rn}[1]{\expandafter\@slowromancap\romannumeral #1@}
