@@ -21,7 +21,7 @@ Bei vorgegebenen Außendurchmesser: $ \frac{D}{d} =3,59 $
 
 \vspace{1em}
 \underline{\textbf{Dielektrische Verluste}} $G\ll\omega C$, $\tan\delta=
-(^G/_{\omega C})$
+	(^G/_{\omega C})$
 \[
 	\alpha_d = \frac{\sqrt{\varepsilon_r}\pi f}{c_0}\cdot\tan\delta \sim f
 \]
@@ -31,22 +31,29 @@ Bei vorgegebenen Außendurchmesser: $ \frac{D}{d} =3,59 $
 
 \subsubsection{Effektive Permittivitätszahl}
 Unterschiedliche Phasengeschwindigkeit $\rightarrow$ Dispersion
-\[
-	\varepsilon_{r,\texttt{eff}}  = \frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2\sqrt{1+10\cdot\frac{\text{h}}{\text{w}}}} \\
-\]
-
 Je größer $\dfrac{\mathrm{w}}{\mathrm{h}}$ desto mehr nähert sich
 $\varepsilon_{r,\texttt{eff}}$ an $\varepsilon_r$ und
 \[
 	\lambda = \frac{\lambda_0}{\sqrt{\varepsilon_{r,\texttt{eff}}\cdot\mu_{r,\texttt{eff}}}}
 \]
 
-\subsubsection[Schmale Streifen]{Schmale Streifen (ca 20-200$\Omega$)}
+\subsubsection[Schmale Streifen]{Schmale Streifen (ca 20-200$\Omega$) $\frac{\mathrm{w}}{\mathrm{h}}\leq 1$}
+\[
+	\varepsilon_{r,\texttt{eff}}  = \frac{\varepsilon_r+1}{2} + \frac{\varepsilon_r-1}{2}
+  \left[\frac{1}{\sqrt{1+12\cdot\frac{\mathrm{h}}{\mathrm{w}}}} +
+  0,04\cdot\left(1-\frac{\mathrm{w}}{\mathrm{h}}\right)^2\right]
+\]
+
 \[
 	Z_L = \frac{60\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\ln\left(\frac{8\mathrm{h}}{\mathrm{w}}+\frac{\mathrm{w}}{4\mathrm{h}}\right)
 \]
 
-\subsubsection[Breite Streifen]{Breite Streifen (ca 20-200$\Omega$)}
+\subsubsection[Breite Streifen]{Breite Streifen (ca 20-200$\Omega$) $\frac{\mathrm{w}}{\mathrm{h}} > 1$}
+\[
+	\varepsilon_{r,\texttt{eff}}  = \frac{\varepsilon_r+1}{2} + \frac{\varepsilon_r-1}{2}
+  \left[\frac{1}{\sqrt{1+12\cdot\frac{\mathrm{h}}{\mathrm{w}}}}\right]
+\]
+
 \[
 	Z_L = \frac{120\pi\Omega}{\sqrt{\varepsilon_{r,\texttt{eff}}}}\cdot\frac{1}{\dfrac{\mathrm{w}}{\mathrm{h}}+2,42-0,44\cdot\dfrac{\mathrm{h}}{\mathrm{w}}+\left(1-\dfrac{\mathrm{h}}{\mathrm{w}}\right)^6}
 \]
@@ -63,8 +70,8 @@ vorhanden $\rightarrow$ Teil der Welle wird an der Grenzfläche transmittiert.
 Abhängigkeit vom Reflexionsfaktor.
 
 \textbf{Reflexionsfaktor}
-\[ 
-\underline{r}_2 = \underline{r}(z=0) = \frac{Z_2 - \underline{Z}_L}{Z_2 + \underline{Z}_L} 
+\[
+	\underline{r}_2 = \underline{r}(z=0) = \frac{Z_2 - \underline{Z}_L}{Z_2 + \underline{Z}_L}
 \]
 
 \underline{VSWR}
@@ -95,18 +102,18 @@ Abhängigkeit vom Reflexionsfaktor.
 \begin{description}
 	\item \underline{Dispersion:}\\
 	      {\small Die von der Frequenz des Lichts abhängende
-		      Ausbreitungsgeschwindigkeit des Lichts in Medien. Dies hat zur Folge,
-		      dass Licht an Übergangsflächen unterschiedlich stark gebrochen wird.
-		      Somit verflacht sich beispielsweise ein (Dirac-)Impuls zu einer Gauß'schen
-		      Glocke.
+	      Ausbreitungsgeschwindigkeit des Lichts in Medien. Dies hat zur Folge,
+	      dass Licht an Übergangsflächen unterschiedlich stark gebrochen wird.
+	      Somit verflacht sich beispielsweise ein (Dirac-)Impuls zu einer Gauß'schen
+	      Glocke.
 	      }
 
 	\item \underline{Stufenprofil:}\\
 	      {\small Multimode: leichtes Einkoppeln, geringes $B\cdot l$ wegen
-		      Modendispersion
+	      Modendispersion
 
-		      Single/Monomode: schwieriges Einkoppeln, großes $B\cdot l$, keine
-		      Modendispersion
+	      Single/Monomode: schwieriges Einkoppeln, großes $B\cdot l$, keine
+	      Modendispersion
 	      }
 
 	\item \underline{Gradientenprofil:}\\
@@ -115,10 +122,10 @@ Abhängigkeit vom Reflexionsfaktor.
 	\item \underline{Bandbreitenlängenprodukt:}\\
 	      {\small $B' =  B\cdot l[\frac{MHz}{km}]$ = konstant
 
-		      $B \sim \frac{1}{l}$ und $l\sim \frac{1}{B}$
+	      $B \sim \frac{1}{l}$ und $l\sim \frac{1}{B}$
 
-		      Bandbreite ist gegen Übertragungslänge austauschbar, solange
-		      Dämpfung keine Rolle spielt.
+	      Bandbreite ist gegen Übertragungslänge austauschbar, solange
+	      Dämpfung keine Rolle spielt.
 	      }
 \end{description}
 
