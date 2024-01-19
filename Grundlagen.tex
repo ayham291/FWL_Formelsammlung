@@ -119,7 +119,7 @@ Trick: Regel von Sarrus anwenden!
 	\end{pmatrix} =
 	\begin{vmatrix}
 		\vec{e}_x                    & \vec{e}_y                     & \vec{e}_z                     \\
-		\dfrac{\partial}{\partial x} & \dfrac{\partial }{\partial x} & \dfrac{\partial }{\partial z} \\
+		\dfrac{\partial}{\partial x} & \dfrac{\partial }{\partial y} & \dfrac{\partial }{\partial z} \\
 		\vec{F}_x                    & \vec{F}_y                     & \vec{F}_z
 	\end{vmatrix}
 \end{align*}\\
@@ -200,7 +200,7 @@ Wichtig: Feldgrößen sind \textbf{Effektivwerte}!
 \subsubsection{Rechnen mit Pegeln / Logarithmen}
 Rechenregeln für Logarithmen (10er-Basis): \quad $ x,y,a > 0 $
 \begin{flalign*}
-	\log (x\cdot y) & = \log (x) - \log (y)            & \log (\tfrac{x}{y}) & = \log (x) - \log (y)              & \\
+	\log (x\cdot y) & = \log (x) + \log (y)            & \log (\tfrac{x}{y}) & = \log (x) - \log (y)              & \\
 	\log (x^a)      & = a\cdot \log(x)                 & \log \sqrt[a]{x}    & = \frac{1}{a} \cdot \log (x)       & \\
 	\mathtt{Pegel}  & = 10 \cdot \log(\mathtt{Faktor}) & \mathtt{Faktor}     & = 10 ^{\tfrac{\mathtt{Pegel}}{10}}
 \end{flalign*}
